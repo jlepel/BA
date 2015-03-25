@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Seneca(2005)]{Apelt200511}
+\dinatlabel{Seneca 2005} \textsc{Seneca}:
+\newblock \emph{Von der Kürze des Lebens}.
+\newblock Deutscher Taschenbuch Verlag, 11 2005. --
+\newblock URL \url{http://amazon.de/o/ASIN/342334251X/}. --
+\newblock ISBN 9783423342513
+
+\end{thebibliography}
