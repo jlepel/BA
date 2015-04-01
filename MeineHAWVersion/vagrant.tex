@@ -1,9 +1,23 @@
-\chapter{Vagrant}
-Bei Vagrant handelt es sich um ein Projekt, welches 2010 von Mitchell Hashimoto und John Bender 2010 ins Leben gerufen wurde.
-Durch das schnelle und unkomplizierte erstellen von virtuellem Maschinen, wollte man insbesonders Entwickler ansprechen.
-Gerade Teamarbeit wird dadurch vereinfacht, denn die gewünschten Maschinen können mit den gleichen Konfigurationen, Komponenten, Infrastrukturen und Bibliotheken erstellt werden.
-Die Konfiguration einer Maschine geschieht über das "Vagrantfile"; in dem man Parameter wie IP Adresse konfiguriert oder Provisionierer hinzuschaltet.
-Bei den Provisionierern wird dem Benutzer die Freiheit gegeben, auf Bekannte wie Chef, Puppet oder Ansible zurückzugreifen.
+\section{Vagrant}
+Bei Vagrant handelt es sich um ein Softwareprojekt, welches 2010 von Mitchell Hashimoto und John Bender 2010 ins Leben gerufen wurde.
+Der prim"are Gedanke hinter diesem Projekt ist es, gerade Entwicklern und Teams eine schnelle und unkomplizierte M"oglichkeit zu bieten, virtuelle Maschinen und Landschaften zu erstellen.\newline
+Vagrant ist also ein m"achtiges Werkzeug zum virtuallisieren, der sonst oft lokalen Entwicklungsumgebungen. 
+Gerade Teamarbeit wird dadurch vereinfacht, denn die gew"unschten Maschinen k"onnen mit den gleichen Konfigurationen, Komponenten, Infrastrukturen und Bibliotheken erstellt werden.\newline 
+Um die gew"unsche Maschine zu visuallisieren, greift Vagrant auf VirtualBox zur"uck.
+VirtualBox ist Oracles Freeware Pandant zur kommerziellen VMware Produktlinie. Wenn gew"unscht, kann auf VMware Fusion oder Amazon Web Services zur"uckgegriffen werden.\newline 
+Die Konfiguration einer Maschine geschieht "uber das "Vagrantfile"; in dem Parameter wie IP Adresse konfiguriert oder Provisionierer hinzuschaltet.
+Da das Vagrantfile in einer Ruby Domain Specific Language geschrieben wird, bedeutet das f"ur den Anwender, dass er es einfach mit anderen Kollegen "uber Versionskontrollen (z.B. Git oder Subversion) teilen kann.
+Bei den Provisionierern wird dem Benutzer die Freiheit gegeben, auf Bekannte wie Chef, Puppet oder Ansible zur"uckzugreifen.
+
+\section{Konfiguration}
+Vagrantfile beinhalten die Konfiguration jeder Vagrantmaschine. Sogar jeder Vagrant-"Landschaft". 
+Das in Ruby Syntax geschriebene Konfigurationsfile, wird automatisch "uber den Befehl "vagrant init" im gewünschten Ordner generiert oder manuell über jeden Editor erstellt werden. Auf Linux-Systemen ist darauf zu achten, dass der gewünschte Ordner "uber entsprechende Berechtigungen verf"ugt.
+Manuelle Erweiterung des Vagrantfiles wird durch die Rubysyntax zus"atzlich vereinfacht.
+
+
+
+
+
 
 
 
