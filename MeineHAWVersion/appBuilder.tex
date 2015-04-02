@@ -1,1 +1,63 @@
+\setcounter{secnumdepth}{3}
 \chapter{Die Software}
+\section{Idee und Anforderung}
+\section{Ubersicht der Komponenten}
+\subsection{Webkomponente}
+\subsection{Vagrant}
+
+Durch die Verwendung von Vagrant wird es möglich durch wenig Aufwand eine schnell verfügbare Umgebung aufzubauen.
+Diese Arbeit bezieht sich in der Entwicklungsphase ausschliesslich auf eine Ubuntu 32Bit Version, die Online von Vagrant bereitgestellt wird.
+Somit wird sichergestellt, dass diese vorgefertigte virtuelle Box frei von Schadsoftware ist. Ausserdem wird damit garantiert, dass die angebotene Platform immer identisch ist.
+Da Vagrant auf jedem System installiert werden kann, OS X; Windows; Linux Distrubutionen, hervorragend mit diversen Provisionierern zusammenarbeitet und VM-Tools wie VirtualBox, VMWare und AWS unterstützt, wird es zu einem guten Allrounder. 
+Gerade die Provisionierung von Software auf die zu startende virtuelle Maschine, macht Vagrant für das vorliegende Projekt attraktiv.
+Zwar dauert der Aufbau im Gegensatz zu Docker nicht Sekunden sondern Minuten, aber die Provisionierung ist mit das entscheidene.
+Ausserdem ist die händische Konfiguration und die Begrifflichkeiten eingängiger und auf das Projektvorhaben besser zugeschnitten.
+
+
+
+\subsubsection{Vergleich zu Docker}
+Im Zusammenhang mit ad hoc Umgebungen, wird der Fokus in Diskussion auf Docker und Vagrant gelegt.
+Der Grundgedanke bei beiden Applikationen ist der Gleiche, aber man muss sich bewusst sein, was das Ziel der Anwendung sein soll.
+Beide Applikationen haben wie alles ihre Vor- und Nachteile, aber in einem sind beide Virtualisierungs-Tools gleich. Die zentrale Steuerung zum Aufbau einer Maschine, geschieht über eine einziges Konfig-File.\newline
+Docker ist ein Linux-only VE (Virtuel Environment)-Tool und arbeitet im Gegensatz zu Vagrant mit Operating-System-Level Virtualisierung, auch Linux Containern (LxC) genannt. Während Vagrant Hypervisor-basierten virtuellen Maschinen aufbaut.
+Für die sogenannten Container nutzt Docker spezielle Kernelfunktionalitäten, um einzelne Prozesse in Containern voneinander zu isolieren.\newline 
+Dadurch wird für den Benutzer der Eindruck erweckt, dass für Prozesse die mit Containern gestartet werden, diese auf ihrem eigenen System laufen würden.
+Docker wird in drei Teile unterteilt. Die Arbeitsweise ist nicht wie bei einer VM (virtuelle machine) bei der ein virtueller Computer mit einem bestimmten Betriebsystem, Hardware-Emulation sowie Prozessor simuliert wird. Ein VE ist quasi eine leichtgewichtige virtuelle Maschine. In einem Container ausgeführte Prozesse greifen gemeinschaftlich auf den Kernel des Hostsystems zu. Durch die Kernelnamensräume(cnames) werden die ausgeführten Prozesse von einander isoliert. Allerdings ist gerade die Isolation der Prozesse, durch den gemeinsam genutzten Kernel etwas geringer, als bei der Benutzung durch einen Hypervisor.\newline
+Durch die zugrunde liegende Architektur von Vagrant, wird Vagrant gerne für immer gleich aufbauende Entwicklungsumgebungen benutzt.
+Die vielzahl an unterstützten Betriebsystemen macht es für viele Benutzer attraktiver. Allerdings kooperieren Vagrant und Docker auch hervorragend zusammen.
+Vagrant verspricht durch die leichtere Handhabung und Konfiguration eher das, was für das vorliegende Projekt entscheidend ist.
+
+
+
+ZITAT: Docker wird in diversen Varianten als Lösung für das Setup und die Kapselung lokaler Entwicklungsumgebungen, als temporär verfügbarer Service im Rahmen von Integrationstests und als Laufzeitumgebung auf Produktionsservern eingesetzt. Gerade der temporäre Charakter von Docker-Containern wird für einen anderen Anwendungsfall interessant: als dynamisch erzeugte Buildsysteme mit einer projektspezifischen Buildumgebung.
+
+Informationen: http://www.scriptrock.com/articles/docker-vs-vagrant ; https://entwickler.de/online/docker-basics-system-level-virtualisierung-125514.html\newline
+
+\subsection{Ansible}
+\subsubsection{Vergleich zu Salt}
+Da Ansible mit Salt am ehesten verwandt ist, wird auf Puppet und Chef im weiteren nicht weiter eingegangen.
+Puppet und Chef wiedersprechen dem vorgesehenen Konzept der leichten Konfiguration.
+
+Salt ist wie Ansible in Python entwickelt worden. Da Salt zur Kommunikation mit seinen Clients Agenten (Minions) benötigt, ist dies wiederrum schwer zu automatisieren. Zwar kann Vagrant mit Salt zusammenarbeiten, allerdings nicht nativ. Salt wäre eine gute Alternative, wenn nicht nur einen Provisioner haben möchte, sondern auch ein remote execution framework.
+Salt implementiert eine ZeroMQ messaging lib in der Transportschicht, was die Kommunikation zwischen Master und Minions im Gegensatz zu Chef und Puppet vervielfacht. Dadurch ist die Kommunikation zwar schnell, aber nicht so sicher, wie bei der SSH Kommunikation von Ansible. 
+ZeroMq bietet keine native Verschlüsselung und transportiert Nachichten über IPC, TCP, TIPC und Multicast.
+
+
+
+http://www.scriptrock.com/articles/ansible-vs-salt
+
+\subsubsection{Vergleich zu Puppet}
+Einer der wohl bekanntesten Configuration Management Tool ist Puppet.
+Puppet wird von allen gängigen Betriebssystemen unterstützt. Windows, Unix, Mac OS X und Linux. 
+
+Nachteile: Flexibilität und Agilität sind keine stärken. Zu groß. 
+
+
+
+\section{Struktur und Zusammenspiel}
+\section{Konfiguration}
+
+\section{Datenbank}
+\section{Virtualisierung}
+\section{Provisionierung}
+\section{Kommunikation der einzelnen Komponenten}
