@@ -11,6 +11,7 @@
 \usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
 \usepackage[latin1]{inputenc}
+%\usepackage[macce]{inputenc}
 \usepackage{libertine}
 \usepackage{pifont}
 \usepackage{microtype}
@@ -24,6 +25,7 @@
 \usepackage{soul}
 \usepackage{hawstyle}
 \usepackage{lipsum} %% for sample text
+
 
 %% define some colors
 \colorlet{BackgroundColor}{gray!20}
@@ -140,8 +142,9 @@
 %%\include{chapter1}
 
 \include{einleitung}
-\chapter{Grundlagen}
+\include{anforderungen}
 \include{appBuilder}
+\chapter{Grundlagen}
 \include{vagrant}
 \include{ansible}
 \include{sinatra}

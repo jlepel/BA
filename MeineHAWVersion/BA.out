@@ -1,26 +1,34 @@
 \BOOKMARK [0][-]{chapter.1}{1 Einleitung}{}% 1
 \BOOKMARK [1][-]{section.1.1}{1.1 Problemstellung}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{1.2 Zielsetzung}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{1.3 Themenabgrenzung}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{1.4 Struktur der Arbeit}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{2 Grundlagen}{}% 6
-\BOOKMARK [0][-]{chapter.3}{3 Die Software}{}% 7
-\BOOKMARK [1][-]{section.3.1}{3.1 Idee und Anforderung}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.2}{3.2 Ubersicht der Komponenten}{chapter.3}% 9
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Vagrant}{section.3.2}% 10
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Ansible}{section.3.2}% 11
-\BOOKMARK [1][-]{section.3.3}{3.3 Struktur und Zusammenspiel}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.4}{3.4 Konfiguration}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.5}{3.5 Webkomponente}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.6}{3.6 Datenbank}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.7}{3.7 Virtualisierung}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.8}{3.8 Provisionierung}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.9}{3.9 Kommunikation der einzelnen Komponenten}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.10}{3.10 Vagrant}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.11}{3.11 Konfiguration}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.12}{3.12 Ansible}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.13}{3.13 Passenger}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.14}{3.14 Sidekiq}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{4 Schluss}{}% 24
-\BOOKMARK [1][-]{section.4.1}{4.1 Zusammenfassung}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.2}{4.2 Fazit}{chapter.4}% 26
+\BOOKMARK [1][-]{section.1.3}{1.3 Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{1.4 Themenabgrenzung}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{1.5 Struktur der Arbeit}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{2 Die Software}{}% 7
+\BOOKMARK [1][-]{section.2.1}{2.1 Idee und Anforderung}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{2.2 Ubersicht der Komponenten}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Webkomponente}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Vagrant}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Ansible}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{2.3 Struktur und Zusammenspiel}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{2.4 Konfiguration}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{2.5 Datenbank}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.6}{2.6 Virtualisierung}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.7}{2.7 Provisionierung}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.8}{2.8 Kommunikation der einzelnen Komponenten}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.9}{2.9 Export Funktionen}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.9.1}{2.9.1 Clonen einer Maschine}{section.2.9}% 20
+\BOOKMARK [2][-]{subsection.2.9.2}{2.9.2 Export zu Git}{section.2.9}% 21
+\BOOKMARK [1][-]{section.2.10}{2.10 Sharing einer Maschine}{chapter.2}% 22
+\BOOKMARK [0][-]{chapter.3}{3 Grundlagen}{}% 23
+\BOOKMARK [1][-]{section.3.1}{3.1 Vagrant}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Konfiguration}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Vergleich zu Docker}{section.3.1}% 26
+\BOOKMARK [1][-]{section.3.2}{3.2 Ansible}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Vergleich zu Salt}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Vergleich zu Puppet}{section.3.2}% 29
+\BOOKMARK [1][-]{section.3.3}{3.3 Passenger}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.4}{3.4 Sidekiq}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{4 Schluss}{}% 32
+\BOOKMARK [1][-]{section.4.1}{4.1 Zusammenfassung}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{4.2 Fazit}{chapter.4}% 34

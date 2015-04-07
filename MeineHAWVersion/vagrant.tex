@@ -9,13 +9,29 @@ Die Konfiguration einer Maschine geschieht "uber das "Vagrantfile"; in dem Param
 Da das Vagrantfile in einer Ruby Domain Specific Language geschrieben wird, bedeutet das f"ur den Anwender, dass er es einfach mit anderen Kollegen "uber Versionskontrollen (z.B. Git oder Subversion) teilen kann.
 Bei den Provisionierern wird dem Benutzer die Freiheit gegeben, auf Bekannte wie Chef, Puppet oder Ansible zur"uckzugreifen.
 
-\section{Konfiguration}
+\subsection{Konfiguration}
 Vagrantfile beinhalten die Konfiguration jeder Vagrantmaschine. Sogar jeder Vagrant-"Landschaft". 
 Das in Ruby Syntax geschriebene Konfigurationsfile, wird automatisch "uber den Befehl "vagrant init" im gewünschten Ordner generiert oder manuell über jeden Editor erstellt werden. Auf Linux-Systemen ist darauf zu achten, dass der gewünschte Ordner "uber entsprechende Berechtigungen verf"ugt.
 Manuelle Erweiterung des Vagrantfiles wird durch die Rubysyntax zus"atzlich vereinfacht.
 
 
+\subsection{Vergleich zu Docker}
+Im Zusammenhang mit ad hoc Umgebungen, wird der Fokus in Diskussion auf Docker und Vagrant gelegt.
+Der Grundgedanke bei beiden Applikationen ist der Gleiche, aber man muss sich bewusst sein, was das Ziel der Anwendung sein soll.
+Beide Applikationen haben wie alles ihre Vor- und Nachteile, aber in einem sind beide Virtualisierungs-Tools gleich. Die zentrale Steuerung zum Aufbau einer Maschine, geschieht "uber eine einziges Konfig-File.\newline
+Docker ist ein Linux-only VE (Virtuel Environment)-Tool und arbeitet im Gegensatz zu Vagrant mit Operating-System-Level Virtualisierung, auch Linux Containern (LxC) genannt. W"ahrend Vagrant Hypervisor-basierten virtuellen Maschinen aufbaut.
+F"ur die sogenannten Container nutzt Docker spezielle Kernelfunktionalit"aten, um einzelne Prozesse in Containern voneinander zu isolieren.\newline 
+Dadurch wird f"ur den Benutzer der Eindruck erweckt, dass f"ur Prozesse die mit Containern gestartet werden, diese auf ihrem eigenen System laufen w"urden.
+Docker wird in drei Teile unterteilt. Die Arbeitsweise ist nicht wie bei einer VM (virtuelle machine) bei der ein virtueller Computer mit einem bestimmten Betriebsystem, Hardware-Emulation sowie Prozessor simuliert wird. Ein VE ist quasi eine leichtgewichtige virtuelle Maschine. In einem Container ausgef"uhrte Prozesse greifen gemeinschaftlich auf den Kernel des Hostsystems zu. Durch die Kernelnamensr"aume(cnames) werden die ausgef"uhrten Prozesse von einander isoliert. Allerdings ist gerade die Isolation der Prozesse, durch den gemeinsam genutzten Kernel etwas geringer, als bei der Benutzung durch einen Hypervisor.\newline
+Durch die zugrunde liegende Architektur von Vagrant, wird Vagrant gerne f"ur immer gleich aufbauende Entwicklungsumgebungen benutzt.
+Die vielzahl an unterst"utzten Betriebsystemen macht es f"ur viele Benutzer attraktiver. Allerdings kooperieren Vagrant und Docker auch hervorragend zusammen.
+Vagrant verspricht durch die leichtere Handhabung und Konfiguration eher das, was f"ur das vorliegende Projekt entscheidend ist.
 
+
+
+ZITAT: Docker wird in diversen Varianten als L"osung f"ur das Setup und die Kapselung lokaler Entwicklungsumgebungen, als tempor"ar verf"ugbarer Service im Rahmen von Integrationstests und als Laufzeitumgebung auf Produktionsservern eingesetzt. Gerade der tempor"are Charakter von Docker-Containern wird f"ur einen anderen Anwendungsfall interessant: als dynamisch erzeugte Buildsysteme mit einer projektspezifischen Buildumgebung.
+
+Informationen: http://www.scriptrock.com/articles/docker-vs-vagrant ; https://entwickler.de/online/docker-basics-system-level-virtualisierung-125514.html\newline
 
 
 
