@@ -1,45 +1,73 @@
 \setcounter{secnumdepth}{3}
 \chapter{Die Software}
 
-\section{Idee und Anforderung}
-
-
-
 \section{Ubersicht der Komponenten}
-\subsection{Webkomponente}
-\subsection{Vagrant}
+Die folgende Aufz"ahlung gibt einen "Uberblick "uber die verwendeten fertigen Softwarekomponenten, sowie "uber die eigens implementierten Komponenten.
+Im nachfolgenden wird detailierter auf die einzelnen Bauteile eingegangen und deren Funktionsweise ausf"uhrlicher erkl"art.
+\begin{itemize}
+      \item Vagrant
+      \item VirtualBox
+      \item Ansible
+      \item Apache
+      \item Passenger
+      \item Sinatra
+      \item SQLite
+ \end{itemize}
 
+\subsection{Ruby}
+F"ur die Entwicklung der Software wurde Ruby in der Version 1.9 im Zusammenhang mit dem Micro-Framework Sinatra verwendet.
+Durch die leicht zu erlenernende Syntax und die leichte Wartung des Quellcodes, ist Ruby eine einsteigerfreundliche Programmiersprache, im Bereich der Webentwicklung.\newline 
+Durch die Installation von Bunder, ein Dependency Manager f"ur Ruby, werden alle ben"otigten Abh"angigkeiten bei der Installation der hier thematisierten Software, heruntergeladen und installiert.
+Dadurch entsteht ein zentraler Punkt, der sich um die Abh"angigkeiten von Ruby k"ummert und es erm"oglicht leicht und schnell "Anderungen vorzunehmen.
+
+\subsection{Sinatra}
+
+
+
+\subsection{Vagrant}
 Durch die Verwendung von Vagrant wird es m"oglich durch wenig Aufwand eine schnell verf"ugbare Umgebung aufzubauen.
 Diese Arbeit bezieht sich in der Entwicklungsphase ausschliesslich auf eine Ubuntu 32Bit Version, die Online von Vagrant bereitgestellt wird.
-So wird eine stabile Testbasis erzeugt, die vom Hersteller geprüft wurde.
-Da Vagrant auf den g"angigen Systemen OS X, Windows und diversen Linux Distrubutionen installiert werden kann, es hervorragend mit diversen Provisionierern zusammenarbeitet und VM-Tools wie VirtualBox, VMWare und AWS unterst"utzt, wird es zu einem guten Allrounder. 
-Gerade die Provisionierung von Software ,auf die zu startende virtuelle Maschine, macht Vagrant f"ur das vorliegende Projekt attraktiv.
-Zwar dauert der Aufbau im Gegensatz zu Docker nicht Sekunden sondern Minuten, aber die Provisionierung ist mit einer der entscheidene Punkte f"ur die angestrebte Software.
+So wird eine stabile Testbasis erzeugt, die vom Hersteller geprüft wurde.\newline
+Da Vagrant auf den g"angigen Systemen OS X, Windows und diversen Linux Distrubutionen installiert werden kann, es hervorragend mit diversen Provisionierern zusammenarbeitet und VM-Tools wie VirtualBox, VMWare und AWS unterst"utzt, wird es zu einem guten Allrounder. \newline
+Gerade die Provisionierung von Software, auf die zu startende virtuelle Maschine, macht Vagrant f"ur das vorliegende Projekt attraktiv.
+Zwar dauert der Aufbau im Gegensatz zu Docker nicht Sekunden sondern Minuten, aber die Provisionierung ist mit einer der entscheidene Punkte f"ur die angestrebte Software.\newline
 Die leicht zu handhabende Konfiguration und die eing"angigen Begrifflichkeiten sind weiterer Punkte, die positiv f"ur die Benutzung in diesem Projekt sprechen.
 
 
 \subsection{Ansible}
  Ansible.......
-
+%Quelle: Buch: ansible-for-devops
 
 \section{Struktur und Zusammenspiel}
 \section{Konfiguration}
 \section{Datenbank}
+Im Backend der Applikation befindet sich eine relationale Datenbank. \newline
+Die dazu verwendete ORM-Schicht namens Datamapper unterst"utzt MySQL, PostgreSQL und SQLite.\newline
+F"ur den Prototypen der Anwendung wurde eine SQLite Datenbank benutzt um die Portierung auf andere Systeme zu erleichtern und den Installations, sowie administrativen Aufwand gering zu halten.\newline
+Allerdings ist SQLite weniger für Mehrbenutzerzugriffe ausgelegt. Eher f"ur portable Anwendungen. Daher sollte die Datenbank in der Endfassung auf MySQL ge"andert werden.\newline
+Durch die verwendete ORM-Schicht, ist ein Austausch der Datenbank im Aufwand minimal.\newline
+Die Datenbank beinhaltet die Softwarekomponenten, die zur Provisionierung der virtuellen Maschine eingesetzt werden k"onnen.
+
+
 \section{Virtualisierung}
+%Bild: http://www.digitalforreallife.com/wp-content/uploads/2012/11/django.png
 \section{Provisionierung}
 \section{Kommunikation der einzelnen Komponenten}
 \section{Export Funktionen}
 
 \subsection{Clonen einer Maschine}
-Vagrant enth"alt nativ einen Befehlssatz um aus einer aktuell laufenden Maschine eine wiederverwendbare Vagrant-Box zu erstellen.
+Vagrant enth"alt nativ einen Befehlssatz um aus einer aktuell laufenden Maschine eine wiederverwendbare Vagrant-Box zu erstellen.\newline
 Um diese Box sp"ater wieder benutzen zu k"onnen, muss diese auf ein Laufwerk kopiert werden, welches von dem gew"unschten Mitarbeiter zugegriffen werden kann. Durch das kopieren auf dessen lokalen Datentr"ager und dem erstellen eines angepassten Import-Vagrantfiles, ist es m"oglich Maschinen an Mitarbeiter weiterzugeben.
-
-http://www.dev-metal.com/copy-duplicate-vagrant-box/
+%Quelle: http://www.dev-metal.com/copy-duplicate-vagrant-box/
 
 \subsection{Export zu Git}
-Die Vorraussetzung hier f"ur ist ein GitHub Konto, welches mit der Anwendung verkn"upft ist. 
-Durch die Benutzung von GitHub kann das zuvor erstellte Vagrantfile automatisiert als Git-Repository hochgeladen werden.
+Die Vorraussetzung hier f"ur ist ein GitHub Konto, welches mit der Anwendung verkn"upft ist. \newline
+Durch die Benutzung von GitHub kann das zuvor erstellte Vagrantfile automatisiert als Git-Repository hochgeladen werden.\newline
 Dies ermöglicht es Konfigurationen mit Mitarbeitern auszutauschen, zu archivieren oder zu versionieren.
 
 
 \section{Sharing einer Maschine}
+Mit der Version 1.5 hat Vagrant die M"oglichkeit implementiert, eine erstellte Maschine mit anderen Mitarbeitern zu teilen.\newline
+Da der Mitbenutzer nicht im gleichen Netzwerk sein muss, sondern einfach nur an das Internet angeschlossen sein braucht, ist diese Option...
+
+

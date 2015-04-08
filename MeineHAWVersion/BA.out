@@ -4,31 +4,40 @@
 \BOOKMARK [1][-]{section.1.3}{1.3 Motivation}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{1.4 Themenabgrenzung}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.5}{1.5 Struktur der Arbeit}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{2 Die Software}{}% 7
-\BOOKMARK [1][-]{section.2.1}{2.1 Idee und Anforderung}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{2.2 Ubersicht der Komponenten}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Webkomponente}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Vagrant}{section.2.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Ansible}{section.2.2}% 12
-\BOOKMARK [1][-]{section.2.3}{2.3 Struktur und Zusammenspiel}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.4}{2.4 Konfiguration}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.5}{2.5 Datenbank}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.6}{2.6 Virtualisierung}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.7}{2.7 Provisionierung}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.8}{2.8 Kommunikation der einzelnen Komponenten}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.9}{2.9 Export Funktionen}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.9.1}{2.9.1 Clonen einer Maschine}{section.2.9}% 20
-\BOOKMARK [2][-]{subsection.2.9.2}{2.9.2 Export zu Git}{section.2.9}% 21
-\BOOKMARK [1][-]{section.2.10}{2.10 Sharing einer Maschine}{chapter.2}% 22
-\BOOKMARK [0][-]{chapter.3}{3 Grundlagen}{}% 23
-\BOOKMARK [1][-]{section.3.1}{3.1 Vagrant}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Konfiguration}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Vergleich zu Docker}{section.3.1}% 26
-\BOOKMARK [1][-]{section.3.2}{3.2 Ansible}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Vergleich zu Salt}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Vergleich zu Puppet}{section.3.2}% 29
-\BOOKMARK [1][-]{section.3.3}{3.3 Passenger}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.4}{3.4 Sidekiq}{chapter.3}% 31
-\BOOKMARK [0][-]{chapter.4}{4 Schluss}{}% 32
-\BOOKMARK [1][-]{section.4.1}{4.1 Zusammenfassung}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.2}{4.2 Fazit}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.2}{2 Anforderungen}{}% 7
+\BOOKMARK [1][-]{section.2.1}{2.1 Funktionale Anforderungen}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{2.2 Nichtfunktionale Anforderungen}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{2.3 Evaluation von Vergleichsprodukten}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 OpenNebula}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 VMware}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 IaaS}{section.2.3}% 13
+\BOOKMARK [0][-]{chapter.3}{3 Die Software}{}% 14
+\BOOKMARK [1][-]{section.3.1}{3.1 Ubersicht der Komponenten}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Ruby}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Sinatra}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Vagrant}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 Ansible}{section.3.1}% 19
+\BOOKMARK [1][-]{section.3.2}{3.2 Struktur und Zusammenspiel}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{3.3 Konfiguration}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{3.4 Datenbank}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.5}{3.5 Virtualisierung}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.6}{3.6 Provisionierung}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.7}{3.7 Kommunikation der einzelnen Komponenten}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.8}{3.8 Export Funktionen}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.8.1}{3.8.1 Clonen einer Maschine}{section.3.8}% 27
+\BOOKMARK [2][-]{subsection.3.8.2}{3.8.2 Export zu Git}{section.3.8}% 28
+\BOOKMARK [1][-]{section.3.9}{3.9 Sharing einer Maschine}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{4 Grundlagen}{}% 30
+\BOOKMARK [1][-]{section.4.1}{4.1 Ruby}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{4.2 Sinatra}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.3}{4.3 Vagrant}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Konfiguration}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Vergleich zu Docker}{section.4.3}% 35
+\BOOKMARK [1][-]{section.4.4}{4.4 Ansible}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Vergleich zu Salt}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Vergleich zu Puppet}{section.4.4}% 38
+\BOOKMARK [1][-]{section.4.5}{4.5 Passenger}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.6}{4.6 Sidekiq}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{5 Schluss}{}% 41
+\BOOKMARK [1][-]{section.5.1}{5.1 Zusammenfassung}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.2}{5.2 Fazit}{chapter.5}% 43

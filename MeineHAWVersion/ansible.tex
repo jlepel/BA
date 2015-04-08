@@ -7,8 +7,7 @@ Puppet und Chef wiedersprechen dem vorgesehenen Konzept der leichten Konfigurati
 Salt ist wie Ansible in Python entwickelt worden. Da Salt zur Kommunikation mit seinen Clients Agenten (Minions) ben"otigt, ist dies wiederrum schwer zu automatisieren. Zwar kann Vagrant mit Salt zusammenarbeiten, allerdings nicht nativ. Salt w"are eine gute Alternative, wenn nicht nur einen Provisioner haben m"ochte, sondern auch ein remote execution framework.
 Salt implementiert eine ZeroMQ messaging lib in der Transportschicht, was die Kommunikation zwischen Master und Minions im Gegensatz zu Chef und Puppet vervielfacht. Dadurch ist die Kommunikation zwar schnell, aber nicht so sicher, wie bei der SSH Kommunikation von Ansible. 
 ZeroMq bietet keine native Verschl"usselung und transportiert Nachichten "uber IPC, TCP, TIPC und Multicast.
-
-http://www.scriptrock.com/articles/ansible-vs-salt
+%Quelle: http://www.scriptrock.com/articles/ansible-vs-salt
 
 \subsection{Vergleich zu Puppet}
 Einer der wohl bekanntesten Configuration Management Tool ist Puppet.
