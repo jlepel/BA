@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.1}Problemstellung}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Zielsetzung}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Motivation}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Themenabgrenzung}{3}{section.1.4}
+\contentsline {section}{\numberline {1.4}Themenabgrenzung}{2}{section.1.4}
 \contentsline {section}{\numberline {1.5}Struktur der Arbeit}{3}{section.1.5}
 \contentsline {chapter}{\numberline {2}Anforderungen}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Funktionale Anforderungen}{4}{section.2.1}
@@ -36,16 +36,16 @@
 \contentsline {subsection}{\numberline {3.8.2}Export zu Git}{7}{subsection.3.8.2}
 \contentsline {section}{\numberline {3.9}Sharing einer Maschine}{7}{section.3.9}
 \contentsline {chapter}{\numberline {4}Grundlagen}{8}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ruby}{9}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sinatra}{9}{section.4.2}
-\contentsline {section}{\numberline {4.3}Vagrant}{10}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Konfiguration}{10}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Vergleich zu Docker}{10}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Ansible}{12}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Vergleich zu Salt}{12}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Vergleich zu Puppet}{12}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Passenger}{13}{section.4.5}
-\contentsline {section}{\numberline {4.6}Sidekiq}{14}{section.4.6}
-\contentsline {chapter}{\numberline {5}Schluss}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Zusammenfassung}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Fazit}{15}{section.5.2}
+\contentsline {section}{\numberline {4.1}Ruby}{8}{section.4.1}
+\contentsline {section}{\numberline {4.2}Sinatra}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3}Vagrant}{9}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Konfiguration}{9}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Vergleich zu Docker}{9}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Ansible}{11}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Vergleich zu Salt}{11}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Vergleich zu Puppet}{11}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Passenger}{12}{section.4.5}
+\contentsline {section}{\numberline {4.6}Sidekiq}{13}{section.4.6}
+\contentsline {chapter}{\numberline {5}Schluss}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}Zusammenfassung}{14}{section.5.1}
+\contentsline {section}{\numberline {5.2}Fazit}{14}{section.5.2}

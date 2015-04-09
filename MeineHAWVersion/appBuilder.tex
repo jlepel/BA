@@ -2,7 +2,7 @@
 \chapter{Die Software}
 
 \section{Ubersicht der Komponenten}
-Die folgende Aufz"ahlung gibt einen "Uberblick "uber die verwendeten fertigen Softwarekomponenten, sowie "uber die eigens implementierten Komponenten.
+Die folgende Aufz"ahlung gibt einen "Uberblick "uber die verwendeten Softwarekomponenten, sowie "uber die eigens implementierten Komponenten.
 Im nachfolgenden wird detailierter auf die einzelnen Bauteile eingegangen und deren Funktionsweise ausf"uhrlicher erkl"art.
 \begin{itemize}
       \item Vagrant
@@ -16,9 +16,9 @@ Im nachfolgenden wird detailierter auf die einzelnen Bauteile eingegangen und de
 
 \subsection{Ruby}
 F"ur die Entwicklung der Software wurde Ruby in der Version 1.9 im Zusammenhang mit dem Micro-Framework Sinatra verwendet.
-Durch die leicht zu erlenernende Syntax und die leichte Wartung des Quellcodes, ist Ruby eine einsteigerfreundliche Programmiersprache, im Bereich der Webentwicklung.\newline 
-Durch die Installation von Bunder, ein Dependency Manager f"ur Ruby, werden alle ben"otigten Abh"angigkeiten bei der Installation der hier thematisierten Software, heruntergeladen und installiert.
-Dadurch entsteht ein zentraler Punkt, der sich um die Abh"angigkeiten von Ruby k"ummert und es erm"oglicht leicht und schnell "Anderungen vorzunehmen.
+Durch die leicht zu erlenernende Syntax und die einfache Wartung des Quellcodes, ist Ruby eine einsteigerfreundliche Programmiersprache, im Bereich der Webentwicklung.\newline 
+Durch die Installation von Bundler, ein Dependency Manager f"ur Ruby, werden alle ben"otigten Abh"angigkeiten bei der Installation der hier thematisierten Software, heruntergeladen und installiert.
+Somit entsteht ein zentraler Punkt, der sich um die Abh"angigkeiten von Ruby k"ummert und es erm"oglicht leicht und schnell "Anderungen vorzunehmen.
 
 \subsection{Sinatra}
 
@@ -43,11 +43,11 @@ Die leicht zu handhabende Konfiguration und die eing"angigen Begrifflichkeiten s
 \section{Datenbank}
 Im Backend der Applikation befindet sich eine relationale Datenbank. \newline
 Die dazu verwendete ORM-Schicht namens Datamapper unterst"utzt MySQL, PostgreSQL und SQLite.\newline
-F"ur den Prototypen der Anwendung wurde eine SQLite Datenbank benutzt um die Portierung auf andere Systeme zu erleichtern und den Installations, sowie administrativen Aufwand gering zu halten.\newline
-Allerdings ist SQLite weniger für Mehrbenutzerzugriffe ausgelegt. Eher f"ur portable Anwendungen. Daher sollte die Datenbank in der Endfassung auf MySQL ge"andert werden.\newline
+F"ur den Prototypen der Anwendung wurde eine SQLite Datenbank benutzt um die Portierung auf andere Systeme zu erleichtern und den Installations-, sowie administrativen Aufwand gering zu halten.\newline
+Allerdings ist SQLite weniger für Mehrbenutzerzugriffe ausgelegt, sondern f"ur portable- und einbenutzer Anwendungen. Daher sollte die Datenbank in der Endfassung auf MySQL ge"andert werden.\newline
 Durch die verwendete ORM-Schicht, ist ein Austausch der Datenbank im Aufwand minimal.\newline
 Die Datenbank beinhaltet die Softwarekomponenten, die zur Provisionierung der virtuellen Maschine eingesetzt werden k"onnen.
-
+...
 
 \section{Virtualisierung}
 %Bild: http://www.digitalforreallife.com/wp-content/uploads/2012/11/django.png
@@ -56,13 +56,13 @@ Die Datenbank beinhaltet die Softwarekomponenten, die zur Provisionierung der vi
 \section{Export Funktionen}
 
 \subsection{Clonen einer Maschine}
-Vagrant enth"alt nativ einen Befehlssatz um aus einer aktuell laufenden Maschine eine wiederverwendbare Vagrant-Box zu erstellen.\newline
+Vagrant enth"alt nativ einen Befehlssatz, um aus einer aktuell laufenden Maschine eine wiederverwendbare Vagrant-Box zu erstellen.\newline
 Um diese Box sp"ater wieder benutzen zu k"onnen, muss diese auf ein Laufwerk kopiert werden, welches von dem gew"unschten Mitarbeiter zugegriffen werden kann. Durch das kopieren auf dessen lokalen Datentr"ager und dem erstellen eines angepassten Import-Vagrantfiles, ist es m"oglich Maschinen an Mitarbeiter weiterzugeben.
 %Quelle: http://www.dev-metal.com/copy-duplicate-vagrant-box/
 
 \subsection{Export zu Git}
 Die Vorraussetzung hier f"ur ist ein GitHub Konto, welches mit der Anwendung verkn"upft ist. \newline
-Durch die Benutzung von GitHub kann das zuvor erstellte Vagrantfile automatisiert als Git-Repository hochgeladen werden.\newline
+Durch die Benutzung von GitHub, kann das zuvor erstellte Vagrantfile automatisiert als Git-Repository hochgeladen werden.\newline
 Dies ermöglicht es Konfigurationen mit Mitarbeitern auszutauschen, zu archivieren oder zu versionieren.
 
 
