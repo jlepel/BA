@@ -1,20 +1,108 @@
 \chapter{Anforderungen}
-An dieser Stellen sollen die Anforderungen an die Software detailierter konzipiert und aufgelistet werden.\newline
-Ein direkter Vergleich mit bestehenden L"osungen wird veranschaulicht und das Konzept der zu entwickelnden Software genauer betrachtet.
-
+An dieser Stellen sollen die Anforderungen an die Software detaillierter konzipiert und aufgelistet werden.\newline
+Ein direkter Vergleich mit bestehenden Lösungen wird veranschaulicht und das Konzept der zu entwickelnden Software genauer betrachtet.
 
 \section{Funktionale Anforderungen}
+Funktionale Anforderungen beschreiben Dienste oder Funktionalitäten, die ein System bereitstellen soll.\newline
+  \begin{enumerate}
+      \item[FA 1.0] \textbf{Berechtigungssystem}\newline
+		Die zu entwickelnde Software soll zwei Berechtigungsstufen beinhalten, um Benutzer und Administratoren von einander zu trennen.
+		\begin{enumerate}      
+		    \item[FA 1.1] Rolle: Administrator\newline
+                                  Die Administrator-Rolle, soll Zugriff auf konfigurative Möglichkeiten bekommen.\newline 
+							   Beispiele hierfür wären: Speicherpfad der Logdatei ändern; neue Softwarekomponenten in die Auswahlliste(FA 2.0) übernehmen.
+			\item[FA 1.2] Rolle: User\newline
+							   Benutzer in der User-Rolle sind nicht berechtigt Konfigurationen an der Software vorzunehmen. Ihnen steht der Administrative Punkt nicht zur
+							    Verfügung
+		\end{enumerate}      
+   \end{enumerate}        
+      
+  \begin{enumerate}
+      \item[FA 2.0] \textbf{Ausswahlliste Softwarekomponenten}\newline
+       Um dem Benutzer die Möglichkeit zu bieten, auf die gewünschte Maschine Softwarekomponenten zu provisionieren, soll das System eine entsprechende 				   Auswahlliste beinhalten
+		\begin{enumerate}      
+		    \item[FA 2.1] Die Auswahlliste kann durch Benutzer mit Administrationsberechtigungen geändert werden. Benutzer mit Berechtigungen der Stufe 									   \textbf{User}, dürfen die Liste nicht manipulieren.\newline
+			\item[FA 2.2] Folgende Funktionen sollen dem Administrator zur Verfügung gestellt werden:
+			\begin{enumerate}      
+						\item Löschen - Löscht den kompletten Datensatz aus der Liste und somit aus der Datenbank.
+						\item Ändern - Beschreibung, sowie Linux-Befehlssatz kann geändert werden.
+						\item Hinzufügen - Name der Software, Beschreibung und Linux-Befehlssatz können eingegeben werden und zur Datenbank hinzugefügt werden.
+		    \end{enumerate}      
+		\end{enumerate}      
+   \end{enumerate}        
+      
+  \begin{enumerate}
+      \item[FA 3.0] \textbf{Hochladen eigener YAML-Dateien}\newline
+		Es soll möglich sein, statt die Auswahlliste(FA 2.0) zu verwenden, eine YAML-Datei hochzuladen, die die gewünschte Software enthält.\newline
+		Dies geschieht über einen Menüpunkt in der Benutzeroberfläche.
+		\begin{enumerate}      
+		    \item[FA 3.1] Die YAML-Datei muss den Vorgaben von Ansible genügen.
+		    \item[FA 3.2] Administratoren und User dürfen YAML-Dateien verwenden.
+			\item[FA 3.3] Fehler sind in einer Logdatei zu protokolieren.
+		\end{enumerate}      
+   \end{enumerate}        
+   
+  \begin{enumerate}
+      \item[FA 4.0] \textbf{Fehler}\newline
+	  Falsche Benutzung oder Systemfehler sollen Software angezeigt werden und entsprechend in einer Logdatei protokoliert werden.
+		\begin{enumerate}      	  
+		  \item[FA 4.1] Falsche Benutzung, darf nicht zum Abbruch des kompletten Vorgangs führen.
+		\end{enumerate}      
+   \end{enumerate}        
+
+%Diese Beschreibung kann in allgemeiner Form Funktionen des Systems definieren oder als Spezifikation detaillierte Aussagen zum gewünschten Verhalten, Datenstrukturen oder Funktionen des Systems festhalten. 
+
 
 \section{Nichtfunktionale Anforderungen}
+Beschränkungen von Funktionalitäten und Diensten werden in nichtfunktionalen Anforderungen definiert.\newline
+Diese beziehen sich entweder auf Teile des Systems oder auf das gesamte System und werden unterschieden in Qualitätsanforderungen an die Diensterbringung,
+Rahmenbedingungen, die das System einschränken und unterspezifische funktionale Anforderungen, die noch nicht detailliert spezifiziert wurden.
+
+\begin{enumerate}
+      \item[NFA 1.0] \textbf{Verschlüsselung}\newline
+		Die Kommunikation zwischen Frontend und Backend wird nicht verschlüsselt und läuft über HTTP.
+      \item[NFA 2.0] \textbf{Fehlermeldungen}\newline
+		Die Anwendung hat für alle Fehlerfälle eine entsprechende Fehlermeldung.
+	  \item[NFA 3.0] \textbf{Zuverlässigkeit}\newline
+		Die Anwendung hat zu jedem Zeitpunkt stabil zu laufen und nicht abzustürzen.
+	  \item[NFA 4.0] \textbf{Austauschbarkeit}\newline
+		Komponenten sollen leicht austauschbar sein.
+	  \item[NFA 5.0] \textbf{Sprache}\newline
+		Die Benutzerführung erfolgt in Deutsch
+	  \item[NFA 6.0] \textbf{Nachvollziehbarkeit}\newline
+		Das System muss den Benutzer über den aktuellen Konfigurationsstand informieren
+		
+\end{enumerate}
+%Anforderungen werden i. d. R. drei Klassen unterschieden:
+%- Qualitätsanforderungen an die Diensterbringung, z. B. bezüglich Zuverlässigkeit
+%oder Geschwindigkeit,
+%- Rahmenbedingungen, welche das System oder die Systementwicklung einschränken,
+%z. B. rechtliche Vorgaben oder Unternehmensanforderungen an die Umgebung
+%des Systems oder die einzusetzende Entwicklungsplattform,
+%- unterspezifizierte funktionale Anforderungen, die noch nicht detailliert spezifiziert
+%wurden, z. B. ein sicheres, einfach bedienbares System.
+%Qualitätsanforderungen gelten für das gesamte System oder für einzelne Teile des
+%Systems. Rahmenbedingungen gelten häufig für das gesamte Unternehmen und werden
+%daher selten in Geschäftsprozessmodellen dokumentiert. Unterspezifizierte funktionale
+%Anforderungen gelten zunächst allgemein für das gesamte System bis diese
+%detailliert als funktionale und/oder nichtfunktionale Qualitätsanforderungen formuliert
+%sind. Im Folgenden wird diese Unterteilung der nichtfunktionalen Anforderungen
+%nur aufgegriffen, falls es explizit notwendig erscheint. 
+
+\section{Anwendungsfälle}
+Anwendungsfälle helfen fachlichen Anforderungen eines Systems darzustellen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden.
 
 
-\section{Evaluation von Vergleichsprodukten}
-Vergleichbare Produkte aufz"ahlen
-Vor- und Nachteile auflisten.
-Fazit
-\subsection{OpenNebula}
+\begin{enumerate}
 
-\subsection{VMware}
+      \item[Anwendungsfall AF 1]
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.4]{../Bilder/usecase1.png}
+\caption{Anwendungsfall AF 1}
+\label{fig: dasdasdasdas}
+\end{figure}
 
-\subsection{IaaS}
+Anforderungen: [12312312312312312312]
 
+\end{enumerate}

@@ -11,8 +11,6 @@
 \usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
 \usepackage[latin1]{inputenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[macce]{inputenc}
 \usepackage{libertine}
 \usepackage{pifont}
 \usepackage{microtype}
@@ -26,10 +24,6 @@
 \usepackage{soul}
 \usepackage{hawstyle}
 \usepackage{lipsum} %% for sample text
-\usepackage{graphicx}
-\usepackage {picins}
-
-
 
 %% define some colors
 \colorlet{BackgroundColor}{gray!20}
@@ -90,18 +84,16 @@
 \begin{document}
 \selectlanguage{ngerman}
 
-
 %%%%%
 %% customize (see readme.pdf for supported values)
 \HAWThesisProperties{Author={Jan Lepel}
-                    ,Title={Automatisierte Erstellung und Provisionierung von ad hoc Linuxumgebungen -\\
-Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstellter Entwicklungsumgebungen}
-                    ,EnglishTitle={TODO}
+                    ,Title={Softwareentwicklung im Großen und Ganzen	}
+                    ,EnglishTitle={Developing software in Germany}
                     ,ThesisType={Bachelorarbeit}
                     ,ExaminationType={Bachelorprüfung}
                     ,DegreeProgramme={Bachelor of Science Angewandte Informatik}
-                    ,ThesisExperts={Prof. Dr. Ulrike Steffens \and MSc Informatik Oliver Neumann}
-                    ,ReleaseDate={1. Januar 2015}
+                    ,ThesisExperts={Prof. Dr. Erstprüfer \and Prof. Dr. Zweitprüfer}
+                    ,ReleaseDate={1. Januar 2345}
                   }
 
 %% title
@@ -116,16 +108,11 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %% note: this is one command on multiple lines
 \HAWAbstractPage
 %% German abstract
-{Ad hoc Umgebung, automatisierter Umgebungsaufbau und Provisionierung}%
+{Schlüsselwort 1, Schlüsselwort 2}%
 {Dieses Dokument \ldots}
 %% English abstract
-{Keywords, Keywords1}%
+{keyword 1, keyword 2}%
 {This document \ldots}
-
-\lstlistoflistings
-
-%% main
-
 
 \newpage
 \singlespacing
@@ -135,8 +122,7 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %% enable if these lists should be shown on their own page
 %%\listoftables
 %%\listoffigures
-
-%%\lstlistoflistings
+\lstlistoflistings
 
 %% main
 \mainmatter
@@ -146,28 +132,13 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %% include chapter file (chapter1.tex)
 %%\include{chapter1}
 
-\include{einleitung}
-\include{anforderungen}
-\include{appBuilder}
-\include{rubySinatra}
-\include{vagrant}
-\include{ansible}
-\include{sinatra}
-\include{passenger}
-\include{sidekiq}
-\include{schluss}
-
-
 %%%%
 %% add some text to generate a sample document
-%%\include{Einleitung}
-%%\subfile{Einleitung}
+\chapter{Sample Chapter}
 
+öööß
 
-
-%\lipsum
-
-See also \cite{goossens93}.
+See also \cite{sample_bib}.
 %%%%
 
 %% appendix if used
@@ -181,7 +152,7 @@ See also \cite{goossens93}.
 \typeout{===== Section: literature}
 %% read the documentation for customizing the style
 \bibliographystyle{dinat}
-\bibliography{literatur}
+\bibliography{sample}
 
 \typeout{===== Section: nomenclature}
 %% uncomment if a TOC entry is needed

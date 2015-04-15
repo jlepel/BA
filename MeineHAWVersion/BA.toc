@@ -14,38 +14,37 @@
 \contentsline {section}{\numberline {1.5}Struktur der Arbeit}{3}{section.1.5}
 \contentsline {chapter}{\numberline {2}Anforderungen}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Funktionale Anforderungen}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Nichtfunktionale Anforderungen}{4}{section.2.2}
-\contentsline {section}{\numberline {2.3}Evaluation von Vergleichsprodukten}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}OpenNebula}{4}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}VMware}{4}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}IaaS}{4}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}Die Software}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Ubersicht der Komponenten}{5}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Ruby}{5}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Sinatra}{6}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Vagrant}{6}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Ansible}{6}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Struktur und Zusammenspiel}{6}{section.3.2}
-\contentsline {section}{\numberline {3.3}Konfiguration}{6}{section.3.3}
-\contentsline {section}{\numberline {3.4}Datenbank}{6}{section.3.4}
-\contentsline {section}{\numberline {3.5}Virtualisierung}{7}{section.3.5}
-\contentsline {section}{\numberline {3.6}Provisionierung}{7}{section.3.6}
-\contentsline {section}{\numberline {3.7}Kommunikation der einzelnen Komponenten}{7}{section.3.7}
-\contentsline {section}{\numberline {3.8}Export Funktionen}{7}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Clonen einer Maschine}{7}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Export zu Git}{7}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}Sharing einer Maschine}{7}{section.3.9}
-\contentsline {chapter}{\numberline {4}Grundlagen}{8}{chapter.4}
-\contentsline {section}{\numberline {4.1}Ruby}{8}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sinatra}{8}{section.4.2}
-\contentsline {section}{\numberline {4.3}Vagrant}{9}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Konfiguration}{9}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Vergleich zu Docker}{9}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Ansible}{11}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Vergleich zu Salt}{11}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Vergleich zu Puppet}{11}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Passenger}{12}{section.4.5}
-\contentsline {section}{\numberline {4.6}Sidekiq}{13}{section.4.6}
-\contentsline {chapter}{\numberline {5}Schluss}{14}{chapter.5}
-\contentsline {section}{\numberline {5.1}Zusammenfassung}{14}{section.5.1}
-\contentsline {section}{\numberline {5.2}Fazit}{14}{section.5.2}
+\contentsline {section}{\numberline {2.2}Nichtfunktionale Anforderungen}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Anwendungsf\"alle}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}Die Software}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Frontend}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Backend}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Ruby}{8}{section.3.3}
+\contentsline {section}{\numberline {3.4}Externe Komponenten}{8}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Sinatra}{9}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Vagrant}{9}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Ansible}{9}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Struktur und Zusammenspiel}{9}{section.3.5}
+\contentsline {section}{\numberline {3.6}Konfiguration}{9}{section.3.6}
+\contentsline {section}{\numberline {3.7}Datenbank}{9}{section.3.7}
+\contentsline {section}{\numberline {3.8}Virtualisierung}{10}{section.3.8}
+\contentsline {section}{\numberline {3.9}Provisionierung}{10}{section.3.9}
+\contentsline {section}{\numberline {3.10}Kommunikation der einzelnen Komponenten}{10}{section.3.10}
+\contentsline {section}{\numberline {3.11}Export Funktionen}{10}{section.3.11}
+\contentsline {subsection}{\numberline {3.11.1}Clonen einer Maschine}{10}{subsection.3.11.1}
+\contentsline {subsection}{\numberline {3.11.2}Export zu Git}{10}{subsection.3.11.2}
+\contentsline {section}{\numberline {3.12}Sharing einer Maschine}{11}{section.3.12}
+\contentsline {chapter}{\numberline {4}Grundlagen}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ruby}{12}{section.4.1}
+\contentsline {section}{\numberline {4.2}Sinatra}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Vagrant}{13}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Konfiguration}{13}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Vergleich zu Docker}{13}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Ansible}{15}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Vergleich zu Salt}{15}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Vergleich zu Puppet}{15}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Passenger}{16}{section.4.5}
+\contentsline {section}{\numberline {4.6}Sidekiq}{17}{section.4.6}
+\contentsline {chapter}{\numberline {5}Schluss}{18}{chapter.5}
+\contentsline {section}{\numberline {5.1}Zusammenfassung}{18}{section.5.1}
+\contentsline {section}{\numberline {5.2}Fazit}{18}{section.5.2}
