@@ -1,7 +1,17 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: BA.aux
-A level-1 auxiliary file: Einleitung.aux
+A level-1 auxiliary file: einleitung.aux
+A level-1 auxiliary file: anforderunsanalyse.aux
+A level-1 auxiliary file: anwendungsfaelle.aux
+A level-1 auxiliary file: appBuilder.aux
+A level-1 auxiliary file: rubySinatra.aux
+A level-1 auxiliary file: vagrant.aux
+A level-1 auxiliary file: ansible.aux
+A level-1 auxiliary file: sinatra.aux
+A level-1 auxiliary file: passenger.aux
+A level-1 auxiliary file: sidekiq.aux
+A level-1 auxiliary file: schluss.aux
 The style file: dinat.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -12,7 +22,7 @@ Database file #1: literatur.bib
 Warning--I didn't find a database entry for "goossens93"
 You've used 1 entry,
             3552 wiz_defined-function locations,
-            806 strings with 6126 characters,
+            816 strings with 6265 characters,
 and the built_in function-call counts, 556 in all, are:
 = -- 57
 > -- 7

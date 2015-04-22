@@ -1,0 +1,131 @@
+\chapter{Anforderungsanalyse}
+Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
+zu erfassen, zu analysieren und ggf eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
+Im Folgenden werden die Anforderungen an die Software detaillierter konzipiert, aufgelistet und beschrieben. Zudem grundlegende Fragen bezüglich der Kernaufgaben, Qualitätsanforderungen, beteiligte Gruppen und benachbarter Systeme geklärt.
+
+
+\section{Anforderungen}
+Anforderungen beschreiben die Kernaufgabe des Systems und hinterfragen die Qualitätsanforderungen, die das System erfüllen muss.
+Daher werden Anforderungen in der Regel zwischen funktionale Anforderungen und nichtfunktionale Anforderungen unterschieden, wobei die Abgrenzung zwischen den beiden Anforderungsarten nicht immer eindeutig bestimmt werden kann.
+
+\subsection{Funktionale Anforderungen} \label{FA}
+Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll.
+\newline
+
+\begin{enumerate}
+	\item[FA 1] \textbf{Starten der Applikation}
+	\newline	
+		Ist die Applikation Lokal oder Serverseitig installiert, benötigt der Anwender keine zusätzliche Installation, um die Software im Browser auszuführen.
+
+	\item[FA 2]\label{itm:AUSWAHLLISTE} \textbf{Optionen}\newline
+		Ruft der Benutzer die Anwendung in seinem Browser auf, kann er zwischen drei Möglichkeiten wählen:
+		\begin{enumerate}				
+				\item Maschine ohne Provisionierung erstellen.
+				\item Import einer Konfiguration inkl. Erstellung der Maschine.
+				\item Maschine mit Hilfe einer vorgegebenen Auswahlliste an Softwarekomponeten provisionieren und erstellen.
+		\end{enumerate}        
+  
+
+	\item[FA 3] \textbf{Softwareauswahl}\newline
+		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLLISTE}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
+		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
+		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann der den Erstellungsprozess weiterführen.
+%		Änderungen an der Auswahl, kann nur ein angemeldeter Administrator \ref{BERECHTIGUNGSSYSTEM} vornehmen.
+		
+	
+	\item[FA 4] \textbf{Anmeldung an der Anwendung}\newline
+		Mit einer Anmeldung an der Anwendung, bekommt der Benutzer die Möglichkeit weitere Operationen auszuführen, die von seiner Berechtigungsstufe
+			\begin{enumerate}
+				\item Export zu Git.
+				\item Konfigurationen bestehender Maschinen speichern.
+				\item Gespeicherte Konfigurationen abrufen.
+			\end{enumerate}       
+
+	\item[FA 5]\label{BERECHTIGUNGSSYSTEM} \textbf{Berechtigungssystem}\newline
+		Die zu entwickelnde Software soll zwei Berechtigungsstufen beinhalten, um Benutzern Berechtigungsstufen zuordnen zu können und weitere Optionen zu ermöglichen\newline
+		\textbf{Rolle: Administrator}\newline
+          	Die Administrator-Rolle soll Zugriff auf konfigurative Möglichkeiten bekommen.\newline 
+			Speicherpfad der Logdatei ändern; neue Softwarekomponenten in die Auswahlliste übernehmen, diese ändern und löschen.\newline\newline
+		\textbf{Rolle: User}\newline
+			Benutzer in der User-Rolle sind nicht berechtigt Konfigurationen an der Software vorzunehmen. Ihnen steht der Administrative Punkt nicht zur Verfügung
+        
+
+	\item[FA 6] \textbf{Export von Konfigurationen}\newline
+		Die Exportfunktion ermöglich es dem Benutzer erstellte Konfigurationen mir Kollegen zu teilen oder extern zu speichern.
+		Folgende Optionen stehen zur Verfügung:
+			\begin{enumerate}
+				\item Der Export zu Git, auf ein eigenes Konto oder eines der Abteilung.
+				\item Export auf einen lokalen Datenträger.
+			\end{enumerate}       
+
+	\item[FA 7] \textbf{Import von Konfigurationen}\newline
+		Das Importieren von Konfigurationen, sollen dem Benutzer ermöglichen, eigens erstellte oder fremde Konfigurationen zu verwenden.
+		Ladtbar sind diese von einem lokalen Datenträger oder aus einem Git Repository.\newline
+		Nach dem Import, kann der Benutzer auswählen, ob er die Konfiguration speichern möchte, oder eine neue Maschine erstellen will.
+		Speichern wird nur angeboten, wenn der Benutzer angemeldet ist.
+	
+	\item[FA 8] \textbf{Speichern von Konfigurationen}\newline
+	 	Nur  Anwender, die an der Applikation angemeldet sind, haben die Möglichkeit zu speichern.
+		Konfigurationen können dann gespeichert werden, wenn sie noch nicht provisioniert worden sind.
+	 	Gerade importierte Konfigurationen können sofort gespeichert werden.
+	 
+	 \item[FA 9] \textbf{Registrierung}\newline
+	 	Möchte ein Benutzer sich an der Applikation registieren, ist dies mit einer E-Mailadresse in Kombination eines Passwortes möglich.
+	 	Optional wird ihm vorgeschlagen ein Git Account mit anzugeben, um spätere Exporte oder Sicherungen zu tätigen.
+	 	Ist der Benutzer noch nicht in der Datenbank hinterlegt, wird der Registierungsprozess abgeschlossen.
+	 	Andernfalls, wird der Benutzer darauf aufmerksam gemacht, dass die E-Mailadresse bereits hinterlegt ist.
+
+\end{enumerate}
+	
+	
+\subsection{Nichtfunktionale Anforderungen} \label{NFA}
+Nichtfunktionale Anforderungen können als Qualitätskriterium an System und Software angesehen werden, wobei die Qualität der Software/des Systems immer auf die folgenden Qualitätsmerkmale bezogen wird.
+
+      		\begin{enumerate}
+				\item  \textbf{Funktionalität}
+					Die geforderten Funktionen sind in der Software umgesetzt worden und erfüllen die definierten Aufgaben und Ziele.
+				\item  \textbf{Zuverlässigkeit}
+					Die Software kann unter bestimmten Bedingungen und über einen bestimmten Zeitraum ein definiertes Leistungsniveau aufrechthalten.
+         		\item  \textbf{Benutzbarkeit}
+         			Analyse der Benutzung und des Aufwandes. Der Benutzer steht hier im Fokus.
+		         \item  \textbf{Effizienz}
+					Das Verhältnis zwischen den der zu erbringenden Leistung der Software und der dafür zugrundeliegenden Betriebsmittel. 
+         		\item  \textbf{Änderbarkeit}
+         			Der Aufwand, der betrieben werden muss um Änderungen an der Software vorzunehmen.
+			         Änderungen sind definiert als Korrekturen, Verbesserungen oder Anpassungen an Veränderungen der Umgebung, der Anforderungen oder der funktionalen Spezifikationen.
+     		    \item  \textbf{Übertragbarkeit}
+         			Der Aufwand, der zum übertragen oder implementieren in eine neue Umgebung benötigt wird.
+			         Als Umgebung ist sowohl Hardware- als auch Softwareumgebung gemeint.
+      		\end{enumerate}
+      		(Qualitäten nach ISO/IEC 9126 (DIN 66272))
+
+
+Das bilden von Qualitätsszenarien hilft bei der Erfassung von Qualitäten und deren Sortierung zu entsprechenden Qualitätsmerkmalen.
+Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abegeleitet werden.
+
+\subsection{Qualitätsszenarien}
+\begin{enumerate}
+	
+	\item Exporte werden in einer Logdatei gespeichert.
+	\item Wenn ein Benutzer sich anmeldet, wird der Login nicht protokoliert.
+	\item Änderungen an der Softwareliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.	
+	\item Wird ein Fehler im Aufbauprozess einer Maschine angezeigt, wird dieser auch in einer seperaten Logdatei protokoliert.
+	\item Lädt der Benutzer eine eigene Konfiguration hoch, wird die mit einem YAML-Prüfalgorithmus geprüft und es wird dem Benutzer mitgeteilt, ob die Datei valide ist.
+	\item Fehlerhafte Importversuche, werden in einer Logdatei protokoliert
+	\item Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand bei unter einem Personentag.
+	\item Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
+	\item Die Anzahl der zur gleichen Zeit laufenden virtuellen Umgebungen, ist maximal bei 10.
+	\item Softwareupdates der benutzen Softwarekomponenten sollten mit Rücksprache des Entwicklers erfolgen.
+
+
+
+
+
+
+
+
+
+	
+	
+	
+\end{enumerate}

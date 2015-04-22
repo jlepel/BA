@@ -1,63 +1,111 @@
-\chapter{Anforderungen}
+\chapter{Anforderungsanalyse}
 An dieser Stellen sollen die Anforderungen an die Software detaillierter konzipiert und aufgelistet werden.\newline
 Ein direkter Vergleich mit bestehenden Lösungen wird veranschaulicht und das Konzept der zu entwickelnden Software genauer betrachtet.
 
-\section{Funktionale Anforderungen}
-Funktionale Anforderungen beschreiben Dienste oder Funktionalitäten, die ein System bereitstellen soll.\newline
-  \begin{enumerate}
-      \item[FA 1.0] \textbf{Berechtigungssystem}\newline
-		Die zu entwickelnde Software soll zwei Berechtigungsstufen beinhalten, um Benutzer und Administratoren von einander zu trennen.
-		\begin{enumerate}      
-		    \item[FA 1.1] Rolle: Administrator\newline
-                                  Die Administrator-Rolle, soll Zugriff auf konfigurative Möglichkeiten bekommen.\newline 
-							   Beispiele hierfür wären: Speicherpfad der Logdatei ändern; neue Softwarekomponenten in die Auswahlliste(FA 2.0) übernehmen.
-			\item[FA 1.2] Rolle: User\newline
-							   Benutzer in der User-Rolle sind nicht berechtigt Konfigurationen an der Software vorzunehmen. Ihnen steht der Administrative Punkt nicht zur
-							    Verfügung
-		\end{enumerate}      
-   \end{enumerate}        
-      
-  \begin{enumerate}
-      \item[FA 2.0] \textbf{Ausswahlliste Softwarekomponenten}\newline
-       Um dem Benutzer die Möglichkeit zu bieten, auf die gewünschte Maschine Softwarekomponenten zu provisionieren, soll das System eine entsprechende 				   Auswahlliste beinhalten
-		\begin{enumerate}      
-		    \item[FA 2.1] Die Auswahlliste kann durch Benutzer mit Administrationsberechtigungen geändert werden. Benutzer mit Berechtigungen der Stufe 									   \textbf{User}, dürfen die Liste nicht manipulieren.\newline
-			\item[FA 2.2] Folgende Funktionen sollen dem Administrator zur Verfügung gestellt werden:
-			\begin{enumerate}      
-						\item Löschen - Löscht den kompletten Datensatz aus der Liste und somit aus der Datenbank.
-						\item Ändern - Beschreibung, sowie Linux-Befehlssatz kann geändert werden.
-						\item Hinzufügen - Name der Software, Beschreibung und Linux-Befehlssatz können eingegeben werden und zur Datenbank hinzugefügt werden.
-		    \end{enumerate}      
-		\end{enumerate}      
-   \end{enumerate}        
-      
-  \begin{enumerate}
-      \item[FA 3.0] \textbf{Hochladen eigener YAML-Dateien}\newline
-		Es soll möglich sein, statt die Auswahlliste(FA 2.0) zu verwenden, eine YAML-Datei hochzuladen, die die gewünschte Software enthält.\newline
-		Dies geschieht über einen Menüpunkt in der Benutzeroberfläche.
-		\begin{enumerate}      
-		    \item[FA 3.1] Die YAML-Datei muss den Vorgaben von Ansible genügen.
-		    \item[FA 3.2] Administratoren und User dürfen YAML-Dateien verwenden.
-			\item[FA 3.3] Fehler sind in einer Logdatei zu protokolieren.
-		\end{enumerate}      
-   \end{enumerate}        
-   
-  \begin{enumerate}
-      \item[FA 4.0] \textbf{Fehler}\newline
-	  Falsche Benutzung oder Systemfehler sollen Software angezeigt werden und entsprechend in einer Logdatei protokoliert werden.
-		\begin{enumerate}      	  
-		  \item[FA 4.1] Falsche Benutzung, darf nicht zum Abbruch des kompletten Vorgangs führen.
-		\end{enumerate}      
-   \end{enumerate}        
-
-%Diese Beschreibung kann in allgemeiner Form Funktionen des Systems definieren oder als Spezifikation detaillierte Aussagen zum gewünschten Verhalten, Datenstrukturen oder Funktionen des Systems festhalten. 
 
 
 \section{Nichtfunktionale Anforderungen}
-Beschränkungen von Funktionalitäten und Diensten werden in nichtfunktionalen Anforderungen definiert.\newline
-Diese beziehen sich entweder auf Teile des Systems oder auf das gesamte System und werden unterschieden in Qualitätsanforderungen an die Diensterbringung,
-Rahmenbedingungen, die das System einschränken und unterspezifische funktionale Anforderungen, die noch nicht detailliert spezifiziert wurden.
+%Diese beziehen sich entweder auf Teile des Systems oder auf das gesamte System und werden unterschieden in Qualitätsanforderungen an die Diensterbringung,
+%Rahmenbedingungen, die das System einschränken und unterspezifische funktionale Anforderungen, die noch nicht detailliert spezifiziert wurden.
 
+Beschränkungen von Funktionalitäten und Diensten werden in nichtfunktionalen Anforderungen definiert.\newline
+Diese können in der Analyse in drei Kategorien unterteilt werden
+	\begin{enumerate}
+		\item \textbf{Leistungsanforderungen}\newline
+      		Merkmale wie Zeit, Menge, Raten, Ressourcenverbrauch und Genauigkeit werden hier begutachtet. 
+		\begin{enumerate}        
+         	\item  \textbf{Zeit} 
+				Zeit im Sinne von Reaktionszeit, Zeit zum erledigen einer Aufgabe, oder Zeit innerhalb eines Intervalls.
+			\item  \textbf{Menge}         	
+                	Die Menge, kann eine Menge von Daten widerspiegeln, sowie eine Menge zwischen einem Minimum und einem Maximum.
+			\item  \textbf{Raten}
+         		 Bei Raten werden Durchsatzraten definiert oder beispielsweise Transaktionsraten.                  		
+			\item  \textbf{Ressourcenverbrauch}	              
+         		 Da Rechnerkapazitäten, sowie Speicherkapazitäten in Softwareprojekten eine Rolle spielen können, werden diese Punkte unter dem Begriff Ressourcenverbrauch begutachtet.
+			\item  \textbf{Genauigkeit}	     
+				Der oben genannte Punkt 'Genauigkeit', kann und wird auch als funktionale Anforderung gesehen. Darf aber auch als Leistungsanforderung in Betracht gezogen werden und fällt somit wieder in die nichtfunktionalen Anforderungen.
+		\end{enumerate}      
+ 
+		\item \textbf{Besondere Qualitäten}
+      		Qualtäten sind nach ISO/IEC 9126 (DIN 66272) definiert und beinhalten sechs Kriterien, die angewendet werden können.
+      		\begin{enumerate}
+				\item  \textbf{Funktionalität}
+					Die geforderten Funktionen sind in der Software umgesetzt worden und erfüllen die definierten Aufgaben und Ziele.
+				\item  \textbf{Zuverlässigkeit}
+					Die Software kann unter bestimmten Bedingungen und über einen bestimmten Zeitraum ein definiertes Leistungsniveau aufrechthalten.
+         		\item  \textbf{Benutzbarkeit}
+         			Analyse der Benutzung und des Aufwandes. Der Benutzer steht hier im Fokus.
+		         \item  \textbf{Effizienz}
+					Das Verhältnis zwischen den der zu erbringenden Leistung der Software und der dafür zugrundeliegenden Betriebsmittel. 
+         		\item  \textbf{Änderbarkeit}
+         			Der Aufwand, der betrieben werden muss um Änderungen an der Software vorzunehmen.
+			         Änderungen sind definiert als Korrekturen, Verbesserungen oder Anpassungen an Veränderungen der Umgebung, der Anforderungen oder der funktionalen Spezifikationen.
+     		    \item  \textbf{Übertragbarkeit}
+         			Der Aufwand, der zum übertragen oder implementieren in eine neue Umgebung benötigt wird.
+			         Als Umgebung ist sowohl Hardware- als auch Softwareumgebung gemeint.
+      		\end{enumerate}
+		\item \textbf{Randbedingungen}
+		Randbedingungen beschreiben die Einschränkung möglicher Lösungen, meißt durch den Auftraggeber.
+		Gesetze, Sprache, Unternehmenstraditionen oder explizite Vorgaben vom Auftraggeber, werden als z.B. als Randbedingungen definiert.
+Randbedingungen werden zusammen mit den übrigen Anforderungen erhoben, aber eigenständig dokumentiert.
+	\end{enumerate}
+%Quelle: https://files.ifi.uzh.ch/rerg/arvo/ftp/ses/kapitel_12.pdf  
+
+Im weiteren wird der Fokus auf die Qualitäten gesetzte, da diese durch ihre Definition Kriterien abdecken, die für diese Arbeit relavant sind.
+Da Wert auf eine intuitive Benutzbarkeit gelegt wird, um dem Benutzer einen schnellen und effektiven Aufbau seiner gewünschten Umgebung zu ermöglichen und die Möglichkeit geboten wird, die Applikation nicht nur Serverseitig, sondern auch Lokal zu installieren....
+Durch das bilden von Qualitätsszenarien, wird eine repräsentative Übersicht erschaffen, um die Qualitätsmerkmale der Anwendung zu hervorzuheben.
+Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abegeleitet werden.
+
+\section{Qualitätsszenarien}
+\begin{enumerate}
+	\item Der Benutzer kann die Anwendung, ohne zusätzliche Installation nutzen.
+	\item Mit einer Anmeldung an der Anwendung, bekommt der Benutzer die Möglichkeit seine Maschinen-Konfiguration zu speichern und wieder abzurufen.
+	\item Der Export einer Konfiguration zu Git kann nach einem erfolgreichen Aufbau ausgewählt werden, unter angabe des Verzeichnisses.
+	\item Der Export einer Konfiguration zu Git kann nach dem hochladen einer YAML Datei und dem erfolgreichen prüfen dieser Datei, erfolgen.
+	\item Exporte werden in einer Logdatei gespeichert.
+	\item Wenn ein Benutzer sich anmeldet, wird der Login nicht protokoliert.
+	\item Ist der Benutzer als Administrator angemeldet, darf er Softwarekomponenten einpflegen, ändern und löschen.
+	\item Administratoren sind berechtigt andere Administratoren zu löschen.
+	\item Aus Sicherheitsgründen gibt es einen Administratore, der nicht löschbar ist.
+	\item Änderungen an der Softwareliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.	
+	\item Fällt wärend des Aufbaus einer Maschine der Server aus, wird nicht garantiert, dass die Umgebung lauffähig ist.
+	\item Wird ein Fehler im Aufbauprozess einer Maschine angezeigt, wird dieser auch in einer seperaten Logdatei protokoliert.
+	\item Fehlerhafte Benutzung, wird dem Benutzer angezeigt, aber nicht protokoliert.
+	\item Der Import von Konfigurationen kann über Git oder einer YAML Datei erfolgen.	
+	\item Lädt der Benutzer eine eigene Konfiguration hoch, wird die mit einem YAML-Prüfalgorithmus geprüft und es wird dem Benutzer mitgeteilt, ob die Datei valide ist.
+	\item Fehlerhafte Importversuche, werden dem Benutzer mit einer Fehlermeldung angezeigt.
+	\item Versucht ein Benutzer eine neue Umgebung aufzubauen und der Server ist gerade ausgelastet, wird der Benutzer darauf hingewiesen, dass die Benutzung gestört ist. Der Hinweis wird Protokoliert.
+	\item Ist eine Umgebung erfolgreich aufgebaut worden, wird dem Benutzer das Verzeichnis angezeigt, in dem die Umgebung erstellt wurde.
+	\item Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand bei unter einem Personentag.
+	\item Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
+	\item Die Anzahl der zur gleichen Zeit laufenden virtuellen Umgebungen, ist maximal bei 10.
+	\item Ist der Benuter angemeldet und schliesst das Browserfenster wärend des Konfigurationsvorgangs, kann er an der gleichen Stelle weitermachen, an der er aufgehört hat.
+	\item Ist der Benutzer nicht angemeldet, verfällt die Konfiguration, wenn er die Applikationsseite schliesst.
+	
+	\item Softwareupdates der benutzen Softwarekomponenten sollten mit Rücksprache des Entwicklers erfolgen.
+	
+\end{enumerate}
+
+\section{Kategorisierung der Qualitäten}
+	\begin{enumerate}
+				\item  \textbf{Funktionalität}
+					1,2,3
+				\item  \textbf{Zuverlässigkeit}
+					4,5,6
+         		\item  \textbf{Benutzbarkeit}
+					7,7,7
+		         \item  \textbf{Effizienz}
+8,8,8
+         		\item  \textbf{Änderbarkeit}
+        				9,9,9 		
+     		    \item  \textbf{Übertragbarkeit}
+33,33,4,4
+
+      		\end{enumerate}
+
+
+%AUSKOMMENTIERT!!!
+\begin{comment}
 \begin{enumerate}
       \item[NFA 1.0] \textbf{Verschlüsselung}\newline
 		Die Kommunikation zwischen Frontend und Backend wird nicht verschlüsselt und läuft über HTTP.
@@ -71,38 +119,49 @@ Rahmenbedingungen, die das System einschränken und unterspezifische funktionale 
 		Die Benutzerführung erfolgt in Deutsch
 	  \item[NFA 6.0] \textbf{Nachvollziehbarkeit}\newline
 		Das System muss den Benutzer über den aktuellen Konfigurationsstand informieren
-		
 \end{enumerate}
-%Anforderungen werden i. d. R. drei Klassen unterschieden:
-%- Qualitätsanforderungen an die Diensterbringung, z. B. bezüglich Zuverlässigkeit
-%oder Geschwindigkeit,
-%- Rahmenbedingungen, welche das System oder die Systementwicklung einschränken,
-%z. B. rechtliche Vorgaben oder Unternehmensanforderungen an die Umgebung
-%des Systems oder die einzusetzende Entwicklungsplattform,
-%- unterspezifizierte funktionale Anforderungen, die noch nicht detailliert spezifiziert
-%wurden, z. B. ein sicheres, einfach bedienbares System.
-%Qualitätsanforderungen gelten für das gesamte System oder für einzelne Teile des
-%Systems. Rahmenbedingungen gelten häufig für das gesamte Unternehmen und werden
-%daher selten in Geschäftsprozessmodellen dokumentiert. Unterspezifizierte funktionale
-%Anforderungen gelten zunächst allgemein für das gesamte System bis diese
-%detailliert als funktionale und/oder nichtfunktionale Qualitätsanforderungen formuliert
-%sind. Im Folgenden wird diese Unterteilung der nichtfunktionalen Anforderungen
-%nur aufgegriffen, falls es explizit notwendig erscheint. 
-
-\section{Anwendungsfälle}
-Anwendungsfälle helfen fachlichen Anforderungen eines Systems darzustellen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden.
+\end{comment}
 
 
-\begin{enumerate}
+\section{Funktionale Anforderungen}
+Funktionale Anforderungen beschreiben Dienste oder Funktionalitäten, die ein System bereitstellen soll.\newline
+  \begin{enumerate}
+      \item[FA 1.0] \textbf{Berechtigungssystem}\newline
+		Die zu entwickelnde Software soll zwei Berechtigungsstufen beinhalten, um Benutzer und Administratoren von einander zu trennen.
 
-      \item[Anwendungsfall AF 1]
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.4]{../Bilder/usecase1.png}
-\caption{Anwendungsfall AF 1}
-\label{fig: dasdasdasdas}
-\end{figure}
+		\textbf{Rolle: Administrator}\newline
+          	Die Administrator-Rolle, soll Zugriff auf konfigurative Möglichkeiten bekommen.\newline 
+			Beispiele hierfür wären: Speicherpfad der Logdatei ändern; neue Softwarekomponenten in die Auswahlliste(FA 2.0) übernehmen.\newline\newline
+		\textbf{Rolle: User}\newline
+			Benutzer in der User-Rolle sind nicht berechtigt Konfigurationen an der Software vorzunehmen. Ihnen steht der Administrative Punkt nicht zur Verfügung
+	\end{enumerate}        
+      
+	\begin{enumerate}
+     	 \item[FA 2.0] \textbf{Ausswahlliste Softwarekomponenten}\newline
+       		Um dem Benutzer die Möglichkeit zu bieten, auf die gewünschte Maschine Softwarekomponenten zu provisionieren, soll das System eine entsprechende Auswahlliste beinhalten.
+		    \item[FA 2.1] Die Auswahlliste kann durch Benutzer mit Administrationsberechtigungen geändert werden. Benutzer mit Berechtigungen der Stufe \textbf{User}, dürfen die Liste nicht manipulieren.\newline
+			\item[FA 2.2] Folgende Funktionen sollen dem Administrator zur Verfügung gestellt werden:
+				\begin{enumerate}      
+						\item Löschen - Löscht den kompletten Datensatz aus der Liste und somit aus der Datenbank.
+						\item Ändern - Beschreibung, sowie Linux-Befehlssatz kann geändert werden.
+						\item Hinzufügen - Name der Software, Beschreibung und Linux-Befehlssatz können eingegeben werden und zur Datenbank hinzugefügt werden.
+		    		\end{enumerate}      
+	\end{enumerate}      
+     
+     \begin{enumerate}
+		\item[FA 3.0] \textbf{Hochladen eigener YAML-Dateien}\newline
+			Es soll möglich sein, statt die Auswahlliste(FA 2.0) zu verwenden, eine YAML-Datei hochzuladen, die die gewünschte Software enthält.\newline
+			Dies geschieht über einen Menüpunkt in der Benutzeroberfläche.
+		\item[FA 3.1] Die YAML-Datei muss den Vorgaben von Ansible genügen.
+		\item[FA 3.2] Administratoren und User dürfen YAML-Dateien verwenden.
+		\item[FA 3.3] Fehler sind in einer Logdatei zu protokolieren.
+	\end{enumerate}        
+	
+	\begin{enumerate}
+      	\item[FA 4.0] \textbf{Fehler}\newline
+	 		Falsche Benutzung oder Systemfehler sollen Software angezeigt werden und entsprechend in einer Logdatei protokoliert werden.
+		\item[FA 4.1] Falsche Benutzung, darf nicht zum Abbruch des kompletten Vorgangs führen.
+	\end{enumerate}        
 
-Anforderungen: [12312312312312312312]
+%Diese Beschreibung kann in allgemeiner Form Funktionen des Systems definieren oder als Spezifikation detaillierte Aussagen zum gewünschten Verhalten, Datenstrukturen oder Funktionen des Systems festhalten. 
 
-\end{enumerate}

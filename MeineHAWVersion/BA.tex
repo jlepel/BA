@@ -27,7 +27,11 @@
 \usepackage{hawstyle}
 \usepackage{lipsum} %% for sample text
 \usepackage{graphicx}
-\usepackage {picins}
+\usepackage{graphics}
+\usepackage{wrapfig}
+\usepackage{capt-of}
+\usepackage{verbatim}
+\usepackage{enumitem}
 
 
 
@@ -147,8 +151,19 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %%\include{chapter1}
 
 \include{einleitung}
-\include{anforderungen}
+
+%Anforderungsanaylse
+\include{anforderunsanalyse}
+\include{anwendungsfaelle}
+
+\chapter{Entwurf/Design}
+\section{Systemkontext}
+\section{Technische Randbedingungen}
+
+%Umsetzung
 \include{appBuilder}
+
+%Grundlagen
 \include{rubySinatra}
 \include{vagrant}
 \include{ansible}
