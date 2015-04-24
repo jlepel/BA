@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.17)  22 APR 2015 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.3.17)  24 APR 2015 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,21 +449,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/soul/soul.sty
-Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks21
-\SOUL@lasttoken=\toks22
-\SOUL@cmds=\toks23
-\SOUL@buffer=\toks24
-\SOUL@token=\toks25
-\SOUL@spaceskip=\skip53
-\SOUL@ttwidth=\dimen115
-\SOUL@uldp=\dimen116
-\SOUL@ulht=\dimen117
-) (./hawstyle.sty
+(./hawstyle.sty
 Package: hawstyle 2010/04/26 v1.0 HAW Thesis Style
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -492,14 +480,14 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count113
 \calc@Bcount=\count114
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Adimen=\dimen115
+\calc@Bdimen=\dimen116
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 75.
 LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count115
-\calc@Cskip=\skip56
+\calc@Cskip=\skip55
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2014/01/03 v1.7j
@@ -510,17 +498,17 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
 \TP@textbox=\box29
 \TP@holdbox=\box30
-\TPHorizModule=\dimen120
-\TPVertModule=\dimen121
-\TP@margin=\dimen122
-\TP@absmargin=\dimen123
+\TPHorizModule=\dimen117
+\TPVertModule=\dimen118
+\TP@margin=\dimen119
+\TP@absmargin=\dimen120
 
 Grid set 16 x 16 = 37.34424pt x 52.81543pt
-\TPboxrulesize=\dimen124
-\TP@ox=\dimen125
-\TP@oy=\dimen126
-\TP@tbargs=\toks26
-\TP@prevdepth=\dimen127
+\TPboxrulesize=\dimen121
+\TP@ox=\dimen122
+\TP@oy=\dimen123
+\TP@tbargs=\toks21
+\TP@prevdepth=\dimen124
 TextBlockOrigin set to 0pt x 0pt
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2013/12/19 v3.12 KOMA-Script package (page head and foot)
@@ -540,15 +528,15 @@ File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen128
-\Gin@req@width=\dimen129
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen130
-\WF@size=\dimen131
+\wrapoverhang=\dimen127
+\WF@size=\dimen128
 \c@WF@wrappedlines=\count116
 \WF@box=\box31
-\WF@everypar=\toks27
+\WF@everypar=\toks22
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/capt-of/capt-of.sty
@@ -556,15 +544,15 @@ Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks28
-\verbatim@line=\toks29
+\every@verbatim=\toks23
+\verbatim@line=\toks24
 \verbatim@in@stream=\read1
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip57
-\enit@outerparindent=\dimen132
-\enit@toks=\toks30
+\labelindent=\skip56
+\enit@outerparindent=\dimen129
+\enit@toks=\toks25
 \enit@inbox=\box32
 \enitdp@description=\count117
 )
@@ -673,16 +661,16 @@ LaTeX Info: Redefining \nameref on input line 89.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
-\scratchdimen=\dimen133
+\scratchdimen=\dimen130
 \scratchbox=\box34
 \nofMPsegments=\count123
 \nofMParguments=\count124
-\everyMPshowfont=\toks31
+\everyMPshowfont=\toks26
 \MPscratchCnt=\count125
-\MPscratchDim=\dimen134
+\MPscratchDim=\dimen131
 \MPnumerator=\count126
 \makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks32
+\everyMPtoPDFconversion=\toks27
 ) ABD: EveryShipout initializing macros
 (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -733,7 +721,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <./logo/HAW_logo.png, id=192, 768.8725pt x 231.86626pt>
+ <./logo/HAW_logo.png, id=196, 768.8725pt x 231.86626pt>
 File: ./logo/HAW_logo.png Graphic file (type png)
 
 <use ./logo/HAW_logo.png>
@@ -783,9 +771,9 @@ Overfull \hbox (318.98038pt too wide) in paragraph at lines 110--110
 [][][][][][][] 
  []
 
-\haw@xpos=\skip58
-\haw@fw=\skip59
-\haw@tw=\skip60
+\haw@xpos=\skip57
+\haw@fw=\skip58
+\haw@tw=\skip59
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 110.
 
@@ -987,72 +975,116 @@ Package babel Info: Redefining ngerman shorthand "~
  (./anforderunsanalyse.tex
 Kapitel 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 11.
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 11.
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
- []
-
+(babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 24.
 [4
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
-
+Overfull \hbox (25.63419pt too wide) in paragraph at lines 43--44
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Lädt der Be-nut-zer ei-ne ei-ge-ne Ko
+n-fi-gu-ra-ti-on hoch, wird die-se mit ei-nem YAML-Prüfalgorithmus
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 49.
 [5]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
- [6]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 52.
 
-Overfull \hbox (16.65234pt too wide) in paragraph at lines 113--114
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Lädt der Be-nut-zer ei-ne ei-ge-ne Ko
-n-fi-gu-ra-ti-on hoch, wird die mit ei-nem YAML-Prüfalgorithmus
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
  []
 
+<../Bilder/Stakeholder.png, id=322, 654.445pt x 214.8025pt>
+File: ../Bilder/Stakeholder.png Graphic file (type png)
+
+<use ../Bilder/Stakeholder.png>
+Package pdftex.def Info: ../Bilder/Stakeholder.png used on input line 58.
+(pdftex.def)             Requested size: 261.77336pt x 85.91946pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 83.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 83.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 83.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 83.
+ [6 <../Bilder/Stakeholder.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 116.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 116.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 116.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 116.
+[7]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \newline
+               \newline
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \newline \newline
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 136.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 136.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 151.
@@ -1062,7 +1094,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 151.
- [7]
+ [8]
 \openout2 = `anwendungsfaelle.aux'.
 
  (./anwendungsfaelle.tex
@@ -1071,7 +1103,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-<../Bilder/usecase1.png, id=333, 721.69624pt x 776.9025pt>
+<../Bilder/usecase1.png, id=341, 721.69624pt x 776.9025pt>
 File: ../Bilder/usecase1.png Graphic file (type png)
 
 <use ../Bilder/usecase1.png>
@@ -1086,7 +1118,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 152.
- [8
+ [9
 
 
  <../Bilder/usecase1.png>]
@@ -1111,7 +1143,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 159.
-[9
+[10
 
 
 
@@ -1162,7 +1194,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
- [10
+ [11
 
 
 
@@ -1199,7 +1231,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 58.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 58.
- [11]
+ [12]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 59.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1236,7 +1268,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 79.
- [12])
+ [13])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1245,7 +1277,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 159.
- [13]
+ [14]
 \openout2 = `rubySinatra.aux'.
 
  (./rubySinatra.tex
@@ -1271,7 +1303,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 162.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 162.
- [14
+ [15
 
 
 
@@ -1306,7 +1338,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 30.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 30.
-[15
+[16
 
 
 ])
@@ -1318,7 +1350,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 163.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 163.
- [16]
+ [17]
 \openout2 = `ansible.aux'.
 
  (./ansible.tex
@@ -1343,7 +1375,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 164.
- [17
+ [18
 
 
 ]
@@ -1367,7 +1399,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 166.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 166.
- [18
+ [19
 
 
 
@@ -1389,7 +1421,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 167.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 167.
- [19
+ [20
 
 
 ]
@@ -1418,14 +1450,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 168.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 168.
- [20
+ [21
 
 
 
 
 ]
 
-Package natbib Warning: Citation `goossens93' on page 21 undefined on input lin
+Package natbib Warning: Citation `goossens93' on page 22 undefined on input lin
 e 180.
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -1436,7 +1468,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 189.
-[21
+[22
 
 ]
 ===== Section: literature
@@ -1467,7 +1499,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 200.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 200.
-[22
+[23
 
 
 
@@ -1488,7 +1520,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 210.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 210.
-[23
+[24
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
@@ -1499,15 +1531,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `BA.out' has not changed.
-(rerunfilecheck)             Checksum: C7689148A292015B702E75E2D0F400B0;3107.
+(rerunfilecheck)             Checksum: 0A9AA1D815A7CD0B06F71B56C619D7D8;3187.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 14152 strings out of 493117
- 227413 string characters out of 6135433
- 388384 words of memory out of 5000000
- 17041 multiletter control sequences out of 15000+600000
- 88781 words of font info for 145 fonts, out of 8000000 for 9000
+ 13980 strings out of 493117
+ 225340 string characters out of 6135433
+ 383896 words of memory out of 5000000
+ 16881 multiletter control sequences out of 15000+600000
+ 88032 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,10n,55p,693b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc
@@ -1524,10 +1556,10 @@ MT.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/libertine/LinLibe
 rtineT.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/libertine/Lin
 LibertineTB.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/libertin
 e/LinLibertineTI.pfb>
-Output written on BA.pdf (29 pages, 502201 bytes).
+Output written on BA.pdf (30 pages, 524274 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 23427 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 23440 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -13,5 +13,14 @@
 \newblock Deutscher Taschenbuch Verlag, 11 2005. --
 \newblock URL \url{http://amazon.de/o/ASIN/342334251X/}. --
 \newblock ISBN 9783423342513
+
+\bibitem[Zörner(2012)]{Starke201205}
+\dinatlabel{Zörner 2012} \textsc{Zörner}, Stefan:
+\newblock \emph{Softwarearchitekturen dokumentieren und kommunizieren:
+  Entwürfe, Entscheidungen und Lösungen nachvollziehbar und wirkungsvoll
+  festhalten}.
+\newblock Carl Hanser Verlag GmbH und Co. KG, 5 2012. --
+\newblock URL \url{http://amazon.de/o/ASIN/3446429247/}. --
+\newblock ISBN 9783446429246
 
 \end{thebibliography}

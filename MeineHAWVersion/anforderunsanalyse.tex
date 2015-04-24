@@ -1,3 +1,4 @@
+\setcounter{secnumdepth}{3}
 \chapter{Anforderungsanalyse}
 Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
 zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
@@ -8,31 +9,149 @@ Im Folgenden werden die Anforderungen an die Software detaillierter konzipiert, 
 Anforderungen beschreiben die Kernaufgabe des Systems und hinterfragen die Qualitätsanforderungen, die das System erfüllen muss.
 Daher werden Anforderungen in der Regel zwischen funktionale Anforderungen und nichtfunktionale Anforderungen unterschieden, wobei die Abgrenzung zwischen den beiden Anforderungsarten nicht immer eindeutig bestimmt werden kann.
 
+
+\subsection{Nichtfunktionale Anforderungen} \label{NFA}
+Nichtfunktionale Anforderungen können als Qualitätskriterium an System und Software angesehen werden, wobei die Qualität der Software/des Systems immer auf die folgenden Qualitätsmerkmale bezogen wird.
+	\begin{enumerate}
+				\item  \textbf{Funktionalität}
+					Die geforderten Funktionen sind in der Software umgesetzt worden und erfüllen die definierten Aufgaben und Ziele.
+				\item  \textbf{Zuverlässigkeit}
+					Die Software kann unter bestimmten Bedingungen und über einen bestimmten Zeitraum ein definiertes Leistungsniveau aufrechthalten.
+         		\item  \textbf{Benutzbarkeit}
+         			Analyse der Benutzung und des Aufwandes. Der Benutzer steht hier im Fokus.
+		         \item  \textbf{Effizienz}
+					Das Verhältnis zwischen den der zu erbringenden Leistung der Software und der dafür zugrundeliegenden Betriebsmittel. 
+         		\item  \textbf{Änderbarkeit}
+         			Der Aufwand, der betrieben werden muss um Änderungen an der Software vorzunehmen.
+			         Änderungen sind definiert als Korrekturen, Verbesserungen oder Anpassungen an Veränderungen der Umgebung, der Anforderungen oder der funktionalen Spezifikationen.
+     		    \item  \textbf{Übertragbarkeit}
+         			Der Aufwand, der zum übertragen oder implementieren in eine neue Umgebung benötigt wird.
+			         Als Umgebung ist sowohl Hardware- als auch Softwareumgebung gemeint.
+	\end{enumerate}
+      		(Qualitäten nach ISO/IEC 9126 (DIN 66272))
+
+Das bilden von Qualitätsszenarien hilft bei der Erfassung von Qualitäten und deren Sortierung zu entsprechenden Qualitätsmerkmalen.
+Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abegeleitet werden.
+
+\subsubsection{Qualitätsszenarien}
+
+	\begin{enumerate}
+		\item Exporte einer Konfiguration werden in einer Logdatei protokoliert.
+		\item Wenn ein Benutzer sich anmeldet, wird der Login nicht protokoliert.
+		\item Änderungen an der Softwareliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.	
+		\item Wird ein Fehler im Aufbauprozess einer Maschine angezeigt, wird dieser in einer seperaten Logdatei protokoliert.
+		\item Lädt der Benutzer eine eigene Konfiguration hoch, wird diese mit einem YAML-Prüfalgorithmus geprüft und es wird dem Benutzer mitgeteilt, ob die Datei valide ist.
+		\item Fehlerhafte Importversuche, werden in einer Logdatei protokoliert
+		\item Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand des Austausches bei unter einem Personentag.
+		\item Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
+		\item Die Anzahl der zur gleichen Zeit laufenden virtuellen Umgebungen, ist maximal bei 10.
+		\item Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
+	\end{enumerate}
+
+
+\subsection{Stakeholder} \label{STAKEHOLDER}
+`Stakeholder in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
+
+\begin{center}
+ \begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{../Bilder/Stakeholder.png}%
+	\captionof{figure}[Stakeholderdefinition]{Stakeholder}%
+ \end{minipage}
+\end{center}
+
+
+
 \subsection{Funktionale Anforderungen} \label{FA}
-Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll.
-\newline
+Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll. Im folgenden sind die Anforderungen Stakeholdern zugeordnet, die vorher definiert werden.
 
-\begin{enumerate}
-	\item[FA 1] \textbf{Starten der Applikation}
-	\newline	
-		Ist die Applikation Lokal oder Serverseitig installiert, benötigt der Anwender keine zusätzliche Installation, um die Software im Browser auszuführen.
 
-	\item[FA 2]\label{itm:AUSWAHLLISTE} \textbf{Optionen}\newline
-		Ruft der Benutzer die Anwendung in seinem Browser auf, kann er zwischen drei Möglichkeiten wählen:
-		\begin{enumerate}				
-				\item Maschine ohne Provisionierung erstellen.
-				\item Import einer Konfiguration inkl. Erstellung der Maschine.
-				\item Maschine mit Hilfe einer vorgegebenen Auswahlliste an Softwarekomponenten provisionieren und erstellen.
-		\end{enumerate}        
-  
 
-	\item[FA 3] \textbf{Softwareauswahl}\newline
-		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLLISTE}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
-		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
-		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann der den Erstellungsprozess weiterführen.
-%		Änderungen an der Auswahl, kann nur ein angemeldeter Administrator \ref{BERECHTIGUNGSSYSTEM} vornehmen.
+\textbf{Anwender}
+	\begin{enumerate}
+		\item[FA 1]	\textbf{Starten der Applikation}\newline
+			Ist die Applikation Lokal oder Serverseitig installiert, benötigt der Anwender keine zusätzliche Installation, um die Software im Browser auszuführen.
+		\item[FA 2]	\textbf{Aufbau ohne Provisionierung}\newline
+			Der Anwender hat die Möglichkeit eine Umgebung aufzubauen, ohne vorinstallierte Software.
+		\item[FA 3]\label{itm:AUSWAHLMIT}	\textbf{Aufbau mit Provisionierung inkl. Auswahlliste}\newline
+			Es ist dem Anwender möglich, eine Umgebung inkl. Provisionierung zu erstellen, in dem er über eine Auswahlliste Softwarekomponenten auswählen kann.
+		\item[FA 4]	\textbf{Aufbau mit Provisionierung inkl. eigener Dateien}\newline
+			Durch das Hochladen eigener Dateien, ist der Anwender in der Lage, Umgebungen aufzubauen inkl. seiner eigens ausgesuchten Dateien/Programme.
+			Dies ist in Kombination mit FA 3 \ref{itm:AUSWAHLMIT} möglich
+		\item[FA 5]	\textbf{Import von Konfigurationen}\newline
+			Durch den Import von Konfigurationen wird es dem Benutzer ermöglicht, selbst- oder von Kollegen erstellte Umgebungen wieder aufzubauen.
+		\item[FA 6]	\textbf{Export von Konfigurationen}\newline
+			Exportieren der erstellten Konfiguration, soll den Austausch und das Speichern von Konfigurationen für den Benutzer erleichtern.\newline
+			Der Benutzer kann sich den Speicherort aussuchen.	
+		\item[FA 7]	\textbf{Rückmeldung wärend Konfiguration 1/2}\newline			
+			Die Anwendungen informiert den Benutzer bei jedem Konfigurationsschritt über Erfolg oder Misserfolg.
+		\item[FA 7.1]\textbf{Rückmeldung wärend Konfiguration 2/2}\newline		
+			Ist eine Maschine ohne Fehler aufgebaut, wird dies dem Benutzer mitgeteilt. Ausserdem erscheint  der Erstellungsordner, sowie Verbindungsmöglichkeiten zu der Maschine.
 		
-	
+
+	\end{enumerate}	
+
+\textbf{Administrator}\newline
+	\begin{enumerate}
+		\item[FA 1]	\textbf{Administratorenkonto}\newline			
+			Das anlegen eines Administratorenkonto bevollmächtigt den entsprechenden Benutzer zu Konfigurationsänderungen bezüglich der Anwendung.
+
+		\item[FA 2]	\textbf{Logdateien - Speicherort ändern}\newline			
+			Der Administrator kann den Speicherort von Logdateien ändern.
+
+		\item[FA 3]	\textbf{Logdateien - Name ändern}\newline			
+			Der Administrator kann den Namen von Logdateien ändern.
+
+		\item[FA 4]	\textbf{Logdateien - Anzeigen}\newline			
+			Der Administrator kann sind den Inhalt von Logdateien in der Applikation anzeigen lassen.
+
+		\item[FA 5]	\textbf{Protokollierung 1/2}\newline			
+			Auftretende Fehler wärend der Benutzer die Umgebung konfiguriert, werden in einer seperaten Logdatei protokolliert.
+		\item[FA 5.1]	\textbf{Protokollierung 2/2}\newline			
+			Erfolgreiche Konfigurationsschritte werden in einer seperaten Logdatei protokolliert.	
+		
+		\item[FA 6]	\textbf{Export/Import - Dateiformat YAML}\newline			
+			Erlaubte Export-, sowie Importdateien sind ausschliesslich YAML-Dateien.							
+
+		\item[FA 7]	\textbf{Anbindung an Git}\newline			
+			Export und Import sind optional mit einem Git Konto verknüpfbar, um die Kommunikation zwischen gewünschten Personen zu vereinfachen.
+
+		\item[FA 8]	\textbf{Validierung von Importen}\newline
+			Dateien, die importiert werden sollen, werden beim Import validiert.
+
+		\item[FA 9]	\textbf{Softwarekomponentenliste}\newline
+			Der Administrator kann die angebotene Softwarekomponentenliste bearbeiten, um diese aktuell zu halten.
+		\item[FA 9.1]	\textbf{Hinzufügen von Softwarekomponenten}\newline
+			Der Administrator kann neue Software zur Softwareliste hinzufügen.
+		\item[FA 9.2]	\textbf{Löschen von Softwarekomponenten}\newline
+			Der Administrator kann Software aus der Softwareliste entfernen
+		\item[FA 9.3]	\textbf{Ändern von Softwarekomponenten}\newline
+			Der Administrator kann Software aus der Softwareliste abändern. Dazu gehört 'Name', 'Beschreibung' und 'Befehl'.
+		\item[FA 9.4]	\textbf{Export der Softwarekomponentenliste}\newline
+			Der Administrator kann die Softwarekomponentenliste als XLS exportieren.
+
+	\end{enumerate}	
+
+
+
+
+%AUSKOMMENTIERT!!!
+\begin{comment}
+	 \textbf{FA 3 - Softwareauswahl}\newline
+		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLMIT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
+		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
+		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
+
+	 \textbf{FA 4 - Softwareauswahl}\newline
+		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLMIT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
+		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
+		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
+
+	 \textbf{FA 5 - Softwareauswahl}\newline
+		Entscheidet sich der Benutzer für den Auswahlpunkt FA2.\ref{itm:AUSWAHLIMPORT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
+		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
+		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
+
 	\item[FA 4] \textbf{Anmeldung an der Anwendung}\newline
 		Mit einer Anmeldung an der Anwendung, bekommt der Benutzer die Möglichkeit weitere Operationen auszuführen, die von seiner Berechtigungsstufe
 			\begin{enumerate}
@@ -76,56 +195,10 @@ Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des System
 	 	Andernfalls, wird der Benutzer darauf aufmerksam gemacht, dass die E-Mailadresse bereits hinterlegt ist.
 
 \end{enumerate}
+
+%AUSKOMMENTIERT!!!
+\end{comment}	
 	
-	
-\subsection{Nichtfunktionale Anforderungen} \label{NFA}
-Nichtfunktionale Anforderungen können als Qualitätskriterium an System und Software angesehen werden, wobei die Qualität der Software/des Systems immer auf die folgenden Qualitätsmerkmale bezogen wird.
-
-      		\begin{enumerate}
-				\item  \textbf{Funktionalität}
-					Die geforderten Funktionen sind in der Software umgesetzt worden und erfüllen die definierten Aufgaben und Ziele.
-				\item  \textbf{Zuverlässigkeit}
-					Die Software kann unter bestimmten Bedingungen und über einen bestimmten Zeitraum ein definiertes Leistungsniveau aufrechthalten.
-         		\item  \textbf{Benutzbarkeit}
-         			Analyse der Benutzung und des Aufwandes. Der Benutzer steht hier im Fokus.
-		         \item  \textbf{Effizienz}
-					Das Verhältnis zwischen den der zu erbringenden Leistung der Software und der dafür zugrundeliegenden Betriebsmittel. 
-         		\item  \textbf{Änderbarkeit}
-         			Der Aufwand, der betrieben werden muss um Änderungen an der Software vorzunehmen.
-			         Änderungen sind definiert als Korrekturen, Verbesserungen oder Anpassungen an Veränderungen der Umgebung, der Anforderungen oder der funktionalen Spezifikationen.
-     		    \item  \textbf{Übertragbarkeit}
-         			Der Aufwand, der zum übertragen oder implementieren in eine neue Umgebung benötigt wird.
-			         Als Umgebung ist sowohl Hardware- als auch Softwareumgebung gemeint.
-      		\end{enumerate}
-      		(Qualitäten nach ISO/IEC 9126 (DIN 66272))
-
-
-Das bilden von Qualitätsszenarien hilft bei der Erfassung von Qualitäten und deren Sortierung zu entsprechenden Qualitätsmerkmalen.
-Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abegeleitet werden.
-
-\subsection{Qualitätsszenarien}
-\begin{enumerate}
-	
-	\item Exporte werden in einer Logdatei gespeichert.
-	\item Wenn ein Benutzer sich anmeldet, wird der Login nicht protokoliert.
-	\item Änderungen an der Softwareliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.	
-	\item Wird ein Fehler im Aufbauprozess einer Maschine angezeigt, wird dieser auch in einer seperaten Logdatei protokoliert.
-	\item Lädt der Benutzer eine eigene Konfiguration hoch, wird die mit einem YAML-Prüfalgorithmus geprüft und es wird dem Benutzer mitgeteilt, ob die Datei valide ist.
-	\item Fehlerhafte Importversuche, werden in einer Logdatei protokoliert
-	\item Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand bei unter einem Personentag.
-	\item Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
-	\item Die Anzahl der zur gleichen Zeit laufenden virtuellen Umgebungen, ist maximal bei 10.
-	\item Softwareupdates der benutzen Softwarekomponenten sollten mit Rücksprache des Entwicklers erfolgen.
 
 
 
-
-
-
-
-
-
-	
-	
-	
-\end{enumerate}
