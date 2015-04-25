@@ -15,43 +15,42 @@
 \contentsline {chapter}{\numberline {2}Anforderungsanalyse}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Anforderungen}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Nichtfunktionale Anforderungen}{4}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Qualit\"atsszenarien}{5}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\nonumberline Qualit\"atsszenarien}{5}{section*.3}
 \contentsline {subsection}{\numberline {2.1.2}Stakeholder}{6}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Funktionale Anforderungen}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Nichtfunktionale Anforderungen}{8}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Anwendungsf\"alle}{9}{section.2.2}
-\contentsline {chapter}{\numberline {3}Entwurf/Design}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Systemkontext}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Technische Randbedingungen}{10}{section.3.2}
-\contentsline {chapter}{\numberline {4}Umsetzung/Realisierung}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Frontend}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Backend}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Ruby}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Externe Komponenten}{11}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Sinatra}{12}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Vagrant}{12}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Ansible}{12}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Struktur und Zusammenspiel}{12}{section.4.5}
-\contentsline {section}{\numberline {4.6}Konfiguration}{12}{section.4.6}
-\contentsline {section}{\numberline {4.7}Datenbank}{12}{section.4.7}
-\contentsline {section}{\numberline {4.8}Virtualisierung}{13}{section.4.8}
-\contentsline {section}{\numberline {4.9}Provisionierung}{13}{section.4.9}
-\contentsline {section}{\numberline {4.10}Kommunikation der einzelnen Komponenten}{13}{section.4.10}
-\contentsline {section}{\numberline {4.11}Export Funktionen}{13}{section.4.11}
-\contentsline {subsection}{\numberline {4.11.1}Clonen einer Maschine}{13}{subsection.4.11.1}
-\contentsline {subsection}{\numberline {4.11.2}Export zu Git}{13}{subsection.4.11.2}
-\contentsline {section}{\numberline {4.12}Sharing einer Maschine}{14}{section.4.12}
-\contentsline {chapter}{\numberline {5}Grundlagen}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Ruby}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Sinatra}{15}{section.5.2}
-\contentsline {section}{\numberline {5.3}Vagrant}{16}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Konfiguration}{16}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Vergleich zu Docker}{16}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Ansible}{18}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Vergleich zu Salt}{18}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Vergleich zu Puppet}{18}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Passenger}{19}{section.5.5}
-\contentsline {section}{\numberline {5.6}Sidekiq}{20}{section.5.6}
-\contentsline {chapter}{\numberline {6}Schluss}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Zusammenfassung}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Fazit}{21}{section.6.2}
+\contentsline {section}{\numberline {2.2}Anwendungsf\"alle}{10}{section.2.2}
+\contentsline {chapter}{\numberline {3}Entwurf/Design}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Systemkontext}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Technische Randbedingungen}{12}{section.3.2}
+\contentsline {chapter}{\numberline {4}Umsetzung/Realisierung}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Frontend}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Backend}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}Ruby}{13}{section.4.3}
+\contentsline {section}{\numberline {4.4}Externe Komponenten}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Sinatra}{14}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Vagrant}{14}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Ansible}{14}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Struktur und Zusammenspiel}{14}{section.4.5}
+\contentsline {section}{\numberline {4.6}Konfiguration}{14}{section.4.6}
+\contentsline {section}{\numberline {4.7}Datenbank}{14}{section.4.7}
+\contentsline {section}{\numberline {4.8}Virtualisierung}{15}{section.4.8}
+\contentsline {section}{\numberline {4.9}Provisionierung}{15}{section.4.9}
+\contentsline {section}{\numberline {4.10}Kommunikation der einzelnen Komponenten}{15}{section.4.10}
+\contentsline {section}{\numberline {4.11}Export Funktionen}{15}{section.4.11}
+\contentsline {subsection}{\numberline {4.11.1}Clonen einer Maschine}{15}{subsection.4.11.1}
+\contentsline {subsection}{\numberline {4.11.2}Export zu Git}{15}{subsection.4.11.2}
+\contentsline {section}{\numberline {4.12}Sharing einer Maschine}{16}{section.4.12}
+\contentsline {chapter}{\numberline {5}Grundlagen}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Ruby}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Sinatra}{17}{section.5.2}
+\contentsline {section}{\numberline {5.3}Vagrant}{18}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Konfiguration}{18}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Vergleich zu Docker}{18}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Ansible}{20}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Vergleich zu Salt}{20}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Vergleich zu Puppet}{20}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Passenger}{21}{section.5.5}
+\contentsline {section}{\numberline {5.6}Sidekiq}{22}{section.5.6}
+\contentsline {chapter}{\numberline {6}Schluss}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Zusammenfassung}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Fazit}{23}{section.6.2}

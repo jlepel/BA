@@ -1,4 +1,4 @@
-\setcounter{secnumdepth}{3}
+%\setcounter{secnumdepth}{3}
 \chapter{Anforderungsanalyse}
 Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
 zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
@@ -31,21 +31,40 @@ Nichtfunktionale Anforderungen können als Qualitätskriterium an System und Softw
       		(Qualitäten nach ISO/IEC 9126 (DIN 66272))
 
 Das bilden von Qualitätsszenarien hilft bei der Erfassung von Qualitäten und deren Sortierung zu entsprechenden Qualitätsmerkmalen.
-Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abegeleitet werden.
+Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abgeleitet werden. 
 
 \subsubsection{Qualitätsszenarien}
-
 	\begin{enumerate}
-		\item Exporte einer Konfiguration werden in einer Logdatei protokoliert.
-		\item Wenn ein Benutzer sich anmeldet, wird der Login nicht protokoliert.
-		\item Änderungen an der Softwareliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.	
-		\item Wird ein Fehler im Aufbauprozess einer Maschine angezeigt, wird dieser in einer seperaten Logdatei protokoliert.
-		\item Lädt der Benutzer eine eigene Konfiguration hoch, wird diese mit einem YAML-Prüfalgorithmus geprüft und es wird dem Benutzer mitgeteilt, ob die Datei valide ist.
-		\item Fehlerhafte Importversuche, werden in einer Logdatei protokoliert
-		\item Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand des Austausches bei unter einem Personentag.
-		\item Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
-		\item Die Anzahl der zur gleichen Zeit laufenden virtuellen Umgebungen, ist maximal bei 10.
-		\item Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
+				
+		\item[NFA 1] Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des Systems innerhalb von 10 Minuten in der Lage sein, die gewu?nschte Funktionalita?t zu lokalisieren und zu verwenden.
+
+		\item[NFA 2] Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, ist maximal bei 10.	
+		
+		\item[NFA 3] Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziebar.
+
+		\item[NFA 4] Die Architektur soll so erweiterbar sein, dass es zukünftig möglich ist, mehrere Maschinen gleichzeitig aufbauen zu können.
+
+		\item[NFA 5] Das Importieren von Konfigurationensdateien beträgt <2 Minuten.		
+
+		\item[NFA 6] Die Validierung einer YAML-Datei beträgt <1 Minute.
+
+		\item[NFA 7] Der bei Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein.
+		
+		\item[NFA 8] Der Export von Konfigurationen beträgt <1 Minute.
+		
+		\item[NFA 9] Änderungen an der Softwarekomponentenliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.		
+		
+		\item[NFA 10] Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
+		\item[NFA 11] Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand des Austausches bei unter einem Personentag.
+
+		\item[NFA 12] Die Implementierung weiterer Grundfunktionalitäten soll möglichst einfach erfolgen.		
+
+		\item[NFA 13] Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
+
+		\item[NFA 14] Die Kommunikation zwischen Frontend und Backend muss nicht verschlüsselt ablaufen.
+		
+		\item[NFA 15] Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
+		
 	\end{enumerate}
 
 
@@ -63,11 +82,8 @@ Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfä
 
 
 \subsection{Funktionale Anforderungen} \label{FA}
-Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll. Im folgenden sind die Anforderungen Stakeholdern zugeordnet, die vorher definiert werden.
-
-
-
-\textbf{Anwender}
+Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll. Im folgenden sind die Anforderungen Stakeholdern zugeordnet, die vorher definiert werden.\newline\newline
+\textbf{Anforderungen Anwender}
 	\begin{enumerate}
 		\item[FA 1]	\textbf{Starten der Applikation}\newline
 			Ist die Applikation Lokal oder Serverseitig installiert, benötigt der Anwender keine zusätzliche Installation, um die Software im Browser auszuführen.
@@ -91,7 +107,7 @@ Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des System
 
 	\end{enumerate}	
 
-\textbf{Administrator}\newline
+\textbf{Anforderungen Administrator}\newline
 	\begin{enumerate}
 		\item[FA 1]	\textbf{Administratorenkonto}\newline			
 			Das anlegen eines Administratorenkonto bevollmächtigt den entsprechenden Benutzer zu Konfigurationsänderungen bezüglich der Anwendung.
