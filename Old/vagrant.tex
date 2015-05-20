@@ -1,0 +1,41 @@
+\section{Vagrant}
+Bei Vagrant handelt es sich um ein Softwareprojekt, welches 2010 von Mitchell Hashimoto und John Bender 2010 ins Leben gerufen wurde.
+Der primäre Gedanke hinter diesem Projekt ist es, gerade Entwicklern und Teams eine schnelle und unkomplizierte Möglichkeit zu bieten, virtuelle Maschinen und Landschaften zu erstellen.\newline
+%Vagrant ist also ein mächtiges Werkzeug zum virtualisieren, der sonst oft lokalen Entwicklungsumgebungen. 
+%Gerade Teamarbeit wird dadurch vereinfacht, denn die gewünschten Maschinen können mit den gleichen Konfigurationen, Komponenten, Infrastrukturen und Bibliotheken erstellt werden.\newline 
+Standardmäßig greift Vagrant auf VirtualBox zurück, um die Virtualisierung vorzunehmen. 
+VirtualBox ist Oracles Freeware Pendant zur kommerziellen VMware Workstation/Fusion. Die Installation von Plugins ermöglicht es, statt auf VirtualBox auf VMware Workstation/Fusion oder Amazon Web Services zurückgegriffen werden.\newline 
+Die Konfiguration einer Maschine geschieht über das 'Vagrantfile', in dem Parameter wie IP Adresse konfiguriert oder Provisionierer hinzuschaltet werden können. Bei den Provisionierern wird dem Benutzer die Freiheit gegeben, auf Bekannte wie Chef, Puppet oder Ansible zurückzugreifen.\newline
+Da das Vagrantfile in einer Ruby Domain Specific Language geschrieben wird, bedeutet das für den Anwender, dass er es einfach mit anderen Kollegen über Versionskontrollen (z.B. Git oder Subversion) teilen kann.\newline
+Abgesehen von dem Austausch der Konfigurationen, wird die Teamarbeit durch eine 'sharing' Option unterstützt, die mit Version 1.5 implementiert wurde.
+Das Teilen eine Maschine ermöglicht es Teams an gemeinsamen und entfernten Standorten auf die gleiche Maschine zuzugreifen. 
+
+\subsection{Konfiguration}
+Vagrantfile beinhalten die Konfiguration jeder Vagrantmaschine. Sogar jeder Vagrant-"Landschaft". 
+Das in Ruby Syntax geschriebene Konfigurationsfile, wird automatisch über den Befehl 'vagrant init' im gewünschten Ordner generiert oder manuell über jeden Editor erstellt werden. Auf Linux-Systemen ist darauf zu achten, dass der gewünschte Ordner über entsprechende Berechtigungen verfügt.
+Manuelle Erweiterung des Vagrantfiles wird durch die Rubysyntax zusätzlich vereinfacht.
+
+
+\subsection{Vergleich zu Docker}
+%Im Zusammenhang mit ad hoc Umgebungen, liegt der Fokus in Diskussion oft auf Docker und Vagrant.
+%Der Grundgedanke bei beiden Applikationen ist der Gleiche, aber man muss sich bewusst sein, was das Ziel der Anwendung sein soll.
+%Beide Applikationen haben wie alles ihre Vor- und Nachteile, aber in einem sind beide Virtualisierungs-Tools gleich. Die zentrale Steuerung zum Aufbau einer %Maschine, geschieht über ein einziges Konfig-File.\newline
+Docker ist ein Linux-only VE (Virtual Environment)-Tool und arbeitet im Gegensatz zu Vagrant mit Operating-System-Level Virtualisierung, auch Linux Containern (LxC) genannt. Während Vagrant Hypervisor-basierten virtuellen Maschinen aufbaut.
+Für die sogenannten Container nutzt Docker spezielle Kernelfunktionalitäten, um einzelne Prozesse in Containern voneinander zu isolieren.\newline 
+Dadurch wird für den Benutzer der Eindruck erweckt, dass für Prozesse die mit Containern gestartet werden, diese auf ihrem eigenen System laufen würden.
+Docker wird in drei Teile unterteilt. Die Arbeitsweise ist nicht wie bei einer VM (virtuelle machine) bei der ein virtueller Computer mit einem bestimmten Betriebssystem, Hardware-Emulation sowie Prozessor simuliert wird. Ein VE ist quasi eine leichtgewichtige virtuelle Maschine. In einem Container ausgeführte Prozesse greifen gemeinschaftlich auf den Kernel des Hostsystems zu. Durch die Kernelnamensräume(cnames) werden die ausgeführten Prozesse voneinander isoliert. Allerdings ist gerade die Isolation der Prozesse, durch den gemeinsam genutzten Kernel etwas geringer, als bei der Benutzung durch einen Hypervisor.\newline
+Durch die zugrunde liegende Architektur von Vagrant, wird Vagrant gerne für immer gleich aufbauende Entwicklungsumgebungen benutzt.
+Die Vielzahl an unterstützten Betriebssystemen macht es für viele Benutzer attraktiver. Allerdings kooperieren Vagrant und Docker auch hervorragend zusammen.
+%Vagrant verspricht durch die leichtere Handhabung und Konfiguration eher das, was für das vorliegende Projekt entscheidend ist.
+
+
+
+%ZITAT: Docker wird in diversen Varianten als Lösung für das Setup und die Kapselung lokaler Entwicklungsumgebungen, als temporär verfügbarer Service imRahmen von Integrationstests und als Laufzeitumgebung auf Produktionsservern eingesetzt. Gerade der temporäre Charakter von Docker-Containern wird für einen anderen Anwendungsfall interessant: als dynamisch erzeugte Buildsysteme mit einer projektspezifischen Buildumgebung.
+%Quelle: http://www.scriptrock.com/articles/docker-vs-vagrant 
+%Quelle: https://entwickler.de/online/docker-basics-system-level-virtualisierung-125514.html
+
+
+
+
+
+

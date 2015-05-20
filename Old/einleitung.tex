@@ -1,0 +1,87 @@
+\chapter{Einleitung}
+\begin{quote}
+	``Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen'' - Lucius Annaeus Seneca, \cite{Apelt200511}
+\end{quote}
+Seneca formulierte  49 n. Chr. ein Gef"uhl das jeder kennt. Die Zeit die er hat, nicht richtig zu nutzen.
+Technische Neuerungen helfen uns unsere Zeit besser zu planen, mehr Zeit in andere Aktivitäten zu stecken und unsere Prioritäten zu "uberdenken.
+Diese Arbeit beschäftigt sich mit dem Teil-Aspekt der Informatik, der Virtualisierung von Servern im Entwicklungsumfeld.\newline
+... 
+
+
+
+\section{Motivation}
+
+\section{Zielsetzung}
+Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interatives Vorgehen eine Applikation zu modellieren, die den Anwender der Applikation bei dem Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und dem Anwender durch seine ausgewählte Funktion leiten.
+Große Konfigurationen oder komplizierte Einstellungen sollen dem Normalanwender abgenommen werden und geschehen im Hintergrund. 
+Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollten Im- und Exportfunktionen dies untzerstützen.
+Die Realisierung sollte auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendige Maschine zu erstellen und zu verwalten.
+Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Bereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
+Bei der Erstellung der einzelnen Softwarekomponenten ist stehts auf das Prinzip von hoher Kohäsion und loser Kopplung zu achten. Also dem Grad der Abhängigkeit zwischen mehrere Hard-/ und Softwarekomponenten, der Änderungen an einzelnen Komponenten erleichtert.
+Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden von unnötigen Verschachtelungen oder einer Flut an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
+\newline
+
+
+\begin{comment}
+\section{Zielsetzung}
+Ziel der vorliegenden Arbeit ist es, ein Softwareprodukt zu erarbeiten, welches aktuelle Virtualisierungs-, sowie Provisionierungslösungen verwendet, um mit deren Hilfe den Aufbau von temporären (ad hoc) Umgebungen im virtuellen Umfeld zu vereinfachen.\newline
+Eine Auswahl von leicht erlernbaren und unkomplizierten Softwarekomponenten, fördern ein weiteres Ziel. Den Administrationsaufwand gering wie möglich zu halten und auch Linux/Unix unerfahrene Administratoren, sowie Entwickler anzusprechen.\newline
+Es ist angestrebt, bei Ende dieser Arbeit eine zentralisierte und leicht lokal zu implementierende Anwendung zur Verfügung zu stellen.
+Sie soll es dem Benutzer ermöglichen, sich selbstständig und mit geringem Zeitaufwand eine virtuelle Maschine mit gewünschter Software zu erstellen, ohne große Einarbeitung in Benutzung und Konfiguration. \newline
+Somit wird die administrative Instanz des z.B. Unternehmen entlasten und befähigt den Benutzer sich auf seine Kerntätigkeiten zu konzentrieren.
+
+
+
+\section{Problemstellung}
+%Die Einleitung muss Ihr Thema eingrenzen (und diese Eingrenzung rechtfertigen) und Ihr Erkenntnisinteresse prÃ¤zisieren und begrÃ¼nden
+Virtualisierung hat in vielen Bereichen den physischen Server abgelöst, denn der Finanzielle Aspekt ist f"ur Unternehmen nicht unerheblich. Im Idealfall heißt der Umstieg auf virtuelle Landschaften gleich weniger Server, was gleichbedeutend mit weniger Stellfläche ist. Somit auch mit weniger Racks und weniger Verkabelung.\newline
+Aufwändige Vorplanung von Serverzentren entfällt, die Kostenplanung der unterschiedlichen Hardware wird minimiert und die Frage, was in ein paar Jahren mit der Hardware passieren soll, wird obsolet.\newline
+Gerade im Entwicklungsbereich ist es meist sinnvoller virtuelle Umgebungen zu realisieren, als reale Maschinen aufzubauen. Entwickler haben so die Möglichkeit bei Bedarf sich Abz"uge der Produktionsumgebung zu erstellen oder Fehlerszenarien nachzustellen.\newline
+Meist ist dazu die Involvierung des Betriebs-Teams oder des IT-Support notwendig, die nach Priorität ihrer Auftragslage, eine gewissen Vorlaufzeit benötigen, um die gewünschte Maschine aufzubauen. \newline
+In dem Fall, dass die Firmengröße es nicht erlaubt, eine eigene Support-Abteilung zu haben, muss die Zeit des jeweiligen Mitarbeiters herhalten, um das Wissen über die jeweilige Virtualisierungslösung aufzubauen, die gewünschte Maschine zu erstellen und die Installationen der nötigen Programme zu realisieren. Der Rückschluss daraus ist, geringere Produktivität in den Kerntätigkeiten des Mitarbeiters.\newline
+Auch wenn die Softwarebranche eine Vielfalt an Möglichkeiten bereitstellt, sind diese entweder in ihrer Struktur überdimensioniert, um sie in der Anwendung schnell zu erlernen, oder komplex in ihrer Konfiguration in Bezug auf Automatisierungen und/oder Provisionierungen.
+
+%Da die Softwarebranche vielfältige Möglichkeiten bereitstellt, um mit geringem Aufwand lokal eine virtuelle Umgebung zu erzeugen und diese ggf. zu Provisionieren. 
+%Im idealfall heisst das für Unternehmen: Weniger Server sind gleichbedeutend mit weniger Stellfäche, mit weniger Verkabelung oder Racks. Somit ist die %Konsolidierung der ehemals großen Server-Zentren für viele Unternehmen eine direkte Konsequenz. 
+%Wodurch eine Kostenreduzierung der gesamten Infrastruktur entsteht.\newline
+%Nicht nur der Finanzielle Aspekt spricht oft für die Virtualisierung, sondern auch die leichte Automatisierung, die Erhöhung der Verfügbarkeit und ....\newline
+%Das Verschieben von kompletten Applikationen von einem physischen Ort zu einem anderen,....\newline
+%Verbesserung der Verfügbarkeit und Business Continuity. Dazu gehören Live Migration, Storage Migration, Fehlertoleranz, Hochverfügbarkeit und Ressourcen-Management. Virtuelle Maschinen können damit leicht verschoben und vor ungewünschten Auszeiten geschützt werden.\newline
+%In der physischen Welt war es bisher üblich, jeder Applikation einen eigenen Server zuzuweisen. Damit war dafür Sorge getragen, dass die einzelnen Software-Programme sauber voneinander isoliert waren. Aber das führte auch zu einem Wust von Rechnern, von denen viele noch dazu nicht optimal ausgelastet waren. Und die Kosten für diese Server-Landschaft liefen schnell aus dem Ruder. Nicht so bei Virtualisierung. Inzwischen sind auch die nötigen Funktionen und Tools vorhanden, um VMs und die in ihnen verpackten Anwendungen sauber voneinander zu trennen. CPU, Memory und Storage können exakt ausgelastet werden, die Kosten in einem solchen Modell sinken.\newline
+
+
+
+\section{Motivation}
+Die Motivation dieser Ausarbeitung besteht darin, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne bürokratischen Aufwand und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
+Der normalerweise große zeitliche Aufwand soll möglichst minimiert werden und es Anwendern in Unternehmen und Projekten erleichtert wird, sich auf die vorhandenen Usecase zu fokussieren und keine Zeit in Aufbau, Installation und Problembehebung investieren zu müssen.
+
+\section{Themenabgrenzung}
+Diese Arbeit greift bekannte und etablierte Softwareprodukte auf und nutzt diese in einem zusammenhängenden Kontext. Dabei werden die verwendeten Softwareprodukte nicht modifiziert, sondern für eine vereinfachte Benutzung durch eigene Implementierungen kombiniert und mit einem Benutzerinterface versehen, welches die Abläufe visualisiert und dem Benutzer die Handhabung vereinfacht.
+Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen Software ein, sondern vereinfacht das Zusammenspiel der einzelnen Anwendungen.
+
+\section{Struktur der Arbeit}
+
+\chapter{Grundlagen}
+\section{Begriffserklärung}
+Im Verlauf dieser Arbeit werden Begrifflichkeiten verwendet, die im Vorfeld zu klären sind.\newline
+	\begin{enumerate}
+		\item \textbf{Provisioning / Provisioner}\newline
+\textit{Provisioning} ist ein Aspekt der Informatik, in dem es darum geht, den richtigen Personen zur richtigen Zeit effektiv Ressourcen zur Verfügung zu stellen.
+\textit{Provisioner} helfen bei der Softwareverteilung auf gewünschte Maschinen, Ad-hoc Kommando-Ausführung und Konfigurationsmanagement.
+In dieser Arbeit bezieht sich der Begriff \textit{Provisioning} auf die automatisierte Softwareverteilung, die mit dem Aufbau einer Entwicklungsumgebung verbunden ist.\newline
+		\item \textbf{Entwicklungsumgebung}\newline
+IDE's (integrated development environment) sind Entwicklungsumgebungen, die den Entwickler unterstützen, Quellcode zu schreiben und zu bearbeiten. Die gängigsten IDE's unterstützen meißt mehrere Programmiersprachen und helfen dem Entwickler mit nützlichen Funktionen, wie  z.B. das aufzeigen von Fehlern im Quelltext. Entwicklungsumgebungen sind in vielen Fällen auch PC's / Server / virtuelle Maschinen, die zum Entwickeln installiert und bereitgestellt werden.
+Dort können neue Funktionalitäten ausprobiert werden und das bestehende System testweise erweitert werden, ohne in die Produktionslandschaft einzugreifen.
+In den folgenden Texten wird der Begriff \textit{Entwicklungsumgebung} als Synonym für eine virtuelle Maschine benutzt, die dem Anwender die Freiheit gibt, unkompliziert Möglichkeiten auszutesten und neues auzuprobieren.\newline
+		\item \textbf{Aufbau einer Maschine}\newline
+\textit{Aufbau einer Maschine} beinhaltet immer das automatische Erstellen und Konfigurieren einer virtuellem Maschine mit Hilfe von VirtualBox und Vagrant.
+Das Resultat ist eine virtuelle Maschine mit der Basisinstallation von Ubuntu (32Bit / 64Bit) und \textbf{MEHR INFOS ZU DEM SYSTEM}.
+Durch die Möglichkeit des Provisioning kann die Basisinstallation mit Software ergänzt und Befehle auf der Maschine ausgeführt werden.
+
+\item \textbf{Maschinenkonfiguration}\newline
+Für den Aufbau einer Maschine werden zwei wesentliche Konfigurationsdateien erstellt.
+Diese werden für den Aufbau der virtuelle Maschine selbst benötigt und für das ggf. gewünschte Provisioning. Der Begriff \textit{Maschinenkonfiguration} beschreibt im folgenden immer das vorhandensein beider Dateien. 
+	\end{enumerate}
+	
+
+\end{comment}

@@ -1,15 +1,104 @@
 %\setcounter{secnumdepth}{3}
+
+
 \chapter{Anforderungsanalyse}
 Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
 zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
 Im Folgenden werden die Anforderungen an die Software detaillierter konzipiert, aufgelistet und beschrieben. Zudem grundlegende Fragen bezüglich der Kernaufgaben, Qualitätsanforderungen, beteiligte Gruppen und benachbarter Systeme geklärt.
 
+\section{Bestandsaufnahme existierender Lösungen}
+\textbf{DAS EHER NACH HINTEN?!}
 
-\section{Anforderungen}
-Anforderungen beschreiben die Kernaufgabe des Systems und hinterfragen die Qualitätsanforderungen, die das System erfüllen muss.
-Daher werden Anforderungen in der Regel zwischen funktionale Anforderungen und nichtfunktionale Anforderungen unterschieden, wobei die Abgrenzung zwischen den beiden Anforderungsarten nicht immer eindeutig bestimmt werden kann.
+\section{Zielsetzung}
+%Anforderungen beschreiben die Kernaufgabe des Systems und hinterfragen die Qualitätsanforderungen, die das System erfüllen muss.
+%Daher werden Anforderungen zwischen funktionale Anforderungen und nichtfunktionale Anforderungen unterschieden.
+Die zu erstellende Applikation unterstützt den Anwender bei der Umsetzung und der Konfiguration von virtuellen Entwicklungsumgebungen.
+Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, sollen dem Anwender in seinen Tätigkeiten hilfreich sein.
+Durch ein übersichtliches Konfigurationsspektrum, soll es dem Anwender vereinfacht werden, sich innerhalb kürzester Zeit in die Anwendung einzufinden um sich die gewünschte virtuelle Umgebung mit geringem Zeitaufwand zu erstellen.
+%Gerade Anwender mit geringer Erfahrung im Aufbau von virtuellen Maschinen, sollen davon provitieren, dass die Anwendung den Aufbau, die Installation externer Software, die Benutzung und den Austausch mit anderen Anwendern unterstützt.
+Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten und Qualitätsmerkmale näher zu betrachten, werden als erstes die Stakeholder definiert und ihnen dann die Kernfunktionalitäten zugeordnet. Im weiteren wird auf die Qualitätsmerkmale eingegangen, die auch als nichtfunktionale Anforderungen bezeichnet werden und als Qualitätskriterium an System und Software angesehen werden können.
 
 
+\subsection{Stakeholder} \label{STAKEHOLDER}
+'\textit{Stakeholder} in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
+
+\begin{center}
+ \begin{minipage}{\linewidth}
+	\centering
+	\includegraphics[scale=0.4]{../Bilder/Stakeholder.png}%
+	\captionof{figure}[Stakeholderdefinition]{Stakeholder}%
+ \end{minipage}
+\end{center}
+
+
+
+\subsection{Funktionale Anforderungen} \label{FA}
+
+%Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll.
+\textbf{Anforderungen Anwender}
+\begin{enumerate}
+
+\item[FA 1]
+Die Anwendung muss über den Browser ausführbar sein zu, ohne zusätzliche lokale Installationen auf Anwenderseite.			
+			
+\item[FA 2]	
+Falls der Anwender keine zusätzliche Software auf der virtuellen Maschine haben möchte, muss die Anwendung eine entsprechende Option dafür anbieten.
+			
+\item[FA 3]	
+Die Anwendung muss dem Anwender die Möglichkeit bieten, Software mit zu installieren.
+
+\item[FA 4]\label{itm:AUSWAHLMIT} 
+Falls der Anwender diese Option nutzt, sollte die Anwendung Softwarekomponenten vorschlagen oder es ermöglichen eigene Dateien auszuwählen.
+
+\item[FA 5]
+Die Anwendung sollte fähig sein, dem Administrator Bearbeitungsmöglichkeiten für die vorzuschlagenden Softwarekomponenten anzubieten.
+
+%Es ist dem Anwender möglich, eine Umgebung inkl. Provisioning zu erstellen, in dem er über eine Auswahlliste Softwarekomponenten auswählen kann.
+		
+%\item[FA 4]	\textbf{Aufbau mit Provisioning inkl. eigener Dateien}\newline
+%			Durch das Hochladen eigener Dateien, ist der Anwender in der Lage, Umgebungen aufzubauen inkl. seiner eigens ausgesuchten Dateien/Programme.
+%			Dies ist in Kombination mit FA 3 \ref{itm:AUSWAHLMIT} möglich
+
+\item[FA 6]	
+Die Anwendung sollte dem Anwender die Option bieten, virtuelle Maschinen zu exportieren. 
+
+\item[FA 7] 
+Die Anwendung sollte fähig sein den Export zu komprimieren.
+
+\item[FA 8] 
+Ist der Export durchgeführt worden, muss die Anwendung das mit einer Meldung auf dem Bildschirm bestätigen.
+		
+\item[FA 9]	
+Die Anwendung muss fähig sein, Exporte wieder importieren zu können
+Falls währen der Importierung Datenfehler auftreten, muss die Anwendung den jeweiligen Fehler (Fehlerbeschreibung) auf dem Bildschirm ausgeben.
+
+\item[FA 10]	
+Ist der Import erfolgreich durchgeführt worden, sollte die Anwendung eine entsprechende Meldung anzeigen.
+%Durch den Import von Maschinenkonfiguration wird es dem Anwender ermöglicht, selbst- oder von Kollegen erstellte Umgebungen wieder aufzubauen.
+
+\item[FA 11]	
+Wenn der Anwender eine virtuelle Maschine erstellen möchte, muss die Anwendung bei wichtigen Konfigurationsschritten, für den Benutzer sichtbare Statusmeldungen anzeigen. 
+\item[FA 12]	
+Treten Fehler bei der Erstellung einer virtuellen Maschine auf, muss das System eine Fehlermeldung ausgeben.
+\end{enumerate}	
+
+\textbf{Anforderungen Administrator}
+	
+\begin{enumerate}
+\item[FA 13]
+Falls während des Betriebes der Anwendung Änderungen an der Konfiguration durchgeführt werden müssen, sollte die Anwendung dies nur durch einen expliziten Administratoren-Account zulassen.
+
+\item[FA 14]	
+Solange der Administrator angemeldet ist, sollte die Anwendung ihm die Möglichkeit bieten, den Speicherort und Name von Logdateien persistent zu ändern. 
+
+\item[FA 15]	
+Falls während der Änderung ein Fehler auftritt, muss die Anwendung eine Fehlermeldung auf dem Bildschirm ausgeben.
+
+\item[FA 16]	
+Die Anwendung sollte dem Administrator die Option bieten, sich den Inhalt von Logdateien anzeigen zu lassen.
+\end{enumerate}	
+
+Definition Funktionale Anforderungen nach \cite{RuppSOPHISTen201410}
 \subsection{Nichtfunktionale Anforderungen} \label{NFA}
 Nichtfunktionale Anforderungen können als Qualitätskriterium an System und Software angesehen werden, wobei die Qualität der Software/des Systems immer auf die folgenden Qualitätsmerkmale bezogen wird.
 	\begin{enumerate}
@@ -50,11 +139,12 @@ Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfä
 
 		\item[NFA 7] Der bei Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein.
 		
-		\item[NFA 8] Der Export von Konfigurationen beträgt <1 Minute.
+		\item[NFA 8] Der Export von Konfigurationsdateien beträgt <1 Minute.
 		
-		\item[NFA 9] Änderungen an der Softwarekomponentenliste muss innerhalb von 2 Sekunden in der GUI sichtbar sein.		
+		\item[NFA 9] Änderungen an der Softwarekomponentenliste muss innerhalb von <10 Sekunden in der GUI sichtbar sein.		
 		
 		\item[NFA 10] Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
+		
 		\item[NFA 11] Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand des Austausches bei unter einem Personentag.
 
 		\item[NFA 12] Die Implementierung weiterer Grundfunktionalitäten soll möglichst einfach erfolgen.		
@@ -66,155 +156,5 @@ Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfä
 		\item[NFA 15] Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
 		
 	\end{enumerate}
-
-
-\subsection{Stakeholder} \label{STAKEHOLDER}
-`Stakeholder in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
-
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.4]{../Bilder/Stakeholder.png}%
-	\captionof{figure}[Stakeholderdefinition]{Stakeholder}%
- \end{minipage}
-\end{center}
-
-
-
-\subsection{Funktionale Anforderungen} \label{FA}
-Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll. Im folgenden sind die Anforderungen Stakeholdern zugeordnet, die vorher definiert werden.\newline\newline
-\textbf{Anforderungen Anwender}
-	\begin{enumerate}
-		\item[FA 1]	\textbf{Starten der Applikation}\newline
-			Ist die Applikation Lokal oder Serverseitig installiert, benötigt der Anwender keine zusätzliche Installation, um die Software im Browser auszuführen.
-		\item[FA 2]	\textbf{Aufbau ohne Provisionierung}\newline
-			Der Anwender hat die Möglichkeit eine Umgebung aufzubauen, ohne vorinstallierte Software.
-		\item[FA 3]\label{itm:AUSWAHLMIT}	\textbf{Aufbau mit Provisionierung inkl. Auswahlliste}\newline
-			Es ist dem Anwender möglich, eine Umgebung inkl. Provisionierung zu erstellen, in dem er über eine Auswahlliste Softwarekomponenten auswählen kann.
-		\item[FA 4]	\textbf{Aufbau mit Provisionierung inkl. eigener Dateien}\newline
-			Durch das Hochladen eigener Dateien, ist der Anwender in der Lage, Umgebungen aufzubauen inkl. seiner eigens ausgesuchten Dateien/Programme.
-			Dies ist in Kombination mit FA 3 \ref{itm:AUSWAHLMIT} möglich
-		\item[FA 5]	\textbf{Import von Konfigurationen}\newline
-			Durch den Import von Konfigurationen wird es dem Benutzer ermöglicht, selbst- oder von Kollegen erstellte Umgebungen wieder aufzubauen.
-		\item[FA 6]	\textbf{Export von Konfigurationen}\newline
-			Exportieren der erstellten Konfiguration, soll den Austausch und das Speichern von Konfigurationen für den Benutzer erleichtern.\newline
-			Der Benutzer kann sich den Speicherort aussuchen.	
-		\item[FA 7]	\textbf{Rückmeldung wärend Konfiguration 1/2}\newline			
-			Die Anwendungen informiert den Benutzer bei jedem Konfigurationsschritt über Erfolg oder Misserfolg.
-		\item[FA 7.1]\textbf{Rückmeldung wärend Konfiguration 2/2}\newline		
-			Ist eine Maschine ohne Fehler aufgebaut, wird dies dem Benutzer mitgeteilt. Ausserdem erscheint  der Erstellungsordner, sowie Verbindungsmöglichkeiten zu der Maschine.
-		
-
-	\end{enumerate}	
-
-\textbf{Anforderungen Administrator}\newline
-	\begin{enumerate}
-		\item[FA 1]	\textbf{Administratorenkonto}\newline			
-			Das anlegen eines Administratorenkonto bevollmächtigt den entsprechenden Benutzer zu Konfigurationsänderungen bezüglich der Anwendung.
-
-		\item[FA 2]	\textbf{Logdateien - Speicherort ändern}\newline			
-			Der Administrator kann den Speicherort von Logdateien ändern.
-
-		\item[FA 3]	\textbf{Logdateien - Name ändern}\newline			
-			Der Administrator kann den Namen von Logdateien ändern.
-
-		\item[FA 4]	\textbf{Logdateien - Anzeigen}\newline			
-			Der Administrator kann sind den Inhalt von Logdateien in der Applikation anzeigen lassen.
-
-		\item[FA 5]	\textbf{Protokollierung 1/2}\newline			
-			Auftretende Fehler wärend der Benutzer die Umgebung konfiguriert, werden in einer seperaten Logdatei protokolliert.
-		\item[FA 5.1]	\textbf{Protokollierung 2/2}\newline			
-			Erfolgreiche Konfigurationsschritte werden in einer seperaten Logdatei protokolliert.	
-		
-		\item[FA 6]	\textbf{Export/Import - Dateiformat YAML}\newline			
-			Erlaubte Export-, sowie Importdateien sind ausschliesslich YAML-Dateien.							
-
-		\item[FA 7]	\textbf{Anbindung an Git}\newline			
-			Export und Import sind optional mit einem Git Konto verknüpfbar, um die Kommunikation zwischen gewünschten Personen zu vereinfachen.
-
-		\item[FA 8]	\textbf{Validierung von Importen}\newline
-			Dateien, die importiert werden sollen, werden beim Import validiert.
-
-		\item[FA 9]	\textbf{Softwarekomponentenliste}\newline
-			Der Administrator kann die angebotene Softwarekomponentenliste bearbeiten, um diese aktuell zu halten.
-		\item[FA 9.1]	\textbf{Hinzufügen von Softwarekomponenten}\newline
-			Der Administrator kann neue Software zur Softwareliste hinzufügen.
-		\item[FA 9.2]	\textbf{Löschen von Softwarekomponenten}\newline
-			Der Administrator kann Software aus der Softwareliste entfernen
-		\item[FA 9.3]	\textbf{Ändern von Softwarekomponenten}\newline
-			Der Administrator kann Software aus der Softwareliste abändern. Dazu gehört 'Name', 'Beschreibung' und 'Befehl'.
-		\item[FA 9.4]	\textbf{Export der Softwarekomponentenliste}\newline
-			Der Administrator kann die Softwarekomponentenliste als XLS exportieren.
-
-	\end{enumerate}	
-
-
-
-
-%AUSKOMMENTIERT!!!
-\begin{comment}
-	 \textbf{FA 3 - Softwareauswahl}\newline
-		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLMIT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
-		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
-		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
-
-	 \textbf{FA 4 - Softwareauswahl}\newline
-		Entscheidet sich der Benutzer für den Auswahlpunkt \ref{itm:AUSWAHLMIT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
-		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
-		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
-
-	 \textbf{FA 5 - Softwareauswahl}\newline
-		Entscheidet sich der Benutzer für den Auswahlpunkt FA2.\ref{itm:AUSWAHLIMPORT}, wird ihm eine Auswahl an voreingestellten Softwarekomponenten angeboten.
-		Die einzelnen Komponenten werden mit Name, Beschreibung und Änderungsdatum angezeigt.\newline
-		Wählt der Benutzer ein oder mehrere Punkte aus der Liste aus, kann er den Erstellungsprozess weiterführen.
-
-	\item[FA 4] \textbf{Anmeldung an der Anwendung}\newline
-		Mit einer Anmeldung an der Anwendung, bekommt der Benutzer die Möglichkeit weitere Operationen auszuführen, die von seiner Berechtigungsstufe
-			\begin{enumerate}
-				\item Export zu Git.
-				\item Konfigurationen bestehender Maschinen speichern.
-				\item Gespeicherte Konfigurationen abrufen.
-			\end{enumerate}       
-
-	\item[FA 5]\label{BERECHTIGUNGSSYSTEM} \textbf{Berechtigungssystem}\newline
-		Die zu entwickelnde Software soll zwei Berechtigungsstufen beinhalten, um Benutzern Berechtigungsstufen zuordnen zu können und weitere Optionen zu ermöglichen\newline
-		\textbf{Rolle: Administrator}\newline
-          	Die Administrator-Rolle soll Zugriff auf konfigurative Möglichkeiten bekommen.\newline 
-			Speicherpfad der Logdatei ändern; neue Softwarekomponenten in die Auswahlliste übernehmen, diese ändern und löschen.\newline\newline
-		\textbf{Rolle: User}\newline
-			Benutzer in der User-Rolle sind nicht berechtigt Konfigurationen an der Software vorzunehmen. Ihnen steht der Administrative Punkt nicht zur Verfügung
-        
-
-	\item[FA 6] \textbf{Export von Konfigurationen}\newline
-		Die Exportfunktion ermöglich es dem Benutzer erstellte Konfigurationen mir Kollegen zu teilen oder extern zu speichern.
-		Folgende Optionen stehen zur Verfügung:
-			\begin{enumerate}
-				\item Der Export zu Git, auf ein eigenes Konto oder eines der Abteilung.
-				\item Export auf einen lokalen Datenträger.
-			\end{enumerate}       
-
-	\item[FA 7] \textbf{Import von Konfigurationen}\newline
-		Das Importieren von Konfigurationen, sollen dem Benutzer ermöglichen, eigens erstellte oder fremde Konfigurationen zu verwenden.
-		Ladbar sind diese von einem lokalen Datenträger oder aus einem Git Repository.\newline
-		Nach dem Import, kann der Benutzer auswählen, ob er die Konfiguration speichern möchte, oder eine neue Maschine erstellen will.
-		Speichern wird nur angeboten, wenn der Benutzer angemeldet ist.
-	
-	\item[FA 8] \textbf{Speichern von Konfigurationen}\newline
-	 	Nur  Anwender, die an der Applikation angemeldet sind, haben die Möglichkeit zu speichern.
-		Konfigurationen können dann gespeichert werden, wenn sie noch nicht provisioniert worden sind.
-	 	Gerade importierte Konfigurationen können sofort gespeichert werden.
-	 
-	 \item[FA 9] \textbf{Registrierung}\newline
-	 	Möchte ein Benutzer sich an der Applikation registrieren, ist dies mit einer E-Mailadresse in Kombination eines Passwortes möglich.
-	 	Optional wird ihm vorgeschlagen ein Git Account mit anzugeben, um spätere Exporte oder Sicherungen zu tätigen.
-	 	Ist der Benutzer noch nicht in der Datenbank hinterlegt, wird der Registrierungsprozess abgeschlossen.
-	 	Andernfalls, wird der Benutzer darauf aufmerksam gemacht, dass die E-Mailadresse bereits hinterlegt ist.
-
-\end{enumerate}
-
-%AUSKOMMENTIERT!!!
-\end{comment}	
-	
-
 
 

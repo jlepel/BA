@@ -1,17 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: BA.aux
-A level-1 auxiliary file: einleitung.aux
 A level-1 auxiliary file: anforderunsanalyse.aux
-A level-1 auxiliary file: anwendungsfaelle.aux
-A level-1 auxiliary file: appBuilder.aux
-A level-1 auxiliary file: rubySinatra.aux
-A level-1 auxiliary file: vagrant.aux
-A level-1 auxiliary file: ansible.aux
-A level-1 auxiliary file: sinatra.aux
-A level-1 auxiliary file: passenger.aux
-A level-1 auxiliary file: sidekiq.aux
-A level-1 auxiliary file: schluss.aux
 The style file: dinat.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -22,43 +12,43 @@ Database file #1: literatur.bib
 Warning--I didn't find a database entry for "goossens93"
 You've used 2 entries,
             3552 wiz_defined-function locations,
-            824 strings with 6524 characters,
-and the built_in function-call counts, 1127 in all, are:
-= -- 121
-> -- 14
-< -- 11
-+ -- 15
-- -- 6
-* -- 100
-:= -- 187
-add.period$ -- 2
+            814 strings with 6497 characters,
+and the built_in function-call counts, 1272 in all, are:
+= -- 140
+> -- 17
+< -- 18
++ -- 24
+- -- 9
+* -- 122
+:= -- 211
+add.period$ -- 3
 call.type$ -- 2
-change.case$ -- 8
+change.case$ -- 9
 chr.to.int$ -- 2
 cite$ -- 2
-duplicate$ -- 32
-empty$ -- 115
-format.name$ -- 12
-if$ -- 244
+duplicate$ -- 35
+empty$ -- 118
+format.name$ -- 19
+if$ -- 266
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 4
-newline$ -- 24
+newline$ -- 25
 num.names$ -- 8
 pop$ -- 14
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 9
 quote$ -- 0
-skip$ -- 38
+skip$ -- 44
 stack$ -- 0
-substring$ -- 93
-swap$ -- 4
-text.length$ -- 2
+substring$ -- 99
+swap$ -- 7
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 12
 warning$ -- 0
-while$ -- 12
+while$ -- 13
 width$ -- 0
-write$ -- 33
+write$ -- 35
 (There was 1 warning)
