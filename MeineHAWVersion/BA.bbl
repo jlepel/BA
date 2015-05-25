@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{7}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -6,6 +6,35 @@
 \makeatother
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Bengel(2008)]{Bengel200806}
+\dinatlabel{Bengel 2008} \textsc{Bengel}, Gunther:
+\newblock \emph{Masterkurs Parallele und Verteilte Systeme: Grundlagen und
+  Programmierung von Multicoreprozessoren, Multiprozessoren, Cluster und Grid
+  (German Edition)}.
+\newblock 2008.
+\newblock Vieweg+Teubner Verlag, 6 2008. --
+\newblock URL \url{http://amazon.de/o/ASIN/3834803944/}. --
+\newblock ISBN 9783834803948
+
+\bibitem[Burge und Brown(2002)]{Burge02}
+\dinatlabel{Burge und Brown 2002} \textsc{Burge}, Janet~E.~; \textsc{Brown},
+  David~C.:
+\newblock NFR's: Fact or Fiction?
+\newblock / Computer Science Department WPI, Worcester.
+\newblock URL \url{http://web.cs.wpi.edu/~dcb/Papers/CASCON03.pdf}, 2002.
+\newblock  -- Forschungsbericht
+
+\bibitem[Chung u.\,a.(1999)Chung, Nixon, Yu und
+  Mylopoulos]{ChungNixonYuMylopoulos199910}
+\dinatlabel{Chung u.\,a. 1999} \textsc{Chung}, Lawrence~; \textsc{Nixon},
+  Brian~A.~; \textsc{Yu}, Eric~; \textsc{Mylopoulos}, John:
+\newblock \emph{Non-Functional Requirements in Software Engineering
+  (International Series in Software Engineering)}.
+\newblock 2000.
+\newblock Springer, 10 1999. --
+\newblock URL \url{http://amazon.de/o/ASIN/0792386663/}. --
+\newblock ISBN 9780792386667
 
 \bibitem[Rupp und die SOPHISTen(2014)]{RuppSOPHISTen201410}
 \dinatlabel{Rupp und die SOPHISTen 2014} \textsc{Rupp}, Chris~;
@@ -16,6 +45,22 @@
 \newblock Carl Hanser Verlag GmbH und Co. KG, 10 2014. --
 \newblock URL \url{http://amazon.de/o/ASIN/3446438939/}. --
 \newblock ISBN 9783446438934
+
+\bibitem[Seneca(2005)]{Apelt200511}
+\dinatlabel{Seneca 2005} \textsc{Seneca}:
+\newblock \emph{Von der Ku"rze des Lebens}.
+\newblock Deutscher Taschenbuch Verlag, 11 2005. --
+\newblock URL \url{http://amazon.de/o/ASIN/342334251X/}. --
+\newblock ISBN 9783423342513
+
+\bibitem[Siegert und Baumgarten(2006)]{SiegertBaumgarten200612}
+\dinatlabel{Siegert und Baumgarten 2006} \textsc{Siegert}, Hans-Jürgen~;
+  \textsc{Baumgarten}, Uwe:
+\newblock \emph{Betriebssysteme: Eine Einführung}.
+\newblock überarbeitete, aktualisierte und erweiterte Auflage.
+\newblock Oldenbourg Wissenschaftsverlag, 12 2006. --
+\newblock URL \url{http://amazon.de/o/ASIN/3486582119/}. --
+\newblock ISBN 9783486582116
 
 \bibitem[Zörner(2012)]{Starke201205}
 \dinatlabel{Zörner 2012} \textsc{Zörner}, Stefan:

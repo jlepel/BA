@@ -3,9 +3,9 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: anforderunsanalyse.aux
 I found no \bibdata command---while reading file anforderunsanalyse.aux
 I found no \bibstyle command---while reading file anforderunsanalyse.aux
-You've used 1 entry,
+You've used 4 entries,
             0 wiz_defined-function locations,
-            85 strings with 534 characters,
+            91 strings with 642 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
