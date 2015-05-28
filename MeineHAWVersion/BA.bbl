@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{10}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -6,6 +6,15 @@
 \makeatother
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Balzert(2011)]{Balzert201109}
+\dinatlabel{Balzert 2011} \textsc{Balzert}, Helmut:
+\newblock \emph{Lehrbuch der Softwaretechnik: Entwurf, Implementierung,
+  Installation und Betrieb}.
+\newblock 3. Aufl. 2012.
+\newblock Spektrum Akademischer Verlag, 9 2011. --
+\newblock URL \url{http://amazon.de/o/ASIN/3827417066/}. --
+\newblock ISBN 9783827417060
 
 \bibitem[Bengel(2008)]{Bengel200806}
 \dinatlabel{Bengel 2008} \textsc{Bengel}, Gunther:
@@ -36,6 +45,15 @@
 \newblock URL \url{http://amazon.de/o/ASIN/0792386663/}. --
 \newblock ISBN 9780792386667
 
+\bibitem[Rechtin und Maier(2000)]{RechtinMaier200006}
+\dinatlabel{Rechtin und Maier 2000} \textsc{Rechtin}, Eberhardt~;
+  \textsc{Maier}, Mark:
+\newblock \emph{The Art of Systems Architecting, Second Edition}.
+\newblock 0002.
+\newblock Crc Pr Inc, 6 2000. --
+\newblock URL \url{http://amazon.de/o/ASIN/0849304407/}. --
+\newblock ISBN 9780849304408
+
 \bibitem[Rupp und die SOPHISTen(2014)]{RuppSOPHISTen201410}
 \dinatlabel{Rupp und die SOPHISTen 2014} \textsc{Rupp}, Chris~;
   \textsc{SOPHISTen} die:
@@ -61,6 +79,14 @@
 \newblock Oldenbourg Wissenschaftsverlag, 12 2006. --
 \newblock URL \url{http://amazon.de/o/ASIN/3486582119/}. --
 \newblock ISBN 9783486582116
+
+\bibitem[Starke(2014)]{Starke201401}
+\dinatlabel{Starke 2014} \textsc{Starke}, Gernot:
+\newblock \emph{Effektive Softwarearchitekturen: Ein praktischer Leitfaden}.
+\newblock 6., überarbeitete Auflage.
+\newblock Carl Hanser Verlag GmbH und Co. KG, 1 2014. --
+\newblock URL \url{http://amazon.de/o/ASIN/3446436146/}. --
+\newblock ISBN 9783446436145
 
 \bibitem[Zörner(2012)]{Starke201205}
 \dinatlabel{Zörner 2012} \textsc{Zörner}, Stefan:

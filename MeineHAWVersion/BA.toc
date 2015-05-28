@@ -23,11 +23,23 @@
 \contentsline {section}{\numberline {3.2}Stakeholder}{10}{section.3.2}
 \contentsline {section}{\numberline {3.3}Funktionale Anforderungen}{10}{section.3.3}
 \contentsline {section}{\numberline {3.4}Use-Cases}{12}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}System-Use-Case}{13}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Business-Use-Case}{13}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.1}Business-Use-Case}{12}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}System-Use-Case}{14}{subsection.3.4.2}
+\contentsline {subsubsection}{\nonumberline Use-Case 1 - Virtuelle Maschine erstellen}{14}{section*.3}
+\contentsline {subsubsection}{\nonumberline Use-Case 2 - Virtuelle Maschine exportieren}{15}{section*.4}
+\contentsline {subsubsection}{\nonumberline Use-Case 3 - Virtuelle Maschine importieren}{15}{section*.5}
+\contentsline {subsubsection}{\nonumberline Use-Case 4 - Virtuelle Maschine teilen}{16}{section*.6}
 \contentsline {section}{\numberline {3.5}Nichtfunktionale Anforderungen}{16}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Qualit\"atsszenarien}{17}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Randbedingungen}{19}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{19}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Organisatorische Randbedingungen}{19}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Zusammenfassung}{19}{section.3.7}
+\contentsline {subsubsection}{\nonumberline Technologische Anforderungen}{18}{section*.7}
+\contentsline {subsubsection}{\nonumberline Qualit\"atsanforderungen}{18}{section*.8}
+\contentsline {subsubsection}{\nonumberline Anforderungen an die Benutzeroberfl\"ache}{19}{section*.9}
+\contentsline {section}{\numberline {3.6}Randbedingungen}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{21}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Zusammenfassung}{22}{section.3.7}
+\contentsline {chapter}{\numberline {4}Softwareentwurf}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Kontextabgrenzung}{24}{section.4.1}
+\contentsline {chapter}{\numberline {5}Sichten}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Bausteinsicht}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Laufzeitsicht}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}Verteilungssicht}{25}{section.5.3}
+\contentsline {section}{\numberline {5.4}Zusammenfassung}{25}{section.5.4}

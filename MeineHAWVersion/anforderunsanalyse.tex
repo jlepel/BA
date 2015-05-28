@@ -1,7 +1,3 @@
-%\setcounter{secnumdepth}{3}
-
-
-\setcounter{secnumdepth}{3}
 \chapter{Anforderungsanalyse}
 Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
 zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
@@ -28,7 +24,7 @@ Alle virtuelle Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennt
 
 
 
-\section{Funktionale Anforderungen} \label{FA}
+\section{Funktionale Anforderungen} \label{sec:FunktionaleAnforderungen}
 %Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll.
 \textbf{Anforderungen Anwender}
 \begin{enumerate}
@@ -63,8 +59,8 @@ Die Anwendung sollte fähig sein den Export zu komprimieren.
 \item[FA 8.] 
 Ist der Export durchgeführt worden, muss die Anwendung das mit einer Meldung auf dem Bildschirm bestätigen.
 		
-\item[FA 9.]	
-Die Anwendung muss fähig sein, Exporte wieder importieren zu können
+\item[FA 9. \label{Import}]
+Die Anwendung muss fähig sein, Exporte wieder importieren zu können.
 Falls währen der Importierung Datenfehler auftreten, muss die Anwendung den jeweiligen Fehler (Fehlerbeschreibung) auf dem Bildschirm ausgeben.
 
 \item[FA 10.]	
@@ -77,15 +73,15 @@ Wenn der Anwender eine virtuelle Maschine erstellen möchte, muss die Anwendung b
 \item[FA 12.]	
 Treten Fehler bei der Erstellung einer virtuellen Maschine auf, muss das System eine Fehlermeldung ausgeben.
 
-
 \item[FA 13.]	
-Die Anwendung sollte fähig sein, dem Anwender Optionen im Bezug auf bereits erstellte virtuelle Maschinen zu bieten.
+Die Applikation sollte fähig sein, anderen Anwendern bereits erstellte Maschinen über das Internet und das lokale Netzwerk zur Verfügung zu stellen.
 
 \item[FA 14.]
 Möchte der Anwender eine bereits erstellte und laufende virtuelle Maschine beenden, muss die Anwendung dafür eine entsprechende Option bieten.
 
 \item[FA 15.]
 Falls der Anwender eine bereits erstellte virtuelle Maschine löschen möchte, muss die Anwendung ihm dafür ein Hilfsmittel bereitstellen.	
+
 
 \end{enumerate}	
 \textbf{Anforderungen Administrator}
@@ -107,28 +103,114 @@ Definition Funktionale Anforderungen nach \cite{RuppSOPHISTen201410}
 
 \section{Use-Cases}
 Use-Case helfen fachlichen Anforderungen eines Systems darzustellen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden und das System grob in seine Hauptfunktionen gegliedert wird.
-
-\subsection{System-Use-Case}
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.5]{../Bilder/UseCaseUebersicht.png}
-	\captionof{figure}[System-Use-Case]{System-Use-Case}
- \end{minipage}
-\end{center}
+Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten wieder und grenzt diese voneinander ab. Während die darauf folgenden System-Use-Cases helfen eine erste Skizze der zu entwickelnden Hauptfunktionalitäten zu erstellen, die sich wie folgt aus den funktionalen Anforderungen in Kapitel \ref{sec:FunktionaleAnforderungen} ergeben haben:
+\begin{enumerate}
+\item Erstellung einer virtuellen Maschine
+\item Export einer vorhandenen Maschine
+\item Der Import einer zuvor erstellten Maschine
+\item Eine virtuelle Maschine zugreiffbar für andere Anwender machen (teilen)
+\end{enumerate}
 
 \subsection{Business-Use-Case}
 
-\textbf{Use-Case 1}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[scale=0.5]{../Bilder/UseCaseUebersicht.png}
+  }
+  \caption{Titel}
+
+\end{figure}
+\FloatBarrier
+
+\subsection{System-Use-Case}
+
+\subsubsection{Use-Case 1 - Virtuelle Maschine erstellen}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Bezeichnung} & Virtuelle Maschine erstellen \\
+\textbf{Ziel im Kontext} & Erstellung einer virtuellen Maschine \\
+\textbf{Akteur} & Anwender \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine erstellen \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Der Anwender kann auf die Benutzeroberfläche zugreifen.\\
+\textbf{Nachbedingung} & Der Anwender erhält eine gepackte Datei, in der alle nötigen Daten enthalten sind, die für einen erneuten Import nötig wären. \\
+\textbf{Anforderungen} & FA 1, FA 3, FA 4, FA 11, FA 12, FA 13 \\
+\textbf{Erfolgsszenario} & 
+ \end{tabular}
+\begin{enumerate}
+\item Der Anwender startet die Applikation über den Browser
+\item Der Anwender wird gebeten persönliche Konfigurationsparameter für die zu erstellende Maschine einzugeben
+\item Die Applikation schlägt dem Anwender vor, Software mit auf die gewünschte Maschine zu installieren
+\item Nach der entsprechenden Auswahl zeigt die Applikation den aktuellen Aufbaustatus der virtuellen Maschine
+\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten für die Maschine an\newline\newline
+\end{enumerate}
+
+
+\subsubsection{Use-Case 2 - Virtuelle Maschine exportieren}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Bezeichnung} & Virtuelle Maschine exportieren \\
+\textbf{Ziel im Kontext} & Export aller notwendigen Konfigurationsdateien, um eine Maschine mit der gleichen Konfiguration erneut erstellen zu können \\
+\textbf{Akteur} & Anwender \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine exportieren \\
+\textbf{Vorbedingung} & Die zu exportierende virtuelle Maschine existiert bereits \\
+\textbf{Nachbedingung} & Der Anwender erhält eine gepackte Datei, in der alle nötigen Daten enthalten sind, die für einen erneuten Import nötig wären. \\
+\textbf{Anforderungen} & FA 1, FA 6, FA 7, FA 8, FA 13 \\
+\textbf{Erfolgsszenario} & 
+ \end{tabular}
+\begin{enumerate}
+\item Der Anwender startet die Applikation über den Browser
+\item Der Anwender wählt die Exportfunktion aus und die Applikation zeigt dem Anwender die verfügbaren Maschinen an
+\item Der Anwender sucht sich die entsprechende Maschine aus und mit einem weiteren Klick wird der Download mit den benötigten Dateien gestartet\newline\newline
+\end{enumerate}
+
+
+\subsubsection{Use-Case 3 - Virtuelle Maschine importieren}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Bezeichnung} & Virtuelle Maschine importieren \\
+\textbf{Ziel im Kontext} & Erstellung einer Maschine aus einem Import \\
+\textbf{Akteur} & Anwender \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine importieren \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Der Anwender kann auf die Benutzeroberfläche zugreifen \\
+\textbf{Nachbedingung} & Die Maschinenkonfiguration konnte importiert werden und eine virtuelle Maschine wurde erstellt \\
+\textbf{Anforderungen} & FA 1, FA 9, FA 10, FA 11, FA 12 \\
+\textbf{Erfolgsszenario} & 
+ \end{tabular}
+\begin{enumerate}
+\item Der Anwender startet die Applikation über den Browser
+\item Der Anwender wählt die Importfunktion aus und kann die gewünschte(n) Datei(en) hochladen
+\item Die Applikation zeigt dem Anwender, dass der Import erfolgreich war
+\item Der Anwender kann nun entscheiden, ob er die virtuelle Maschine erstellen lassen möchte\newline\newline
+\end{enumerate}
+
+
+\subsubsection{Use-Case 4 - Virtuelle Maschine teilen}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Bezeichnung} & Virtuelle Maschine teilen \\
+\textbf{Ziel im Kontext} & Eine erstelle Maschine über das Internet oder das lokale Netzwerk für andere Anwender zugreifbar machen  \\
+\textbf{Akteur} & Anwender \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine für andere Anwender zugreifbar machen \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Die zu teilende Maschine ist erstellt \\
+\textbf{Nachbedingung} & Die virtuelle Maschine ist von Intern und/oder Extern zugreifbar\\
+\textbf{Anforderungen} & FA 13 \\
+\textbf{Erfolgsszenario} & 
+ \end{tabular}
+\begin{enumerate}
+\item Der Anwender startet die Applikation über den Browser
+\item Der Anwender wählt die gewünschte virtuelle Maschine aus und aktiviert die Teil-Option
+\item Die Applikation zeigt dem Anwender, die Zugriffsmöglichkeiten auf die virtuelle Maschine
+\end{enumerate}
+
+\begin{comment}
+#################################################################
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.4]{../Bilder/usecase_provisioning.png}
-	\captionof{figure}[Beschreibung des Use-Case 'Umgebung erstellen - Provisioning aus einer Auswahl an Komponenten']{Beschreibung des Use-Case 'Umgebung erstellen - Provisioning aus einer Auswahl an Komponenten'}
+	\captionof{figure}[Beschreibung des Use-Case 'Virtuelle Maschine erstellen - Provisioning aus einer Auswahl an Komponenten']{Beschreibung des Use-Case 'Virtuelle Maschine erstellen - Provisioning aus einer Auswahl an Komponenten'}
  \end{minipage}
 \end{center}
+\FloatBarrier
 
-\textbf{Use-Case 2}
+\subsubsection{Use-Case 2}
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
@@ -136,9 +218,9 @@ Use-Case helfen fachlichen Anforderungen eines Systems darzustellen, indem dort 
 	\captionof{figure}[kurze Bildunterschrift]{Beschreibung des Use-Case 'Virtuelle Maschine exportieren'}
  \end{minipage}
 \end{center}
+\FloatBarrier
 
-
-\textbf{Use-Case 3}
+\subsubsection{Use-Case 3}
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
@@ -146,11 +228,12 @@ Use-Case helfen fachlichen Anforderungen eines Systems darzustellen, indem dort 
 	\captionof{figure}[kurze Bildunterschrift]{Beschreibung des Use-Case 'Virtuelle Maschine importieren'}
  \end{minipage}
 \end{center}
+\FloatBarrier
+#################################################################
+\end{comment}
 
 
-
-
-\section{Nichtfunktionale Anforderungen} \label{NFA}
+\section{Nichtfunktionale Anforderungen} \label{sec:NFA}
 In der Literatur findet sich keine einheitliche Definition von nichtfunktionalen Anforderungen, aber bezogen auf das Design eines Systems sind die nichtfunktionalen Anforderungen für den Architekten von besonderer Bedeutung \cite{ChungNixonYuMylopoulos199910}.\newline
 Durch nichtfunktionale Anforderungen können neue Lösungsmöglichkeiten vorgegeben werden oder schlicht die Menge an potentiellen Designentwürfen, im Bezug auf die Funktionalitäten, reduziert werden \cite{Burge02}.\newline
 Im Wesentlichen gibt es eine begrenze Auswahl an Definitionen und Perspektiven die im folgenden nach \cite{RuppSOPHISTen201410} zusammengefasst werden.
@@ -173,69 +256,82 @@ Die 'Anforderungen an durchzuführende Tätigkeiten' beeinflussen Tätigkeiten, wie
 
 \item  \textbf{Rechtliche-vertragliche Anforderungen}\newline
 'Rechtliche-vertragliche Anforderungen' beschreiben die Regelungen, die zwischen Auftraggeber und Auftragnehmer vor der Entwicklung des System oder der Anwendung, festgelegt werden müssen.
-
 \end{enumerate}
+Im folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen}) 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche}) 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend.....\newline\newline
+\subsubsection{Technologische Anforderungen}
+\begin{enumerate}
+\item Das für den Betrieb der Anwendung zugrunde liegende Betriebssystem muss Ubuntu 12.04 oder höher sein.
+\item Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, ist maximal bei 10.	
+\item Die Kommunikation zwischen Frontend und Backend muss nicht verschlüsselt ablaufen.
+\item Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
+\end{enumerate}
+\subsubsection{Qualitätsanforderungen}
+\begin{enumerate}
+\item Die Installation und Betriebnahme der Anwendung sollte über einen automatischen Installationsprozess erfolgen.
+\item Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
+\item Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziebar.
+\item Änderungen am vorgeschlagenen Softwarebestand müssen innerhalb von <10 Sekunden in der Anwendungsoberfläche sichtbar sein. (bezogen auf \nameref{Import} FA 4.)		
+\item Falls das Betriebssystem auf eine höhere Version aktualisiert werden soll, muss dies ohne Änderungen am Quellcodes der Anwendung vorgenommen werden können.
+\item Soll ein anderer Provisionierer verwendet werden, muss der Aufwand des Austausches bei unter einem Personentag liegen.		
+\item Wird angedacht weitere Grundfunktionalitäten zu implementieren, soll dies möglichst einfach erfolgen.		
+\item Das Importieren von virtuellen Maschinen sollte <10 Minuten betragen.
+\item Die Validierung der zu importierenden Daten sollte <2 Minute betragen.
+\item Der bei Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein. (bezogen auf \nameref{Import} FA 9.)
+\item Der Export von einer virtuellen Maschine sollte <5 Minuten betragen.\end{enumerate}
+\subsubsection{Anforderungen an die Benutzeroberfläche}
+\begin{enumerate}
+\item Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des Systems innerhalb von maximal 10 Minuten in der Lage sein, die gewünschte Funktionalität zu lokalisieren und zu verwenden.
 
-Im folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen}) 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche}) 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine exportieren" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\textbf{BILD EINFÜGEN}
+
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine importieren" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\textbf{BILD EINFÜGEN}
 
 
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine erstellen - Mit Provisioning aus einer Auswahl an Komponenten" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\textbf{BILD EINFÜGEN}
 
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine über das Internet teilen" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.9\textwidth]{../Bilder/share_mockup.png}
+  }
+  \caption{Titel}
+
+\end{figure}
+\FloatBarrier
+ 
+\end{enumerate}
 \begin{comment}
+#################################################################
 
 Das bilden von Qualitätsszenarien hilft bei der Erfassung von Qualitäten und deren Sortierung zu entsprechenden Qualitätsmerkmalen.
 Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfälle abgeleitet werden. 
+#################################################################
 \end{comment}
 
-\subsection{Qualitätsszenarien}
-	\begin{enumerate}
-				
-		\item[NFA 1] Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des Systems innerhalb von 10 Minuten in der Lage sein, die gewu?nschte Funktionalita?t zu lokalisieren und zu verwenden.
-
-		\item[NFA 2] Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, ist maximal bei 10.	
-		
-		\item[NFA 3] Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziebar.
-
-		\item[NFA 4] Die Architektur soll so erweiterbar sein, dass es zukünftig möglich ist, mehrere Maschinen gleichzeitig aufbauen zu können.
-
-		\item[NFA 5] Das Importieren von Konfigurationensdateien beträgt <2 Minuten.		
-
-		\item[NFA 6] Die Validierung einer YAML-Datei beträgt <1 Minute.
-
-		\item[NFA 7] Der bei Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein.
-		
-		\item[NFA 8] Der Export von Konfigurationsdateien beträgt <1 Minute.
-		
-		\item[NFA 9] Änderungen an der Softwarekomponentenliste muss innerhalb von <10 Sekunden in der GUI sichtbar sein.		
-		
-		\item[NFA 10] Das Betriebssystem soll auf eine höhere Version aktualisiert werden. Dies kann ohne Änderungen des Quellcodes der Software vorgenommen werden.
-		
-		\item[NFA 11] Soll ein anderer Provisionierer verwendet werden, liegt der Aufwand des Austausches bei unter einem Personentag.
-
-		\item[NFA 12] Die Implementierung weiterer Grundfunktionalitäten soll möglichst einfach erfolgen.		
-
-		\item[NFA 13] Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
-
-		\item[NFA 14] Die Kommunikation zwischen Frontend und Backend muss nicht verschlüsselt ablaufen.
-		
-		\item[NFA 15] Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
-		
-	\end{enumerate}
-
-\section{Randbedingungen}
+\section{Randbedingungen}\label{sec:Randbedingungen}
+Um anwendungs­- und problembezogene Entwurfsentscheidungen treffen zu können, werden Faktoren analysiert, die die Architekturen der Anwendung beeinflussen oder einschränken können und werden. Dies geschieht über die im Vorfeld formulierten Anforderunge.
+Laut \cite{Starke201401} werden diese Einflussfaktoren und Randbedingungen in folgende Kategorien unterteilt:
+\begin{itemize}
+\item Organisatorische und politische Faktoren. Manche solcher Faktoren wirken auf ein be­stimmtes System ein, während Andere eine Vielzahl an Projekten eines Unternehmens beeinflussen können. \citep{RechtinMaier200006} charakterisiert diese Faktoren als facts of life.
+\item Technische Faktoren. Durch sie wird das technische Umfeld geprägt und entsprechend eingeschränkt. Sie betreffen nicht nur die Ablaufumgebung des zu entwickelnden Systems, sondern umfassen auch die technischen Vorgaben für die Entwicklung, einzusetzender Software und vorhandener Systeme.
+\end{itemize}
+Da die organisatorischen-, sowie politischen Faktoren auf dieses Projekt keinen Einfluss haben, werden diese nicht weiter betrachtet. 
 
 \subsection{Technische Randbedingungen}
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.6]{../Bilder/technische_randbedingungen.png}
-	\captionof{figure}[kurze Bildunterschrift]{Bildunterschrift}
- \end{minipage}
-\end{center}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.9\textwidth]{../Bilder/technische_randbedingungen.png}
+  }
+  \caption{Titel}
 
-
-
-
-\subsection{Organisatorische Randbedingungen}	
+\end{figure}
+\FloatBarrier
 
 \section{Zusammenfassung}
 
