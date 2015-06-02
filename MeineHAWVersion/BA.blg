@@ -3,6 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: BA.aux
 A level-1 auxiliary file: einleitung.aux
 A level-1 auxiliary file: anforderunsanalyse.aux
+A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: entwurf.aux
 The style file: dinat.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -11,47 +12,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: literatur.bib
+Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
+--line 220 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
-You've used 10 entries,
+You've used 14 entries,
             3552 wiz_defined-function locations,
-            884 strings with 8165 characters,
-and the built_in function-call counts, 6714 in all, are:
-= -- 768
-> -- 91
-< -- 138
-+ -- 174
-- -- 54
-* -- 628
-:= -- 1107
-add.period$ -- 18
-call.type$ -- 10
-change.case$ -- 47
-chr.to.int$ -- 10
-cite$ -- 12
-duplicate$ -- 174
-empty$ -- 584
-format.name$ -- 103
-if$ -- 1389
+            913 strings with 8693 characters,
+and the built_in function-call counts, 8874 in all, are:
+= -- 1014
+> -- 119
+< -- 164
++ -- 208
+- -- 66
+* -- 819
+:= -- 1464
+add.period$ -- 23
+call.type$ -- 14
+change.case$ -- 63
+chr.to.int$ -- 14
+cite$ -- 16
+duplicate$ -- 235
+empty$ -- 794
+format.name$ -- 127
+if$ -- 1859
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 18
-newline$ -- 87
-num.names$ -- 40
-pop$ -- 68
+missing$ -- 24
+newline$ -- 115
+num.names$ -- 56
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 63
 quote$ -- 0
-skip$ -- 266
+skip$ -- 341
 stack$ -- 0
-substring$ -- 549
-swap$ -- 36
-text.length$ -- 17
+substring$ -- 739
+swap$ -- 44
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 65
+type$ -- 94
 warning$ -- 2
-while$ -- 67
+while$ -- 91
 width$ -- 0
-write$ -- 143
-(There were 2 warnings)
+write$ -- 191
+(There were 3 warnings)

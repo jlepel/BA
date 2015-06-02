@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{14}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -45,6 +45,20 @@
 \newblock URL \url{http://amazon.de/o/ASIN/0792386663/}. --
 \newblock ISBN 9780792386667
 
+\bibitem[Hall(2013)]{Hall201311}
+\dinatlabel{Hall 2013} \textsc{Hall}, Daniel:
+\newblock \emph{Ansible Configuration Management}.
+\newblock Packt Publishing, 11 2013. --
+\newblock URL \url{http://amazon.com/o/ASIN/1783280816/}. --
+\newblock ISBN 9781783280810
+
+\bibitem[Peacock(2013)]{Peacock201308}
+\dinatlabel{Peacock 2013} \textsc{Peacock}, Michael:
+\newblock \emph{Creating Development Environments with Vagrant}.
+\newblock Packt Publishing, 8 2013. --
+\newblock URL \url{http://amazon.de/o/ASIN/1849519188/}. --
+\newblock ISBN 9781849519182
+
 \bibitem[Rechtin und Maier(2000)]{RechtinMaier200006}
 \dinatlabel{Rechtin und Maier 2000} \textsc{Rechtin}, Eberhardt~;
   \textsc{Maier}, Mark:
@@ -53,6 +67,14 @@
 \newblock Crc Pr Inc, 6 2000. --
 \newblock URL \url{http://amazon.de/o/ASIN/0849304407/}. --
 \newblock ISBN 9780849304408
+
+\bibitem[Rhett(2015)]{Rhett201508}
+\dinatlabel{Rhett 2015} \textsc{Rhett}, Jo:
+\newblock \emph{Learning Puppet 4}.
+\newblock 1.
+\newblock O'Reilly Vlg. Gmbh and Co., 8 2015. --
+\newblock URL \url{http://amazon.de/o/ASIN/1491907665/}. --
+\newblock ISBN 9781491907665
 
 \bibitem[Rupp und die SOPHISTen(2014)]{RuppSOPHISTen201410}
 \dinatlabel{Rupp und die SOPHISTen 2014} \textsc{Rupp}, Chris~;
@@ -63,6 +85,12 @@
 \newblock Carl Hanser Verlag GmbH und Co. KG, 10 2014. --
 \newblock URL \url{http://amazon.de/o/ASIN/3446438939/}. --
 \newblock ISBN 9783446438934
+
+\bibitem[ScriptRock(2014)]{ScriptRock:2014:Online}
+\dinatlabel{ScriptRock 2014} \textsc{ScriptRock}:
+\newblock \emph{Ansible vs. Salt}.
+\newblock Januar 2014. --
+\newblock URL \url{https://www.scriptrock.com/articles/ansible-vs-salt}
 
 \bibitem[Seneca(2005)]{Apelt200511}
 \dinatlabel{Seneca 2005} \textsc{Seneca}:

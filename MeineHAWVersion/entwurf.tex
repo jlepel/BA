@@ -2,7 +2,19 @@
 Nach \cite{Balzert201109} ist der Softwareentwurf die Entwicklung einer software-technischen Lösung im Sinne einer Softwarearchitektur auf Basis der gegebenen Anforderungen an ein Softwareprodukt. 
 Die Kunst bei einem Softwareentwurf besteht entsprechend darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet, einschliesslich der Berücksichtigung von Einflussfaktoren wie definierte Randbedingungen. (Kaptitel \ref{sec:Randbedingungen}).
 Der Softwareentwurf ist als Richtlinie zu sehen, der bei der Umsetzung der angeforderten Software unterstützt.
-Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine, deren Interaktionen und Beziehungen untereinander sowie ggf. deren Verteilung auf physicher Ebene. Dabei ist die spezifizierung der entsprechenden Schnittstellen der einzelnen Architekturbausteine mit zu beachten. Für die visualisierung der Architekturbausteine können verschiedene Abstufungen von Sichten herangezogen werden.
+Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine, deren Interaktionen und Beziehungen untereinander sowie ggf. deren Verteilung auf physicher Ebene. Dabei ist die spezifizierung der entsprechenden Schnittstellen der einzelnen Architekturbausteine mit zu beachten. Für die Visualisierung der Architekturbausteine können verschiedene Abstufungen von Sichten herangezogen werden.
+Die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
+\begin{comment}
+\begin{enumerate}
+\item \textbf{Kontextabgrenzung}
+%Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung 
+%sowie die wesentlichen Teile der umgebenden Infrastruktur.
+\item \textbf{Bausteinsicht}
+%Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung sowie die wesentlichen Teiler der umgebenden Infrastruktur.
+\item \textbf{Laufzeitsicht}
+\item \textbf{Verteilungssicht}
+\end{enumerate}
+\end{comment}
 \begin{figure}[htbp]
   \centering
   \fbox{
@@ -13,21 +25,13 @@ Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine,
 \end{figure}
 \FloatBarrier
 
-
-
-\textbf{Kontextsicht}\newline
-Zeigt die Zusammenhänge zwischen dem System und seinen Nachbarsystemen.\newline
-\textbf{Bausteinsicht}\newline
-Zeigt die statische Struktur, welche Bausteine Teil der Anwendung sind und welche
-Beziehung sie zueinander haben.\newline
-\textbf{Laufzeitsicht}\newline
-Zeigt die Abläufe der Anwendung und die Zusammenarbeit der Bausteine zur Laufzeit.\newline
-\textbf{Verteilungssicht}\newline
-Zeigt, in welcher Umgebung das System abläuft.
-
 \section{Kontextabgrenzung}
-Dieser Abschnitt stellt das Umfeld von der Applikation dar. Fu?r welche Benutzer ist es da, und mit welchen Fremdsystemen interagiert es?
-
+Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung sowie die wesentlichen Teile der umgebenden Infrastruktur.
+Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{NFA} haben ergeben, dass die Hauptfunktionalitäten aus erstellen, exportieren, importieren, teilen und dem Provisioning von virtuellen Maschinen bestehen.
+Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten von bestimmten Produkten übernommen werden. 
+Frei erhältliche Virtualisierungsprodukte können das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Software-Provisioner sind meist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen zu arbeiten und übernehmen somit die gewünschten Anforderung nach automatisierter Softwareinstallation.
+Der Kern der Anwendung organisiert das zusammenspiel der einzelnen Softwareprodukte und stellt dem Anwender die entsprechende Benutzeroberfläche zur Verfügung.
+Die Anwendung selbst, inklusive der oben genannten Produkte, laufen auf einem gemeinsamen Server, der zentralisiert angesprochen werden kann.
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
@@ -36,7 +40,15 @@ Dieser Abschnitt stellt das Umfeld von der Applikation dar. Fu?r welche Benutzer
  \end{minipage}
 \end{center}
 
-In der dargestellten Kontextsicht, wird die d
+\subsubsection{Kurzbeschreibung der externen Schnittstellen}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Eingaben / Auswahl} & Der Awender tätigt Eingaben und wählt unter Optionen aus, die von der Anwendung bereitgestellt werden. Diese werden direkt von der Applikation verarbeitet\\
+\textbf{Befehle und Konfigurationen} & Die Applikation erstellt nötige Konfigurationsdateien und leitet Befehle für das Virtualisierungsprodukt weiter\\
+\textbf{Kommunikation über Konfigurationsdateien} & Das Virtualisierungsproduk ruft über die erstellen Konfigurationsdateien auf den Provisionierer zu. \textbf{[TODO MUSS NOCH BEARBEITET WERDEN]}.
+\end{tabular}
+
+
+
 \chapter{Sichten}
 \section{Bausteinsicht}
 \section{Laufzeitsicht}

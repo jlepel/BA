@@ -9,22 +9,35 @@
 \BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Gastbetriebssystem}{section.2.1}% 9
 \BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Hypervisor}{section.2.1}% 10
 \BOOKMARK [1][-]{section.2.2}{2.2 Provisioning/Konfigurationsmanagement}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.3}{2.3 Begriffserkl\344rung}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{3 Anforderungsanalyse}{}% 13
-\BOOKMARK [1][-]{section.3.1}{3.1 Zielsetzung}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{3.2 Stakeholder}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{3.3 Funktionale Anforderungen}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.4}{3.4 Use-Cases}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Business-Use-Case}{section.3.4}% 18
-\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 System-Use-Case}{section.3.4}% 19
-\BOOKMARK [1][-]{section.3.5}{3.5 Nichtfunktionale Anforderungen}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.6}{3.6 Randbedingungen}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 Technische Randbedingungen}{section.3.6}% 22
-\BOOKMARK [1][-]{section.3.7}{3.7 Zusammenfassung}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{4 Softwareentwurf}{}% 24
-\BOOKMARK [1][-]{section.4.1}{4.1 Kontextabgrenzung}{chapter.4}% 25
-\BOOKMARK [0][-]{chapter.5}{5 Sichten}{}% 26
-\BOOKMARK [1][-]{section.5.1}{5.1 Bausteinsicht}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.2}{5.2 Laufzeitsicht}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.3}{5.3 Verteilungssicht}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.4}{5.4 Zusammenfassung}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.3}{3 Anforderungsanalyse}{}% 12
+\BOOKMARK [1][-]{section.3.1}{3.1 Zielsetzung}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{3.2 Stakeholder}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.3}{3.3 Funktionale Anforderungen}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.4}{3.4 Use-Cases}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Business-Use-Case}{section.3.4}% 17
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 System-Use-Case}{section.3.4}% 18
+\BOOKMARK [1][-]{section.3.5}{3.5 Nichtfunktionale Anforderungen}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.6}{3.6 Randbedingungen}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 Technische Randbedingungen}{section.3.6}% 21
+\BOOKMARK [1][-]{section.3.7}{3.7 Zusammenfassung}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{4 Evaluation}{}% 23
+\BOOKMARK [1][-]{section.4.1}{4.1 Virtualisierungsprodukte}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 VMware Player \(Plus\)}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Microsoft Hyper-V}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Oracle VM VirtualBox}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 Zusammenfassung}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.5}{4.1.5 Fazit}{section.4.1}% 29
+\BOOKMARK [1][-]{section.4.2}{4.2 Konfigurationsmanagement-Systeme}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Ansible}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Saltstack}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.3}{4.2.3 Puppet}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.4}{4.2.4 Zusammenfassung}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.5}{4.2.5 Fazit}{section.4.2}% 35
+\BOOKMARK [1][-]{section.4.3}{4.3 Vagrant}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{5 Softwareentwurf}{}% 37
+\BOOKMARK [1][-]{section.5.1}{5.1 Kontextabgrenzung}{chapter.5}% 38
+\BOOKMARK [0][-]{chapter.6}{6 Sichten}{}% 39
+\BOOKMARK [1][-]{section.6.1}{6.1 Bausteinsicht}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{6.2 Laufzeitsicht}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.3}{6.3 Verteilungssicht}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.4}{6.4 Zusammenfassung}{chapter.6}% 43

@@ -127,7 +127,7 @@ Es entsteht nicht nur ein höherer Management-Aufwand um das Betriebssystem zu ko
 \section{Provisioning/Konfigurationsmanagement}\label{subsec:Provisioning}
 \textbf{TODO: WELCHER BEGRIFF IST BESSER?}\newline
 Die Hauptaufgabe eines Konfigurationsmanagement-Systems, im folgenden nur noch KMS genannt, ist es, eine zuvor definierte Zustandsbeschreibung eines Hosts umzusetzen. Dies kann das Installieren von Softwarepaketen bedeuten, starten oder beenden von Diensten oder  Konfigurationen erstellen/anpassen/entfernen zu lassen.
-In der Regel verwenden KMS eigene Agenten auf den Zielsystemen, über die die Kommunikation läuft und die Zustandsbeschreibung realisiert wird. Neuere Anwendungen wie 'Ansible', die Konfigurationsmanagement unterstützen, benötigen diese Agenten nicht mehr und realisieren die Kommunikation über eine SSH-Schnittstelle.
+In der Regel verwenden KMS eigene Agenten auf den Zielsystemen, über die die Kommunikation läuft und die Zustandsbeschreibung realisiert wird. Neuere Anwendungen wie 'Ansible' aus Kapitel \ref{subsec:Ansible}, die Konfigurationsmanagement unterstützen, benötigen diese Agenten nicht mehr und realisieren die Kommunikation über eine SSH-Schnittstelle.
 Pull-basierte Tools, wie beispielsweise 'Puppet', fragen in regelmässigen Abständen ein zentrales Konfigurations-Repository ab, in dem die jeweils aktuelle Zustandsbeschreibung der Maschine gespeichert ist und sorgt dafür, dass die Änderungen auf dem Client ausgeführt werden.
 Es spielt keine Rolle, ob der Zielclient eine virtuelle Maschine ist oder eine standard Maschine ist. KMS sind in der Regel dazu fähig ganze Gruppen an Rechner parallel zu bearbeiten und die entsprechenden Zustandsbeschreibungen umzusetzen. 
 Bei dem im oberen Abschnitts bereits genannten Beispiel 'Ansible', können mehrere Rechner simpel in Inventory-Dateien als Gruppen zusammengefasst werden, die dann jeweils durch 'Ansible' angesprochen werden können um entsprechende Stände an Zustandsbeschreibungen dort auszuliefern. Siehe \ref{lst:InventoryDatei}
@@ -142,7 +142,7 @@ Bei dem im oberen Abschnitts bereits genannten Beispiel 'Ansible', können mehrer
  \end{lstlisting}
 
 %Quelle: http://www.admin-magazin.de/Online-Artikel/Konfigurationsmanagement-mit-Ansible
-
+\begin{comment}
 \section{Begriffserklärung}
 Im Verlauf dieser Arbeit werden Begrifflichkeiten verwendet, die im Vorfeld zu klären sind.\newline
 	\begin{enumerate}
@@ -163,5 +163,5 @@ Durch die Möglichkeit des Provisioning kann die Basisinstallation mit Software e
 Für den Aufbau einer Maschine werden zwei wesentliche Konfigurationsdateien erstellt.
 Diese werden für den Aufbau der virtuelle Maschine selbst benötigt und für das ggf. gewünschte Provisioning. Der Begriff \textit{Maschinenkonfiguration} beschreibt im folgenden immer das Vorhandensein beider Dateien. 
 \end{enumerate}
-	
+\end{comment}
 
