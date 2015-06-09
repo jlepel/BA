@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{17}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -68,6 +68,11 @@
 \newblock URL \url{http://amazon.de/o/ASIN/0849304407/}. --
 \newblock ISBN 9780849304408
 
+\bibitem[Reuther(2013)]{Reuther2014}
+\dinatlabel{Reuther 2013} \textsc{Reuther}, Claus:
+\newblock \emph{Virtualisierung - VMware und Microsoft im Vergleich},
+  Hochschule für Angewandte Wissenschaften Hamburg, Bachelorarbeit, 1 2013
+
 \bibitem[Rhett(2015)]{Rhett201508}
 \dinatlabel{Rhett 2015} \textsc{Rhett}, Jo:
 \newblock \emph{Learning Puppet 4}.
@@ -86,6 +91,15 @@
 \newblock URL \url{http://amazon.de/o/ASIN/3446438939/}. --
 \newblock ISBN 9783446438934
 
+\bibitem[Schäfer(2009)]{Schaefer200912}
+\dinatlabel{Schäfer 2009} \textsc{Schäfer}, Werner:
+\newblock \emph{Softwareentwicklung - inkl. Lerntest auf CD: Einstieg für
+  Anspruchsvolle (Master Class)}.
+\newblock 1.
+\newblock Addison-Wesley Verlag, 12 2009. --
+\newblock URL \url{http://amazon.de/o/ASIN/3827328519/}. --
+\newblock ISBN 9783827328519
+
 \bibitem[ScriptRock(2014)]{ScriptRock:2014:Online}
 \dinatlabel{ScriptRock 2014} \textsc{ScriptRock}:
 \newblock \emph{Ansible vs. Salt}.
@@ -94,7 +108,7 @@
 
 \bibitem[Seneca(2005)]{Apelt200511}
 \dinatlabel{Seneca 2005} \textsc{Seneca}:
-\newblock \emph{Von der Ku"rze des Lebens}.
+\newblock \emph{Von der Kürze des Lebens}.
 \newblock Deutscher Taschenbuch Verlag, 11 2005. --
 \newblock URL \url{http://amazon.de/o/ASIN/342334251X/}. --
 \newblock ISBN 9783423342513
@@ -115,6 +129,16 @@
 \newblock Carl Hanser Verlag GmbH und Co. KG, 1 2014. --
 \newblock URL \url{http://amazon.de/o/ASIN/3446436146/}. --
 \newblock ISBN 9783446436145
+
+\bibitem[Tanenbaum und van Steen(2007)]{TanenbaumSteen200711}
+\dinatlabel{Tanenbaum und van Steen 2007} \textsc{Tanenbaum}, Andrew~S.~;
+  \textsc{Steen}, Maarten van:
+\newblock \emph{Verteilte Systeme: Prinzipien und Paradigmen (Pearson Studium -
+  IT)}.
+\newblock 2., aktualisierte Auflage.
+\newblock Pearson Studium, 11 2007. --
+\newblock URL \url{http://amazon.de/o/ASIN/3827372933/}. --
+\newblock ISBN 9783827372932
 
 \bibitem[Zörner(2012)]{Starke201205}
 \dinatlabel{Zörner 2012} \textsc{Zörner}, Stefan:

@@ -28,10 +28,10 @@ Die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
 \section{Kontextabgrenzung}
 Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung sowie die wesentlichen Teile der umgebenden Infrastruktur.
 Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{NFA} haben ergeben, dass die Hauptfunktionalitäten aus erstellen, exportieren, importieren, teilen und dem Provisioning von virtuellen Maschinen bestehen.
-Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten von bestimmten Produkten übernommen werden. 
-Frei erhältliche Virtualisierungsprodukte können das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Software-Provisioner sind meist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen zu arbeiten und übernehmen somit die gewünschten Anforderung nach automatisierter Softwareinstallation.
-Der Kern der Anwendung organisiert das zusammenspiel der einzelnen Softwareprodukte und stellt dem Anwender die entsprechende Benutzeroberfläche zur Verfügung.
-Die Anwendung selbst, inklusive der oben genannten Produkte, laufen auf einem gemeinsamen Server, der zentralisiert angesprochen werden kann.
+Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten von bestimmten Produkten übernommen werden, die in Kapitel \ref{ch:Evaluation} betrachtet wurden.
+VirtualBox kann das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Das Konfigurationsmanagement-Systeme Ansible ist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen arbeiten zu können und übernimmt somit die gewünschten Anforderung nach automatisierter Softwareinstallation. 
+Um die beiden Anwendungen zu vereinen, wird als Wrapper Vagrant eingesetzt, das zusätzliche Funktionen, wie das Teilen (sharen) einer Maschine, mitbringt.
+Der Kern der Anwendung ist als eine weitere Schicht anzusehen, der die drei Softwareprodukte weiter vereint und dem Anwender eine entsprechende Benutzeroberfläche zur Verfügung stellt.
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
@@ -42,15 +42,55 @@ Die Anwendung selbst, inklusive der oben genannten Produkte, laufen auf einem ge
 
 \subsubsection{Kurzbeschreibung der externen Schnittstellen}
 \begin{tabular}{p{4cm} p{10cm}}
-\textbf{Eingaben / Auswahl} & Der Awender tätigt Eingaben und wählt unter Optionen aus, die von der Anwendung bereitgestellt werden. Diese werden direkt von der Applikation verarbeitet\\
-\textbf{Befehle und Konfigurationen} & Die Applikation erstellt nötige Konfigurationsdateien und leitet Befehle für das Virtualisierungsprodukt weiter\\
-\textbf{Kommunikation über Konfigurationsdateien} & Das Virtualisierungsproduk ruft über die erstellen Konfigurationsdateien auf den Provisionierer zu. \textbf{[TODO MUSS NOCH BEARBEITET WERDEN]}.
+\textbf{Eingaben / Auswahl} & Der Anwender tätigt Eingaben und wählt unter Optionen aus, die von der Anwendung bereitgestellt werden. Diese werden direkt von der Applikation verarbeitet\\
+ &  \\
+\textbf{Befehle und Konfigurationen} & Die Applikation erstellt nötige Konfigurationsdateien für Vagrant und Ansible und leitet Befehle für die Weiterverarbeitung an Vagrant weiter\\
+ &  \\
+\textbf{Kommunikation über Konfigurationsdateien} & Vagrant ruft über die erstellten Konfigurationsdateien den Konfigurationsmanager Ansible auf, um die virtuelle Maschine in den beschriebenen Zustand zu überführen\\
+ & 
 \end{tabular}
 
+Die Applikation selbst, inklusive der oben genannten Produkte, läuft auf einem Server, der zentralisiert positioniert ist und entsprechend angesprochen werden kann.
+Der Anwender bekommt von der Applikation eine Weboberfläche angeboten, die es ermöglicht Eingaben zu tätigen und Optionen auszuwählen, um eine virtuelle Maschine zu erstellen oder zu verwalten.
+Um die Applikation auf dem Server zu betreiben, muss eine Internetverbindung bestehen, die Vagrant ermöglicht, das gewünschte Abbild des Betriebssystems herunterzuladen und die virtuelle Maschine mit anderen Anwendern teilen zu können.
+Die vom Anwender gestellten Anfragen an den VM-Builder, werden in Konfigurationsdateien übersetzt, die passend für Vagrant und Ansible erstellt werden.
+Diese Konfigurationsdateien dienen nicht nur zur Erstellung der gewünschten Applikation, sondern auch zur Kommunikation zwischen Vagrant und Ansible.
+Vagrant entnimmt den Konfigurationen das gewünschte Image, leitet den entsprechenden Download einleitet Vagrant den Download des gewünschten Images und erstellt mit Hilfe von VirtualBox und ggf Ansible, die zu erwartende virtuelle Maschine. Bei der Erstellung, kommuniziert Vagrant mit Ansible um die vom Anwender zuvor erstellte Zustandsbeschreibung umzusetzen.
+
+\section{Client-Server-Modell}
+Das Client-Server-Modell verdeutlicht die Aufgabenverteilung innerhalb einer Applikation und dem Bedürfnis Prozessorenleistung und gemeinsame Dienste zu zentralisieren.  (\cite{Schaefer200912})\newline
+Um eine einigermaßen klare Unterscheidung zwischen Client- und Servertätigkeiten zu erhalten, kann auf einen geschichteten Architekturstil zurückgegriffen werden, der die Aufgaben in folgende Schichten unterteilt:
+\begin{enumerate}
+\item Benutzerschnittstelle\newline
+Die Benutzerschnittstelle enthält alles Erforderlich, um direkt mit dem Anwender zu interagieren
+\item Verarbeitungsebene\newline
+Enthält die Anwendung / Kernfunktionalität
+\item Datenebene\newline
+Daten werden unabhängig von der Applikation persistent gespeichert
+\end{enumerate}
+Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Modell, oder auch Schichtenmodell. Eine Schicht ist entweder ein physikalischer Rechner oder mindestens ein Systemprozess, der eine gewisse Aufgabe übernimmt. Die einfachste Anordnung dieser Schichten besteht darin, sie auf zwei Computer zu verteilen (2-Tier Modell). Den Client und den Server. Dabei können die Schichten wie in Abbildung \ref{fig:Client-Server-Anordnungen}  zwischen Client und Server verteilt sein.(\cite{TanenbaumSteen200711})
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.9\textwidth]{../Bilder/client-server-anordnungen.png}
+  }
+  \caption{Client-Server-Anordnungen (\cite{TanenbaumSteen200711})}
+	\label{fig:Client-Server-Anordnungen}
+\end{figure}
+\FloatBarrier
+Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin Clients, die für den zu entwickelnden 'VM Builder' im Fokus stehen.\newline
+Der Vorteil von Thin Clients ist, dass weniger Client-Software auf die Seite des Anwenders gebracht werden muss. Denn Software auf Clientseite ist nicht nur schwerer zu administrieren, sondern auch für Fehler anfälliger (\cite{TanenbaumSteen200711}).
+Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(b) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und um lokale Installationen zu verhindern.
+Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Für den Client-Server Aufbau mit Variante (b) geht man davon aus, dass Programmlogik mit zum Client übertragen wird. Also z.B. eine Eingabeüberprüfung direkte im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Serverseite implementiert und benötigt keinen Anteil auf Client-Seite.
+
+\section{Kommunikation}
+
+\section{Verteilungssicht}
 
 
-\chapter{Sichten}
+
+
 \section{Bausteinsicht}
 \section{Laufzeitsicht}
-\section{Verteilungssicht}
+
 \section{Zusammenfassung}

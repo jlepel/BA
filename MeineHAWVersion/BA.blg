@@ -13,48 +13,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: literatur.bib
 Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
---line 220 of file literatur.bib
+--line 257 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
-You've used 14 entries,
+You've used 17 entries,
             3552 wiz_defined-function locations,
-            913 strings with 8693 characters,
-and the built_in function-call counts, 8874 in all, are:
-= -- 1014
-> -- 119
-< -- 164
-+ -- 208
-- -- 66
-* -- 819
-:= -- 1464
-add.period$ -- 23
-call.type$ -- 14
-change.case$ -- 63
-chr.to.int$ -- 14
-cite$ -- 16
-duplicate$ -- 235
-empty$ -- 794
-format.name$ -- 127
-if$ -- 1859
+            936 strings with 9282 characters,
+and the built_in function-call counts, 10750 in all, are:
+= -- 1242
+> -- 143
+< -- 202
++ -- 254
+- -- 79
+* -- 984
+:= -- 1776
+add.period$ -- 27
+call.type$ -- 17
+change.case$ -- 76
+chr.to.int$ -- 17
+cite$ -- 19
+duplicate$ -- 286
+empty$ -- 951
+format.name$ -- 152
+if$ -- 2254
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 115
-num.names$ -- 56
-pop$ -- 92
+missing$ -- 28
+newline$ -- 135
+num.names$ -- 68
+pop$ -- 111
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 76
 quote$ -- 0
-skip$ -- 341
+skip$ -- 415
 stack$ -- 0
-substring$ -- 739
-swap$ -- 44
-text.length$ -- 21
+substring$ -- 901
+swap$ -- 53
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 94
+type$ -- 117
 warning$ -- 2
-while$ -- 91
+while$ -- 110
 width$ -- 0
-write$ -- 191
+write$ -- 228
 (There were 3 warnings)

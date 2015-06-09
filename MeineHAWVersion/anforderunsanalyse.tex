@@ -10,6 +10,8 @@ Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten u
 Die zu erstellende Applikation soll den Anwender in der Umsetzung und Konfiguration von virtuellen Entwicklungsumgebungen unterstützen.
 Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, sollen dem Anwender in seiner Tätigkeit unterstützen. Dabei spielt das User-Interface und der Funktionsumfang der Applikation eine entscheidene Rolle. Während der Aufbau des User-Interface hilft sich mit geringem Zeitaufwand in die Applikation einzuarbeiten, vereinfacht ein übersichtliches Konfigurationsspektrum die Erstellung der gewünschte virtuelle Umgebung. Die Konfiguration einer virtuellen Maschine muss auch für unerfahrene Nutzer möglich sein und keine speziellen Kentnisse vorraussetzen.
 Alle virtuelle Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennten Instanzen laufen und von einander unterscheidbar sein. Die Unterscheidbarkeit soll Funktionen wie den Export oder das Teilen einer Maschine mit einem Kollegen unterstützen und dem Anwender die Möglichkeit schaffen, die gewünschte virtuelle Maschine zu beeinflussen, in dem er die Umgebung abschalten oder zerstören kann.
+Desweiteren soll die Anwendung bei Abhängigen Anwendungen unterstützen.
+Benötigt eine bestimmte Anwendung, gewisse Applikationen zur Inbetriebnahme, können Abhängigkeiten durch eine Vorkonfiguration definiert werden.
 
 \section{Stakeholder} \label{STAKEHOLDER}
 '\textit{Stakeholder} in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
@@ -98,6 +100,13 @@ Falls während der Änderung ein Fehler auftritt, muss die Anwendung eine Fehlerme
 
 \item[FA 19.]	
 Die Anwendung sollte dem Administrator die Option bieten, sich den Inhalt von Logdateien anzeigen zu lassen.
+
+\item[FA 20.]
+Falls eine zu installierende Applikation, Abhängigkeiten zu anderer Software beinhaltet, sollte die Anwendung ein Menü zur Verfügung stellen, dass die Konfiguration von Abhängigkeiten zulässt.
+
+\item[FA 21.]
+Möchte ein erfahrender Benutzer eigene Zustandsbeschreibungen erstellen, sollte die Anwendung das ermöglichen.
+
 \end{enumerate}	
 Definition Funktionale Anforderungen nach \cite{RuppSOPHISTen201410}
 
@@ -109,6 +118,7 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \item Export einer vorhandenen Maschine
 \item Der Import einer zuvor erstellten Maschine
 \item Eine virtuelle Maschine zugreiffbar für andere Anwender machen (teilen)
+\item Software-Abhängigkeiten konfigurieren
 \end{enumerate}
 
 \subsection{Business-Use-Case}
@@ -185,7 +195,7 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \subsubsection{Use-Case 4 - Virtuelle Maschine teilen}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Virtuelle Maschine teilen \\
-\textbf{Ziel im Kontext} & Eine erstelle Maschine über das Internet oder das lokale Netzwerk für andere Anwender zugreifbar machen  \\
+\textbf{Ziel im Kontext} & Eine erstellte Maschine über das Internet oder das lokale Netzwerk für andere Anwender zugreifbar machen  \\
 \textbf{Akteur} & Anwender \\
 \textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine für andere Anwender zugreifbar machen \\
 \textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Die zu teilende Maschine ist erstellt \\
@@ -199,38 +209,27 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \item Die Applikation zeigt dem Anwender, die Zugriffsmöglichkeiten auf die virtuelle Maschine
 \end{enumerate}
 
-\begin{comment}
-#################################################################
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.4]{../Bilder/usecase_provisioning.png}
-	\captionof{figure}[Beschreibung des Use-Case 'Virtuelle Maschine erstellen - Provisioning aus einer Auswahl an Komponenten']{Beschreibung des Use-Case 'Virtuelle Maschine erstellen - Provisioning aus einer Auswahl an Komponenten'}
- \end{minipage}
-\end{center}
-\FloatBarrier
-
-\subsubsection{Use-Case 2}
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.4]{../Bilder/usecase_export.png}
-	\captionof{figure}[kurze Bildunterschrift]{Beschreibung des Use-Case 'Virtuelle Maschine exportieren'}
- \end{minipage}
-\end{center}
-\FloatBarrier
-
-\subsubsection{Use-Case 3}
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.4]{../Bilder/usecase_import.png}
-	\captionof{figure}[kurze Bildunterschrift]{Beschreibung des Use-Case 'Virtuelle Maschine importieren'}
- \end{minipage}
-\end{center}
-\FloatBarrier
-#################################################################
-\end{comment}
+\subsubsection{Use-Case 5 - Software-Abhängigkeiten konfigurieren}
+\begin{tabular}{p{4cm} p{10cm}}
+\textbf{Bezeichnung} & Software-Abhängigkeiten konfigurieren \\
+\textbf{Ziel im Kontext} & Dem Anwender eine Applikation zur Verfügungen stellen, die Installationen von anderen Softwarekomponenten benötigt und diese mit installiert werden \\
+\textbf{Akteur} & Administrator / Erfahrener Anwender \\
+\textbf{Auslöser} & Eine Installation einer Anwendung, die mehrere Softwarekomponenten benötigt  \\
+\textbf{Vorbedingung} & Wissen über die zu Installierenden Softwarekomponenten \\
+\textbf{Nachbedingung} & Eine Applikation, die dem Anwender zur Verfügung steht und alle abhängigen Softwarkomponenten verbirgt und installiert \\
+\textbf{Anforderungen} & FA 3, FA 5, FA 20, FA 21 \\
+\textbf{Erfolgsszenario} & 
+ \end{tabular}
+\begin{enumerate}
+\item Der Administrator startet die Applikation über den Browser
+\item Der Administrator begibt sich in das Konfigurationsmenü
+\item Der Administrator kann dort neue Software zur bestehenden Auswahl hinzufügen
+\item Der Administrator gibt die entsprechenden Optionen wie Name der Softwarekomponente ein
+\item Wählt Abhängigkeiten aus
+\item Definiert Kopier- und Entpackvorgänge  
+\item Wählt ggf. auszuführender Scripte aus
+\item Oder definiert sich selber eine Zustandsbeschreibung im gewünschten Format
+\end{enumerate}
 
 
 \section{Nichtfunktionale Anforderungen} \label{sec:NFA}

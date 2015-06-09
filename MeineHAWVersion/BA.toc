@@ -22,38 +22,40 @@
 \contentsline {section}{\numberline {3.2}Stakeholder}{9}{section.3.2}
 \contentsline {section}{\numberline {3.3}Funktionale Anforderungen}{9}{section.3.3}
 \contentsline {section}{\numberline {3.4}Use-Cases}{11}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Business-Use-Case}{11}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Business-Use-Case}{12}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}System-Use-Case}{13}{subsection.3.4.2}
 \contentsline {subsubsection}{\nonumberline Use-Case 1 - Virtuelle Maschine erstellen}{13}{section*.3}
 \contentsline {subsubsection}{\nonumberline Use-Case 2 - Virtuelle Maschine exportieren}{14}{section*.4}
 \contentsline {subsubsection}{\nonumberline Use-Case 3 - Virtuelle Maschine importieren}{14}{section*.5}
 \contentsline {subsubsection}{\nonumberline Use-Case 4 - Virtuelle Maschine teilen}{15}{section*.6}
-\contentsline {section}{\numberline {3.5}Nichtfunktionale Anforderungen}{15}{section.3.5}
-\contentsline {subsubsection}{\nonumberline Technologische Anforderungen}{17}{section*.7}
-\contentsline {subsubsection}{\nonumberline Qualit\"atsanforderungen}{17}{section*.8}
-\contentsline {subsubsection}{\nonumberline Anforderungen an die Benutzeroberfl\"ache}{18}{section*.9}
-\contentsline {section}{\numberline {3.6}Randbedingungen}{20}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{20}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Zusammenfassung}{21}{section.3.7}
-\contentsline {chapter}{\numberline {4}Evaluation}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Virtualisierungsprodukte}{22}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}VMware Player (Plus)}{22}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Microsoft Hyper-V}{23}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Oracle VM VirtualBox}{23}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Zusammenfassung}{23}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Fazit}{24}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Konfigurationsmanagement-Systeme}{25}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Ansible}{25}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Saltstack}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Puppet}{26}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Zusammenfassung}{26}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Fazit}{27}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Vagrant}{27}{section.4.3}
-\contentsline {chapter}{\numberline {5}Softwareentwurf}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Kontextabgrenzung}{30}{section.5.1}
-\contentsline {subsubsection}{\nonumberline Kurzbeschreibung der externen Schnittstellen}{31}{section*.10}
-\contentsline {chapter}{\numberline {6}Sichten}{32}{chapter.6}
-\contentsline {section}{\numberline {6.1}Bausteinsicht}{32}{section.6.1}
-\contentsline {section}{\numberline {6.2}Laufzeitsicht}{32}{section.6.2}
-\contentsline {section}{\numberline {6.3}Verteilungssicht}{32}{section.6.3}
-\contentsline {section}{\numberline {6.4}Zusammenfassung}{32}{section.6.4}
+\contentsline {subsubsection}{\nonumberline Use-Case 5 - Software-Abh\"angigkeiten konfigurieren}{16}{section*.7}
+\contentsline {section}{\numberline {3.5}Nichtfunktionale Anforderungen}{16}{section.3.5}
+\contentsline {subsubsection}{\nonumberline Technologische Anforderungen}{18}{section*.8}
+\contentsline {subsubsection}{\nonumberline Qualit\"atsanforderungen}{18}{section*.9}
+\contentsline {subsubsection}{\nonumberline Anforderungen an die Benutzeroberfl\"ache}{19}{section*.10}
+\contentsline {section}{\numberline {3.6}Randbedingungen}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{21}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Zusammenfassung}{22}{section.3.7}
+\contentsline {chapter}{\numberline {4}Evaluation}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Virtualisierungsprodukte}{23}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}VMware Player (Plus)}{23}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Microsoft Hyper-V}{24}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Oracle VM VirtualBox}{24}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Zusammenfassung}{24}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Fazit}{25}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Konfigurationsmanagement-Systeme}{26}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Ansible}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Saltstack}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Puppet}{27}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Zusammenfassung}{27}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Fazit}{28}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Vagrant}{28}{section.4.3}
+\contentsline {chapter}{\numberline {5}Softwareentwurf}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Kontextabgrenzung}{31}{section.5.1}
+\contentsline {subsubsection}{\nonumberline Kurzbeschreibung der externen Schnittstellen}{32}{section*.11}
+\contentsline {section}{\numberline {5.2}Client-Server-Modell}{32}{section.5.2}
+\contentsline {section}{\numberline {5.3}Client}{34}{section.5.3}
+\contentsline {section}{\numberline {5.4}Verteilungssicht}{34}{section.5.4}
+\contentsline {section}{\numberline {5.5}Bausteinsicht}{34}{section.5.5}
+\contentsline {section}{\numberline {5.6}Laufzeitsicht}{34}{section.5.6}
+\contentsline {section}{\numberline {5.7}Zusammenfassung}{34}{section.5.7}
