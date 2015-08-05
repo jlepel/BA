@@ -1,9 +1,8 @@
 \chapter{Softwareentwurf}
 Nach \cite{Balzert201109} ist der Softwareentwurf die Entwicklung einer software-technischen Lösung im Sinne einer Softwarearchitektur auf Basis der gegebenen Anforderungen an ein Softwareprodukt. 
-Die Kunst bei einem Softwareentwurf besteht entsprechend darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet, einschliesslich der Berücksichtigung von Einflussfaktoren wie definierte Randbedingungen. (Kaptitel \ref{sec:Randbedingungen}).
-Der Softwareentwurf ist als Richtlinie zu sehen, der bei der Umsetzung der angeforderten Software unterstützt.
-Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine, deren Interaktionen und Beziehungen untereinander sowie ggf. deren Verteilung auf physicher Ebene. Dabei ist die spezifizierung der entsprechenden Schnittstellen der einzelnen Architekturbausteine mit zu beachten. Für die Visualisierung der Architekturbausteine können verschiedene Abstufungen von Sichten herangezogen werden.
-Die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
+Die Kunst bei einem Softwareentwurf besteht entsprechend darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet einschließlich der Berücksichtigung von Einflussfaktoren, wie definierte Randbedingungen (Kaptitel \ref{sec:Randbedingungen}).
+Der Softwareentwurf ist als Richtlinie zu sehen, der bei der Umsetzung der geforderten Software unterstützt.
+Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine, deren Interaktionen und Beziehungen untereinander sowie ggf. deren Verteilung auf physischer Ebene. Dabei ist die Spezifizierung der entsprechenden Schnittstellen der einzelnen Architekturbausteine mit zu beachten. Zur Visualisierung können verschiedene Abstufungen von Sichten herangezogen werden, die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
 \begin{comment}
 \begin{enumerate}
 \item \textbf{Kontextabgrenzung}
@@ -27,48 +26,58 @@ Die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
 
 \section{Kontextabgrenzung}
 Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung sowie die wesentlichen Teile der umgebenden Infrastruktur.
-Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{NFA} haben ergeben, dass die Hauptfunktionalitäten aus erstellen, exportieren, importieren, teilen und dem Provisioning von virtuellen Maschinen bestehen.
-Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten von bestimmten Produkten übernommen werden, die in Kapitel \ref{ch:Evaluation} betrachtet wurden.
-VirtualBox kann das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Das Konfigurationsmanagement-Systeme Ansible ist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen arbeiten zu können und übernimmt somit die gewünschten Anforderung nach automatisierter Softwareinstallation. 
-Um die beiden Anwendungen zu vereinen, wird als Wrapper Vagrant eingesetzt, das zusätzliche Funktionen, wie das Teilen (sharen) einer Maschine, mitbringt.
-Der Kern der Anwendung ist als eine weitere Schicht anzusehen, der die drei Softwareprodukte weiter vereint und dem Anwender eine entsprechende Benutzeroberfläche zur Verfügung stellt.
+Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{NFA} haben ergeben, dass die Hauptfunktionalitäten aus Erstellen, Exportieren, Importieren, Teilen und dem Provisioning von virtuellen Maschinen bestehen.
+Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten bestimmter Produkte übernommen werden, die in Kapitel \ref{ch:Evaluation} betrachtet wurden.
+VirtualBox kann das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Das Konfigurationsmanagement-System Ansible ist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen arbeiten zu können und übernimmt somit die gewünschte Anforderung nach automatisierter Softwareinstallation. 
+Um die beiden Anwendungen zu vereinen, wird als Wrapper Vagrant eingesetzt, der zusätzliche Funktionen, wie das Teilen (Sharen) einer Maschine, mitbringt.
+Der Kern der Anwendung ist als eine weitere Schicht anzusehen, die die drei Softwareprodukte noch mehr vereint und dem Anwender eine entsprechende Benutzeroberfläche zur Verfügung stellt.
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
 	\includegraphics[scale=0.5]{../Bilder/kontextsicht.png}
-	\captionof{figure}[kurze Bildunterschrift]{Bildunterschrift}
+	\captionof{figure}[Kontextsicht]{Kontextsicht}
+	\label{fig:kontextsicht}
  \end{minipage}
 \end{center}
 
 \subsubsection{Kurzbeschreibung der externen Schnittstellen}
 \begin{tabular}{p{4cm} p{10cm}}
-\textbf{Eingaben / Auswahl} & Der Anwender tätigt Eingaben und wählt unter Optionen aus, die von der Anwendung bereitgestellt werden. Diese werden direkt von der Applikation verarbeitet\\
+\textbf{Eingaben / Auswahl} & Der Anwender tätigt Eingaben und wählt unter bereitgestellten Optionen aus. Diese werden direkt von der Applikation verarbeitet\\
  &  \\
 \textbf{Befehle und Konfigurationen} & Die Applikation erstellt nötige Konfigurationsdateien für Vagrant und Ansible und leitet Befehle für die Weiterverarbeitung an Vagrant weiter\\
  &  \\
 \textbf{Kommunikation über Konfigurationsdateien} & Vagrant ruft über die erstellten Konfigurationsdateien den Konfigurationsmanager Ansible auf, um die virtuelle Maschine in den beschriebenen Zustand zu überführen\\
- & 
+ &  \\
+ \textbf{Vagrant interne\newline Abläufe} & VirtualBox erstellt die virtuelle Maschine und gibt Statusmeldungen an Vagrant weiter. Dies sind interne Abläufe, die zwischen Vagrant und VirtualBox ablaufen und nicht vom Entwicklungsprozess beeinflusst werden können \\
+ &
 \end{tabular}
 
 Die Applikation selbst, inklusive der oben genannten Produkte, läuft auf einem Server, der zentralisiert positioniert ist und entsprechend angesprochen werden kann.
-Der Anwender bekommt von der Applikation eine Weboberfläche angeboten, die es ermöglicht Eingaben zu tätigen und Optionen auszuwählen, um eine virtuelle Maschine zu erstellen oder zu verwalten.
-Um die Applikation auf dem Server zu betreiben, muss eine Internetverbindung bestehen, die Vagrant ermöglicht, das gewünschte Abbild des Betriebssystems herunterzuladen und die virtuelle Maschine mit anderen Anwendern teilen zu können.
-Die vom Anwender gestellten Anfragen an den VM-Builder, werden in Konfigurationsdateien übersetzt, die passend für Vagrant und Ansible erstellt werden.
-Diese Konfigurationsdateien dienen nicht nur zur Erstellung der gewünschten Applikation, sondern auch zur Kommunikation zwischen Vagrant und Ansible.
-Vagrant entnimmt den Konfigurationen das gewünschte Image, leitet den entsprechenden Download einleitet Vagrant den Download des gewünschten Images und erstellt mit Hilfe von VirtualBox und ggf Ansible, die zu erwartende virtuelle Maschine. Bei der Erstellung, kommuniziert Vagrant mit Ansible um die vom Anwender zuvor erstellte Zustandsbeschreibung umzusetzen.
+Dem Anwender wird von der Applikation eine Weboberfläche angeboten, die es ermöglicht Eingaben zu tätigen und Optionen auszuwählen, um eine virtuelle Maschine zu erstellen oder zu verwalten.
+Um die Applikation auf dem Server zu betreiben, muss eine Internetverbindung bestehen, die es Vagrant ermöglicht, das gewünschte Abbild des Betriebssystems herunterzuladen und die virtuelle Maschine mit anderen Anwendern zu teilen.
+Die vom Anwender gestellten Anfragen an den VM-Builder, werden in Konfigurationsdateien übersetzt, die speziell auf Vagrant und Ansible passend erstellt werden.
+Diese Konfigurationsdateien dienen nicht nur zur Erstellung der gewünschten virtuellen Maschine, sondern auch zur Kommunikation zwischen Vagrant und Ansible.
+Vagrant entnimmt den Konfigurationen das gewünschte Image und leitet den entsprechenden Download des Betriebssystems ein. Allerdings nur, falls das Image des Betriebssystems nicht schon auf dem Server vorliegt.\newline
+Durch die Hilfe von VirtualBox und ggf Ansible, wird die zu erwartende virtuelle Maschine komplettiert.
+ 
+\section{Systemarchitektur}\label{sec:Systemarchitektur}
+Um eine besseres Verständnis über den Aufbau des VM-Builders zu erhalten, wird auf Architekturmuster zurückgegriffen. Diese helfen bei der Verteilung der Verantwortlichkeiten und bilden die Vorlage für Systemstrukturen. 
+Da sie sich in einigen Punkten überschneiden und sogar ergänzen, ensteht bei der Verwendung mehrerer Architekturmuster keine Widersprüche.
 
-\section{Client-Server-Modell}
-Das Client-Server-Modell verdeutlicht die Aufgabenverteilung innerhalb einer Applikation und dem Bedürfnis Prozessorenleistung und gemeinsame Dienste zu zentralisieren.  (\cite{Schaefer200912})\newline
-Um eine einigermaßen klare Unterscheidung zwischen Client- und Servertätigkeiten zu erhalten, kann auf einen geschichteten Architekturstil zurückgegriffen werden, der die Aufgaben in folgende Schichten unterteilt:
+
+\subsection{Client-Server-Modell}\label{subsec:ClientServer}
+Um eine möglichst gute strukturelle Verteilung der Aufgaben und Dienstleistungen des VM-Builders auf physikalischer Ebene zu erhalten, wird auf das Client-Server-Modell zurückgegriffen.
+Das Client-Server-Modell verdeutlicht die Aufgabenverteilung innerhalb einer Applikation und die Zentralisierung von Prozessorenleistung und gemeinsamer Dienste (\cite{Schaefer200912}).\newline
+Um eine klarere Unterscheidung zwischen Client- und Servertätigkeiten zu erhalten, kann auf einen geschichteten Architekturstil zurückgegriffen werden, der die Aufgaben in folgende Schichten unterteilt:
 \begin{enumerate}
-\item Benutzerschnittstelle\newline
+\item Benutzerschnittstelle (User interface)\newline
 Die Benutzerschnittstelle enthält alles Erforderlich, um direkt mit dem Anwender zu interagieren
-\item Verarbeitungsebene\newline
-Enthält die Anwendung / Kernfunktionalität
-\item Datenebene\newline
+\item Verarbeitungsebene (Application)\newline
+Die Verarbeitungsebene enthält die Anwendung / Kernfunktionalität
+\item Datenebene (Database)\newline
 Daten werden unabhängig von der Applikation persistent gespeichert
 \end{enumerate}
-Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Modell, oder auch Schichtenmodell. Eine Schicht ist entweder ein physikalischer Rechner oder mindestens ein Systemprozess, der eine gewisse Aufgabe übernimmt. Die einfachste Anordnung dieser Schichten besteht darin, sie auf zwei Computer zu verteilen (2-Tier Modell). Den Client und den Server. Dabei können die Schichten wie in Abbildung \ref{fig:Client-Server-Anordnungen}  zwischen Client und Server verteilt sein.(\cite{TanenbaumSteen200711})
+Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Model oder auch Schichtenmodell. Eine Schicht ist entweder ein physikalischer Rechner oder mindestens ein Systemprozess, der eine gewisse Aufgabe übernimmt. Die einfachste Anordnung dieser Schichten besteht darin, sie auf zwei Computer zu verteilen (2-Tier Model), den Client und den Server. Dabei können die Schichten wie in Abbildung \ref{fig:Client-Server-Anordnungen} zwischen Client und Server verteilt sein (\cite{TanenbaumSteen200711}).
 \begin{figure}[htbp]
   \centering
   \fbox{
@@ -78,19 +87,144 @@ Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Modell, oder auch 
 	\label{fig:Client-Server-Anordnungen}
 \end{figure}
 \FloatBarrier
-Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin Clients, die für den zu entwickelnden 'VM Builder' im Fokus stehen.\newline
-Der Vorteil von Thin Clients ist, dass weniger Client-Software auf die Seite des Anwenders gebracht werden muss. Denn Software auf Clientseite ist nicht nur schwerer zu administrieren, sondern auch für Fehler anfälliger (\cite{TanenbaumSteen200711}).
-Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(b) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und um lokale Installationen zu verhindern.
-Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Für den Client-Server Aufbau mit Variante (b) geht man davon aus, dass Programmlogik mit zum Client übertragen wird. Also z.B. eine Eingabeüberprüfung direkte im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Serverseite implementiert und benötigt keinen Anteil auf Client-Seite.
+Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin-Clients, die für den zu entwickelnden 'VM Builder' im Fokus stehen. Die Varianten (d) und (e) sind sogenannte Fat-Clients. \newline 
+Der Vorteil von Thin Clients ist, dass weniger bis keine Client-Software auf die Seite des Anwenders gebracht werden muss. Denn Software auf Clientseite ist nicht nur schwerer zu administrieren, sondern auch anfälliger für Fehler (\cite{TanenbaumSteen200711}).\newline
+Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(b) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und lokale Installationen zu verhindern.
+\textbf{TODO: Was hab ich damit gemeint }Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Beim Client-Server-Aufbau mit Variante (b) geht man davon aus, dass Programmlogik mit zum Client übertragen wird, also z.B. eine Eingabeüberprüfung direkt im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
+Auf Verarbeitungsebene wird der Webserver mit den Applikationskomponenten des VM-Builders realisiert. Die Datenebene spiegelt die zu verwendende Datenbank wieder, die für die Persistierung von Daten zuständig sein wird.
+
+
+\subsection{Model-View-Controller Entwurfsmuster}\label{subsec:MVC}
+Für eine strukturierte Umsetzung der grafischen Komponente des 'VM Builders', wird auf das bekannte architektonische Model-View-Controller Entwufsmuster zurückgegriffen.
+Das Model-View-Controller (MVC) Entwurfsmuster findet beim Entwurf grafischer Benutzungsoberfläche anwendung, d.h. bei der Mensch-Maschine-Interaktionen.
+Dazu wird das System, das Interaktionen anbietet und ausführt, in drei Verantwortlichkeiten strukturiert:
+\begin{enumerate}
+\item \textbf{Model}\newline
+kapselt alle fachlichen Daten und enthält den Anwendungskern
+\item \textbf{View}\newline
+bereitet Informationen für den Anwender grafisch auf
+\item \textbf{Controller}\newline
+nehmen Benutzereingaben/Events an, die entsprechend an das passende Model oder die View weitergeleitet werden.
+\end{enumerate}
+Wie das Client-Server-Model, besteht auch das Model-View-Controller Entwurfsmuster aus drei Schichten. Anstatt diese drei Schichten auf mehrere physikalische oder virtuelle Systeme zu verteilen, werden sie auf Applikationsebene abgebildet. Das MVC-Entwurfsmuster kann zwar auf jeder der Schichten des Client-Server-Models implementiert werden, hat aber im Gegensatz zu dem Client-Server-Model entsprechend nichts mit der Verteilung des Systems zu tun.
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.4\textwidth]{../Bilder/MVC-Process_Wiki.png}
+  }
+  \caption{Model-View-Controller (\cite{Wikipedia:2015:Online})}
+	\label{fig:MVC}
+\end{figure}
+
+\FloatBarrier
+Abbildung \ref{fig:MVC} verdeutlicht die Kommunikation zwischen den Bestandteilen des Mode-View-Controller Entwurfsmusters.
+
+\begin{enumerate}
+\item Alle Eingaben/Änderungen des \textbf{User} werden von der Benutzeroberfäche an den Controller weitergegeben
+\item Der \textbf{Controller} gibt Zustandsänderungen an das Model weiter
+\item Das \textbf{Model} verarbeitet die erhaltenden Daten in dem diese z.B an den persistenten Speicher weitergeleitet werden oder Berechnungen stattfinden
+\item Die resultierenden Ergebnisse / Änderungen werden dann über die View sichtbar gemacht 
+\end{enumerate}
+Das MVC-Entwurfsmuster entkoppelt das User-Interface von der Verarbeitungsebene.
+Es geht der Forderung nach, die View (Repräsentation) und das Model (Fachlichkeiten) zu trennen, da die Änderungshäufigkeit beider Ebenen, unterschiedlich ausfallen können.
+Durchschnittlich ändern sich z.B. Windows-Oberflächen etwa alle zwei Jahre, Fachlichkeit aber sehr viel langsamer in der Größenordnung von ca 10 bis 15 Jahren.
+Das MVC-Entwurfsmuster erlaubt also als eine Modernisierungsmaßnahme den entsprechenden Austausch der Oberfläche, ohne die Fachlichkeiten ändern zu müssen
+(\cite{Masak200911}).
+Da das geforderte Framework Sinatra diese Konzept nativ umsetzen kann, lässt sich das Entwurfsmuster entsprechend gut anwenden.
+
+
+\section{Server}
+Um den Server nach den Systemarchitekturen aus Kapitel \ref{sec:Systemarchitektur} zu konzepieren, wird der dieser wie folgt Aufgeteilt.
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.4\textwidth]{../Bilder/MVC_Eigen.png}
+  }
+  \caption{Model-View-Controller (\cite{Wikipedia:2015:Online})}
+	\label{fig:MVC}
+\end{figure}
+
+\FloatBarrier
+
+
+
+
+Da der Server eine zentrale Rolle im Entwurf einnimmt, wird im fol
+Bevor auf die Anwendung der Entwufsmuster  eingegangen wird, 
+
+
+
+
+
+
+vor der . Dieser stellt alle applikationsrelevanten Funktionen zur Verfügung, beinhaltet die Anwendungslogik und ist für die Datenhaltung zuständig. Zudem wird ein Webservice für HTTP-Anfragen implementiert, um die Verarbeitung von Client-Seitigen HTTP-Requests zu übernehmen.
+Wie in Kapitel \ref{subsec:ClientServer} und Kapitel \ref{subsec:MVC} bereits aufgeführt, wird für die Umsetzung des Servers das Client-Server-Modell und das MVC-Entwurfsmuster vorgesehen.
+
 
 \section{Kommunikation}
+Die Kommunikation zwschen Client und Server wird über das zustandslose HTTP Protokoll realisiert. Möchte ein Client (der theoretisch ein Web-Browser, eine Web-Anwendung, ein Dienst, usw. sein kann) mit einem Webserver kommunizieren, erstellt der Client eine HTTP-Nachricht. Diese Nachricht ist in 'plain-text' geschrieben und Zeilen orientiert. Dementsprechend ist eine Nachricht leicht zu erstellen und auf Serverseite entsprechen leicht auszuwerten. Ist ein Server mit der Anfragebearbeitung fertig, sendet er in der Regel den Status (war die Client-Anforderung erfolgreich, ist ein Fehler aufgetreten, etc.), Inhalte und andere Daten zurück an den Client. Nachrichten enthalten sogenannte HTTP-Verben, die den Typ der Anfrage definieren und wie der Server die Anfrage zu verstehen hat (\cite{HarrisHaase201112}).\newline\newline
+\begin{tabular}{p{5cm} p{8cm}}
+\textbf{Standard HTTP-Verben} & \textbf{Definition} \\
+GET &  Eine GET-Anforderung wird verwendet, um einen Server zu bitten, die Darstellung einer Ressource zurückzuliefern\newline \\
+POST &  Eine POST-Anforderung wird verwendet, um Daten an einen Webserver zu übermitteln\newline \\
+PUT & PUT wird verwendet, um auf einem Server eine Ressource zu erstellen oder zu aktualisieren\newline \\
+DELETE & DELETE wird verwendet, um eine Ressource auf dem Server zu löschen \\
+ & 
+\end{tabular}
 
-\section{Verteilungssicht}
+In dem zu verwendenen Framework Sinatra wird das Vokabular der HTTP-Verben benutzt, um Routen zu definieren. Um eine Route in Sinatra zu deklarieren, muss das HTTP-Verb zum Reagieren geliefert, die spezifische URL und dann das gegebenenfalls für die Route gewünschte Verhalten definiert werden, siehe Abbildung \ref{code:SinatraVerbs}.\newline
+
+\begin{lstlisting} [caption={Routen in Sinatra (\cite{Sinatra:2015:Online})},label={code:SinatraVerbs}, language=Ruby]
+get '/' do
+  .. zeige etwas ..
+end
+
+post '/' do
+  .. erstelle etwas ..
+end
+
+put '/' do
+  .. update etwas ..
+end
+
+delete '/' do
+  .. entferne etwas ..
+end
+
+options '/' do
+  .. zeige, was wir können ..
+end
+
+link '/' do
+  .. verbinde etwas ..
+end
+
+unlink '/' do
+  .. trenne etwas ..
+end
+ \end{lstlisting}
 
 
 
 
-\section{Bausteinsicht}
-\section{Laufzeitsicht}
+
+
+
+\subsection{Bausteinsicht}
+Die Bausteinsicht 'zeigt die statische Struktur des Systems, seinen Aufbau aus Softwarebausteinen sowie deren Beziehungen und Schnittstellen untereinander' \cite{Hruschka201103}. 
+Ausgehend vom Systemkontext, wird das System hierarchisch zergliedert. Somit können Ebenen in unterschiedlichem Detailgrad entstehen. Ebene 0 stellt das System als Blockbox dar, was der Kontextsicht aus Abbildung \ref{fig:kontextsicht} entspricht.
+In den höheren Ebenen, wird der Detailierungsgrad erhöht und die dargestellte Blackbox zur Whitebox. Whiteboxen geben detailiertere Einblicke in ihre Struktur und Schnittstellen, die allerdings wiederum als Blackboxen dargestellt werden.
+
+
+\section{Client}
+Das hier angestrebte Konstrukt ist ein Thin Client. Diese Art von Clients benötigt entweder wenig oder gar keine Anwendungsteile auf dem Client-Rechner.
+In diesem Fall wird auf dem Client nur die Weboberfläche des VM-Builders aufgerufen um Interaktionen durchführen zu können. Die Logik für den Client ist komplett auf dem Applikationsserver implementiert.
+
+
+%\section{Verteilungssicht}
+%\section{Bausteinsicht}
+%\section{Laufzeitsicht}
 
 \section{Zusammenfassung}

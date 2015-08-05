@@ -1,0 +1,30 @@
+\ifglsentryexists{symb:Pi}{}%
+{%
+\gls@defglossaryentry{symb:Pi}%
+{%
+name={$\pi $},%
+sort={symbolpi},%
+type={symbolslist},%
+first={$\pi $},%
+firstplural={$\pi $s},%
+text={$\pi $},%
+plural={$\pi $s},%
+description={Die Kreiszahl.},%
+descriptionplural={Die Kreiszahl.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%

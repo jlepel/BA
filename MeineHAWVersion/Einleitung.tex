@@ -3,26 +3,27 @@
 \begin{quote}
 	``Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen'' - Lucius Annaeus Seneca, \cite{Apelt200511}
 \end{quote}
-Seneca formulierte  49 n. Chr. ein Gef"uhl das jeder kennt. Die Zeit die er hat, nicht richtig zu nutzen.
+Seneca formulierte  49 n. Chr. ein Gefühl das jeder kennt. Die Zeit die er hat, nicht richtig zu nutzen.
 Technische Neuerungen helfen uns unsere Zeit besser zu planen, mehr Zeit in andere Aktivitäten zu stecken und unsere Prioritäten zu "uberdenken.
 Diese Arbeit beschäftigt sich mit dem Teil-Aspekt der Informatik, der Virtualisierung von Servern im Entwicklungsumfeld.\newline
+
 ... 
 
 
 \section{Motivation}
 \textbf{TODO}
 [...]
-Die Motivation dieser Ausarbeitung besteht darin, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne bürokratischen Aufwand und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
-Der normalerweise große zeitliche Aufwand soll möglichst minimiert werden und es Anwendern in Unternehmen und Projekten erleichtern, sich auf die vorhandenen Usecase zu fokussieren und keine Zeit in Aufbau, Installation und Problembehebung investieren zu müssen. [...]
+Sinn und Zweck dieser Ausarbeitung besteht darin, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne dass ein bürokratischer Aufwand erforderlich ist und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
+Der normalerweise große zeitliche Aufwand für die Erstellung von virtuellen Maschinen soll möglichst minimiert werden und es Anwendern sowohl in Unternehmen als auch bei  Projektarbeiten erleichtern, sich auf die vorhandenen Usecase zu fokussieren. Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden. [...]
 
 \section{Zielsetzung}
-Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interatives Vorgehen eine Applikation zu modellieren, die den Anwender der Applikation bei dem Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und dem Anwender durch seine ausgewählte Funktion leiten.
-Große Konfigurationen oder komplizierte Einstellungen sollen dem Normalanwender abgenommen werden und geschehen im Hintergrund. 
+Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interaktives Vorgehen eine Applikation zu modellieren, die den Anwendern der Applikation beim Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und dem Anwender durch seine ausgewählte Funktion leiten.
+Große Konfigurationen oder komplizierte Einstellungen sollen dem Anwender abgenommen werde. Sie geschehen im Hintergrund. 
 Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollten Im- und Exportfunktionen dies untzerstützen.
 Die Realisierung sollte auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendige Maschine zu erstellen und zu verwalten.
-Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Bereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
-Bei der Erstellung der einzelnen Softwarekomponenten ist stehts auf das Prinzip von hoher Kohäsion und loser Kopplung zu achten. Also dem Grad der Abhängigkeit zwischen mehrere Hard-/ und Softwarekomponenten, der Änderungen an einzelnen Komponenten erleichtert.
-Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden von unnötigen Verschachtelungen oder einer Flut an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
+Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Einsatzbereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
+Bei der Erstellung der einzelnen Softwarekomponenten sind stehts die Prinzipien von hoher Kohäsion und loser Kopplung zu beachten. Darunter wird der Grad der Abhängigkeit zwischen mehreren Hard-/ und Softwarekomponenten verstanden, der Änderungen an einzelnen Komponenten erleichtert.\textbf{[TODO: SATZ KORRIGIEREN]}
+Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden sowohl von unnötigen verschachtelten Menüführungen als auch von einer Vielfalt an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
 \newline
 
 
@@ -41,8 +42,8 @@ Auch wenn die Softwarebranche eine Vielfalt an Möglichkeiten bereitstellt, sind 
 \end{comment}
 
 \section{Themenabgrenzung}
-Diese Arbeit greift bekannte und etablierte Softwareprodukte auf und nutzt diese in einem zusammenhängenden Kontext. Dabei werden die verwendeten Softwareprodukte nicht modifiziert, sondern für eine vereinfachte Benutzung durch eigene Implementierungen kombiniert und mit einem Benutzerinterface versehen, welches die Abläufe visualisiert und dem Benutzer die Handhabung vereinfacht.
-Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen Software ein, sondern vereinfacht das Zusammenspiel der einzelnen Anwendungen.
+Diese Arbeit greift bekannte und etablierte Softwareprodukte auf und nutzt diese in einem zusammenhängenden Kontext. Dabei werden die verwendeten Softwareprodukte nicht modifiziert, sondern für eine vereinfachte Benutzung durch eigene Implementierungen kombiniert. Sie werden mit einem Benutzerinterface versehen, welches die Abläufe visualisiert und dem Benutzer die Handhabung vereinfacht.
+Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen Software ein, sondern vereinfachen das Zusammenspiel der einzelnen Anwendungen.
 
 
 
@@ -56,10 +57,10 @@ Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen 
 %Zunächst wird erläutert, was Virtualisierung ist, dann werden Begrifflichkeiten geklärt sowie Vor- und Nachteile begutachtet.
 
 \section{Grundlagen der Virtualisierung}
-Für den Begriff Virtualisierung existiert keine allgemeingültige Definition. In der Regel wird damit der parallele Einsatz mehrerer Betriebssysteme beschrieben oder detailierter, das Ressourcen zu einer logischen Schicht zusammengefasst werden und dadurch deren Auslastung optimiert wird. So kann die logische Schicht bei Aufforderung ihre Ressourcen automatisch zur Verfügung stellen. 
+Für den Begriff Virtualisierung existiert keine allgemeingültige Definition. In der Regel wird damit der parallele Einsatz mehrerer Betriebssysteme beschrieben. Detaillierter bedeutet das, dass Hardware-Ressourcen zu einer logischen Schicht \textbf{[TODO: LOGISCHE SCHICHT ERKLÄREN?!]} zusammengefasst werden und dadurch deren Auslastung optimiert wird. So kann die logische Schicht bei Aufforderung ihre Ressourcen automatisch zur Verfügung stellen. 
 Das Prinzip dahinter ist die Verknüpfung von Servern, Speichern und Netzen zu einem virtuellen Gesamtsystem.
 Daraus können sich darüber liegende Anwendungen direkt und bedarfsgerecht ihre Ressourcen beziehen.\newline
-Grundsätzlich unterscheidet man zwischen 
+Grundsätzlich wird unterschieden zwischen 
 \begin{enumerate}
 \item \textbf{Virtualisierung von Hardware}\newline
 die sich mit der Verwaltung von Hardware-Ressourcen beschäftigt und
@@ -77,14 +78,14 @@ Eine virtuelle Maschine ist nach Robert P. Goldberg
 which a statistically dominant subset of the virtual processor's
 instructions execute directly on the host processor in native mode'} [\cite{SiegertBaumgarten200612}]
 \end{quote} 
-Wörtlich übersetzt ist also eine virtuelle Maschine ein Hardware-/Software-Duplikat eines real existierenden Computersystems, in dem eine statistisch dominante Untermenge an virtuellen Prozessoren, Befehle im Benutzer-Modus auf dem Host-Prozessor ausführen.
-Dieses Duplikat kann als Software-Container betrachtet werden, der einen vollständigen Satz an emulierten Hardwareressourcen, dem Gastbetriebssystem und entsprechenden Anwendungen besteht. Durch die Containerstruktur wird eine Kapselung hervorgerufen, die es ermöglicht mehrere virtuelle Maschinen komplett unabhängig auf einem Hostsystem zu installieren und laufen zu lassen. Ist eine virtuelle Maschine fehlerhaft oder nicht mehr erreichbar, betrifft dies nicht automatisch die restlichen parallel laufenden Maschinen und stellt damit einen der charakteristischen Vorteile von virtuellen Maschinen dar. Die Verfügbarkeit. Backup-Systeme oder mehrere Instanzen einer Applikationen können so unabhängig auf einem Host ausgeführt werden, ohne sich gegegnseitig zu beeinflussen. Durch den struktuellen Aufbau einer virtuellen Maschine, ist es ebenfalls möglich, eine Maschine nach den eigenen Wünschen zu erstellen und diese im Weiteren zu replizieren.\newline
-Virtuelle Maschinen können ohne größeren Aufwand verschoben, kopiert und zwischen Hostservern neu zugeteilt werden, um die Hardware-Ressourcen-Auslastung zu optimieren. Administratoren können auch die Vorteile von virtuellen Umgebungen für einfache Backups, Disaster Recovery, neue Deployments und grundlegenden Aufgaben der Systemadministration nutzen, da das Wiederherstellen aus Speicherpunkten oder gespeicherten Abzügen, innerhalbt von Minuten zu realisieren ist.\newline
+Wörtlich übersetzt handelt es sich also bei einer virtuelle Maschine, um ein Hardware-/Software-Duplikats eines real existierenden Computersystems, in der eine statistisch dominante Untermenge an virtuellen Prozessoren, Befehle im Benutzer-Modus auf dem Host-Prozessor ausführen.
+Dieses Duplikat kann als Software-Container betrachtet werden, der aus einem vollständigen Satz an emulierten Hardwareressourcen, dem Gastbetriebssystem und entsprechenden Software-Anwendungen besteht. Durch die Containerstruktur wird eine Kapselung hervorgerufen, die es ermöglicht, mehrere virtuelle Maschinen komplett unabhängig auf einem Hostsystem zu installieren und laufen zu lassen. Ist eine virtuelle Maschine fehlerhaft oder nicht mehr erreichbar, betrifft dies nicht automatisch die restlichen parallel laufenden Maschinen und stellt damit einen der charakteristischen Vorteile von virtuellen Maschinen dar, die Verfügbarkeit. Backup-Systeme oder mehrere Instanzen einer Applikationen können so unabhängig auf einem Host ausgeführt werden, ohne sich gegenseitig zu beeinflussen. Durch den strukturellen Aufbau einer virtuellen Maschine, ist es ebenfalls möglich, eine Maschine nach den eigenen Wünschen zu erstellen und diese zu replizieren. Somit wird eine Redundanz geschaffen.\newline
+Virtuelle Maschinen können ohne größeren Aufwand verschoben, kopiert und zwischen Hostservern neu zugeteilt werden, um die Hardware-Ressourcen-Auslastung zu optimieren. Administratoren können auch die Vorteile von virtuellen Umgebungen für einfache Backups, Disaster Recovery, neue Deployments und grundlegenden Aufgaben der Systemadministration nutzen, da das Wiederherstellen aus Speicherpunkten oder gespeicherten Abzügen, innerhalb von Minuten zu realisieren ist.\newline
 
 
 \subsection{Gastbetriebssystem}\label{subsec:Gastbetriebssystem}
-Ein übliches Betriebssystem wird im privilegierten Prozessor-Modus ausgeführt (Auch Kernel-Mode genannt). Dies befähigt es, die absolute Kontrolle über die vorhandenen Ressourcen zu gewinnen. Alle Anwendungen, die auf dem Betriebssystem laufen, werden im sogenannten Benutzer-Modus ausgeführt. Die Privilegien im Benutzer-Modus sind allerdings relativ eingeschränkt. Ein direkter Zugriff wird nur sehr selten und unter genau kontrollierten Bedingungen gestattet. Dies hat den Vorteil, dass kein Programm z. B. durch einen Fehler das System zum Absturz bringen kann. (\cite{Reuther2014})\newline
-Eine virtuelle Maschine (siehe \ref{subsec:VirtuelleMaschine}) läuft als normaler Benutzer-Prozess im Benutzer-Modus, was zur Folge hat, dass das dort installierte Betriebssystem, das Gastbetriebssystem, folglich nicht den privilegierten Prozessor-Modus nutzen kann, wie es ein nicht virtualisiertes Betriebssystem könnte. Da weder die Anwendungen noch das entsprechende Gastbetriebssystem Kentniss dadrüber haben, dass sie in einer virtuellen Maschine laufen, müssen ausgeführte Instruktionen, die den Prozessor-Modus erfordern, entsprechend anders gehandhabt werden. Dies ist unter anderem die Aufgabe des Hypervisors (siehe \ref{subsec:Hypervisor}).
+Ein übliches Betriebssystem wird im privilegierten Prozessor-Modus ausgeführt. Dies wird auch Kernel-Mode genannt. Dies befähigt es, die absolute Kontrolle über die vorhandenen Ressourcen zu gewinnen. Alle Anwendungen, die auf dem Betriebssystem laufen, werden im sogenannten Benutzer-Modus ausgeführt. Die Privilegien im Benutzer-Modus sind allerdings relativ eingeschränkt. Ein direkter Zugriff wird nur sehr selten und unter genau kontrollierten Bedingungen gestattet. Dies hat den Vorteil, dass kein Programm z. B. durch einen Fehler das System zum Absturz bringen kann. (\cite{Reuther2014})\newline
+Eine virtuelle Maschine (siehe \ref{subsec:VirtuelleMaschine}) läuft als normaler Benutzer-Prozess im Benutzer-Modus. Dies hat zur Folge, dass ein auf der virtuellen Maschine installierte Betriebssystem, das Gastbetriebssystem, folglich nicht den privilegierten Prozessor-Modus nutzen kann, wie es ein nicht virtualisiertes Betriebssystem könnte. Da weder die Anwendungen noch das entsprechende Gastbetriebssystem Kenntnis darüber haben, dass sie in einer virtuellen Maschine laufen, müssen ausgeführte Instruktionen, die den Prozessor-Modus erfordern, entsprechend anders gehandhabt werden. Dies ist unter anderem die Aufgabe des Hypervisors (siehe \ref{subsec:Hypervisor}).
 
 
 \begin{center}
@@ -100,22 +101,22 @@ Eine virtuelle Maschine (siehe \ref{subsec:VirtuelleMaschine}) läuft als normale
 \subsection{Hypervisor}\label{subsec:Hypervisor}
 Der Name des Hypervisors kann von Hersteller zu Hersteller variieren. Bei Microsoft z.B.  wird er Hyper-V genannt und bei VMware als ESXi bezeichnet.
 Der Hypervisor, oder in der Literatur auch VMM (Virtual Machine Monitor) genannt, ist die sogenannte abstrahierende Schicht zwischen der tatsächlich vorhanden Hardware und den ggf. mehrfach existierenden Betriebssystemen. Siehe \ref{fig:Betriebssystemvirtualisierung}.
-Seine primäre Aufgabe ist die Verwaltung der Host-Ressourcen und deren Zuteilung bei Anfragen der Gastsysteme. Lösen Instruktionen, oder Anfagen eines Gastbetriebssystems eine CPU-Exception aus, weil diese im Benutzer-Modus ausgeführt werden, fängt der Hypervisor diese auf und emmuliert die Ausführung der Instruktionen (trap and emulate). Die Ressourcen des Hostsystems werden derart verwaltet, dass diese bedarfsgerecht zur Verfügung stehen, egal ob ein oder mehrere Gastsysteme laufen. Zudem zählt unter anderem E/A-Zugriffe (insbesondere Hardwarezugriffe), Speichermanagement, Prozesswechsel und System-Aufrufe.\newline
-Den Hypervisor kann man in zwei verschiedene Typen kategorisiert.
+Seine primäre Aufgabe ist die Verwaltung der Host-Ressourcen und deren Zuteilung bei Anfragen der Gastsysteme. Lösen Instruktionen oder Anfagen eines Gastbetriebssystems eine CPU-Exception aus, weil diese im Benutzer-Modus ausgeführt werden, fängt der Hypervisor diese auf und emuliert die Ausführung der Instruktionen (trap and emulate). Die Ressourcen des Hostsystems werden derart verwaltet, dass diese bedarfsgerecht zur Verfügung stehen, egal ob ein oder mehrere Gastsysteme laufen. Zudem zählt unter anderem E/A-Zugriffe (insbesondere Hardwarezugriffe), Speichermanagement, Prozesswechsel und System-Aufrufe.\newline
+Der Hypervisor kann in zwei verschiedene Typen kategorisiert werden:
 \begin{description}
 \item  [Typ 1 Hypervisor]\hfill \\
-arbeitet direkt auf der Hardware und benötigt somit kein Betriebssystem, welches zwischen ihm und der Hardware liegt. Alle darüber liegenden virtuelle Maschinen laufen in sogenannten Domains. Weder der Hypervisor noch die anderen Domains sind für die jeweilige Domain sichtbar. Die Verwaltung der laufenden Domains wird durch eine priviligierte Domain geregelt, die in der Dom0 läuft. Dadurch hat die priviligierte Domain die Möglichkeit andere Domains zu starten, stoppen und zu verwalten. \newline
-Der Hypervisor Type-1 verfügt selbst über die nötigen Gerätetreiber, um den virtuellen Maschinen CPU, Speicher und I/O zur Verfügung zu stellen. Durch die wegfallende Schicht, das nicht benötigte Betriebssystem, gewinnt der Hypervisor Typ 1 an Performance und spart am Ressourcenverbrauch. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.a].
+arbeitet direkt auf der Hardware und benötigt somit kein Betriebssystem, welches zwischen ihm und der Hardware liegt. Alle darüber liegenden virtuelle Maschinen laufen in sogenannten Domains. Weder der Hypervisor noch die anderen Domains sind für die jeweilige Domain sichtbar. Die Verwaltung der laufenden Domains wird durch eine priviligierte Domain geregelt, die in der Dom0 läuft. Dadurch hat die privilegierte Domain die Möglichkeit andere Domains zu starten, stoppen und zu verwalten. \newline
+Der Hypervisor Type-1 verfügt selbst über die nötigen Gerätetreiber, um den virtuellen Maschinen sowohl CPU, Speicher als auch I/O zur Verfügung zu stellen. Durch die wegfallende Schicht, nämlich dem nicht benötigten Betriebssystems, gewinnt der Hypervisor Typ 1 an Performance und reduziert den Ressourcenverbrauch. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.a].
 
 \item  [Typ 2 Hypervisor]\hfill \\
-lässt durch seine Bezeichnung als 'Hosted' erahnen, dass der Unterschied zu Typ 1 darin besteht, dass er auf einem Hostsystem aufsetzt. Also eine Schicht implementiert sein muss, die zwischen dem Hypervisor und der Hardware liegt. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.b].\newline
+lässt durch seine Bezeichnung als 'Hosted' bereits erahnen, dass der Unterschied zu Typ 1 darin besteht, dass er auf einem Hostsystem aufsetzt. Es muss also eine Schicht implementiert sein, die zwischen dem Hypervisor und der Hardware liegt. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.b].\newline
 Diese Schicht wird durch ein Betriebssystem realisiert, das dem Hypervisor den Zugang zur Hardware durch die eigenen Hardwaretreiber ermöglicht.
-Ist ein Betriebssystem mit einer Hardware kompatibel, ist transitiv gesehen, der Hypervisor ebenfalls mit installier- und ausführbar. Dies vereinfacht die Installation gegenüber dem Hypervisor Typ 1. \newline
+Ist das Betriebssystem mit der Hardware kompatibel, ist transitiv gesehen, der Hypervisor ebenfalls mit installiert- und ausführbar. Dies vereinfacht die Installation gegenüber dem Hypervisor Typ 1. \newline
 Aus Implementierungssicht gibt es für beide Hypervisoren Vor- und Nachteile.
 Für einige Bereiche ist die Anforderung eines Betriebssystems nur von Vorteil.
-Vor allem wenn es um um Hardware- und Treiber-Kompatibilität, Konfigurationsflexibilität und vertraute Management-Tools geht.\newline
-Auf der anderen Seite kann genau das zum Nachteil ausgelegt werden.
-Es entsteht nicht nur ein höherer Management-Aufwand um das Betriebssystem zu konfigurieren und zu verwalten, auch die Performance und der Sicherheitsaspekt leiden unter dieser zusätzlichen Schicht. 
+Vor allem, wenn es um Hardware- und Treiber-Kompatibilität, Konfigurationsflexibilität und vertraute Management-Tools geht.\newline
+Auf der anderen Seite kann genau das zum Nachteil gereichen.
+Es entsteht nicht nur ein höherer Management-Aufwand, um das Betriebssystem zu konfigurieren und zu verwalten, auch die Performance und der Sicherheitsaspekt leiden unter dieser zusätzlichen Schicht für das Betriebssystem.
 \end{description}
 \begin{figure} 
     \subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{../Bilder/Hypervisor1.png}} 
@@ -126,11 +127,11 @@ Es entsteht nicht nur ein höherer Management-Aufwand um das Betriebssystem zu ko
 
 \section{Provisioning/Konfigurationsmanagement}\label{subsec:Provisioning}
 \textbf{TODO: WELCHER BEGRIFF IST BESSER?}\newline
-Die Hauptaufgabe eines Konfigurationsmanagement-Systems, im folgenden nur noch KMS genannt, ist es, eine zuvor definierte Zustandsbeschreibung eines Hosts umzusetzen. Dies kann das Installieren von Softwarepaketen bedeuten, starten oder beenden von Diensten oder  Konfigurationen erstellen/anpassen/entfernen zu lassen.
+Die Hauptaufgabe eines Konfigurationsmanagement-Systems, im Folgenden nur noch KMS genannt, ist es, eine zuvor definierte Zustandsbeschreibung eines Hosts umzusetzen. Dies kann das Installieren von Softwarepaketen bedeuten, aber auch starten oder beenden von Diensten oder Konfigurationen erstellen/anpassen/entfernen lassen.
 In der Regel verwenden KMS eigene Agenten auf den Zielsystemen, über die die Kommunikation läuft und die Zustandsbeschreibung realisiert wird. Neuere Anwendungen wie 'Ansible' aus Kapitel \ref{subsec:Ansible}, die Konfigurationsmanagement unterstützen, benötigen diese Agenten nicht mehr und realisieren die Kommunikation über eine SSH-Schnittstelle.
-Pull-basierte Tools, wie beispielsweise 'Puppet', fragen in regelmässigen Abständen ein zentrales Konfigurations-Repository ab, in dem die jeweils aktuelle Zustandsbeschreibung der Maschine gespeichert ist und sorgt dafür, dass die Änderungen auf dem Client ausgeführt werden.
-Es spielt keine Rolle, ob der Zielclient eine virtuelle Maschine ist oder eine standard Maschine ist. KMS sind in der Regel dazu fähig ganze Gruppen an Rechner parallel zu bearbeiten und die entsprechenden Zustandsbeschreibungen umzusetzen. 
-Bei dem im oberen Abschnitts bereits genannten Beispiel 'Ansible', können mehrere Rechner simpel in Inventory-Dateien als Gruppen zusammengefasst werden, die dann jeweils durch 'Ansible' angesprochen werden können um entsprechende Stände an Zustandsbeschreibungen dort auszuliefern. Siehe \ref{lst:InventoryDatei}
+Pull-basierte Tools, wie beispielsweise 'Puppet', fragen in regelmäßigen Abständen ein zentrales Konfigurations-Repository ab, in dem die jeweils aktuelle Zustandsbeschreibung der Maschine gespeichert ist. Sie sorgen dafür, dass die Änderungen auf dem Ziel-Client ausgeführt werden.
+Es spielt keine Rolle, ob das Ziel eine virtuelle Maschine ist oder eine Standard Maschine ist. KMS sind in der Regel dazu fähig, ganze Gruppen an Rechnern parallel zu bearbeiten und die entsprechenden Zustandsbeschreibungen umzusetzen. 
+Bei dem im oberen Abschnitt bereits genannten Beispiel 'Ansible', können mehrere Rechner simpel in Inventory-Dateien als Gruppen zusammengefasst werden. Diese können dann jeweils durch 'Ansible' angesprochen werden, um entsprechende Zustandsbeschreibungen dort auszuliefern. Siehe \ref{lst:InventoryDatei}
 
 \begin{lstlisting} [caption={Beispiel Inventory-Datei}\label{lst:InventoryDatei},captionpos=t] 
 [atomic]

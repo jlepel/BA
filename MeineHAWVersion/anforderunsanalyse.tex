@@ -1,17 +1,17 @@
 \chapter{Anforderungsanalyse}
-Die Anforderungsanaylse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
+Die Anforderungsanalyse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
 zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
-Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten und Qualitätsmerkmale näher zu betrachten, wird als erstes das Ziel der Anwendung beschrieben, dann die Stakeholder definiert und ihnen im Anschluss die Kernfunktionalitäten zugeordnet. Im weiteren wird auf die Qualitätsmerkmale eingegangen, die auch als nichtfunktionale Anforderungen bezeichnet werden und als Qualitätskriterium an System und Software angesehen werden können.
+Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten und Qualitätsmerkmale näher zu betrachten, wird als erstes das Ziel der Anwendung beschrieben. Dann werden die Stakeholder definiert und ihnen im Anschluss die Kernfunktionalitäten zugeordnet. Im Weiteren wird auf die Qualitätsmerkmale eingegangen, die auch als nichtfunktionale Anforderungen bezeichnet werden.
+%und als Qualitätskriterium an System und Software angesehen werden können.
 %Im Folgenden werden die Ziele, Anforderungen an die Software detaillierter konzipiert, aufgelistet und beschrieben. Zudem grundlegende Fragen bezüglich der Kernaufgaben, Qualitätsanforderungen, beteiligte Gruppen und benachbarter Systeme geklärt.
 
 \section{Zielsetzung}
 'Keine Systementwicklung sollte ohne wenigstens eine halbe Seite schriftliche Ziele angegangen werden. Dabei ist es wichtig, quantifizierbare Angaben aufzuzählen, denn Ziele sind Anforderungen auf einer abstrakten Ebene.'  \cite{RuppSOPHISTen201410} \newline\newline
 
 Die zu erstellende Applikation soll den Anwender in der Umsetzung und Konfiguration von virtuellen Entwicklungsumgebungen unterstützen.
-Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, sollen dem Anwender in seiner Tätigkeit unterstützen. Dabei spielt das User-Interface und der Funktionsumfang der Applikation eine entscheidene Rolle. Während der Aufbau des User-Interface hilft sich mit geringem Zeitaufwand in die Applikation einzuarbeiten, vereinfacht ein übersichtliches Konfigurationsspektrum die Erstellung der gewünschte virtuelle Umgebung. Die Konfiguration einer virtuellen Maschine muss auch für unerfahrene Nutzer möglich sein und keine speziellen Kentnisse vorraussetzen.
-Alle virtuelle Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennten Instanzen laufen und von einander unterscheidbar sein. Die Unterscheidbarkeit soll Funktionen wie den Export oder das Teilen einer Maschine mit einem Kollegen unterstützen und dem Anwender die Möglichkeit schaffen, die gewünschte virtuelle Maschine zu beeinflussen, in dem er die Umgebung abschalten oder zerstören kann.
-Desweiteren soll die Anwendung bei Abhängigen Anwendungen unterstützen.
-Benötigt eine bestimmte Anwendung, gewisse Applikationen zur Inbetriebnahme, können Abhängigkeiten durch eine Vorkonfiguration definiert werden.
+Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, soll den Anwender in seiner Tätigkeit unterstützen. Dabei spielen das User-Interface und der Funktionsumfang der Applikation eine entscheidende Rolle. Während der Aufbau des User-Interface hilft sich mit geringem Zeitaufwand in die Applikation einzuarbeiten, vereinfacht ein übersichtliches Konfigurationsspektrum die Erstellung der gewünschten virtuellen Umgebung. Die Konfiguration einer virtuellen Maschine muss auch für unerfahrene Nutzer möglich sein und keine speziellen Kenntnisse voraussetzen.
+Alle virtuelle Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennten Instanzen laufen und von einander unterscheidbar sein. Die Unterscheidbarkeit soll Funktionen wie den Export oder den entfernten Zugriff auf die Maschine unterstützen. Sie soll dem Anwender die Möglichkeit schaffen, die gewünschte virtuelle Maschine zu beeinflussen, in dem er die Umgebung abschalten oder zerstören kann.
+Des Weiteren soll die Anwendung Unterstützung bieten, voneinander abhängige Applikationen zu konfigurieren und automatisiert zu installieren.
 
 \section{Stakeholder} \label{STAKEHOLDER}
 '\textit{Stakeholder} in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
@@ -28,17 +28,17 @@ Benötigt eine bestimmte Anwendung, gewisse Applikationen zur Inbetriebnahme, kön
 
 \section{Funktionale Anforderungen} \label{sec:FunktionaleAnforderungen}
 %Die funktionalen Anforderungen decken die Frage nach den Kernaufgaben des Systems ab. Beschreiben somit Dienste oder Funktionalitäten, die ein System bereitstellen soll.
-\textbf{Anforderungen Anwender}
+\textbf{Anforderungen - Anwender}
 \begin{enumerate}
 
 \item[FA 1.]
-Die Anwendung muss über den Browser ausführbar sein zu, ohne zusätzliche lokale Installationen auf Anwenderseite.			
+Die Anwendung muss über den Browser ausführbar sein, ohne zusätzliche lokale Installationen auf Anwenderseite.			
 			
 \item[FA 2.]	
 Falls der Anwender keine zusätzliche Software auf der virtuellen Maschine haben möchte, muss die Anwendung eine entsprechende Option dafür anbieten.
 			
 \item[FA 3.]	
-Die Anwendung muss dem Anwender die Möglichkeit bieten, Software mit zu installieren.
+Die Anwendung muss dem Anwender die Möglichkeit bieten, Software auf der gewünschten virtuellen Maschine mit zu installieren.
 
 \item[FA 4.]\label{itm:AUSWAHLMIT} 
 Falls der Anwender diese Option nutzt, sollte die Anwendung Softwarekomponenten vorschlagen oder es ermöglichen eigene Dateien auszuwählen.
@@ -59,11 +59,11 @@ Die Anwendung sollte dem Anwender die Option bieten, virtuelle Maschinen zu expo
 Die Anwendung sollte fähig sein den Export zu komprimieren.
 
 \item[FA 8.] 
-Ist der Export durchgeführt worden, muss die Anwendung das mit einer Meldung auf dem Bildschirm bestätigen.
+Ist der Export durchgeführt worden, muss die Anwendung dies mit einer Meldung auf dem Bildschirm bestätigen.
 		
 \item[FA 9. \label{Import}]
 Die Anwendung muss fähig sein, Exporte wieder importieren zu können.
-Falls währen der Importierung Datenfehler auftreten, muss die Anwendung den jeweiligen Fehler (Fehlerbeschreibung) auf dem Bildschirm ausgeben.
+Falls währen des Imports Datenfehler auftreten, muss die Anwendung den jeweiligen Fehler (Fehlerbeschreibung) auf dem Bildschirm ausgeben.
 
 \item[FA 10.]	
 Ist der Import erfolgreich durchgeführt worden, sollte die Anwendung eine entsprechende Meldung anzeigen.
@@ -76,7 +76,7 @@ Wenn der Anwender eine virtuelle Maschine erstellen möchte, muss die Anwendung b
 Treten Fehler bei der Erstellung einer virtuellen Maschine auf, muss das System eine Fehlermeldung ausgeben.
 
 \item[FA 13.]	
-Die Applikation sollte fähig sein, anderen Anwendern bereits erstellte Maschinen über das Internet und das lokale Netzwerk zur Verfügung zu stellen.
+Die Applikation sollte fähig sein, anderen Anwendern bereits erstellte virtuelle Maschinen über das Internet und das lokale Netzwerk zur Verfügung zu stellen.
 
 \item[FA 14.]
 Möchte der Anwender eine bereits erstellte und laufende virtuelle Maschine beenden, muss die Anwendung dafür eine entsprechende Option bieten.
@@ -86,14 +86,14 @@ Falls der Anwender eine bereits erstellte virtuelle Maschine löschen möchte, mus
 
 
 \end{enumerate}	
-\textbf{Anforderungen Administrator}
+\textbf{Anforderungen - Administrator}
 	
 \begin{enumerate}
 \item[FA 16.]
 Falls während des Betriebes der Anwendung Änderungen an der Konfiguration durchgeführt werden müssen, sollte die Anwendung dies nur durch einen expliziten Administratoren-Account zulassen.
 
 \item[FA 17.]	
-Solange der Administrator angemeldet ist, sollte die Anwendung ihm die Möglichkeit bieten, den Speicherort und Name von Logdateien persistent zu ändern. 
+Solange der Administrator angemeldet ist, sollte die Anwendung ihm die Möglichkeit bieten, den Speicherort und Namen von Logdateien persistent zu ändern. 
 
 \item[FA 18.]	
 Falls während der Änderung ein Fehler auftritt, muss die Anwendung eine Fehlermeldung auf dem Bildschirm ausgeben.
@@ -111,8 +111,8 @@ Möchte ein erfahrender Benutzer eigene Zustandsbeschreibungen erstellen, sollte 
 Definition Funktionale Anforderungen nach \cite{RuppSOPHISTen201410}
 
 \section{Use-Cases}
-Use-Case helfen fachlichen Anforderungen eines Systems darzustellen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden und das System grob in seine Hauptfunktionen gegliedert wird.
-Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten wieder und grenzt diese voneinander ab. Während die darauf folgenden System-Use-Cases helfen eine erste Skizze der zu entwickelnden Hauptfunktionalitäten zu erstellen, die sich wie folgt aus den funktionalen Anforderungen in Kapitel \ref{sec:FunktionaleAnforderungen} ergeben haben:
+Use-Case (Anwendungsfälle) helfen, die fachlichen Anforderungen eines Systems zu bezeichnen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden und das System grob in seine Hauptfunktionen gegliedert wird.
+Der Business-Use-Case spiegelt dabei ein Gesamtbild aller Funktionalitäten der Applikation wieder und grenzt diese voneinander ab, während die darauf folgenden System-Use-Cases helfen eine erste Skizze der zu entwickelnden Hauptfunktionalitäten zu erstellen, die sich wie folgt aus den funktionalen Anforderungen in Kapitel \ref{sec:FunktionaleAnforderungen} ergeben haben:
 \begin{enumerate}
 \item Erstellung einer virtuellen Maschine
 \item Export einer vorhandenen Maschine
@@ -142,7 +142,7 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \textbf{Akteur} & Anwender \\
 \textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine erstellen \\
 \textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Der Anwender kann auf die Benutzeroberfläche zugreifen.\\
-\textbf{Nachbedingung} & Der Anwender erhält eine gepackte Datei, in der alle nötigen Daten enthalten sind, die für einen erneuten Import nötig wären. \\
+\textbf{Nachbedingung} & Der Anwender erhält eine gepackte Datei, in der alle Daten enthalten sind, die für einen erneuten Import nötig wären. \\
 \textbf{Anforderungen} & FA 1, FA 3, FA 4, FA 11, FA 12, FA 13 \\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
@@ -206,17 +206,17 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \begin{enumerate}
 \item Der Anwender startet die Applikation über den Browser
 \item Der Anwender wählt die gewünschte virtuelle Maschine aus und aktiviert die Teil-Option
-\item Die Applikation zeigt dem Anwender, die Zugriffsmöglichkeiten auf die virtuelle Maschine
+\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten auf die virtuelle Maschine
 \end{enumerate}
 
 \subsubsection{Use-Case 5 - Software-Abhängigkeiten konfigurieren}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Software-Abhängigkeiten konfigurieren \\
-\textbf{Ziel im Kontext} & Dem Anwender eine Applikation zur Verfügungen stellen, die Installationen von anderen Softwarekomponenten benötigt und diese mit installiert werden \\
+\textbf{Ziel im Kontext} & Dem Anwender eine Applikation zur Verfügungen stellen, die Installationen von anderen Softwarekomponenten benötigt, welche diese mit installieren soll \\
 \textbf{Akteur} & Administrator / Erfahrener Anwender \\
 \textbf{Auslöser} & Eine Installation einer Anwendung, die mehrere Softwarekomponenten benötigt  \\
-\textbf{Vorbedingung} & Wissen über die zu Installierenden Softwarekomponenten \\
-\textbf{Nachbedingung} & Eine Applikation, die dem Anwender zur Verfügung steht und alle abhängigen Softwarkomponenten verbirgt und installiert \\
+\textbf{Vorbedingung} & Wissen über die zu installierenden Softwarekomponenten \\
+\textbf{Nachbedingung} & Eine Applikation, die dem Anwender zur Verfügung steht und alle abhängigen Softwarekomponenten verbirgt und installiert \\
 \textbf{Anforderungen} & FA 3, FA 5, FA 20, FA 21 \\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
@@ -224,74 +224,75 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild über alle Funktionalitäten w
 \item Der Administrator startet die Applikation über den Browser
 \item Der Administrator begibt sich in das Konfigurationsmenü
 \item Der Administrator kann dort neue Software zur bestehenden Auswahl hinzufügen
-\item Der Administrator gibt die entsprechenden Optionen wie Name der Softwarekomponente ein
+\item Der Administrator gibt die entsprechenden Optionen wie z.B. Name der Softwarekomponente ein
 \item Wählt Abhängigkeiten aus
 \item Definiert Kopier- und Entpackvorgänge  
-\item Wählt ggf. auszuführender Scripte aus
+\item Wählt ggf. auszuführende Scripte aus
 \item Oder definiert sich selber eine Zustandsbeschreibung im gewünschten Format
 \end{enumerate}
 
 
 \section{Nichtfunktionale Anforderungen} \label{sec:NFA}
-In der Literatur findet sich keine einheitliche Definition von nichtfunktionalen Anforderungen, aber bezogen auf das Design eines Systems sind die nichtfunktionalen Anforderungen für den Architekten von besonderer Bedeutung \cite{ChungNixonYuMylopoulos199910}.\newline
-Durch nichtfunktionale Anforderungen können neue Lösungsmöglichkeiten vorgegeben werden oder schlicht die Menge an potentiellen Designentwürfen, im Bezug auf die Funktionalitäten, reduziert werden \cite{Burge02}.\newline
-Im Wesentlichen gibt es eine begrenze Auswahl an Definitionen und Perspektiven die im folgenden nach \cite{RuppSOPHISTen201410} zusammengefasst werden.
+In der Literatur findet sich keine einheitliche Definition von nichtfunktionalen Anforderungen, Bezogen auf das Design eines Systems sind die nichtfunktionalen Anforderungen für den Architekten von besonderer Bedeutung (\cite{ChungNixonYuMylopoulos199910}).\newline
+Durch nichtfunktionale Anforderungen können neue Lösungsmöglichkeiten vorgegeben werden oder schlicht die Menge an potentiellen Designentwürfen, im Bezug auf die Funktionalitäten, reduziert werden (\cite{Burge02}).\newline
+Im Wesentlichen gibt es eine begrenze Auswahl an Definitionen und Perspektiven, die im Folgenden nach \cite{RuppSOPHISTen201410} zusammengefasst werden.
 
 \begin{enumerate}
 \item  \textbf{Technologische Anforderungen}\label{itm:TechnologischeAnforderungen} \newline
-Die detailiertere Beschreibung von Lösungsvorgaben oder der Umgebung, in der das System betrieben werden soll, können und sollen den Lösungsraum, für die Realisierung des Systems, beschränken.
+Die detailliertere Beschreibung von Lösungsvorgaben oder der Umgebung, in der das System betrieben werden soll, können und sollen den Lösungsraum, für die Realisierung des Systems beschränken.
 
 \item  \textbf{Qualitätsanforderungen}\label{itm:Qualitätsanforderungen}\newline
-Qualitätsanforderungen können wiederrum in detailiertere Unterpunkte unterteilt werden. Dies kann nach zwei Standards erfolgen: ISO 25000 und ISO 9126. Mittlerweile ist jedoch der ISO 9126 Standard in ISO 25000 aufgegangen. Beide Standards legen allerdings die gleiche Aussage nahe, dass Qualitätsanforderungen die Qualität des Systems und des Entwicklungsprozesses festlegen.
+Qualitätsanforderungen lassen sich in detailliertere Unterpunkte unterteilt werden. Dies kann nach zwei Standards erfolgen: ISO 25000 und ISO 9126. Mittlerweile ist jedoch der ISO 9126 Standard in ISO 25000 aufgegangen. Beide Standards sollen sicherstellen, dass über Qualitätsanforderungen die Qualität des Systems und des Entwicklungsprozesses festgelegt wird.
 
 \item  \textbf{Anforderungen an die Benutzeroberfläche}\label{itm:AnforderungenAnDieBenutzeroberfläche}\newline
-Die Anforderungen, wie sich die Anwendung dem Benutzer darstellt, werden unter 'Anforderungen an die Benutzeroberfäche' gebündelt.
+Die Anforderungen, die festlegen, wie sich die Anwendung dem Benutzer darstellt, werden unter 'Anforderungen an die Benutzeroberfäche' gebündelt.
          		
 \item  \textbf{Anforderungen an die sonstigen Lieferbestandteile}\newline
-Alle Produkte die zu dem System oder der Anwendung geliefert werden müssen, wie z.B. ein Handbuch oder Quellcode, werden unter 'Anforderungen an die sonstigen Lieferbestandteile' beschrieben.
+Alle Produkte, die zu dem System oder der Anwendung geliefert werden müssen, wie z.B. ein Handbuch oder Quellcode, werden unter 'Anforderungen an die sonstigen Lieferbestandteile' beschrieben.
 
 \item  \textbf{Anforderungen an durchzuführende Tätigkeiten}\newline
 Die 'Anforderungen an durchzuführende Tätigkeiten' beeinflussen Tätigkeiten, wie Wartung oder Support, die der Entwicklung nachgelagert sind.
 
 \item  \textbf{Rechtliche-vertragliche Anforderungen}\newline
-'Rechtliche-vertragliche Anforderungen' beschreiben die Regelungen, die zwischen Auftraggeber und Auftragnehmer vor der Entwicklung des System oder der Anwendung, festgelegt werden müssen.
+'Rechtliche-vertragliche Anforderungen' beschreiben die Regelungen, die zwischen Auftraggeber und Auftragnehmer vor der Entwicklung des System des Auftraggebers oder deren Anwendung, festgelegt werden müssen.
 \end{enumerate}
-Im folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen}) 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche}) 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend.....\newline\newline
+Im Folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen}) 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche}) 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend für die Entwicklung der angestrebten Applikation sind.\newline\newline
+
 \subsubsection{Technologische Anforderungen}
 \begin{enumerate}
 \item Das für den Betrieb der Anwendung zugrunde liegende Betriebssystem muss Ubuntu 12.04 oder höher sein.
-\item Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, ist maximal bei 10.	
+\item Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, liegt maximal bei 10.	
 \item Die Kommunikation zwischen Frontend und Backend muss nicht verschlüsselt ablaufen.
 \item Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
 \end{enumerate}
 \subsubsection{Qualitätsanforderungen}
 \begin{enumerate}
-\item Die Installation und Betriebnahme der Anwendung sollte über einen automatischen Installationsprozess erfolgen.
+\item Die Installation und Inbetriebnahme der Anwendung sollte über einen automatischen Installationsprozess erfolgen.
 \item Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
-\item Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziebar.
-\item Änderungen am vorgeschlagenen Softwarebestand müssen innerhalb von <10 Sekunden in der Anwendungsoberfläche sichtbar sein. (bezogen auf \nameref{Import} FA 4.)		
-\item Falls das Betriebssystem auf eine höhere Version aktualisiert werden soll, muss dies ohne Änderungen am Quellcodes der Anwendung vorgenommen werden können.
+\item Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziehbar.
+\item Änderungen am vorgeschlagenen Softwarebestand müssen innerhalb von <10 Sekunden in der Anwendungsoberfläche sichtbar sein (bezogen auf \nameref{Import} FA 4.).		
+\item Falls das Betriebssystem auf eine höhere Version aktualisiert werden soll, muss dies ohne Änderungen an dem Quellcodes der Anwendung vorgenommen werden können.
 \item Soll ein anderer Provisionierer verwendet werden, muss der Aufwand des Austausches bei unter einem Personentag liegen.		
 \item Wird angedacht weitere Grundfunktionalitäten zu implementieren, soll dies möglichst einfach erfolgen.		
 \item Das Importieren von virtuellen Maschinen sollte <10 Minuten betragen.
-\item Die Validierung der zu importierenden Daten sollte <2 Minute betragen.
-\item Der bei Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein. (bezogen auf \nameref{Import} FA 9.)
-\item Der Export von einer virtuellen Maschine sollte <5 Minuten betragen.\end{enumerate}
+\item Die Validierung der zu importierenden Daten sollte <2 Minuten betragen.
+\item Der beim Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein. (bezogen auf \nameref{Import} FA 9.)
+\item Der Export einer virtuellen Maschine sollte <5 Minuten betragen.\end{enumerate}
 \subsubsection{Anforderungen an die Benutzeroberfläche}
 \begin{enumerate}
 \item Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des Systems innerhalb von maximal 10 Minuten in der Lage sein, die gewünschte Funktionalität zu lokalisieren und zu verwenden.
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine exportieren" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine exportieren' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzende Anforderung sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
 \textbf{BILD EINFÜGEN}
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine importieren" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine importieren' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
 \textbf{BILD EINFÜGEN}
 
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine erstellen - Mit Provisioning aus einer Auswahl an Komponenten" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine erstellen - Mit Provisioning aus einer Auswahl an Komponenten' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
 \textbf{BILD EINFÜGEN}
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine über das Internet teilen" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ... . Keine umzusetzende Anforderung sind die genau Größe und die Anordnung der einzelnen Elemente.\newline
+\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine über das Internet teilen" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzende Anforderungen sind die genaue	 Größen und die Anordnung der einzelnen Elemente.\newline
 
 \begin{figure}[htbp]
   \centering
@@ -313,13 +314,13 @@ Zusätzlich können neue Anforderungen aufgedeckt werden und leichter Anwendungsfä
 \end{comment}
 
 \section{Randbedingungen}\label{sec:Randbedingungen}
-Um anwendungs­- und problembezogene Entwurfsentscheidungen treffen zu können, werden Faktoren analysiert, die die Architekturen der Anwendung beeinflussen oder einschränken können und werden. Dies geschieht über die im Vorfeld formulierten Anforderunge.
+Um anwendungs­- und problembezogene Entwurfsentscheidungen treffen zu können, werden Faktoren analysiert, die die Architekturen der Anwendung beeinflussen oder einschränken können. Dies geschieht über die im Vorfeld formulierten Anforderungen.
 Laut \cite{Starke201401} werden diese Einflussfaktoren und Randbedingungen in folgende Kategorien unterteilt:
 \begin{itemize}
-\item Organisatorische und politische Faktoren. Manche solcher Faktoren wirken auf ein be­stimmtes System ein, während Andere eine Vielzahl an Projekten eines Unternehmens beeinflussen können. \citep{RechtinMaier200006} charakterisiert diese Faktoren als facts of life.
-\item Technische Faktoren. Durch sie wird das technische Umfeld geprägt und entsprechend eingeschränkt. Sie betreffen nicht nur die Ablaufumgebung des zu entwickelnden Systems, sondern umfassen auch die technischen Vorgaben für die Entwicklung, einzusetzender Software und vorhandener Systeme.
+\item Organisatorische und politische Faktoren: Mancher solcher Faktoren wirken auf ein be­stimmtes System ein, während andere eine Vielzahl an Projekten eines Unternehmens beeinflussen können. \citep{RechtinMaier200006} charakterisiert diese Faktoren als 'facts of life'.
+\item Technische Faktoren: Durch sie wird das technische Umfeld geprägt und entsprechend eingeschränkt. Sie betreffen nicht nur die Ablaufumgebung des zu entwickelnden Systems, sondern umfassen auch die technischen Vorgaben für die Entwicklung, einzusetzender Software und vorhandener IT-Systeme.
 \end{itemize}
-Da die organisatorischen-, sowie politischen Faktoren auf dieses Projekt keinen Einfluss haben, werden diese nicht weiter betrachtet. 
+Da weder die organisatorischen-, noch die politischen Faktoren auf dieses Projekt Einfluss haben, werden diese nicht weiter betrachtet. 
 
 \subsection{Technische Randbedingungen}\label{subsec:TechnischeRandbedingungen}
 \begin{figure}[htbp]
@@ -334,4 +335,4 @@ Da die organisatorischen-, sowie politischen Faktoren auf dieses Projekt keinen 
 \FloatBarrier
 
 \section{Zusammenfassung}
-
+\textbf{TODO}

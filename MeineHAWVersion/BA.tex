@@ -10,7 +10,15 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin1]{inputenc}
 \usepackage[table]{xcolor}
+
 \usepackage{libertine}
+%\usepackage{glossaries}
+\usepackage[
+nonumberlist, %keine Seitenzahlen anzeigen
+acronym,      %ein Abkürzungsverzeichnis erstellen
+toc,          %Einträge im Inhaltsverzeichnis
+section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}
 \usepackage{pifont}
 \usepackage{microtype}
 \usepackage{textcomp}
@@ -29,13 +37,9 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{subfigure} 
-%\usepackage{color}
-
 \usepackage{hyperref} 
 \usepackage{varioref} 
 \usepackage[verbose]{placeins}
-
-%\usepackage[superscript]{cite}
 
 
 
@@ -94,6 +98,22 @@
 
 \makeindex
 \makenomenclature
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}
+\makeglossaries
+
+\lstloadlanguages{Ruby}
+\lstset{%
+basicstyle=\ttfamily\color{black},
+commentstyle = \ttfamily\color{red},
+keywordstyle=\ttfamily\color{blue},
+stringstyle=\color{orange}}
+
+
+
+
+
+
+
 
 \begin{document}
 \selectlanguage{ngerman}
@@ -155,10 +175,12 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %%\include{chapter1}
 
 %%Grundlagen sehen gut aus!
+
 \include{einleitung}
 \include{anforderunsanalyse}
 \include{evaluation}
 \include{entwurf}
+
 
 
 %Umsetzung
@@ -212,5 +234,7 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 \printindex
 
 \HAWasurency
+
+
 
 \end{document}

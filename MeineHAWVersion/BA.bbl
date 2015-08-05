@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{22}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -51,6 +51,24 @@
 \newblock Packt Publishing, 11 2013. --
 \newblock URL \url{http://amazon.com/o/ASIN/1783280816/}. --
 \newblock ISBN 9781783280810
+
+\bibitem[Harris und Haase(2011)]{HarrisHaase201112}
+\dinatlabel{Harris und Haase 2011} \textsc{Harris}, Alan~; \textsc{Haase},
+  Konstantin:
+\newblock \emph{Sinatra: Up and Running}.
+\newblock 1.
+\newblock O'Reilly Media, 12 2011. --
+\newblock URL \url{http://amazon.com/o/ASIN/1449304230/}. --
+\newblock ISBN 9781449304232
+
+\bibitem[Masak(2009)]{Masak200911}
+\dinatlabel{Masak 2009} \textsc{Masak}, Dieter:
+\newblock \emph{Der Architekturreview: Vorgehensweise, Konzepte und Praktiken
+  (Xpert.press)}.
+\newblock 2010.
+\newblock Springer, 11 2009. --
+\newblock URL \url{http://amazon.de/o/ASIN/3642016588/}. --
+\newblock ISBN 9783642016585
 
 \bibitem[Peacock(2013)]{Peacock201308}
 \dinatlabel{Peacock 2013} \textsc{Peacock}, Michael:
@@ -122,6 +140,20 @@
 \newblock URL \url{http://amazon.de/o/ASIN/3486582119/}. --
 \newblock ISBN 9783486582116
 
+\bibitem[Sinatra(2015)]{Sinatra:2015:Online}
+\dinatlabel{Sinatra 2015} \textsc{Sinatra}:
+\newblock \emph{Sinatra Einführung}.
+\newblock Juni 2015. --
+\newblock URL \url{http://www.sinatrarb.com/intro-de.html#Bedingungen}
+
+\bibitem[Starke(2011)]{Hruschka201103}
+\dinatlabel{Starke 2011} \textsc{Starke}, Gernot:
+\newblock \emph{Software-Architektur kompakt (IT kompakt)}.
+\newblock 2nd Printing.
+\newblock Spektrum Akademischer Verlag, 3 2011. --
+\newblock URL \url{http://amazon.de/o/ASIN/3827420938/}. --
+\newblock ISBN 9783827420930
+
 \bibitem[Starke(2014)]{Starke201401}
 \dinatlabel{Starke 2014} \textsc{Starke}, Gernot:
 \newblock \emph{Effektive Softwarearchitekturen: Ein praktischer Leitfaden}.
@@ -139,6 +171,14 @@
 \newblock Pearson Studium, 11 2007. --
 \newblock URL \url{http://amazon.de/o/ASIN/3827372933/}. --
 \newblock ISBN 9783827372932
+
+\bibitem[Wikipedia(2015)]{Wikipedia:2015:Online}
+\dinatlabel{Wikipedia 2015} \textsc{Wikipedia}:
+\newblock \emph{Model ? view ? controller --- Wikipedia - The Free
+  Encyclopedia}.
+\newblock 2015. --
+\newblock URL
+  \url{https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/2000px-MVC-Process.svg.png}
 
 \bibitem[Zörner(2012)]{Starke201205}
 \dinatlabel{Zörner 2012} \textsc{Zörner}, Stefan:
