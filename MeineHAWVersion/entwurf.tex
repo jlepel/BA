@@ -1,3 +1,4 @@
+\setcounter{secnumdepth}{3}
 \chapter{Softwareentwurf}
 Nach \cite{Balzert201109} ist der Softwareentwurf die Entwicklung einer software-technischen Lösung im Sinne einer Softwarearchitektur auf Basis der gegebenen Anforderungen an ein Softwareprodukt. 
 Die Kunst bei einem Softwareentwurf besteht entsprechend darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet einschließlich der Berücksichtigung von Einflussfaktoren, wie definierte Randbedingungen (Kaptitel \ref{sec:Randbedingungen}).
@@ -20,7 +21,7 @@ Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine,
 \includegraphics[width=0.9\textwidth]{../Bilder/sichten.png}
   }
   \caption{Vier Arten von Sichten (\cite{Starke201401})}
-
+	\label{fig:Sichten}
 \end{figure}
 \FloatBarrier
 
@@ -64,7 +65,6 @@ Durch die Hilfe von VirtualBox und ggf Ansible, wird die zu erwartende virtuelle
 Um eine besseres Verständnis über den Aufbau des VM-Builders zu erhalten, wird auf Architekturmuster zurückgegriffen. Diese helfen bei der Verteilung der Verantwortlichkeiten und bilden die Vorlage für Systemstrukturen. 
 Da sie sich in einigen Punkten überschneiden und sogar ergänzen, ensteht bei der Verwendung mehrerer Architekturmuster keine Widersprüche.
 
-
 \subsection{Client-Server-Modell}\label{subsec:ClientServer}
 Um eine möglichst gute strukturelle Verteilung der Aufgaben und Dienstleistungen des VM-Builders auf physikalischer Ebene zu erhalten, wird auf das Client-Server-Modell zurückgegriffen.
 Das Client-Server-Modell verdeutlicht die Aufgabenverteilung innerhalb einer Applikation und die Zentralisierung von Prozessorenleistung und gemeinsamer Dienste (\cite{Schaefer200912}).\newline
@@ -89,9 +89,19 @@ Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Model oder auch Sc
 \FloatBarrier
 Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin-Clients, die für den zu entwickelnden 'VM Builder' im Fokus stehen. Die Varianten (d) und (e) sind sogenannte Fat-Clients. \newline 
 Der Vorteil von Thin Clients ist, dass weniger bis keine Client-Software auf die Seite des Anwenders gebracht werden muss. Denn Software auf Clientseite ist nicht nur schwerer zu administrieren, sondern auch anfälliger für Fehler (\cite{TanenbaumSteen200711}).\newline
-Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(b) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und lokale Installationen zu verhindern.
-\textbf{TODO: Was hab ich damit gemeint }Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Beim Client-Server-Aufbau mit Variante (b) geht man davon aus, dass Programmlogik mit zum Client übertragen wird, also z.B. eine Eingabeüberprüfung direkt im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
+Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und lokale Installationen zu verhindern.
+Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Beim Client-Server-Aufbau mit Variante (b) geht man davon aus, dass Programmlogik mit zum Client übertragen wird, also z.B. eine Eingabeüberprüfung direkt im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
 Auf Verarbeitungsebene wird der Webserver mit den Applikationskomponenten des VM-Builders realisiert. Die Datenebene spiegelt die zu verwendende Datenbank wieder, die für die Persistierung von Daten zuständig sein wird.
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.9\textwidth]{../Bilder/Client-Server.png}
+  }
+  \caption{Model-View-Controller (\cite{Wikipedia:2015:Online})}
+	\label{fig:MVC_eigen}
+\end{figure}
+\FloatBarrier
 
 
 \subsection{Model-View-Controller Entwurfsmuster}\label{subsec:MVC}
@@ -131,37 +141,24 @@ Es geht der Forderung nach, die View (Repräsentation) und das Model (Fachlichkei
 Durchschnittlich ändern sich z.B. Windows-Oberflächen etwa alle zwei Jahre, Fachlichkeit aber sehr viel langsamer in der Größenordnung von ca 10 bis 15 Jahren.
 Das MVC-Entwurfsmuster erlaubt also als eine Modernisierungsmaßnahme den entsprechenden Austausch der Oberfläche, ohne die Fachlichkeiten ändern zu müssen
 (\cite{Masak200911}).
-Da das geforderte Framework Sinatra diese Konzept nativ umsetzen kann, lässt sich das Entwurfsmuster entsprechend gut anwenden.
+Da das geforderte Framework Sinatra diese Konzept nativ umsetzen kann, lässt sich das Entwurfsmuster entsprechend gut anwenden. In Sinatra werden die Views separiert von den sogenannten Rounten (Controllern) implementiert, wodurch die 'V' und 'C' Eigenschaften erfüllt werden. Um die Modell-Anforderungen zu erfüllen, kann z.B. ein Datenbank-Framework, wie Active-Record angewendet werden. 
 
-
-\section{Server}
-Um den Server nach den Systemarchitekturen aus Kapitel \ref{sec:Systemarchitektur} zu konzepieren, wird der dieser wie folgt Aufgeteilt.
-
+Abbildung \ref{fig:MVC_eigen} zeigt die Integration des MVC-Entwurfsmuster in das Client-Server-Modell.
 \begin{figure}[htbp]
   \centering
   \fbox{
-\includegraphics[width=0.4\textwidth]{../Bilder/MVC_Eigen.png}
+\includegraphics[width=0.9\textwidth]{../Bilder/MVC_Eigen.png}
   }
-  \caption{Model-View-Controller (\cite{Wikipedia:2015:Online})}
-	\label{fig:MVC}
+  \caption{Model-View-Controller}
+	\label{fig:MVC_eigen}
 \end{figure}
-
 \FloatBarrier
+Da der Client nur für die Darstellung zuständig ist, wird wie in Abbildung  \ref{fig:MVC_eigen} zu sehen, das MVC-Entwurfsmuster nur auf Server-Seite implementiert. Entsprechend werden die Controller und die Views im serverseitigen Teil der  Benutzerschnittstelle angesiedelt, während die Modells sich über die Verarbeitungsebene und Datenebene erstrecken, um den Zugriff auf die Datenhaltung zu gewährleisten.
 
-
-
-
-Da der Server eine zentrale Rolle im Entwurf einnimmt, wird im fol
-Bevor auf die Anwendung der Entwufsmuster  eingegangen wird, 
-
-
-
-
-
-
+\begin{comment}
 vor der . Dieser stellt alle applikationsrelevanten Funktionen zur Verfügung, beinhaltet die Anwendungslogik und ist für die Datenhaltung zuständig. Zudem wird ein Webservice für HTTP-Anfragen implementiert, um die Verarbeitung von Client-Seitigen HTTP-Requests zu übernehmen.
 Wie in Kapitel \ref{subsec:ClientServer} und Kapitel \ref{subsec:MVC} bereits aufgeführt, wird für die Umsetzung des Servers das Client-Server-Modell und das MVC-Entwurfsmuster vorgesehen.
-
+\end{comment}
 
 \section{Kommunikation}
 Die Kommunikation zwschen Client und Server wird über das zustandslose HTTP Protokoll realisiert. Möchte ein Client (der theoretisch ein Web-Browser, eine Web-Anwendung, ein Dienst, usw. sein kann) mit einem Webserver kommunizieren, erstellt der Client eine HTTP-Nachricht. Diese Nachricht ist in 'plain-text' geschrieben und Zeilen orientiert. Dementsprechend ist eine Nachricht leicht zu erstellen und auf Serverseite entsprechen leicht auszuwerten. Ist ein Server mit der Anfragebearbeitung fertig, sendet er in der Regel den Status (war die Client-Anforderung erfolgreich, ist ein Fehler aufgetreten, etc.), Inhalte und andere Daten zurück an den Client. Nachrichten enthalten sogenannte HTTP-Verben, die den Typ der Anfrage definieren und wie der Server die Anfrage zu verstehen hat (\cite{HarrisHaase201112}).\newline\newline
@@ -206,25 +203,57 @@ unlink '/' do
 end
  \end{lstlisting}
 
+\section{Client / Server - Detailentwurf}
 
 
-
-
-
-
-\subsection{Bausteinsicht}
-Die Bausteinsicht 'zeigt die statische Struktur des Systems, seinen Aufbau aus Softwarebausteinen sowie deren Beziehungen und Schnittstellen untereinander' \cite{Hruschka201103}. 
-Ausgehend vom Systemkontext, wird das System hierarchisch zergliedert. Somit können Ebenen in unterschiedlichem Detailgrad entstehen. Ebene 0 stellt das System als Blockbox dar, was der Kontextsicht aus Abbildung \ref{fig:kontextsicht} entspricht.
-In den höheren Ebenen, wird der Detailierungsgrad erhöht und die dargestellte Blackbox zur Whitebox. Whiteboxen geben detailiertere Einblicke in ihre Struktur und Schnittstellen, die allerdings wiederum als Blackboxen dargestellt werden.
-
-
-\section{Client}
+\subsection{Client}
 Das hier angestrebte Konstrukt ist ein Thin Client. Diese Art von Clients benötigt entweder wenig oder gar keine Anwendungsteile auf dem Client-Rechner.
-In diesem Fall wird auf dem Client nur die Weboberfläche des VM-Builders aufgerufen um Interaktionen durchführen zu können. Die Logik für den Client ist komplett auf dem Applikationsserver implementiert.
+In diesem Fall wird auf dem Client nur die Weboberfläche des VM-Builders aufgerufen um Interaktionen durchführen zu können. Die Logik für den Client ist komplett auf dem Applikationsserver implementiert. Entsprechend durch die Definition des Thin-Clients, ist an dieser Stelle keine weitere Planung oder Konzeptionierung notwendig. 
+
+\subsection{Server}
+Wie in Kapitel \ref{sec:Systemarchitektur} beschrieben, wird der Server nach festgelegten Entwurfsmuster konstruiert. Um eine vollständigen Überblick über das Serverkonstrukt zu erhalten, wird im Folgenden detailierter auf die Sichten aus Abbildung \ref{fig:Sichten} eingegangen.
+
+\subsubsection{Bausteinsicht}
+Die Bausteinsicht 'zeigt die statische Struktur des Systems, seinen Aufbau aus Softwarebausteinen sowie deren Beziehungen und Schnittstellen untereinander' \cite{Hruschka201103}. 
+Ausgehend vom Systemkontext, wird das System hierarchisch zergliedert. Somit können Ebenen in unterschiedlichem Detailgrad entstehen. Ebene 0 stellt das System als Blackbox dar, was der Kontextsicht aus Abbildung \ref{fig:kontextsicht} entspricht.
+In den höheren Ebenen, wird der Detailierungsgrad erhöht und die dargestellte Blackbox zur Whitebox. Whiteboxen geben detailiertere Einblicke in ihre Struktur und Schnittstellen, die allerdings wiederum als Blackboxen dargestellt werden.
+Abbildung \ref{fig:Bausteinsicht1} ist eine Ebene 1 Darstellung des Systems, in der die Anwendung mit ihren einzelenen Komponenten betrachtet wird, die als Blackboxen dargestellt sind. 
+\begin{figure}[htb]
+  \centering
+\includegraphics[width=0.9\textwidth]{../Bilder/Bausteinsicht.png}
+  \caption{Bausteinsicht Level 1}
+	\label{fig:Bausteinsicht1}
+\end{figure}
+\FloatBarrier
+
+\begin{tabular}{p{5cm} p{8cm}}
+\textbf{Komponente}& \textbf{Kurzbeschreibung}\\ 
+\textbf{VM-Builder} & Hauptkomponente zur Steuerung der anderen Komponenten; Realisiert die Kommunikation mit den Clients\newline \\ 
+\textbf{PersistenceHandler} & Verwaltet die Datenbank und bietet Operationen für diese an\newline \\ 
+\textbf{SystemFileManager} & Ermöglicht Dateisystemzugriffe, sowie das Steuern/Kopieren/Anlegen von Dateien und Ordnern\newline \\ 
+\textbf{VagrantControl}& Bietet Operationen zum Steuern von Vagrant\newline \\ 
+\textbf{AnsibleYMLGenerator} & Ist Verantwortlich für die Erstellung von YAML-Dateien\newline \\ 
+\textbf{ConfigurationfileReader} & Liest und verarbeitet die Inhalte von einer zentralen Konfigurationsdatei des VM-Builders\\ 
+\end{tabular}
+
+
+\begin{comment}
+\begin{tabular}{p{5cm} p{8cm}}
+\textbf{Komponente}& \textbf{Kurzbeschreibung}\\ 
+VM-Builder & Hauptkomponente zur Steuerung der anderen Komponenten; Realisiert die Kommunikation mit den Clients \\ 
+PersistenceHandler & Verwaltet die Datenbank und bietet Operationen für diese an \\ 
+SystemFileManager & Ermöglicht Dateisystemzugriffe, sowie das Steuern/Kopieren/Anlegen von Dateien und Ordnern \\ 
+VagrantControl & Bietet Operationen zum Steuern von Vagrant \\ 
+AnsibleYMLGenerator & Ist Verantwortlich für die Erstellung von YAML-Dateien \\ 
+ConfigurationfileReader & Liest und verarbeitet die Inhalte von einer zentralen Konfigurationsdatei des VM-Builders\\ 
+ \end{tabular}
+ \end{comment}
+
+\subsubsection{Laufzeitsicht}
 
 
 %\section{Verteilungssicht}
 %\section{Bausteinsicht}
-%\section{Laufzeitsicht}
+%
 
 \section{Zusammenfassung}
