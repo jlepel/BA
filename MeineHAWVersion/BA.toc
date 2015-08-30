@@ -53,15 +53,20 @@
 \contentsline {chapter}{\numberline {5}Softwareentwurf}{30}{chapter.5}
 \contentsline {section}{\numberline {5.1}Kontextabgrenzung}{31}{section.5.1}
 \contentsline {subsubsection}{\numberline {5.1.0.1}Kurzbeschreibung der externen Schnittstellen}{32}{subsubsection.5.1.0.1}
-\contentsline {section}{\numberline {5.2}Systemarchitektur}{33}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Client-Server-Modell}{33}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Model-View-Controller Entwurfsmuster}{35}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Kommunikation}{37}{section.5.3}
-\contentsline {section}{\numberline {5.4}Server}{39}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Bausteinsicht}{39}{subsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.1.1}Benutzerschnittstelle}{40}{subsubsection.5.4.1.1}
-\contentsline {subsubsection}{\numberline {5.4.1.2}Verarbeitungseben}{45}{subsubsection.5.4.1.2}
-\contentsline {subsubsection}{\numberline {5.4.1.3}Datenebene}{45}{subsubsection.5.4.1.3}
-\contentsline {section}{\numberline {5.5}Client}{45}{section.5.5}
-\contentsline {subsubsection}{\numberline {5.5.0.4}Laufzeitsicht}{46}{subsubsection.5.5.0.4}
-\contentsline {section}{\numberline {5.6}Zusammenfassung}{46}{section.5.6}
+\contentsline {section}{\numberline {5.2}Verteilungssicht}{33}{section.5.2}
+\contentsline {section}{\numberline {5.3}Systemarchitektur}{34}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Client-Server-Modell}{34}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Model-View-Controller Entwurfsmuster}{36}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Kommunikation}{38}{section.5.4}
+\contentsline {section}{\numberline {5.5}Server}{40}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Bausteinsicht}{40}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}Benutzerschnittstelle}{41}{subsubsection.5.5.1.1}
+\contentsline {subsubsection}{\numberline {5.5.1.2}Verarbeitungseben}{46}{subsubsection.5.5.1.2}
+\contentsline {subsubsection}{\numberline {5.5.1.3}Datenebene}{50}{subsubsection.5.5.1.3}
+\contentsline {subsection}{\numberline {5.5.2}Laufzeitsicht}{51}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Aufbau einer virtuellen Maschine}{52}{subsubsection.5.5.2.1}
+\contentsline {subsection}{\numberline {5.5.3}Datenbank}{54}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}Entity-Relationship-Model}{54}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}RelationalDatabaseDiagram}{54}{subsubsection.5.5.3.2}
+\contentsline {section}{\numberline {5.6}Client}{55}{section.5.6}
+\contentsline {section}{\numberline {5.7}Zusammenfassung}{55}{section.5.7}

@@ -36,11 +36,14 @@
 \BOOKMARK [1][-]{section.4.3}{4.3 Vagrant}{chapter.4}% 36
 \BOOKMARK [0][-]{chapter.5}{5 Softwareentwurf}{}% 37
 \BOOKMARK [1][-]{section.5.1}{5.1 Kontextabgrenzung}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.2}{5.2 Systemarchitektur}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Client-Server-Modell}{section.5.2}% 40
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Model-View-Controller Entwurfsmuster}{section.5.2}% 41
-\BOOKMARK [1][-]{section.5.3}{5.3 Kommunikation}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.4}{5.4 Server}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 Bausteinsicht}{section.5.4}% 44
-\BOOKMARK [1][-]{section.5.5}{5.5 Client}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.6}{5.6 Zusammenfassung}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.2}{5.2 Verteilungssicht}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.3}{5.3 Systemarchitektur}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Client-Server-Modell}{section.5.3}% 41
+\BOOKMARK [2][-]{subsection.5.3.2}{5.3.2 Model-View-Controller Entwurfsmuster}{section.5.3}% 42
+\BOOKMARK [1][-]{section.5.4}{5.4 Kommunikation}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.5}{5.5 Server}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.5.1}{5.5.1 Bausteinsicht}{section.5.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.2}{5.5.2 Laufzeitsicht}{section.5.5}% 46
+\BOOKMARK [2][-]{subsection.5.5.3}{5.5.3 Datenbank}{section.5.5}% 47
+\BOOKMARK [1][-]{section.5.6}{5.6 Client}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.7}{5.7 Zusammenfassung}{chapter.5}% 49
