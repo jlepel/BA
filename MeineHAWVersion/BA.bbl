@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{24}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -61,6 +61,13 @@
 \newblock URL \url{http://amazon.com/o/ASIN/1449304230/}. --
 \newblock ISBN 9781449304232
 
+\bibitem[Jarosch(2002)]{jarosch2002datenbankentwurf}
+\dinatlabel{Jarosch 2002} \textsc{Jarosch}, Helmut:
+\newblock \emph{Datenbankentwurf : eine beispielorientierte Einfu?hrung fu?r
+  Studenten und Praktiker}.
+\newblock Braunschweig Wiesbaden~: Vieweg, 2002. --
+\newblock ISBN 3528058005
+
 \bibitem[Masak(2009)]{Masak200911}
 \dinatlabel{Masak 2009} \textsc{Masak}, Dieter:
 \newblock \emph{Der Architekturreview: Vorgehensweise, Konzepte und Praktiken
@@ -76,6 +83,13 @@
 \newblock Packt Publishing, 8 2013. --
 \newblock URL \url{http://amazon.de/o/ASIN/1849519188/}. --
 \newblock ISBN 9781849519182
+
+\bibitem[Pernul(2003)]{pernul2003datenbanken}
+\dinatlabel{Pernul 2003} \textsc{Pernul}, Gu?nther:
+\newblock \emph{Datenbanken im Unternehmen : Analyse, Modellbildung und
+  Einsatz}.
+\newblock Mu?nchen Wien~: Oldenbourg, 2003. --
+\newblock ISBN 3486272101
 
 \bibitem[Rechtin und Maier(2000)]{RechtinMaier200006}
 \dinatlabel{Rechtin und Maier 2000} \textsc{Rechtin}, Eberhardt~;

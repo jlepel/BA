@@ -13,52 +13,52 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: literatur.bib
 Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
---line 289 of file literatur.bib
+--line 307 of file literatur.bib
 Warning--entry type for "Sinatra:2015:Online" isn't style-file defined
---line 297 of file literatur.bib
+--line 315 of file literatur.bib
 Warning--entry type for "Wikipedia:2015:Online" isn't style-file defined
---line 305 of file literatur.bib
+--line 323 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
-You've used 22 entries,
+You've used 24 entries,
             3552 wiz_defined-function locations,
-            966 strings with 10052 characters,
-and the built_in function-call counts, 13565 in all, are:
-= -- 1570
-> -- 181
-< -- 243
-+ -- 308
-- -- 97
-* -- 1239
-:= -- 2244
-add.period$ -- 35
-call.type$ -- 22
-change.case$ -- 97
-chr.to.int$ -- 22
-cite$ -- 24
-duplicate$ -- 363
-empty$ -- 1203
-format.name$ -- 189
-if$ -- 2850
+            979 strings with 10353 characters,
+and the built_in function-call counts, 14679 in all, are:
+= -- 1690
+> -- 195
+< -- 263
++ -- 332
+- -- 103
+* -- 1329
+:= -- 2426
+add.period$ -- 37
+call.type$ -- 24
+change.case$ -- 105
+chr.to.int$ -- 24
+cite$ -- 26
+duplicate$ -- 395
+empty$ -- 1315
+format.name$ -- 201
+if$ -- 3090
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 34
-newline$ -- 171
-num.names$ -- 88
-pop$ -- 138
+missing$ -- 38
+newline$ -- 183
+num.names$ -- 96
+pop$ -- 154
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 105
 quote$ -- 0
-skip$ -- 514
+skip$ -- 560
 stack$ -- 0
-substring$ -- 1147
-swap$ -- 66
-text.length$ -- 31
+substring$ -- 1249
+swap$ -- 70
+text.length$ -- 33
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 157
+type$ -- 169
 warning$ -- 2
-while$ -- 141
+while$ -- 153
 width$ -- 0
-write$ -- 290
+write$ -- 310
 (There were 5 warnings)
