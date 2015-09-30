@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{27}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -34,17 +34,6 @@
 \newblock URL \url{http://web.cs.wpi.edu/~dcb/Papers/CASCON03.pdf}, 2002.
 \newblock  -- Forschungsbericht
 
-\bibitem[Chung u.\,a.(1999)Chung, Nixon, Yu und
-  Mylopoulos]{ChungNixonYuMylopoulos199910}
-\dinatlabel{Chung u.\,a. 1999} \textsc{Chung}, Lawrence~; \textsc{Nixon},
-  Brian~A.~; \textsc{Yu}, Eric~; \textsc{Mylopoulos}, John:
-\newblock \emph{Non-Functional Requirements in Software Engineering
-  (International Series in Software Engineering)}.
-\newblock 2000.
-\newblock Springer, 10 1999. --
-\newblock URL \url{http://amazon.de/o/ASIN/0792386663/}. --
-\newblock ISBN 9780792386667
-
 \bibitem[Hall(2013)]{Hall201311}
 \dinatlabel{Hall 2013} \textsc{Hall}, Daniel:
 \newblock \emph{Ansible Configuration Management}.
@@ -61,12 +50,37 @@
 \newblock URL \url{http://amazon.com/o/ASIN/1449304230/}. --
 \newblock ISBN 9781449304232
 
+\bibitem[Hock(2012)]{Hock12}
+\dinatlabel{Hock 2012} \textsc{Hock}, Jürgen:
+\newblock OpenNebula - The Open Source Solution for Data Center Virtualization
+\newblock / Hochschule Mannheim Institut für Sofwaretechnik und
+  Datenkommunikation, Mannheim.
+\newblock URL
+  \url{http://baun-vorlesungen.appspot.com/SEM12/Dokumente/CLCP_SEM_SS2012_OpenNebula_Ausarbeitung.pdf},
+  2012.
+\newblock  -- Forschungsbericht
+
 \bibitem[Jarosch(2002)]{jarosch2002datenbankentwurf}
 \dinatlabel{Jarosch 2002} \textsc{Jarosch}, Helmut:
-\newblock \emph{Datenbankentwurf : eine beispielorientierte Einfu?hrung fu?r
+\newblock \emph{Datenbankentwurf : eine beispielorientierte Einführung für
   Studenten und Praktiker}.
 \newblock Braunschweig Wiesbaden~: Vieweg, 2002. --
 \newblock ISBN 3528058005
+
+\bibitem[Llorente(2014)]{opennebula:2015:Online}
+\dinatlabel{Llorente 2014} \textsc{Llorente}, Ignacio~M.:
+\newblock \emph{OpenNebula vs. OpenStack: User Needs vs. Vendor Driven}.
+\newblock 2014. --
+\newblock URL
+  \url{http://opennebula.org/opennebula-vs-openstack-user-needs-vs-vendor-driven/}
+
+\bibitem[Loschwitz und Syseleven(2015)]{Golem:2015:Online}
+\dinatlabel{Loschwitz und Syseleven 2015} \textsc{Loschwitz}, Martin~;
+  \textsc{Syseleven}:
+\newblock \emph{OpenStack}.
+\newblock 2015. --
+\newblock URL
+  \url{http://www.golem.de/news/openstack-viele-brauchen-es-keiner-versteht-es-wir-erklaeren-es-1503-112814.html}
 
 \bibitem[Masak(2009)]{Masak200911}
 \dinatlabel{Masak 2009} \textsc{Masak}, Dieter:
@@ -85,10 +99,10 @@
 \newblock ISBN 9781849519182
 
 \bibitem[Pernul(2003)]{pernul2003datenbanken}
-\dinatlabel{Pernul 2003} \textsc{Pernul}, Gu?nther:
+\dinatlabel{Pernul 2003} \textsc{Pernul}, Günther:
 \newblock \emph{Datenbanken im Unternehmen : Analyse, Modellbildung und
   Einsatz}.
-\newblock Mu?nchen Wien~: Oldenbourg, 2003. --
+\newblock München Wien~: Oldenbourg, 2003. --
 \newblock ISBN 3486272101
 
 \bibitem[Rechtin und Maier(2000)]{RechtinMaier200006}
@@ -176,6 +190,13 @@
 \newblock URL \url{http://amazon.de/o/ASIN/3446436146/}. --
 \newblock ISBN 9783446436145
 
+\bibitem[Statista(2015)]{Statista:2015:Online}
+\dinatlabel{Statista 2015} \textsc{Statista}:
+\newblock \emph{marktanteil-der-meistgenutzten-webserver}.
+\newblock 2015. --
+\newblock URL
+  \url{http://de.statista.com/statistik/daten/studie/181588/umfrage/marktanteil-der-meistgenutzten-webserver/}
+
 \bibitem[Tanenbaum und van Steen(2007)]{TanenbaumSteen200711}
 \dinatlabel{Tanenbaum und van Steen 2007} \textsc{Tanenbaum}, Andrew~S.~;
   \textsc{Steen}, Maarten van:
@@ -188,8 +209,7 @@
 
 \bibitem[Wikipedia(2015)]{Wikipedia:2015:Online}
 \dinatlabel{Wikipedia 2015} \textsc{Wikipedia}:
-\newblock \emph{Model ? view ? controller --- Wikipedia - The Free
-  Encyclopedia}.
+\newblock \emph{Model-view-controller --- Wikipedia - The Free Encyclopedia}.
 \newblock 2015. --
 \newblock URL
   \url{https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/2000px-MVC-Process.svg.png}

@@ -1,17 +1,18 @@
 \chapter{Anforderungsanalyse}\label{ch:Anforderungsanalyse}
 Die Anforderungsanalyse hilft Systemeigenschaften und Systemanforderungen der einzelnen beteiligten Gruppen, auch als Stakeholder bezeichnet,
-zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.\newline
-Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten und Qualitätsmerkmale näher zu betrachten, wird als erstes das Ziel der Anwendung beschrieben. Dann werden die Stakeholder definiert und ihnen im Anschluss die Kernfunktionalitäten zugeordnet. Im Weiteren wird auf die Qualitätsmerkmale eingegangen, die auch als nichtfunktionale Anforderungen bezeichnet werden.
+zu erfassen, zu analysieren und ggf. eine Diskussionsgrundlage zu schaffen. Das resultierende Ergebnis, kann dann wiederum als Grundstein für ein zukünftiges Lastenheft genutzt werden.
+%\newline
+%Um die aus dieser Anforderungsbeschreibung hervorgehenden Kernfunktionalitäten und Qualitätsmerkmale näher zu betrachten, wird als erstes das Ziel der Anwendung in Anschnitt \ref{Zielsetzung} beschrieben. Danach werden die Stakeholder (siehe Abschnitt \ref{STAKEHOLDER}) definiert und ihnen im Anschluss die Kernfunktionalitäten zugeordnet. Abschnitt \ref{sec:NFA} geht auf die Qualitätsmerkmale ein, die auch als nichtfunktionale Anforderungen bezeichnet werden, um 
 %und als Qualitätskriterium an System und Software angesehen werden können.
 %Im Folgenden werden die Ziele, Anforderungen an die Software detaillierter konzipiert, aufgelistet und beschrieben. Zudem grundlegende Fragen bezüglich der Kernaufgaben, Qualitätsanforderungen, beteiligte Gruppen und benachbarter Systeme geklärt.
 
-\section{Zielsetzung}
-'Keine Systementwicklung sollte ohne wenigstens eine halbe Seite schriftliche Ziele angegangen werden. Dabei ist es wichtig, quantifizierbare Angaben aufzuzählen, denn Ziele sind Anforderungen auf einer abstrakten Ebene.'  \cite{RuppSOPHISTen201410} \newline\newline
+\section{Zielsetzung}\label{Zielsetzung}
+'Keine Systementwicklung sollte ohne wenigstens eine halbe Seite schriftliche Ziele angegangen werden. Dabei ist es wichtig, quantifizierbare Angaben aufzuzählen, denn Ziele sind Anforderungen auf einer abstrakten Ebene.'  \cite{RuppSOPHISTen201410} \newline
 
-Die zu erstellende Applikation soll den Anwender in der Umsetzung und Konfiguration von virtuellen Entwicklungsumgebungen unterstützen.
-Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, soll den Anwender in seiner Tätigkeit unterstützen. Dabei spielen das User-Interface und der Funktionsumfang der Applikation eine entscheidende Rolle. Während der Aufbau des User-Interface hilft sich mit geringem Zeitaufwand in die Applikation einzuarbeiten, vereinfacht ein übersichtliches Konfigurationsspektrum die Erstellung der gewünschten virtuellen Umgebung. Die Konfiguration einer virtuellen Maschine muss auch für unerfahrene Nutzer möglich sein und keine speziellen Kenntnisse voraussetzen.
-Alle virtuelle Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennten Instanzen laufen und von einander unterscheidbar sein. Die Unterscheidbarkeit soll Funktionen wie den Export oder den entfernten Zugriff auf die Maschine unterstützen. Sie soll dem Anwender die Möglichkeit schaffen, die gewünschte virtuelle Maschine zu beeinflussen, in dem er die Umgebung abschalten oder zerstören kann.
-Des Weiteren soll die Anwendung Unterstützung bieten, voneinander abhängige Applikationen zu konfigurieren und automatisiert zu installieren.
+Die zu erstellende Applikation (in den folgenden Kapiteln auch als VM-Builder bezeichnet) soll den Anwender in der Umsetzung und Konfiguration von virtuellen Entwicklungsumgebungen unterstützen.
+Angestrebte Funktionalitäten, wie der Aufbau einer Entwicklungsumgebung inklusive der automatisierten Installation von Programmen, oder der Austausch von bereits erstellten Entwicklungsumgebungen zwischen beteiligten Benutzern, soll den Anwender in seiner Tätigkeit unterstützen. Dabei spielen das User-Interface und der Funktionsumfang der VM-Builders eine entscheidende Rolle. Während die Strukturierung des User-Interfaces hilft, sich mit geringem Zeitaufwand in die Applikation einzuarbeiten, vereinfacht ein übersichtliches Konfigurationsspektrum die Erstellung der gewünschten virtuellen Umgebung. Die Konfiguration einer virtuellen Maschine muss auch für unerfahrene Nutzer möglich sein und keine speziellen Kenntnisse voraussetzen.
+Alle virtuellen Maschinen, die zu einem Zeitpunkt aktiv sind, sollten in getrennten Instanzen laufen und voneinander unterscheidbar sein. Die Unterscheidbarkeit soll Funktionen wie den Export oder den entfernten Zugriff auf die Maschine unterstützen. Sie soll dem Anwender die Möglichkeit schaffen, die gewünschte virtuelle Maschine zu beeinflussen, indem er die Umgebung abschalten oder zerstören kann.
+Des Weiteren soll der VM-Builder Unterstützung bieten, voneinander abhängige Applikationen zu konfigurieren und automatisiert zu installieren.
 
 \section{Stakeholder} \label{STAKEHOLDER}
 '\textit{Stakeholder} in Softwareentwicklungsprojekten sind alle Personen (oder Gruppen von Personen) die ein Interesse an einem Softwarevorhaben oder dessen Ergebnis haben.' 		 \cite{Starke201205}\newline
@@ -58,38 +59,40 @@ Möchte der Anwender eine virtuelle Maschine nach dem Abbild einer bereits im Sys
 %			Dies ist in Kombination mit FA 3 \ref{itm:AUSWAHLMIT} möglich
 
 \item[FA 7.]\label{itm:autoSpeichern}
-Die Applikation sollte Konfigurationen von virtuelle Maschinen automatisch speichern können.
- 
+Die Applikation sollte durch den Erstellungsprozess die Konfiguration der virtuellen Maschinen automatisch speichern können.
+
 \item[FA 8.]	
+Wenn der Anwender eine virtuelle Maschine erstellen möchte, muss die Applikation bei wichtigen Konfigurationsschritten, für den Benutzer sichtbare Statusmeldungen anzeigen. 
+
+\item[FA 9.]	
+Treten Fehler bei der Erstellung einer virtuellen Maschine auf, muss das System eine Fehlermeldung ausgeben.
+
+ 
+\item[FA 10.]	
 Die Applikation sollte dem Anwender die Option bieten, virtuelle Maschinen zu exportieren. 
 
-\item[FA 9.] 
-Die Applikation sollte fähig sein den Export zu komprimieren.
+%\item[FA 9.] LÖSCHEN !!!
+%Die Applikation sollte fähig sein den Export zu komprimieren.
 
-\item[FA 10.] 
+\item[FA 11.] 
 Ist der Export durchgeführt worden, muss die Applikation dies mit einer Meldung auf dem Bildschirm bestätigen.
 		
-\item[FA 11. \label{Import}]
+\item[FA 12. \label{Import}]
 Die Anwendung muss fähig sein, Exporte wieder importieren zu können.
 Falls währen des Imports Datenfehler auftreten, muss die Anwendung den jeweiligen Fehler (Fehlerbeschreibung) auf dem Bildschirm ausgeben.
 
-\item[FA 12.]	
-Ist der Import erfolgreich durchgeführt worden, sollte die Applikation eine entsprechende Meldung anzeigen.
+\item[FA 13.]	
+Ist der Import erfolgreich durchgeführt worden, soll die Applikation eine entsprechende Meldung anzeigen.
 %Durch den Import von Maschinenkonfiguration wird es dem Anwender ermöglicht, selbst- oder von Kollegen erstellte Umgebungen wieder aufzubauen.
 
-\item[FA 13.]	
-Wenn der Anwender eine virtuelle Maschine erstellen möchte, muss die Applikation bei wichtigen Konfigurationsschritten, für den Benutzer sichtbare Statusmeldungen anzeigen. 
 
 \item[FA 14.]	
-Treten Fehler bei der Erstellung einer virtuellen Maschine auf, muss das System eine Fehlermeldung ausgeben.
+Die Applikation soll fähig sein, anderen Anwendern bereits erstellte virtuelle Maschinen über das Internet und das lokale Netzwerk zur Verfügung zu stellen.
 
-\item[FA 15.]	
-Die Applikation sollte fähig sein, anderen Anwendern bereits erstellte virtuelle Maschinen über das Internet und das lokale Netzwerk zur Verfügung zu stellen.
-
-\item[FA 16.]
+\item[FA 15.]
 Möchte der Anwender eine bereits erstellte und laufende virtuelle Maschine beenden, muss die Applikation dafür eine entsprechende Option bieten.
 
-\item[FA 17.]
+\item[FA 16.]
 Falls der Anwender eine bereits erstellte virtuelle Maschine löschen möchte, muss die Applikation ihm dafür ein Hilfsmittel bereitstellen.	
 
 
@@ -97,53 +100,49 @@ Falls der Anwender eine bereits erstellte virtuelle Maschine löschen möchte, mus
 \textbf{Anforderungen - Administrator}
 	
 \begin{enumerate}
-\item[FA 18.]
-Falls während des Betriebes der Anwendung Änderungen an der Konfiguration durchgeführt werden müssen, sollte die Applikation dies über eine Konfigurationsseite anbieten.
+\item[FA 17.]
+Falls während des Betriebes der Anwendung Änderungen an der Konfiguration durchgeführt werden müssen, soll die Applikation dies über eine Konfigurationsseite anbieten.
+
+\item[FA 18.]	
+Zu den Konfigurationsmöglichkeiten soll das Ändern des Namens, sowie des Speicherorts von Logdateien gehören.
 
 \item[FA 19.]	
-Zu den Konfigurationsmöglichkeiten sollte das Ändern des Namens, sowie des Speicherorts von Logdateien gehören.
+Falls in den Einstellungen ein Fehler während der Bearbeitung auftritt, muss die Anwendung eine Fehlermeldung auf dem Bildschirm ausgeben.
 
 \item[FA 20.]	
-Falls während der Änderung, Löschung oder des Hinzufügens in Einstellungen oder Softwarekomponenten/Softwarepaketen ein Fehler auftritt, muss die Anwendung eine Fehlermeldung auf dem Bildschirm ausgeben.
-
-\item[FA 21.]	
 Die Anwendung sollte dem Administrator die Option bieten, sich den Inhalt von Logdateien anzeigen zu lassen.
 
-\item[FA 22.]
+\item[FA 21.]
 Für das Hinzufügen, Ändern und Löschen von Softwarekomponenten, muss die Applikation eine Oberfläche bereitstellen.
+
+\item[FA 22.]
+Die Applikation muss eine Oberfläche anbieten, in der Softwarepakete konfiguriert werden können. Es muss dort möglich sein, ein neues Softwarepaket anzulegen, Relationen zu anderer Software herzustellen und ggf. Dateien auszuwählen und dies als Paket zu speichern.
 
 \item[FA 23.]
 Das Erstellen, Ändern und Löschen von Softwarepaketen muss als Option in der Applikation angeboten werden.
 
-\item[FA 24.]
-Um Softwarepakete erstellen zu können, die aus mehreren Softwarekomponenten bestehen, muss die Applikation eine Oberfläche anbieten. In der muss es möglich sein, 
-Komponenten auszuwählen und deren Installationsreihenfolge; Kopier- und Entpackvorgänge zu definieren und auszuführende Scripte auszuwählen.
-
-\item[FA 25.]
-Gespeicherte Konfigurationen von bereits erstellten virtuellen Maschinen, sollten löschbar sein.
-
 \end{enumerate}	
 Definition Funktionale Anforderungen nach \cite{RuppSOPHISTen201410}
 
-\section{Use-Cases}
-Use-Case (Anwendungsfälle) helfen, die fachlichen Anforderungen eines Systems zu bezeichnen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden und das System grob in seine Hauptfunktionen gegliedert wird.
+\section{Use-Cases}\label{sec:UseCase}
+Use-Cases (Anwendungsfälle) helfen, die fachlichen Anforderungen eines Systems zu bezeichnen, indem dort Interaktionen zwischen System und Benutzer dargestellt werden und das System grob in seine Hauptfunktionen gegliedert wird.
 Der Business-Use-Case spiegelt dabei ein Gesamtbild aller Funktionalitäten der Applikation wieder und grenzt diese voneinander ab, während die darauf folgenden System-Use-Cases helfen eine erste Skizze der zu entwickelnden Hauptfunktionalitäten zu erstellen, die sich wie folgt aus den funktionalen Anforderungen in Kapitel \ref{sec:FunktionaleAnforderungen} ergeben haben:
 \begin{enumerate}
 \item Erstellung einer virtuellen Maschine
 \item Export einer vorhandenen Maschine
-\item Der Import einer zuvor erstellten Maschine
-\item Eine virtuelle Maschine zugreiffbar für andere Anwender machen (teilen)
+\item Import einer zuvor erstellten Maschine
+\item Eine virtuelle Maschine für andere Anwender zugreifbar machen (teilen)
 \item Software-Abhängigkeiten konfigurieren
 \end{enumerate}
 
-\subsection{Business-Use-Case}
-
+\subsection{Business-Use-Case}\label{ssec:BusinessUseCase}
+\textbf{TODO:} Provisioning klein; Ändern, ANwendungseinstellung bearbeiten
 \begin{figure}[htbp]
   \centering
   \fbox{
 \includegraphics[scale=0.5]{../Bilder/UseCaseUebersicht.png}
   }
-  \caption{Titel}
+  \caption{Business-Use-Case Übersicht}
 
 \end{figure}
 \FloatBarrier
@@ -153,114 +152,112 @@ Der Business-Use-Case spiegelt dabei ein Gesamtbild aller Funktionalitäten der A
 \subsubsection{Use-Case 1 - Virtuelle Maschine erstellen}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Virtuelle Maschine erstellen \\
-\textbf{Ziel im Kontext} & Erstellung einer virtuellen Maschine \\
+\textbf{Ziel im Kontext} & Erstellung einer virtuellen Maschine. \\
 \textbf{Akteur} & Anwender \\
-\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine erstellen \\
-\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Der Anwender kann auf die Benutzeroberfläche zugreifen.\\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine erstellen. \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig.\newline Der Anwender kann auf die Benutzeroberfläche zugreifen.\\
 \textbf{Nachbedingung} & Der Anwender kann auf eine lauffähige virtuelle Maschine zugreifen, die seiner Konfiguration entspricht.\\
-\textbf{Anforderungen} & FA 1, FA 2, FA 3, FA 4, FA 5 , FA 6, FA 13, FA 14 \\
+\textbf{Anforderungen} & FA 2, FA 3, FA 4, FA 5 , FA 7, FA 8, FA 9 \\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
 \begin{enumerate}
-\item Der Anwender startet die Applikation über den Browser
-\item Der Anwender wählt aus, dass er eine neue virtuelle Maschine erstellen möchte
-\item Der Anwender wird gebeten Konfigurationsparameter für die zu erstellende Maschine einzugeben
-\item Die Applikation schlägt dem Anwender vor, Software mit auf die gewünschte Maschine zu installieren
-\item Der Anwender kann optional eigene Dateien mit übertragen lassen
-\item Nach der entsprechenden Auswahl zeigt die Applikation den aktuellen Aufbaustatus der virtuellen Maschine
-\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten für die Maschine an\newline\newline
+\item Der Anwender startet den VM-Builder über den Browser.
+\item Der Anwender wählt aus, dass er eine neue virtuelle Maschine erstellen möchte.
+\item Der Anwender wird gebeten Konfigurationsparameter für die zu erstellende Maschine einzugeben.
+\item Die Applikation schlägt dem Anwender vor, Software mit auf die gewünschte Maschine zu installieren.
+\item Der Anwender kann optional eigene Dateien mit übertragen lassen.
+\item Nach der entsprechenden Auswahl zeigt die Applikation den aktuellen Aufbaustatus der virtuellen Maschine.
+\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten für die Maschine. an\newline\newline
 \end{enumerate}
 
 
 \subsubsection{Use-Case 2 - Virtuelle Maschine exportieren}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Virtuelle Maschine exportieren \\
-\textbf{Ziel im Kontext} & Export aller notwendigen Konfigurationsdateien, um eine Maschine mit der gleichen Konfiguration erneut erstellen zu können \\
+\textbf{Ziel im Kontext} & Export aller notwendigen Konfigurationsdateien, um eine Maschine mit der gleichen Konfiguration erneut erstellen zu können. \\
 \textbf{Akteur} & Anwender \\
-\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine exportieren \\
-\textbf{Vorbedingung} & Die zu exportierende virtuelle Maschine existiert bereits \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine exportieren. \\
+\textbf{Vorbedingung} & Die zu exportierende virtuelle Maschine existiert bereits. \\
 \textbf{Nachbedingung} & Der Anwender erhält eine gepackte Datei, in der alle nötigen Daten enthalten sind, die für einen erneuten Import nötig wären. \\
-\textbf{Anforderungen} & FA 1, FA 8, FA 9, FA 10\\
+\textbf{Anforderungen} & FA 11, FA 12\\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
 \begin{enumerate}
-\item Der Anwender startet die Applikation über den Browser
-\item Der Anwender wählt bei der gewünschten Maschine die Exportfunktion aus
-\item Die Applikation beginnt mit dem Download der benötigten Dateien \newline\newline
+\item Der Anwender startet den VM-Builder über den Browser.
+\item Der Anwender wählt bei der gewünschten Maschine die Exportfunktion aus.
+\item Die Applikation beginnt mit dem Download der benötigten Dateien. \newline\newline
 \end{enumerate}
 
 
 \subsubsection{Use-Case 3 - Virtuelle Maschine importieren}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Virtuelle Maschine importieren \\
-\textbf{Ziel im Kontext} & Erstellung einer Maschine aus einem Import \\
+\textbf{Ziel im Kontext} & Erstellung einer Maschine aus einem Import. \\
 \textbf{Akteur} & Anwender \\
-\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine importieren \\
-\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Der Anwender kann auf die Benutzeroberfläche zugreifen \\
-\textbf{Nachbedingung} & Die Maschinenkonfiguration konnte importiert werden und eine virtuelle Maschine wurde erstellt \\
-\textbf{Anforderungen} & FA 1, FA 11, FA 12, FA 13, FA 14 \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine importieren. \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig.\newline Der Anwender kann auf die Benutzeroberfläche zugreifen. \\
+\textbf{Nachbedingung} & Die Maschinenkonfiguration konnte importiert werden und eine virtuelle Maschine wurde erstellt. \\
+\textbf{Anforderungen} & FA 12, FA 13\\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
 \begin{enumerate}
-\item Der Anwender startet die Applikation über den Browser
-\item Der Anwender wählt die Importfunktion aus und kann die gewünschte(n) Datei(en) hochladen
-\item Die Applikation zeigt dem Anwender, dass der Import erfolgreich war
-\item Der Anwender kann nun entscheiden, ob er die virtuelle Maschine erstellen lassen möchte\newline\newline
+\item Der Anwender startet den VM-Builder über den Browser.
+\item Der Anwender wählt die Importfunktion aus und kann die gewünschte(n) Datei(en) hochladen.
+\item Die Applikation zeigt dem Anwender, dass der Import erfolgreich war.
+\item Der Anwender kann nun entscheiden, ob er die virtuelle Maschine erstellen lassen möchte.\newline\newline
 \end{enumerate}
 
 
 \subsubsection{Use-Case 4 - Virtuelle Maschine teilen}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Virtuelle Maschine teilen \\
-\textbf{Ziel im Kontext} & Eine erstellte Maschine über das Internet oder das lokale Netzwerk für andere Anwender zugreifbar machen  \\
+\textbf{Ziel im Kontext} & Eine erstellte Maschine über das Internet oder das lokale Netzwerk für andere Anwender zugreifbar machen.  \\
 \textbf{Akteur} & Anwender \\
-\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine für andere Anwender zugreifbar machen \\
-\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Die zu teilende Maschine ist erstellt \\
-\textbf{Nachbedingung} & Die virtuelle Maschine ist von Intern und/oder Extern zugreifbar\\
-\textbf{Anforderungen} & FA 15 \\
+\textbf{Auslöser} & Der Anwender möchte eine virtuelle Maschine für andere Anwender zugreifbar machen. \\
+\textbf{Vorbedingung} & Die Anwendung ist installiert und lauffähig\newline Die zu teilende Maschine ist erstellt. \\
+\textbf{Nachbedingung} & Die virtuelle Maschine ist von intern und/oder extern zugreifbar.\\
+\textbf{Anforderungen} & FA 14 \\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
 \begin{enumerate}
-\item Der Anwender startet die Applikation über den Browser
-\item Der Anwender wählt die gewünschte virtuelle Maschine aus und aktiviert die Teil-Option
-\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten auf die virtuelle Maschine
+\item Der Anwender startet den VM-Builder über den Browser.
+\item Der Anwender wählt die gewünschte virtuelle Maschine aus und aktiviert die Teil-Option.
+\item Die Applikation zeigt dem Anwender die Zugriffsmöglichkeiten auf die virtuelle Maschine.
 \end{enumerate}
 
 \subsubsection{Use-Case 5 - Softwarepakete konfigurieren}
 \begin{tabular}{p{4cm} p{10cm}}
 \textbf{Bezeichnung} & Softwarepakete konfigurieren \\
-\textbf{Ziel im Kontext} & Softwarepakete konfigurieren, die andere Software und ggf. das kopieren/entpacken von Dateien beinhaltet \\
+\textbf{Ziel im Kontext} & Softwarepakete konfigurieren, die andere Software und ggf. das Kopieren/Entpacken von Dateien beinhaltet. \\
 \textbf{Akteur} & Administrator \\
-\textbf{Auslöser} & Eine Installation einer Anwendung, die mehrere Softwarekomponenten benötigt  \\
-\textbf{Vorbedingung} & Wissen über die zu installierenden Softwarekomponenten \\
-\textbf{Nachbedingung} & Ein Softwarepaket, dass die Konfigurationen des Anwenders beinhaltet und in der Applikation anwendbar ist\\
-\textbf{Anforderungen} & FA 2, FA 20, FA 23, FA 24 \\
+\textbf{Auslöser} & Eine Installation einer Anwendung, die mehrere Softwarekomponenten benötigt.  \\
+\textbf{Vorbedingung} & Wissen über die zu installierenden Softwarekomponenten. \\
+\textbf{Nachbedingung} & Ein Softwarepaket, dass die Konfigurationen des Anwenders beinhaltet und in der Applikation anwendbar ist.\\
+\textbf{Anforderungen} & FA 21, FA 22, FA 23 \\
 \textbf{Erfolgsszenario} & 
  \end{tabular}
 \begin{enumerate}
-\item Der Administrator startet die Applikation über den Browser
-\item Der Administrator begibt sich in das Konfigurationsmenü
+\item Der Administrator startet den VM-Builder über den Browser.
+\item Der Administrator begibt sich in das Administrationsmenü.
 \item Der Administrator kann dort ein neues Softwarepaket erstellen.
 \item Der Administrator gibt die entsprechenden Optionen wie z.B. Name des Softwarepakets ein.
-\item Wählt die Komponenten und die Reihenfolge der Abhängigkeiten aus
-\item Definiert Kopier- und Entpackvorgänge  
-\item Wählt ggf. auszuführende Scripte aus
-\item speichert das Paket und kann es bei der Installation einer virtuellen Maschine auswählen
-%\item Oder definiert sich selber eine Zustandsbeschreibung im gewünschten Format
+\item Der Administrator wählt die Komponenten aus, die mit installiert werden sollen.
+\item Der Administrator wählt Dateien aus, die auf den Zielrechner kopiert und/oder entpackt werden sollen.
+\item Der Administrator speichert das Paket und kann es bei der Installation einer virtuellen Maschine auswählen.
 \end{enumerate}
 
 
 \section{Nichtfunktionale Anforderungen} \label{sec:NFA}
-In der Literatur findet sich keine einheitliche Definition von nichtfunktionalen Anforderungen, Bezogen auf das Design eines Systems sind die nichtfunktionalen Anforderungen für den Architekten von besonderer Bedeutung (\cite{ChungNixonYuMylopoulos199910}).\newline
-Durch nichtfunktionale Anforderungen können neue Lösungsmöglichkeiten vorgegeben werden oder schlicht die Menge an potentiellen Designentwürfen, im Bezug auf die Funktionalitäten, reduziert werden (\cite{Burge02}).\newline
-Im Wesentlichen gibt es eine begrenze Auswahl an Definitionen und Perspektiven, die im Folgenden nach \cite{RuppSOPHISTen201410} zusammengefasst werden.
-
+Die Literatur gibt keine einheitliche Defininition von nichtfunktionalen Anforderungen vor, aber wie (\cite{Burge02}) es ausdrückte, können durch nichtfunktionale Anforderungen neue Lösungsmöglichkeiten vorgegeben werden oder schlicht die Menge an potentiellen Designentwürfen, im Bezug auf die Funktionalitäten, reduziert werden.
+Im Wesentlichen gibt es eine begrenze Auswahl an Definitionen und Perspektiven bei nichtfunktionalen Anforderungen, die im Folgenden nach \cite{RuppSOPHISTen201410} zusammengefasst werden.
+%von \cite{ChungNixonYuMylopoulos199910} beschrieben:
+%Bezogen auf das Design eines Systems sind die nichtfunktionalen Anforderungen für den Architekten von besonderer Bedeutung
 \begin{enumerate}
 \item  \textbf{Technologische Anforderungen}\label{itm:TechnologischeAnforderungen} \newline
 Die detailliertere Beschreibung von Lösungsvorgaben oder der Umgebung, in der das System betrieben werden soll, können und sollen den Lösungsraum, für die Realisierung des Systems beschränken.
 
 \item  \textbf{Qualitätsanforderungen}\label{itm:Qualitätsanforderungen}\newline
-Qualitätsanforderungen lassen sich in detailliertere Unterpunkte unterteilt werden. Dies kann nach zwei Standards erfolgen: ISO 25000 und ISO 9126. Mittlerweile ist jedoch der ISO 9126 Standard in ISO 25000 aufgegangen. Beide Standards sollen sicherstellen, dass über Qualitätsanforderungen die Qualität des Systems und des Entwicklungsprozesses festgelegt wird.
+Qualitätsanforderungen lassen sich in detailliertere Unterpunkte unterteilen. Dies kann nach zwei Standards erfolgen: ISO 25000 und ISO 9126, mittlerweile ist jedoch der ISO 9126 Standard in ISO 25000 aufgegangen. Beide Standards sollen sicherstellen, dass über Qualitätsanforderungen die Qualität des Systems und des Entwicklungsprozesses festgelegt wird.
 
 \item  \textbf{Anforderungen an die Benutzeroberfläche}\label{itm:AnforderungenAnDieBenutzeroberfläche}\newline
 Die Anforderungen, die festlegen, wie sich die Anwendung dem Benutzer darstellt, werden unter 'Anforderungen an die Benutzeroberfäche' gebündelt.
@@ -272,56 +269,130 @@ Alle Produkte, die zu dem System oder der Anwendung geliefert werden müssen, wie
 Die 'Anforderungen an durchzuführende Tätigkeiten' beeinflussen Tätigkeiten, wie Wartung oder Support, die der Entwicklung nachgelagert sind.
 
 \item  \textbf{Rechtliche-vertragliche Anforderungen}\newline
-'Rechtliche-vertragliche Anforderungen' beschreiben die Regelungen, die zwischen Auftraggeber und Auftragnehmer vor der Entwicklung des System des Auftraggebers oder deren Anwendung, festgelegt werden müssen.
+'Rechtliche-vertragliche Anforderungen' beschreiben die Regelungen, die zwischen Auftraggeber und Auftragnehmer vor der Entwicklung des System oder deren Anwendung, festgelegt werden müssen.
 \end{enumerate}
-Im Folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen}) 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche}) 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend für die Entwicklung der angestrebten Applikation sind.\newline\newline
+Im Folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte \ref{itm:TechnologischeAnforderungen} 'Technologische Anforderungen'  und \ref{itm:AnforderungenAnDieBenutzeroberfläche} 'Anforderungen an die Benutzeroberfläche' betrachtet, da diese Zielführend für die Entwicklung der angestrebten Applikation sind.\newline\newline
 
 \subsubsection{Technologische Anforderungen}\label{sssec:TechnologischeAnforderungen}
 \begin{enumerate}
 \item Das für den Betrieb der Anwendung zugrunde liegende Betriebssystem muss Ubuntu 12.04 oder höher sein.
 \item Die Anzahl der gleichzeitig laufenden virtuellen Umgebungen, liegt maximal bei 10.	
 \item Die Kommunikation zwischen Frontend und Backend muss nicht verschlüsselt ablaufen.
-\item Softwareupdates der benutzen Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
+\item Softwareupdates der benutzten Softwarekomponenten müssen mit Rücksprache des Entwicklers erfolgen.
 \end{enumerate}
 \subsubsection{Qualitätsanforderungen}
 \begin{enumerate}
 \item Die Installation und Inbetriebnahme der Anwendung sollte über einen automatischen Installationsprozess erfolgen.
 \item Die Anwendung sollte zu 99.0 Prozent der Zeit lauffähig sein.
 \item Jeder auftretende Fehler ist eindeutig identifizierbar und nachvollziehbar.
-\item Änderungen am vorgeschlagenen Softwarebestand müssen innerhalb von <10 Sekunden in der Anwendungsoberfläche sichtbar sein (bezogen auf \nameref{Import} FA 4.).		
-\item Falls das Betriebssystem auf eine höhere Version aktualisiert werden soll, muss dies ohne Änderungen an dem Quellcodes der Anwendung vorgenommen werden können.
-\item Soll ein anderer Provisionierer verwendet werden, muss der Aufwand des Austausches bei unter einem Personentag liegen.		
+\item Änderungen am vorgeschlagenen Softwarebestand müssen innerhalb von <10 Sekunden in der Anwendungsoberfläche sichtbar sein.		
+\item Falls das Betriebssystem auf eine höhere Version aktualisiert werden soll, muss dies ohne Änderungen des Quellcodes der Anwendung vorgenommen werden können.
+\item Soll ein anderer Provisionierer verwendet werden, muss der Aufwand des Austausches bei unter fünf Personentagen liegen.		
 \item Wird angedacht weitere Grundfunktionalitäten zu implementieren, soll dies möglichst einfach erfolgen.		
 \item Das Importieren von virtuellen Maschinen sollte <10 Minuten betragen.
-\item Die Validierung der zu importierenden Daten sollte <2 Minuten betragen.
-\item Der beim Import verwendete Validierungsalgorithmus muss unter 0.5 Personentagen austauschbar sein. (bezogen auf \nameref{Import} FA 9.)
 \item Der Export einer virtuellen Maschine sollte <5 Minuten betragen.\end{enumerate}
+
 \subsubsection{Anforderungen an die Benutzeroberfläche}
 \begin{enumerate}
-\item Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des Systems innerhalb von maximal 10 Minuten in der Lage sein, die gewünschte Funktionalität zu lokalisieren und zu verwenden.
+\item Ein Benutzer ohne Vorkenntnisse muss bei der erstmaligen Verwendung des VM-Builders innerhalb von maximal 10 Minuten in der Lage sein, die gewünschte Funktionalität zu lokalisieren und zu verwenden.
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine exportieren' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzende Anforderung sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
-\textbf{BILD EINFÜGEN}
+\item Der VM-Builder sollte einen Oberflächendialog für die Verwaltung der virtuellen Maschinen bereitstellen. Die folgenden Bezeichnungen, die Art der abgebildeten Elemente, deren Göße und Anordnung sind keine Umsetzungsanforderung. (Siehe Abbildung \ref{fig:Manage}). Primär steht eine Übersicht der erstellten virtuellen Maschinen im Vordergrund, inklusive derer verfügbaren Optionen und Statusinformationen.\newline
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Manage.png}
+  }
+  \caption{Entwurf der Verwaltungsoberfläche}
+	\label{fig:Manage}
+\end{figure}
+\FloatBarrier
 
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine importieren' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
-\textbf{BILD EINFÜGEN}
-
-
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine erstellen - Mit Provisioning aus einer Auswahl an Komponenten' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente.\newline
-\textbf{BILD EINFÜGEN}
-
-\item Die Anwendung muss den Oberflächendialog 'Virtuelle Maschine über das Internet teilen" mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung ...). Keine umzusetzende Anforderungen sind die genaue	 Größen und die Anordnung der einzelnen Elemente.\newline
+\item Der VM-Builder sollte den Oberflächendialog 'Virtuelle Maschine erstellen' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung \ref{fig:Create1} und \ref{fig:Create2}). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente.
+Abbildung \ref{fig:Create1} zeigt die Menüführung des geleiteten Aufbaus einer virtuellen Maschine mit Eingabemöglichkeiten. Abbildung \ref{fig:Create2} zeigt den nachfolgenden Auswahlprozess an Softwarekomponenten.
+Zu beachten ist, dass die Eingabe der optionalen- und Pflichtparameter gegeben ist, sowie die Auswahlmöglichkeit an Softwarekomponenten.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/CreatePage1.png}
+  }
+  \caption{Enwurf der Aufbauoberfläche - Eingabe Parameter}
+	\label{fig:Create1}
+\end{figure}
+\FloatBarrier
 
 \begin{figure}[htbp]
   \centering
   \fbox{
-\includegraphics[width=0.9\textwidth]{../Bilder/share_mockup.png}
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/CreatePage12.png}
   }
-  \caption{Titel}
-
+  \caption{Enwurf der Aufbauoberfläche - Auswahl der Softwarekomponenten}
+	\label{fig:Create2}
 \end{figure}
 \FloatBarrier
- 
+
+\item Der VM-Builder sollte den Oberflächendialog 'Sharing' mit den folgenden Bezeichnungen und der Art der abgebildeten Elemente darstellen (siehe Abbildung \ref{fig:Share}). Keine umzusetzenden Anforderungen sind die genaue Größe und die Anordnung der einzelnen Elemente. Um die Oberfläche übersichtlich zu halten, soll der Anwender nur nötige Informationen erhalten, die er zum Weitergeben an Dritte benötigt. Dies wären z.B Konnektivitätsmöglichkeiten und Informationen zur geteilten virtuellen Maschine.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Share.png}
+  }
+  \caption{Enwurf der Sharing-Oberfläche}
+	\label{fig:Share}
+\end{figure}
+\FloatBarrier
+
+\item Der VM-Builder sollte den Oberflächendialog 'Export' besitzen. Durch den Export sollen, von einer zuvor ausgewählten virtuellen Maschine, alle nötigen Konfigurationsdateien exportiert werden können. Exemplarisch in Abbildung \ref{fig:MockExport} zu sehen.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Export.png}
+  }
+  \caption{Enwurf der Export-Oberfläche}
+	\label{fig:MockExport}
+\end{figure}
+\FloatBarrier
+
+\item Der VM-Builder sollte den Oberflächendialog 'Import' besitzen, die den Anwender befähigt zuvor exportierte Dateien wieder zu importieren und daraus eine virtuelle Maschine zu erstellen. So sollen Schaltflächen zum Auswählen der benötigten Dateien angeboten werden. Eine exemplarische Sicht der Oberfläche ist unter Abbildung \ref{fig:MockImport} zu finden.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Import.png}
+  }
+  \caption{Enwurf der Import-Oberfläche}
+	\label{fig:MockImport}
+\end{figure}
+\FloatBarrier
+
+\item Der VM-Builder sollte den Oberflächendialog 'Einstellung' besitzen. Die Einstellungen sollen dem Anwender eine generelle Übersicht über Applikations-Konfigurationen geben. Zudem soll dort der Inhalt von Log-Dateien einsehbar sein und Softwarekomponenten / Softwarepakete hinzugefügt werden können. Abschnitt \ref{ssec:MockupEinstellungen} zeigt die einzelnen Konfigurationsseiten des Einstellungsmenüs als Vorschlag zur Umsetzung.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/SettingsPage1_1_2.png}
+  }
+  \caption{Enwurf der Einstellungen - Generelle Konfiguration}
+	\label{fig:MockSettings}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Settings-Logs.png}
+  }
+  \caption{Enwurf der Einstellungen - Logdatei}
+	\label{fig:MockLog}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Mockups/Settings-Programs.png}
+  }
+  \caption{Enwurf der Einstellungen - Softwarekomponenten hinzufügen}
+	\label{fig:MockSoftwarekomponenten}
+\end{figure}
+\FloatBarrier
 \end{enumerate}
 
 
@@ -329,10 +400,10 @@ Im Folgenden werden die nichtfunktionalen Anforderungen hinsichtlich der Punkte 
 Um anwendungs­- und problembezogene Entwurfsentscheidungen treffen zu können, werden Faktoren analysiert, die die Architekturen der Anwendung beeinflussen oder einschränken können. Dies geschieht über die im Vorfeld formulierten Anforderungen.
 Laut \cite{Starke201401} werden diese Einflussfaktoren und Randbedingungen in folgende Kategorien unterteilt:
 \begin{itemize}
-\item Organisatorische und politische Faktoren: Mancher solcher Faktoren wirken auf ein be­stimmtes System ein, während andere eine Vielzahl an Projekten eines Unternehmens beeinflussen können. \citep{RechtinMaier200006} charakterisiert diese Faktoren als 'facts of life'.
+\item Organisatorische und politische Faktoren: Manche solcher Faktoren wirken auf ein be­stimmtes System ein, während andere eine Vielzahl an Projekten eines Unternehmens beeinflussen können. \citep{RechtinMaier200006} charakterisiert diese Faktoren als 'facts of life'.
 \item Technische Faktoren: Durch sie wird das technische Umfeld geprägt und entsprechend eingeschränkt. Sie betreffen nicht nur die Ablaufumgebung des zu entwickelnden Systems, sondern umfassen auch die technischen Vorgaben für die Entwicklung, einzusetzender Software und vorhandener IT-Systeme.
 \end{itemize}
-Da weder die organisatorischen-, noch die politischen Faktoren auf dieses Projekt Einfluss haben, werden diese nicht weiter betrachtet. 
+Da weder die organisatorischen, noch die politischen Faktoren auf dieses Projekt Einfluss haben, werden diese nicht weiter betrachtet. 
 
 \subsection{Technische Randbedingungen}\label{subsec:TechnischeRandbedingungen}
 \begin{figure}[htbp]
@@ -340,11 +411,22 @@ Da weder die organisatorischen-, noch die politischen Faktoren auf dieses Projek
   \fbox{
 \includegraphics[width=0.9\textwidth]{../Bilder/technische_randbedingungen.png}
   }
-  \caption{Titel}
+  \caption{Technische Randbedingungen}
 
 \end{figure}
-\textbf{TODO: 64 Bit OS müssen möglich sein!}
 \FloatBarrier
 
 \section{Zusammenfassung}
-\textbf{TODO}
+%Die Anforderungsanalyse fasste im Abschnitt \ref{Zielsetzung} die Funktionalität der Applikation zusammen. 
+In der Anforderungsanalyse wurde in Abschnitt \ref{Zielsetzung} ein Überblick über die Ziele des VM-Builders geschaffen. Danach wurden die Stakeholder inklusive ihrer Beschreibung und Ziele definiert, wodurch die Analyse der funktionalen Anforderungen in Abschnitt \ref{sec:FunktionaleAnforderungen} strukturiert wurde. 
+Das Ergebnis der funktionalen Anforderung stellte die Kernpunkte der Applikation heraus, die sich wie folgt ergaben.
+\begin{enumerate}
+\item Die Erstellung einer virtuellen Maschine
+\item Der Export von Maschinen
+\item Der aus dem Export resultierende Import
+\item Die Möglichkeit virtuelle Maschinen mit anderen zu teilen (Sharing)
+\item Die Konfiguration von Softwarepakete, um Abghängigkeiten zu anderen Softwarekomponenten zu definieren.
+\end{enumerate}
+Diese Punkte wurden in Abschnitt \ref{sec:UseCase} als Use-Caseszenarien detailierter in den Kontext des VM-Builders gestellt. Die nichtfunktionalen Anforderungen (siehe Abschnitt \ref{sec:NFA}) bestimmen die Qualitätsmerkmale der Applikation und ergaben die ersten Anforderungen an die Oberfläche (siehe Abschnitt \ref{itm:AnforderungenAnDieBenutzeroberfläche}). Zuletzt wurden die Randbedingungen betrachtet, um Einfluss- und einschränkende Faktoren zu finden, die sich auf die Architektur der Applikation beziehen könnten.
+Die insgesamt geschaffenen Anforderungen werden im folgenden Kapitel \ref{ch:Evaluation}. ('Evaluation') als Grundlage für die Recherche nach Produkten verwendet, die für den VM-Builder nutzbar sein könnten. Die resultierenden Ergebnisse aus der Anforderungsanalyse und der Evaluation schaffen so wiederrum die Basis für den Entwurf in Kapitel \ref{ch:Entwurf}.
+

@@ -1,29 +1,67 @@
 %\setcounter{secnumdepth}{3}
 \chapter{Einleitung}
+Aufgabe: Vom Problem zur Fragestellung
+
 \begin{quote}
 	``Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen'' - Lucius Annaeus Seneca, \cite{Apelt200511}
 \end{quote}
-Seneca formulierte  49 n. Chr. ein Gefühl das jeder kennt. Die Zeit die er hat, nicht richtig zu nutzen.
-Technische Neuerungen helfen uns unsere Zeit besser zu planen, mehr Zeit in andere Aktivitäten zu stecken und unsere Prioritäten zu "uberdenken.
-Diese Arbeit beschäftigt sich mit dem Teil-Aspekt der Informatik, der Virtualisierung von Servern im Entwicklungsumfeld.\newline
+dieser Satz stammt von dem römischer Philosophen Seneca (ca. 49 n. Chr.) und besitzt noch heute in der Informatik seine Daseinsberechtigung.
+Die Informatik hat durch Automatisierung Prozessabläufe vereinfacht, durch effizientere Ressourcennutzung Zeit eingespart und den Arbeitsalltag beschleunigt.
+Gerade durch das Erforschen von effizienterer Ressourcennutzung und der Suche nach Zeitersparnis, ist in der Informatik die Virtualisierung entstanden. Sie hat in vielen Firmen die Serverlandschaften deutlich verkleinert, Clients durch virtuelle Desktops ersetzt und gestattet es Entwicklern und Testern ihren Arbeitsbereich auf produktionsnahen virtuellen Klonen auszuführen.
+Gerade der letzt genannte Aspekt, ist die Grundlage für diese Arbeit. Um genauer zu sein, wird der Fokus auf den automatisierten Aufbau von Entwicklungsumgebungen gelegt, inklusive der Vervollständigung durch ausgewählte Softwarekomponenten. Es wird also versucht, dem Entwickler Zeit zu sparen, damit er seine Zeit effektiver nutzen kann. Gewünschter Nebeneffekt ist die Unabhängigkeit von IT-Support Instanzen. So wird der Anwender in die Lage versetzt autonom zu handeln und Bearbeitungsschritte zu beschleunigen.
 
-... 
+\begin{comment}
+http://www.golem.de/news/openstack-viele-brauchen-es-keiner-versteht-es-wir-erklaeren-es-1503-112814.html
+
+Jeder Administrator kennt konventionelle IT-Einrichtungen, wie sie über Jahre hinweg beinahe überall zum Einsatz kamen. Klassische IT-Setups haben hinsichtlich ihrer Architektur eines gemeinsam: Es gibt Server mit festgelegten Funktionen, und die einmal bestimmten Funktionen verändern sich im Laufe des Lebens eines Servers auch nicht mehr.
+
+Ein typisches Beispiel ist ein Monitoring-Server: Ein Stück Hardware ist dazu da, um einen einzigen Zweck zu erfüllen, und bekommt höchstens noch einen Zwilling als HA-Cluster. Datenbanken, Webserver, Applikationsserver, Archivserver - all diese Rollen sind typisch in alltäglichen Installationen. Fällt der Monitoring-Server aus, übernimmt im besten Falle dessen Cluster-Partner, und der Administrator hat die Möglichkeit, den ausgefallenen Rechner zu reparieren. Außerdem ist die gesamte Architektur einer Plattform auf diese spezifischen Eigenschaften der Systeme ausgerichtet: Auf den beteiligten Switches findet sich eine starre, im Switch abgelegte Zuordnung von VLANs. Neue Rechner kommen selten hinzu. Kurzum: Die ganze Infrastruktur ist in ihrer Anlage bereits sehr festgelegt.
+
+Die Herausforderung klassischer IT-Umgebungen besteht daher oft darin: Wenn das Unternehmen wächst, das das Setup betreibt, muss auch die IT-Plattform mit ihm wachsen. Die konventionelle Methode macht das aber äußerst schwierig, denn neue Funktionen im Setup setzen neue Rechner voraus, und an der Installation neuer Rechner hängt eine ganze Reihe weiterer Abhängigkeiten wie die korrekte Einrichtung von Switches und die spezifische Installation der benötigten Softwarekomponenten.
+
+All das erfordert Zeit und Arbeitskraft. Administratoren sind regelmäßig dieser eher eintönigen Arbeit ausgesetzt, statt sich um Innovation und höheren Komfort zu kümmern. Außerdem nutzen konventionelle Installationen ihre Ressourcen häufig schlecht: Ein moderner Server mit etlichen CPUs und viel Arbeitsspeicher ist mit einem einzelnen Webserverprozess kaum auszulasten, wenn das Setup nicht Java oder ähnlich rechenintensive Software nutzt.
+
+irtualisierung von Computing-Leistungen war der erste Schritt auf dem Weg von spezifischen Rechnern zu universell einsetzbaren. Sie verfolgt dabei einen einfachen Zweck - die Entkoppelung von Hardware - und sorgt dafür, dass eine IT-Infrastruktur deutlich flexibler wird. Ein Server dient nicht mehr nur einer Aufgabe, sondern erfüllt verschiedene Funktionen - abhängig davon, wie viele virtuelle Maschinen (VMs) auf jenem System beheimatet sind.
+
+Typische Virtualisierungen mittels KVM oder VMware lösen aber nur einen Teil der typischen Probleme. Denn auch bei ihnen ist der Grad an Automatisierung eher gering: Zwar müssen Administratoren nicht mehr für jedes neue System auch neue Server in Racks schrauben, aber neue virtuelle Maschinen legen sie noch immer per Hand an. Ebenfalls manuell werden Netzwerke eingerichtet und persistenter Speicher kommissioniert, denn wer will schon seinen Kunden etwa den Zugriff auf vorhandene, zentrale SAN-Speicher erlauben?
+
+Nicht wenige Administratoren unterstellen auch deshalb, dass sich Virtualisierung bis vor rund zwei Jahren ausschließlich auf die Computing-Dienstleistung bezogen habe, während klassische Elemente eines Setups wie Speicher und Storage gar nicht virtualisiert gewesen seien. Das hat sich inzwischen durch eine Erweiterung der Virtualisierung deutlich geändert.
+
+Jetzt verhält es sich in Cloud-Computing-Installationen so: Jeder Rechner ist eine Computing-Maschine und jede angebotene Dienstleistung ist virtualisiert. Das erstreckt sich sowohl auf den Computing-Teil als auch auf das Thema Storage und inzwischen auch auf die Netzwerkverwaltung. Anwender bedienen sich selbst, indem sie etwa nach Bedarf (on demand) neue, virtuelle Systeme selbst starten. Dazu stellt der Anbieter ihnen ein entsprechendes Portal zur Verfügung.
+
+Damit das alles so funktioniert, müssen im Hintergrund etliche Programme arbeiten. Diese steuern die Virtualisierung des Computings, legen dynamische Netzwerke an, die ohnehin nur noch virtuell existieren und hängen an Kunden-VMs Speicher an, wenn sie benötigt werden. Braucht ein Kunde schnell neue Webserver, weil etwa sein Onlineshop im Fernsehen erwähnt worden ist, startet er die neuen virtuellen Maschinen einfach so, wie er sie gerade benötigt. Der Internetanbieter wird gewissermaßen degradiert: In einer typischen Cloud ist er nur noch derjenige, der die Infrastruktur zur Verfügung stellt.
+
+In einer Cloud ist alles durch Software bestimmt (Software-defined), die entlang der vom Administrator festgelegten Richtlinien automatisch Dinge erledigt - willkommen bei Openstack!
+\end{comment}
+
+\begin{comment}
+Virtualisierung hat die Schlagzahl beträchtlich erhöht ? mit KVM, Xen, VMware & Co. stellt der Admin neue Systeme viel schneller bereit, als sich neue Hardware in den Zeiten dedizierter Server beschaffen ließ. Die gewonnene Zeit bringt der nun für viel mehr Systeme Verantwortliche mit dem Klonen von Image-Konfigurationen, dem Kopieren von Verzeichnissen und dem Mounten von Speicherressourcen zu. Richtig knifflig wird es, wenn die Hardware nach Wartung ruft, denn dann gilt es, virtuelle Maschinen herunterzufahren, zu verschieben und neu zu starten.
+
+Wer die Schwemme an Handgriffen reduzieren will, greift zu einer Infrastructure-as-a-Service-Lösung (IaaS). Sie nimmt sich der wichtigsten Aufgaben der Servervirtualisierung an, verwaltet Basisinfrastruktur wie DNS und DHCP und stellt dem Admin eine Weboberfläche zur Verfügung. Mit Open Stack [1], Open QRM [2], Eucalyptus [3] oder Ganeti [4] darf der Systemverwalter aus Open-Source-Produkten unterschiedlicher Herkunft und Funktionsumfangs und mit jeweils eigenen Konzepten wählen.
+\end{comment}
+
 
 
 \section{Motivation}
-\textbf{TODO}
-[...]
-Sinn und Zweck dieser Ausarbeitung besteht darin, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne dass ein bürokratischer Aufwand erforderlich ist und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
-Der normalerweise große zeitliche Aufwand für die Erstellung von virtuellen Maschinen soll möglichst minimiert werden und es Anwendern sowohl in Unternehmen als auch bei  Projektarbeiten erleichtern, sich auf die vorhandenen Usecase zu fokussieren. Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden. [...]
+Das Ziel dieser Arbeit ist die Entwicklung einer Applikation, zur automatisierten Erstellung von Linux basierten ad hoc Umgebungen. Der Anwender soll in die Lage versetzt werden, ohne Grundlegende Kenntnisse über Anwendungsstruktur und Betriebssystem, mit minimalem Aufwand, die benötigte virtuelle Maschine zu erstellen.
+Großer zeitlicher Aufwand für die Erstellung und Organisation wird entsprechend vermieden und es Anwendern ermöglicht sich auf Kerntätigkeiten zu fokussieren.
+Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden.
+
+Der normalerweise große zeitliche Aufwand für die Erstellung von virtuellen Maschinen soll möglichst minimiert werden und es Anwendern sowohl in Unternehmen als auch bei  Projektarbeiten erleichtern, sich auf die vorhandenen Usecase zu fokussieren. Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden.
+
+die durch vereinfachte Handhabung und einer minimalen Einarbeitungszeit den Anwender in die Lage versetzt schnellst möglich eine ad hoc Entwicklungsumgebung zu erstellen. Dies soll 
+
+Das Ziel dieser Arbeit ist es, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne dass ein bürokratischer Aufwand erforderlich ist und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
+Der normalerweise große zeitliche Aufwand für die Erstellung von virtuellen Maschinen soll möglichst minimiert werden und es Anwendern sowohl in Unternehmen als auch bei  Projektarbeiten erleichtern, sich auf die vorhandenen Usecase zu fokussieren. Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden.
 
 \section{Zielsetzung}
-Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interaktives Vorgehen eine Applikation zu modellieren, die den Anwendern der Applikation beim Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und dem Anwender durch seine ausgewählte Funktion leiten.
+Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interaktives Vorgehen eine Applikation zu modellieren, die den Anwender der Applikation beim Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und den Anwender durch seine ausgewählte Funktion leiten.
 Große Konfigurationen oder komplizierte Einstellungen sollen dem Anwender abgenommen werde. Sie geschehen im Hintergrund. 
-Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollten Im- und Exportfunktionen dies untzerstützen.
-Die Realisierung sollte auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendige Maschine zu erstellen und zu verwalten.
+Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollen Im- und Exportfunktionen dies untzerstützen.
+Die Realisierung soll auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendigen Maschinen zu erstellen und zu verwalten.
 Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Einsatzbereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
-Bei der Erstellung der einzelnen Softwarekomponenten sind stehts die Prinzipien von hoher Kohäsion und loser Kopplung zu beachten. Darunter wird der Grad der Abhängigkeit zwischen mehreren Hard-/ und Softwarekomponenten verstanden, der Änderungen an einzelnen Komponenten erleichtert.\textbf{[TODO: SATZ KORRIGIEREN]}
-Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden sowohl von unnötigen verschachtelten Menüführungen als auch von einer Vielfalt an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
+Bei der Erstellung der einzelnen Softwarekomponenten sind stehts die Prinzipien von hoher Kohäsion und loser Kopplung zu beachten. Darunter wird der Grad der Abhängigkeit zwischen mehreren Hard- und Softwarekomponenten verstanden, der Änderungen an einzelnen Komponenten erleichtert.
+Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden sowohl von unnötigen verschachtelten Menüführungen, als auch von einer Vielfalt an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
 \newline
 
 
@@ -32,7 +70,7 @@ Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit 
 
 \section{Problemstellung}
 %Die Einleitung muss Ihr Thema eingrenzen (und diese Eingrenzung rechtfertigen) und Ihr Erkenntnisinteresse prÃ¤zisieren und begrÃ¼nden
-Virtualisierung hat in vielen Bereichen den physischen Server abgelöst, denn der Finanzielle Aspekt ist f"ur Unternehmen nicht unerheblich. Im Idealfall heißt der Umstieg auf virtuelle Landschaften gleich weniger Server, was gleichbedeutend mit weniger Stellfläche ist. Somit auch mit weniger Racks und weniger Verkabelung.\newline
+Virtualisierung hat in vielen Bereichen den physischen Server abgelöst, denn der Finanzielle Aspekt ist für Unternehmen nicht unerheblich. Im Idealfall heißt der Umstieg auf virtuelle Landschaften gleich weniger Server, was gleichbedeutend mit weniger Stellfläche ist. Somit auch mit weniger Racks und weniger Verkabelung.\newline
 Aufwändige Vorplanung von Serverzentren entfällt, die Kostenplanung der unterschiedlichen Hardware wird minimiert und die Frage, was in ein paar Jahren mit der Hardware passieren soll, wird obsolet.\newline
 Gerade im Entwicklungsbereich ist es meist sinnvoller virtuelle Umgebungen zu realisieren, als reale Maschinen aufzubauen. Entwickler haben so die Möglichkeit bei Bedarf sich Abz"uge der Produktionsumgebung zu erstellen oder Fehlerszenarien nachzustellen.\newline
 Meist ist dazu die Involvierung des Betriebs-Teams oder des IT-Support notwendig, die nach Priorität ihrer Auftragslage, eine gewissen Vorlaufzeit benötigen, um die gewünschte Maschine aufzubauen. \newline
@@ -48,121 +86,5 @@ Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen 
 
 
 \section{Struktur der Arbeit}
-[...]
-
-\chapter{Grundlagen}
-[...]
-%Dieses Kapitel gibt einen Einblick in die Grundlagen der Virtualisierung.
-%Dieses Kapitel soll die Einblick in die Grundlagen der Virtualisierung geben.
-%Zunächst wird erläutert, was Virtualisierung ist, dann werden Begrifflichkeiten geklärt sowie Vor- und Nachteile begutachtet.
-
-\section{Grundlagen der Virtualisierung}
-Für den Begriff Virtualisierung existiert keine allgemeingültige Definition. In der Regel wird damit der parallele Einsatz mehrerer Betriebssysteme beschrieben. Detaillierter bedeutet das, dass Hardware-Ressourcen zu einer logischen Schicht \textbf{[TODO: LOGISCHE SCHICHT ERKLÄREN?!]} zusammengefasst werden und dadurch deren Auslastung optimiert wird. So kann die logische Schicht bei Aufforderung ihre Ressourcen automatisch zur Verfügung stellen. 
-Das Prinzip dahinter ist die Verknüpfung von Servern, Speichern und Netzen zu einem virtuellen Gesamtsystem.
-Daraus können sich darüber liegende Anwendungen direkt und bedarfsgerecht ihre Ressourcen beziehen.\newline
-Grundsätzlich wird unterschieden zwischen 
-\begin{enumerate}
-\item \textbf{Virtualisierung von Hardware}\newline
-die sich mit der Verwaltung von Hardware-Ressourcen beschäftigt und
-\item \textbf{Virtualisierung von Software}\newline 
-die sich mit der Verwaltung von Software-Ressourcen, wie z.B. Anwendungen und Betriebssystemen beschäftigt.
-\end{enumerate}
-[\cite{Bengel200806}]
-
-
-
-\subsection{Virtuelle Maschine}\label{subsec:VirtuelleMaschine}
-Eine virtuelle Maschine ist nach Robert P. Goldberg
-\begin{quote}
-\textit{'a hardware-software duplicate of a real existing computer system in
-which a statistically dominant subset of the virtual processor's
-instructions execute directly on the host processor in native mode'} [\cite{SiegertBaumgarten200612}]
-\end{quote} 
-Wörtlich übersetzt handelt es sich also bei einer virtuelle Maschine, um ein Hardware-/Software-Duplikats eines real existierenden Computersystems, in der eine statistisch dominante Untermenge an virtuellen Prozessoren, Befehle im Benutzer-Modus auf dem Host-Prozessor ausführen.
-Dieses Duplikat kann als Software-Container betrachtet werden, der aus einem vollständigen Satz an emulierten Hardwareressourcen, dem Gastbetriebssystem und entsprechenden Software-Anwendungen besteht. Durch die Containerstruktur wird eine Kapselung hervorgerufen, die es ermöglicht, mehrere virtuelle Maschinen komplett unabhängig auf einem Hostsystem zu installieren und laufen zu lassen. Ist eine virtuelle Maschine fehlerhaft oder nicht mehr erreichbar, betrifft dies nicht automatisch die restlichen parallel laufenden Maschinen und stellt damit einen der charakteristischen Vorteile von virtuellen Maschinen dar, die Verfügbarkeit. Backup-Systeme oder mehrere Instanzen einer Applikationen können so unabhängig auf einem Host ausgeführt werden, ohne sich gegenseitig zu beeinflussen. Durch den strukturellen Aufbau einer virtuellen Maschine, ist es ebenfalls möglich, eine Maschine nach den eigenen Wünschen zu erstellen und diese zu replizieren. Somit wird eine Redundanz geschaffen.\newline
-Virtuelle Maschinen können ohne größeren Aufwand verschoben, kopiert und zwischen Hostservern neu zugeteilt werden, um die Hardware-Ressourcen-Auslastung zu optimieren. Administratoren können auch die Vorteile von virtuellen Umgebungen für einfache Backups, Disaster Recovery, neue Deployments und grundlegenden Aufgaben der Systemadministration nutzen, da das Wiederherstellen aus Speicherpunkten oder gespeicherten Abzügen, innerhalb von Minuten zu realisieren ist.\newline
-
-
-\subsection{Gastbetriebssystem}\label{subsec:Gastbetriebssystem}
-Ein übliches Betriebssystem wird im privilegierten Prozessor-Modus ausgeführt. Dies wird auch Kernel-Mode genannt. Dies befähigt es, die absolute Kontrolle über die vorhandenen Ressourcen zu gewinnen. Alle Anwendungen, die auf dem Betriebssystem laufen, werden im sogenannten Benutzer-Modus ausgeführt. Die Privilegien im Benutzer-Modus sind allerdings relativ eingeschränkt. Ein direkter Zugriff wird nur sehr selten und unter genau kontrollierten Bedingungen gestattet. Dies hat den Vorteil, dass kein Programm z. B. durch einen Fehler das System zum Absturz bringen kann. (\cite{Reuther2014})\newline
-Eine virtuelle Maschine (siehe \ref{subsec:VirtuelleMaschine}) läuft als normaler Benutzer-Prozess im Benutzer-Modus. Dies hat zur Folge, dass ein auf der virtuellen Maschine installierte Betriebssystem, das Gastbetriebssystem, folglich nicht den privilegierten Prozessor-Modus nutzen kann, wie es ein nicht virtualisiertes Betriebssystem könnte. Da weder die Anwendungen noch das entsprechende Gastbetriebssystem Kenntnis darüber haben, dass sie in einer virtuellen Maschine laufen, müssen ausgeführte Instruktionen, die den Prozessor-Modus erfordern, entsprechend anders gehandhabt werden. Dies ist unter anderem die Aufgabe des Hypervisors (siehe \ref{subsec:Hypervisor}).
-
-
-\begin{center}
- \begin{minipage}{\linewidth}
-	\centering
-	\includegraphics[scale=0.4]{../Bilder/BSVirtualisierung.png}%
-	\captionof{figure}[Betriebssystemvirtualisierung]{Betriebssystemvirtualisierung [\cite{SiegertBaumgarten200612}]}%
-	\label{fig:Betriebssystemvirtualisierung}% 
- \end{minipage}
-\end{center}
-
-
-\subsection{Hypervisor}\label{subsec:Hypervisor}
-Der Name des Hypervisors kann von Hersteller zu Hersteller variieren. Bei Microsoft z.B.  wird er Hyper-V genannt und bei VMware als ESXi bezeichnet.
-Der Hypervisor, oder in der Literatur auch VMM (Virtual Machine Monitor) genannt, ist die sogenannte abstrahierende Schicht zwischen der tatsächlich vorhanden Hardware und den ggf. mehrfach existierenden Betriebssystemen. Siehe \ref{fig:Betriebssystemvirtualisierung}.
-Seine primäre Aufgabe ist die Verwaltung der Host-Ressourcen und deren Zuteilung bei Anfragen der Gastsysteme. Lösen Instruktionen oder Anfagen eines Gastbetriebssystems eine CPU-Exception aus, weil diese im Benutzer-Modus ausgeführt werden, fängt der Hypervisor diese auf und emuliert die Ausführung der Instruktionen (trap and emulate). Die Ressourcen des Hostsystems werden derart verwaltet, dass diese bedarfsgerecht zur Verfügung stehen, egal ob ein oder mehrere Gastsysteme laufen. Zudem zählt unter anderem E/A-Zugriffe (insbesondere Hardwarezugriffe), Speichermanagement, Prozesswechsel und System-Aufrufe.\newline
-Der Hypervisor kann in zwei verschiedene Typen kategorisiert werden:
-\begin{description}
-\item  [Typ 1 Hypervisor]\hfill \\
-arbeitet direkt auf der Hardware und benötigt somit kein Betriebssystem, welches zwischen ihm und der Hardware liegt. Alle darüber liegenden virtuelle Maschinen laufen in sogenannten Domains. Weder der Hypervisor noch die anderen Domains sind für die jeweilige Domain sichtbar. Die Verwaltung der laufenden Domains wird durch eine priviligierte Domain geregelt, die in der Dom0 läuft. Dadurch hat die privilegierte Domain die Möglichkeit andere Domains zu starten, stoppen und zu verwalten. \newline
-Der Hypervisor Type-1 verfügt selbst über die nötigen Gerätetreiber, um den virtuellen Maschinen sowohl CPU, Speicher als auch I/O zur Verfügung zu stellen. Durch die wegfallende Schicht, nämlich dem nicht benötigten Betriebssystems, gewinnt der Hypervisor Typ 1 an Performance und reduziert den Ressourcenverbrauch. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.a].
-
-\item  [Typ 2 Hypervisor]\hfill \\
-lässt durch seine Bezeichnung als 'Hosted' bereits erahnen, dass der Unterschied zu Typ 1 darin besteht, dass er auf einem Hostsystem aufsetzt. Es muss also eine Schicht implementiert sein, die zwischen dem Hypervisor und der Hardware liegt. Siehe Abbildung [\ref{fig:KlassifizierungHypervisor}.b].\newline
-Diese Schicht wird durch ein Betriebssystem realisiert, das dem Hypervisor den Zugang zur Hardware durch die eigenen Hardwaretreiber ermöglicht.
-Ist das Betriebssystem mit der Hardware kompatibel, ist transitiv gesehen, der Hypervisor ebenfalls mit installiert- und ausführbar. Dies vereinfacht die Installation gegenüber dem Hypervisor Typ 1. \newline
-Aus Implementierungssicht gibt es für beide Hypervisoren Vor- und Nachteile.
-Für einige Bereiche ist die Anforderung eines Betriebssystems nur von Vorteil.
-Vor allem, wenn es um Hardware- und Treiber-Kompatibilität, Konfigurationsflexibilität und vertraute Management-Tools geht.\newline
-Auf der anderen Seite kann genau das zum Nachteil gereichen.
-Es entsteht nicht nur ein höherer Management-Aufwand, um das Betriebssystem zu konfigurieren und zu verwalten, auch die Performance und der Sicherheitsaspekt leiden unter dieser zusätzlichen Schicht für das Betriebssystem.
-\end{description}
-\begin{figure} 
-    \subfigure[Bezeichnung der linken Grafik]{\includegraphics[width=0.49\textwidth]{../Bilder/Hypervisor1.png}} 
-    \subfigure[Bezeichnung der rechten Grafik]{\includegraphics[width=0.49\textwidth]{../Bilder/Hypervisor2.png}} 
-\label{fig:KlassifizierungHypervisor}%
-\caption{Hypervisor Typ 1 und 2} 
-\end{figure} 
-
-\section{Provisioning/Konfigurationsmanagement}\label{subsec:Provisioning}
-\textbf{TODO: WELCHER BEGRIFF IST BESSER?}\newline
-Die Hauptaufgabe eines Konfigurationsmanagement-Systems, im Folgenden nur noch KMS genannt, ist es, eine zuvor definierte Zustandsbeschreibung eines Hosts umzusetzen. Dies kann das Installieren von Softwarepaketen bedeuten, aber auch starten oder beenden von Diensten oder Konfigurationen erstellen/anpassen/entfernen lassen.
-In der Regel verwenden KMS eigene Agenten auf den Zielsystemen, über die die Kommunikation läuft und die Zustandsbeschreibung realisiert wird. Neuere Anwendungen wie 'Ansible' aus Kapitel \ref{subsec:Ansible}, die Konfigurationsmanagement unterstützen, benötigen diese Agenten nicht mehr und realisieren die Kommunikation über eine SSH-Schnittstelle.
-Pull-basierte Tools, wie beispielsweise 'Puppet', fragen in regelmäßigen Abständen ein zentrales Konfigurations-Repository ab, in dem die jeweils aktuelle Zustandsbeschreibung der Maschine gespeichert ist. Sie sorgen dafür, dass die Änderungen auf dem Ziel-Client ausgeführt werden.
-Es spielt keine Rolle, ob das Ziel eine virtuelle Maschine ist oder eine Standard Maschine ist. KMS sind in der Regel dazu fähig, ganze Gruppen an Rechnern parallel zu bearbeiten und die entsprechenden Zustandsbeschreibungen umzusetzen. 
-Bei dem im oberen Abschnitt bereits genannten Beispiel 'Ansible', können mehrere Rechner simpel in Inventory-Dateien als Gruppen zusammengefasst werden. Diese können dann jeweils durch 'Ansible' angesprochen werden, um entsprechende Zustandsbeschreibungen dort auszuliefern. Siehe \ref{lst:InventoryDatei}
-
-\begin{lstlisting} [caption={Beispiel Inventory-Datei}\label{lst:InventoryDatei},captionpos=t] 
-[atomic]
- 192.168.100.100
- 192.168.100.101
-[webserver]
- 192.168.1.110
- 192.168.1.111
- \end{lstlisting}
-
-%Quelle: http://www.admin-magazin.de/Online-Artikel/Konfigurationsmanagement-mit-Ansible
-\begin{comment}
-\section{Begriffserklärung}
-Im Verlauf dieser Arbeit werden Begrifflichkeiten verwendet, die im Vorfeld zu klären sind.\newline
-	\begin{enumerate}
-		\item \textbf{Provisioning / Provisioner}\newline
-\textit{Provisioning} ist ein Aspekt der Informatik, in dem es darum geht, den richtigen Personen zur richtigen Zeit effektiv Ressourcen zur Verfügung zu stellen.
-\textit{Provisioner} helfen bei der Softwareverteilung auf gewünschte Maschinen, Ad-hoc Kommando-Ausführung und Konfigurationsmanagement.
-In dieser Arbeit bezieht sich der Begriff \textit{Provisioning} auf die automatisierte Softwareverteilung, die mit dem Aufbau einer Entwicklungsumgebung verbunden ist.\newline
-		\item \textbf{Entwicklungsumgebung}\newline
-IDE's (integrated development environment) sind Entwicklungsumgebungen, die den Entwickler unterstützen, Quellcode zu schreiben und zu bearbeiten. Die gängigsten IDE's unterstützen meist mehrere Programmiersprachen und helfen dem Entwickler mit nützlichen Funktionen, wie  z.B. das aufzeigen von Fehlern im Quelltext. Entwicklungsumgebungen sind in vielen Fällen auch PC's / Server / virtuelle Maschinen, die zum Entwickeln installiert und bereitgestellt werden.
-Dort können neue Funktionalitäten ausprobiert werden und das bestehende System testweise erweitert werden, ohne in die Produktionslandschaft einzugreifen.
-In den folgenden Texten wird der Begriff \textit{Entwicklungsumgebung} als Synonym für eine virtuelle Maschine benutzt, die dem Anwender die Freiheit gibt, unkompliziert Möglichkeiten auszutesten und neues auszuprobieren.\newline
-		\item \textbf{Aufbau einer Maschine}\newline
-\textit{Aufbau einer Maschine} beinhaltet immer das automatische Erstellen und Konfigurieren einer virtuellem Maschine mit Hilfe von VirtualBox und Vagrant.
-Das Resultat ist eine virtuelle Maschine mit der Basisinstallation von Ubuntu (32Bit / 64Bit) und \textbf{MEHR INFOS ZU DEM SYSTEM}.
-Durch die Möglichkeit des Provisioning kann die Basisinstallation mit Software ergänzt und Befehle auf der Maschine ausgeführt werden.
-
-\item \textbf{Maschinenkonfiguration}\newline
-Für den Aufbau einer Maschine werden zwei wesentliche Konfigurationsdateien erstellt.
-Diese werden für den Aufbau der virtuelle Maschine selbst benötigt und für das ggf. gewünschte Provisioning. Der Begriff \textit{Maschinenkonfiguration} beschreibt im folgenden immer das Vorhandensein beider Dateien. 
-\end{enumerate}
-\end{comment}
+Diese Arbeit wird in Kapitel \ref{ch:Grundlagen} Grundlagen schaffen, um ein besseres Verständnis über die Virtualisierung zu erhalten 
 

@@ -27,6 +27,7 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 \usepackage{makeidx}
 \usepackage{listings}
 \usepackage{natbib}
+\usepackage[hyphens]{url} 
 \usepackage[ngerman,colorlinks=true]{hyperref}
 %\usepackage{soul}
 \usepackage{hawstyle}
@@ -37,9 +38,10 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{subfigure} 
-\usepackage{hyperref} 
+%\usepackage{hyperref} 
 \usepackage{varioref} 
 \usepackage[verbose]{placeins}
+
 
 
 
@@ -150,7 +152,8 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 {Keywords, Keywords1}%
 {This document \ldots}
 
-\lstlistoflistings
+
+
 
 %% main
 
@@ -161,9 +164,9 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 \tableofcontents
 \newpage
 %% enable if these lists should be shown on their own page
-%%\listoftables
-%%\listoffigures
-
+%% \listoftables
+%%%%%%%%%%%\listoffigures
+%%%%%%%%%%%\lstlistoflistings
 %%\lstlistoflistings
 
 %% main
@@ -177,10 +180,12 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 %%Grundlagen sehen gut aus!
 
 \include{einleitung}
+\include{grundlagen}
 \include{anforderunsanalyse}
 \include{evaluation}
 \include{entwurf}
-
+\include{umsetzung}
+\include{fazit}
 
 
 %Umsetzung
@@ -219,7 +224,10 @@ Prototyp einer Weboberfläche zur vereinfachten Inbetriebnahme individuell erstel
 \typeout{===== Section: literature}
 %% read the documentation for customizing the style
 \bibliographystyle{dinat}
+\listoffigures
+\lstlistoflistings
 \bibliography{literatur}
+\include{anhang}
 
 \typeout{===== Section: nomenclature}
 %% uncomment if a TOC entry is needed

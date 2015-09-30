@@ -1,7 +1,7 @@
 \setcounter{secnumdepth}{3}
-\chapter{Softwareentwurf}
-Nach \cite{Balzert201109} ist der Softwareentwurf die Entwicklung einer software-technischen Lösung im Sinne einer Softwarearchitektur auf Basis der gegebenen Anforderungen an ein Softwareprodukt. 
-Die Kunst bei einem Softwareentwurf besteht entsprechend darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet einschließlich der Berücksichtigung von Einflussfaktoren, wie definierte Randbedingungen (Kaptitel \ref{sec:Randbedingungen}).
+\chapter{Softwareentwurf}\label{ch:Entwurf}
+Nach \cite{Balzert201109} ist der Softwareentwurf die Entwicklung einer software-technischen Lösung im Sinne einer Softwarearchitektur, auf Basis der gegebenen Anforderungen an ein Softwareprodukt. 
+Die Kunst bei einem Softwareentwurf besteht darin, eine Softwarearchitektur zu entwerfen, die die zuvor erarbeiteten funktionalen- (Kapitel \ref{sec:FunktionaleAnforderungen}) und nichtfunktionalen Anforderungen (Kapitel \ref{sec:NFA}) betrachtet, einschließlich der Berücksichtigung von Einflussfaktoren, wie definierte Randbedingungen (Kaptitel \ref{sec:Randbedingungen}).
 Der Softwareentwurf ist als Richtlinie zu sehen, der bei der Umsetzung der geforderten Software unterstützt.
 Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine, deren Interaktionen und Beziehungen untereinander sowie ggf. deren Verteilung auf physischer Ebene. Dabei ist die Spezifizierung der entsprechenden Schnittstellen der einzelnen Architekturbausteine mit zu beachten. Zur Visualisierung können verschiedene Abstufungen von Sichten herangezogen werden, die Kontextabgrenzung, Bausteinsicht, Laufzeitsicht und die Verteilungssicht.
 \begin{comment}
@@ -26,12 +26,12 @@ Die zu erstellende Softwarearchitektur hingegen beschreibt Architekturbausteine,
 \FloatBarrier
 
 \section{Kontextabgrenzung}\label{sec:Kontextabgrenzung}
-Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung sowie die wesentlichen Teile der umgebenden Infrastruktur.
-Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{NFA} haben ergeben, dass die Hauptfunktionalitäten aus Erstellen, Exportieren, Importieren, Teilen und dem Provisioning von virtuellen Maschinen bestehen.
+Die Kontextabgrenzung beschreibt die Einbettung des Systems in seine Umgebung, sowie die wesentlichen Teile der umgebenden Infrastruktur.
+Die ermittelten Anforderungen aus Kapitel \ref{sec:FunktionaleAnforderungen} und \ref{sec:NFA} haben ergeben, dass die Hauptfunktionalitäten aus Erstellen, Exportieren, Importieren, Teilen und dem Provisioning von virtuellen Maschinen bestehen.
 Um dies weiter zu bündeln, können Teile der Hauptfunktionaliäten bestimmter Produkte übernommen werden, die in Kapitel \ref{ch:Evaluation}. betrachtet wurden.
 VirtualBox kann das Erstellen, Exportieren und den Import von virtuellen Maschinen übernehmen. Das Konfigurationsmanagement-System Ansible ist darauf ausgelegt, mit bekannten Virtualisierungslösungen zusammen arbeiten zu können und übernimmt somit die gewünschte Anforderung nach automatisierter Softwareinstallation. 
-Um die beiden Anwendungen zu vereinen, wird als Wrapper Vagrant eingesetzt, der zusätzliche Funktionen, wie das Teilen (Sharen) einer Maschine, mitbringt.
-Der Kern der Anwendung ist als eine weitere Schicht anzusehen, die die drei Softwareprodukte noch mehr vereint und dem Anwender eine entsprechende Benutzeroberfläche zur Verfügung stellt.
+Um die beiden Anwendungen zu vereinen, kann Vagrant als Wrapper eingesetzt werden, der zusätzliche Funktionen, wie das Teilen (Sharen) einer Maschin, mitbringt.
+Logik und Oberfläche werden durch den VM-Builder bereitgestellt, der in den folgenden Abschnitten näher konzipiert wird.
 \begin{center}
  \begin{minipage}{\linewidth}
 	\centering
@@ -71,16 +71,16 @@ In \cite{Hruschka201103} wird die Verteilungssicht als '[...] die Verteilung von
 	\label{fig:Verteilungssicht}
 \end{figure}
 \FloatBarrier
-Die genaue Platzierung der Softwarekomponenten aus Abschnitt \ref{sssec:ExternSchnittstellen} verhilft zu einer besseren Umsetzung der kompletten Softwarestruktur und der Kommunikation der einzelnen Komponenten.
-In Kapitel \ref{ch:Anforderungsanalyse} unter den Abschnitten \ref{sssec:TechnologischeAnforderungen} und \ref{subsec:TechnischeRandbedingungen} wurden technologische Anforderungen und entsprechende Randbedingungen beschrieben und definiert. Die dortige Beschreibung besagt, dass die zu verwendene Software frei verfügbar und kostenlos sein sollte. Ausserdem soll die Leistung des Servers den Anforderungen entsprechen.
-Aus diesem Grunde, wird bei dem Betrieb des Servers auf Ubuntu zurückgegriffen, wobei hier von aktuellen Version (Stand Juni 2015) ausgegangen wird. Als Webserver kann Apache eingesetzt werden, der mittels dem zustandslosen HTTP Protokoll mit dem Client kommuniziert.
-Die benötigte rationale Datenbank kann z.B durch MySQL umgesetzt werden. Sie wird für das Speichern von Konfigurationen einzelner virtueller Maschinen genutzt und für das zur Verfügungstellung der zu installierenden Softwarekomponenten.
+Die genaue Platzierung der Softwarekomponenten aus Abschnitt \ref{sssec:ExternSchnittstellen} verhilft zu einer besseren Umsetzung der kompletten Softwarestruktur und verdeutlicht die Beziehung zwischen den einzelnen Komponenten.
+In Kapitel \ref{ch:Anforderungsanalyse}. unter den Abschnitten \ref{sssec:TechnologischeAnforderungen} und \ref{subsec:TechnischeRandbedingungen} wurden technologische Anforderungen und entsprechende Randbedingungen beschrieben und definiert. Die dortige Beschreibung besagt, dass die zu verwendene Software frei verfügbar und kostenlos sein sollte. 
+Aus diesem Grund, wird bei dem Betrieb des Servers auf Ubuntu zurückgegriffen, wobei hier von aktuellen Version (Stand Juni 2015) ausgegangen wird. Als Webserver kann Apache eingesetzt werden, der mittels dem zustandslosen HTTP Protokoll mit dem Client kommuniziert.
+Die benötigte rationale Datenbank kann z.B durch MySQL umgesetzt werden. Sie wird für das Speichern von Konfigurationen einzelner virtueller Maschinen genutzt, deren Konfigurationen und zum persistieren der angebotenen Softwarekomponenten.
 Apache und MySQL sind lizensfreie und kostenlose Produkte, die etabliert und leistungsfähig sind. 
-In dem Execution Framwork wird die hier zu planende Anwendung ausgeführt, die wiederum an die Drittanbieter Ansible und Vagrant angebunden ist. Wie bereits in Kapitel \ref{ch:Evaluation}. aufgeführt, sind beide Produkte ebenfalls kostenlos und frei verfügbar.
+In dem Execution Framwork wird der VM-Builder ausgeführt, der wiederum an die Drittanbieter Ansible und Vagrant angebunden ist. Wie bereits in Kapitel \ref{ch:Evaluation}. aufgeführt, sind beide Produkte ebenfalls kostenlos und frei verfügbar.
 Da Hardwarespezifikationen in dieser Phase noch rein spekulativ sind, wird dieser Aspekt in der Umsetzung weiter betrachtet.
 
 \section{Systemarchitektur}\label{sec:Systemarchitektur}
-Nachdem die Umsysteme, deren Verteilung und der technische Aufbau der Applikation konzipiert ist, steht die Struktur der Anwendung im Fokus. Dafür gibt es etablierte Architektur- und Entwurfsmuster, auf die zurückgegriffen werden kann.
+Nachdem die Umsysteme, deren Verteilung und der technische Aufbau des VM-Builders konzipiert ist, steht die Struktur der Anwendung im Fokus. Dafür gibt es etablierte Architektur- und Entwurfsmuster, auf die zurückgegriffen werden kann.
 Diese helfen bei der Verteilung der Verantwortlichkeiten und bilden eine Vorlage für die Systemstrukturen. Da sie sich in einigen Punkten überschneiden und sogar ergänzen, ensteht bei der Verwendung mehrerer Architekturmuster keine Widersprüche.
 
 \subsection{Client-Server-Modell}\label{subsec:ClientServer}
@@ -105,11 +105,16 @@ Im Zusammenhang mit dem Client-Server-Modell steht das n-Tier Model oder auch Sc
 	\label{fig:Client-Server-Anordnungen}
 \end{figure}
 \FloatBarrier
-Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin-Clients, die für den zu entwickelnden 'VM Builder' im Fokus stehen. Die Varianten (d) und (e) sind sogenannte Fat-Clients. \newline 
+Die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) bis (c) dargestellten Varianten gehören zu der Kategorie Thin-Clients, die für den zu entwickelnden 'VM-Builder' im Fokus stehen. Die Varianten (d) und (e) sind sogenannte Fat-Clients. \newline 
 Der Vorteil von Thin Clients ist, dass weniger bis keine Client-Software auf die Seite des Anwenders gebracht werden muss. Denn Software auf Clientseite ist nicht nur schwerer zu administrieren, sondern auch anfälliger für Fehler (\cite{TanenbaumSteen200711}).\newline
-Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und lokale Installationen zu verhindern.
-Variante (a) würde nur dann zum Einsatz kommen, wenn eine entfernte Steuerung der Darstellung gewünscht wäre, was hier nicht der Fall ist. Beim Client-Server-Aufbau mit Variante (b) wird davon ausgegangen, dass Programmlogik mit zum Client übertragen wird, also z.B. eine Eingabeüberprüfung direkt im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
+Die hier angestrebte Client-Server-Anordnung ist die in Abbildung \ref{fig:Client-Server-Anordnungen}(a) gezeigte Variante. Der Client soll so schlank wie möglich gehalten werden, um dem Anwender einen schnellen Seitenaufbau zu ermöglichen und lokale Installationen zu verhindern. So liegt die Kontrolle der Darstellung auf Applikations-Seite.
+Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
 Auf Verarbeitungsebene wird der Webserver mit den Applikationskomponenten des VM-Builders realisiert. Die Datenebene spiegelt die zu verwendende Datenbank wieder, die für die Persistierung von Daten zuständig sein wird.
+Beim Client-Server-Aufbau mit Variante (b) wird davon ausgegangen, dass die gesamte Darstellung auf Client-Seite platziert wird, wodurch eine separierung vom Client zur restlichen Anwendung vollzogen wird. Die Anwendung von Variante (c) findet Gebrauch in Applikationen, in denen zusätzlich Logikverarbeitung auf Anwender-Seite geschehen soll, was ebenfalls gegen die Planung des VM-Builders sprechen würde. So ist die Wahl von Variante (a) als Thin-Client am zutreffendsten.
+
+\begin{comment}
+Beim Client-Server-Aufbau mit Variante (b) wird davon ausgegangen, dass Programmlogik mit zum Client übertragen wird, also z.B. eine Eingabeüberprüfung direkt im Frontend. Da in der Anforderungsanalyse Kapitel \ref{subsec:TechnischeRandbedingungen} festgelegt wurde, dass mit Ruby inkl. des Frameworks Sinatra gearbeitet werden soll, wird die Logik auf der Server-Seite implementiert und benötigt keinen Anteil auf Client-Seite. Entsprechend sind die Verarbeituns- (Application) und die Datenebene (Database) auf der Server-Seite angesiedelt.
+
 
 \begin{figure}[htbp]
   \centering
@@ -120,10 +125,10 @@ Auf Verarbeitungsebene wird der Webserver mit den Applikationskomponenten des VM
 	\label{fig:MVC_eigen}
 \end{figure}
 \FloatBarrier
-
+\end{comment}
 
 \subsection{Model-View-Controller Entwurfsmuster}\label{subsec:MVC}
-Für eine strukturierte Umsetzung der grafischen Komponente des 'VM Builders', wird auf das bekannte architektonische Model-View-Controller Entwufsmuster zurückgegriffen.
+Für eine strukturierte Umsetzung der grafischen Komponente des VM-Builders, wird auf das bekannte architektonische Model-View-Controller Entwufsmuster zurückgegriffen.
 Das Model-View-Controller (MVC) Entwurfsmuster findet beim Entwurf grafischer Benutzungsoberfläche anwendung, d.h. bei der Mensch-Maschine-Interaktionen.
 Dazu wird das System, das Interaktionen anbietet und ausführt, in drei Verantwortlichkeiten strukturiert:
 \begin{enumerate}
@@ -151,7 +156,7 @@ Abbildung \ref{fig:MVC} verdeutlicht die Kommunikation zwischen den Bestandteile
 \begin{enumerate}
 \item Alle Eingaben/Änderungen des \textbf{User} werden von der Benutzeroberfäche an den Controller weitergegeben
 \item Der \textbf{Controller} gibt Zustandsänderungen an das Model weiter
-\item Das \textbf{Model} verarbeitet die erhaltenden Daten in dem diese z.B an den persistenten Speicher weitergeleitet werden oder Berechnungen stattfinden
+\item Das \textbf{Model} verarbeitet die erhaltenden Daten, in dem diese z.B an den persistenten Speicher weitergeleitet werden oder Berechnungen stattfinden
 \item Die resultierenden Ergebnisse / Änderungen werden dann über die View sichtbar gemacht 
 \end{enumerate}
 Das MVC-Entwurfsmuster entkoppelt das User-Interface von der Verarbeitungsebene.
@@ -161,13 +166,13 @@ Das MVC-Entwurfsmuster erlaubt also als eine Modernisierungsmaßnahme den entspre
 (\cite{Masak200911}).
 Da das geforderte Framework Sinatra diese Konzept nativ umsetzen kann, lässt sich das Entwurfsmuster entsprechend gut anwenden. In Sinatra werden die Views separiert von den sogenannten Rounten (Controllern) implementiert, wodurch die 'V' und 'C' Eigenschaften erfüllt werden. Um die Modell-Anforderungen zu erfüllen, kann z.B. ein Datenbank-Framework, wie Active-Record angewendet werden. 
 
-Abbildung \ref{fig:MVC_eigen} zeigt die Integration des MVC-Entwurfsmuster in das Client-Server-Modell.
+Abbildung \ref{fig:MVC_eigen} zeigt die Integration des MVC-Entwurfsmuster in das Schichtenmodell.
 \begin{figure}[htbp]
   \centering
   \fbox{
 \includegraphics[width=0.9\textwidth]{../Bilder/MVC_Eigen.png}
   }
-  \caption{Model-View-Controller}
+  \caption{Model-View-Controller im 3-Schichten-Modell}
 	\label{fig:MVC_eigen}
 \end{figure}
 \FloatBarrier
@@ -189,9 +194,8 @@ DELETE & DELETE wird verwendet, um eine Ressource auf dem Server zu löschen \\
  & 
 \end{tabular}
 
-In dem zu verwendenen Framework Sinatra wird das Vokabular der HTTP-Verben benutzt, um Routen zu definieren. Um eine Route in Sinatra zu deklarieren, muss das HTTP-Verb zum Reagieren geliefert, die spezifische URL und dann das gegebenenfalls für die Route gewünschte Verhalten definiert werden, siehe Abbildung \ref{code:SinatraVerbs}.\newline
-
-\begin{lstlisting} [caption={Routen in Sinatra (\cite{Sinatra:2015:Online})},label={code:SinatraVerbs}, language=Ruby]
+In dem zu verwendenen Framework Sinatra wird das Vokabular der HTTP-Verben benutzt, um Routen zu definieren. Um eine Route in Sinatra zu deklarieren, wird das HTTP-Verb in Verbindung mit der URL benötigt. Das gewünschte Verhalten wird im Anschluss definiert und beim Aufruf der Route ausgeführt. Siehe Abbildung \ref{code:SinatraVerbs}.\newline
+ \begin{lstlisting} [caption={Routen in Sinatra (\cite{Sinatra:2015:Online})},label={code:SinatraVerbs}, language=Ruby]
 get '/' do
   .. zeige etwas ..
 end
@@ -221,14 +225,14 @@ unlink '/' do
 end
  \end{lstlisting}
 
-\section{Server}
-Wie in Kapitel \ref{sec:Systemarchitektur} beschrieben, wird der Server nach den dort geplanten Entwurfsmuster konstruiert. Damit ein vollständiges Bild des Serverkonstrukt entsteht, werden im Folgenden die noch offenen Sichten aus der Abbildung \ref{fig:Sichten} entworfen.
+\section{Server}\label{sec:Server}
+Wie in Kapitel \ref{sec:Systemarchitektur} beschrieben, wird der Server nach den dort geplanten Entwurfsmuster konstruiert. Damit ein vollständiges Bild des Server-Konstrukts entsteht, werden im Folgenden die noch offenen Sichten aus der Abbildung \ref{fig:Sichten} entworfen.
 
-\subsection{Bausteinsicht}\label{sec:Bausteinsicht}
-Die Bausteinsicht 'zeigt die statische Struktur des Systems, seinen Aufbau aus Softwarebausteinen sowie deren Beziehungen und Schnittstellen untereinander' \cite{Hruschka201103}. 
+\subsection{Bausteinsicht}\label{ssec:Bausteinsicht}
+Die Bausteinsicht 'zeigt die statische Struktur des Systems, seinen Aufbau aus Softwarebausteinen, sowie deren Beziehungen und Schnittstellen untereinander' \cite{Hruschka201103}. 
 Ausgehend vom Systemkontext, wird das System hierarchisch zergliedert. Somit können Ebenen in unterschiedlichem Detailgrad entstehen. Ebene-0 stellt das System als Blackbox dar, die der Kontextsicht aus Abbildung \ref{fig:kontextsicht} entspricht.
 In den höheren Ebenen, wird der Detailgrad erhöht und die dargestellte Blackbox zur Whitebox. Whiteboxen geben detailliertere Einblicke in ihre Struktur und Schnittstellen, die allerdings wiederum als Blackboxen dargestellt werden.
-Abbildung \ref{fig:Bausteinsicht_MVC} ist eine Ebene-1 Darstellung der Serverapplikation in Form des MVC-Entwurfsmusters, in der die Anwendung mit ihren einzelnen Komponenten betrachtet wird, die als Blackboxen dargestellt sind. 
+Abbildung \ref{fig:Bausteinsicht_MVC} ist eine Ebene-1 Darstellung der Serverapplikation in Form des MVC-Entwurfsmusters, in der der VM-Builder mit seinen einzelnen Komponenten betrachtet wird, die als Blackboxen dargestellt sind. 
 \begin{figure}[htb]
   \centering
 \includegraphics[width=0.9\textwidth]{../Bilder/Bausteinsicht.png}
@@ -252,7 +256,7 @@ Der für die Kommunikation zuständige Anwendungsteil, ist die Benutzerschnittstel
 \begin{figure}[htb]
   \centering
 \includegraphics[width=0.9\textwidth]{../Bilder/Distributor.png}
-  \caption{Komponentensicht VMBuilder}
+  \caption{Komponentensicht Distributor}
 	\label{fig:Komponentensicht Distributor}
 \end{figure}
 \FloatBarrier	
@@ -315,15 +319,15 @@ Wie bereits am Anfang im Abschnitt \textbf{Distributor} - Komponente (\ref{sssec
 Die Schnittstelle der \textbf{Administration} - Komponente ist mit dem SystemAdministration aus der Verarbeitungsebene verbunden, um die voreingestellten Anwendungseigenschaften abzurufen und Neue zu speichern.
 
 
-\subsubsection*{SoftwareSelectionEditor - Komponente}
+\subsubsection*{SoftwareSelection - Komponente}
 \begin{figure}[htb]
   \centering
-\includegraphics[width=0.9\textwidth]{../Bilder/SoftwareSelectionEditor.png}
-  \caption{Komponentensicht SoftwareSelectionEditor}
-	\label{fig:SoftwareSelectionEditor}
+\includegraphics[width=0.9\textwidth]{../Bilder/SoftwareSelection.png}
+  \caption{Komponentensicht SoftwareSelection}
+	\label{fig:SoftwareSelection}
 \end{figure}
 \FloatBarrier
-Die an der \textbf{Administrations} - Komponente angeschlossene \textbf{SoftwareSelectionEditor} - Komponente unterstützt den Anwender in der Konfiguration einzelner Softwarekomponenten und Pakete. Pakete bestehen aus einzelnen Softwarekomponenten, die in Abhängigkeit gestellt werden. So können beim Aufbau einer virtuellen Maschine, durch die Auwahl eines Paketes, mehrere Softwarekomponenten auf einmal installiert werden. Zudem ermöglicht die \textbf{SoftwareSelectionEditor} - Komponente neue Softwarekomponenten hinzuzufügen, zu bearbeiten und zu ändern. Entsprechende Views helfen dem Anweder die gewünschten Funktionen durchzuführen.
+Die an der \textbf{Administrations} - Komponente angeschlossene \textbf{SoftwareSelection} - Komponente unterstützt den Anwender in der Konfiguration einzelner Softwarekomponenten und Pakete. Pakete bestehen aus einzelnen Softwarekomponenten, die in Abhängigkeit gestellt werden. So können beim Aufbau einer virtuellen Maschine, durch die Auwahl eines Paketes, mehrere Softwarekomponenten auf einmal installiert werden. Zudem ermöglicht die \textbf{SoftwareSelection} - Komponente neue Softwarekomponenten hinzuzufügen, zu bearbeiten und zu ändern. Entsprechende Views helfen dem Anweder die gewünschten Funktionen durchzuführen.
 
 \subsubsection{Verarbeitungseben}\label{sssec:Verarbeitungsebene}
 \begin{figure}[htb]
@@ -357,7 +361,7 @@ Da Vagrant nur mit einem gültigen Vagrantfile lauffähig ist, übernimmt \textbf{V
 \end{figure}
 \FloatBarrier
 Der Aufbau einer virtuellen Maschine wird durch die \textbf{MachineConstruction} - Komponente realisiert. Genauer durch das Zusammenspiel zwischen \textbf{Buildprocessor} und \textbf{AnsibleYAMLGenerator}. 
-Eine Zweiteilung der beiden Komponenten ist im Bezug auf ihre Zuständigkeiten wichtig. So ist das Auswechseln der Komponenten und die Erweitern von Funktionalitäten einfacher. Der \textbf{AnsibleYAMLGenerator} ist die Komponente, die es Ansible ermöglicht zu wissen, welche Software provisioniert werden soll. Während der Aufgabenbereicht des \textbf{Buildprocessor} sich vom Einsammeln der Eingabeinformationen des Benutzers, über das Erstellen der nötigen Konfigurationsdateien bis hin zum starten des eigentlichen Aufbauprozesses einer Maschine erstreckt.
+Eine Zweiteilung der beiden Komponenten ist im Bezug auf ihre Zuständigkeiten wichtig. So ist das Auswechseln der Komponenten und die Erweitern von Funktionalitäten einfacher. Der \textbf{AnsibleYAMLGenerator} ist die Komponente, die es Ansible ermöglicht zu wissen, welche Software provisioniert werden soll. Während der Aufgabenbereicht des \textbf{Buildprocessor} sich vom Einsammeln der Eingabeinformationen des Benutzers, über das Erstellen der nötigen Konfigurationsdateien, bis hin zum starten des eigentlichen Aufbauprozesses einer Maschine erstreckt.
 Soll zukünftig der Aufbauprozess verändert, oder Ansible durch einen anderen Provisionierer ausgewechselt werden, ermöglicht die Aufteilung der Zuständigkeiten den unkomplizierten austausch der jeweiligen Komponente.
 Die Schnittstellen der \textbf{MachineConstruction} - Komponente sind unter anderem mit \textbf{VagrantControl}, dem \textbf{PersistanceHandler} und dem \textbf{SystemFileManager} verbunden. Um den Aufbau korrekt durchführen zu können, benötigt der \textbf{Buildprocessor} die Steuerbefehle für Vagrant und den Zugriff auf das Dateisystem um die virtuelle Maschine zu platzieren. Der \textbf{PersistanceHandler} liefert für den Aufbau die entsprechende Softwarevorschläge, die der Benutzer auf der virtuellen Maschine installieren kann.
 Der Provisionierer 'Ansible' arbeitet mit YAML-Datei, die Konfigurationseigenschaften enthalten, die unterstützend beim Aufbau einer virtuellen Maschine wirken können. Die YAML-Dateien sind optional, da sie die gewünschten Softwarekomponenten beinhalten. Wird keine Software benötigt, kann diese Datei weggelassen werden.
@@ -389,9 +393,7 @@ Die \textbf{MachineSharing} - Komponente bereitet eine virtuelle Maschine so vor
 Durch die Hinzunahme des \textbf{BuildProcessor} kann der Import wieder zu einer virtuellen Maschine aufgebaut werden.
 
 \subsubsection*{VMBuilder - Komponente}
-Die zentrale Steuerung des VM-Builders ist die gleichnamige Komponente. 
-Sie liefert nicht nur die Funktionen für die MainPresentation - Komponente aus der Benutzerschnittstelle, sondern ist das Herz der Applikation.
-(TODO: wird sich noch rausstellen ob das so ist.)
+Die VMBuilder-Komponenten ist der Informationslieferant für die MainRepresentation - Komponente aus der Benutzerschnittstelle. Da die MainRepresentation die meisten Optionen für virtuelle Maschinen anbietet, liegt die Steuerung der Optionen, ebenfalls im Verantwortungsbereich der VMBuilder-Komponente.
 
 \subsubsection{Datenebene}\label{sssec:Dateneben}
 \begin{figure}[htb]
@@ -416,7 +418,7 @@ So kann z.B der \textbf{AnsibleYAMLGenerator} seine benötigten Informationen aus
 
 \subsection{Laufzeitsicht}\label{ssec:Laufzeitsicht}
 Nach \cite{Starke201205} zeigt die Laufzeitsicht Elemente der Bausteinsicht in Aktion, veranschaulicht dynamische Strukturen und das Verhalten des Systems.
-Um ein paar interessante Aspekte des VM-Builders herauszufiltern, werden auch nur diese in die Laufzeitsicht übernommen. Die dort verwendeten Funktionsaufrufe sind eine abstraktion der späteren Implementierung, da im Entwurf Programmiersprachen unabhängig gearbeitet, sowie auf implementierungsdetails verzichtet wird.
+Um einen interessante Aspekte des VM-Builders herauszufiltern, wird dieser in die Laufzeitsicht übernommen. Die dort verwendeten Funktionsaufrufe sind eine abstraktion der späteren Implementierung, da im Entwurf Programmiersprachen unabhängig gearbeitet, sowie auf implementierungsdetails verzichtet wird.
 
 \subsubsection{Aufbau einer virtuellen Maschine}
 \begin{figure}[htb]
@@ -458,37 +460,26 @@ Ein Asynchroner Prozess erfragt während des Aufbauprozesses immer wieder den Sta
 %\subsubsection{Verwendung von Optionen einer virtuellen Maschine}
 
 \subsection{Datenbank}\label{ssec:Datenbank}
-Wie in der Verteilungssicht (Abbildung \ref{fig:Verteilungssicht}) zu beschrieben, wird der Server eine relationale Datenbank bereit halten, deren Zuständigkeitsbereich im Speichern von Konfigurationen bereits gebauter virtuellen Maschinen und der Verwaltung von Softwarebestandteilen liegt. Optionen bezüglich des Verhaltes von Dateien werden zusätzlich in einer seperaten Tabelle abgelegt. 
-Für den Entwurf der Datenbank, werden zwei Notationsformen verwendet. Abschnitt \ref{ssec:ERM} veranschaulicht in der Notation des Entity-Relationship-Model den ersten konzeptionellen Entwurf des Datenmodells. Während Abschnitt \ref{sssub:RelationalDatabaseDiagram} die tabellarische Umsetzung des Konzeptes klärt.
+Wie in der Verteilungssicht (Abbildung \ref{fig:Verteilungssicht}) beschrieben, wird der Server eine relationale Datenbank bereit halten, deren Zuständigkeitsbereich im Speichern von virtuellen Maschinen, deren Konfigurationen und der Verwaltung von Softwarebestandteilen liegt. Optionen bezüglich des Verhaltes von Dateien werden zusätzlich in einer seperaten Tabelle abgelegt. 
+Für den Entwurf der Datenbank, werden zwei Notationsformen verwendet. Abschnitt \ref{sssec:ERM} veranschaulicht in der Notation des Entity-Relationship-Model den ersten konzeptionellen Entwurf des Datenmodells, während Abschnitt \ref{sssec:RelationalDatabaseModel} die tabellarische Umsetzung des Konzeptes klärt.
 
 \subsubsection{Entity-Relationship-Model}\label{sssec:ERM}
-Der in Abbildung \ref{fig:Entity-Relationship-Model} veranschaulichte Konzipierung, zeigt das semantische Konstrukt der angestrebte Datanbank, wobei die folgende Beschreibung die Bedeutung und die Abhängigkeiten des Modells erklärt.
 \begin{figure}[htb]
   \centering
-\includegraphics[width=0.9\textwidth]{../Bilder/Datenmodell.png}
+\includegraphics[width=0.9\textwidth]{../Bilder/datamodel_impl.png}
   \caption{Entity-Relationship-Model}
 	\label{fig:Entity-Relationship-Model}
 \end{figure}
 \FloatBarrier
-Die Tabelle \textbf{Machine} soll zukünftig jede Maschine beinhalten, die durch das System aufgebaut wurde. Bis auf die Einschränkung, der manuell gelöschten Konfigurationen.
-Die eindeutige Identifizierung jeder Maschine wird allein durch eine \textbf{ID} gelöst.
-Wird eine Maschine mit dem gleichen Namen wieder erstellt, überschreibt sie den bestehende Konfiguration mit den aktuellen Einstellungen.
-Zusätzlich zu der \textbf{ID} der Maschine, wird der \textbf{Name} inklusive einer optionalen Beschreibung (engl. \textbf{Description}) gespeichert.\newline\newline
-Damit dem Anwender eine Softwareauswahl angeboten werden kann, benötigt es die Tabelle \textbf{Software}. In ihr wird der aktuell angebotene Softwarestand gepflegt und verwaltet. Wobei jeder Eintrag aus einer automatisch generierten \textbf{SoftwareID} besteht, dem \textbf{Namen} der gespeicherten Software, einer optionalen Beschreibung (engl. \textbf{Description}) und der zwingend notwendigen Befehlszeile (engl. \textbf{Command}), die den Linux-Befehlt enthält, mit dem die Software installiert wird. 
-Die Auswahl der Softwarekomponenten wird in zwei Funktionsbereichen benötigt:
-\begin{enumerate}
-\item Aufbau einer virtuellen Maschine
-\item Konstruktion von Softwarepaketen
-\end{enumerate}
-Während beim Aufbau einer virtuellen Maschine nur der Inhalt der Tabelle angezeigt wird, wird bei der Konstruktion von Softwarepaketen zusätzlich rekursiv auf den Inhalt zugegriffen und ggf. verändert.
-Die Softwaretabelle selbst wird durch die im VM-Builder vorhandene Möglichkeit zur Konfiguration der Softwarekomponenten gepflegt.\newline\newline Da im Kapitel \ref{sec:FunktionaleAnforderungen} in den Unterpunkten \ref{itm:Abbild}. und \ref{itm:autoSpeichern} die Forderung nach einem Aufbau aus gespeicherten Konfigurationen entstand, wird die Tabelle \textbf{File} benötigt.
-Sie speichert die verwendeten Dateien und stellt sie in eine Relation zur virtuellen Maschine. Nicht nur der \textbf{Name} der Datei wird persistiert, sondern auch das Quellverzeichnis (engl. \textbf{Source}) und das Zielverzeichnis (engl. \textbf{Target}) auf der virtuellen Maschine. Für die eindeutige Identifikation, bekommt jede Datei eine eindeutige \textbf{ID} zugewiesen.\newline\newline Zudem werden Optionen (Tabelle \textbf{Optionen}) zu jeder Datei angeboten, die das Verhaten der Datei beschreiben. Aus diesem Grund werden lediglich die \textbf{Optionen} benötigt, die wieder eindeutig durch eine \textbf{ID} bestimmt werden.
-Geplante Optionen sind das einfache kopieren einer Datei und deren entpacken in ein Zielverzeichnis. 
+Die in der Abbildung \ref{fig:Entity-Relationship-Model} veranschaulichte Konzipierung, zeigt das semantische Konstrukt der angestrebte Datanbank, wobei die folgende Beschreibung die Bedeutung und die Abhängigkeiten des Modells erklärt.
+Die Tabelle \textbf{Machine} soll zukünftig jede Maschine beinhalten, die durch den Anwender aufgebaut wurde, bis hin zu dem Zeitpunkt ihrer Löschung. Die eindeutige Identifizierung jeder Maschine wird durch eine \textbf{ID} gelöst, die bei jedem Speichern einer Maschine fortlaufend hochgezählt wird.
+Die Tabelle enthält zusätzlich zu der \textbf{ID} der Maschine, den \textbf{Name}, eine optionale Beschreibung (engl. \textbf{Description}), den aktuellen \textbf{Status} (Online/Offline) und die \textbf{IP-Adresse} der Maschine.\newline
+Um den Anwender von Beginn an eine Auswahl an VM-Images anbieten zu können, werden in der Tabelle \textbf{Image} die vorgefertigten VM-Images abgelegt. Die Tabelle besteht aus den Attributen \textbf{Name}, das den Namen des Images beinhaltet und einer \textbf{URL}, die auf das Image im Web verweist.\newline
+Die Tabelle \textbf{File} speichert Informationen zu Dateien und stellt sie in eine Relation zur virtuellen Maschine oder Softwarepaketen. Nicht nur der \textbf{Name} der Datei wird persistiert, sondern auch das Quellverzeichnis (engl. \textbf{Source}) und das Zielverzeichnis (engl. \textbf{Target}), das auf das Zielverzeichnis der virtuellen Maschine zeigt. Für die eindeutige Identifikation, bekommt jede Datei eine \textbf{ID} zugewiesen, die fortlaufend inkrementiert wird. Damit der VM-Builder in der Lage ist, Dateien wiederzuverwenden, werden in der Tabelle \textbf{Option} Eigenschaften wie das Kopieren oder Entpacken von Dateien hinterlegt. Jeder Datei, die im VM-Builder gespeichert wird, kann solch eine Eigenschaft zugewiesen werden, um eine immer wieder identisches Verhalten zu erhalten. Die Tabelle selbst besteht aus einer \textbf{ID}, durch die jede Option eindeutig identifiziert werden kann und dem Attribut \textbf{Option}, welches die Option beschreibt.\newline
+Damit dem Anwender eine Softwareauswahl angeboten werden kann, wird die Tabelle \textbf{Software} benötigt. Jeder Eintrag besteht aus einer automatisch generierten, fortlaufenden \textbf{SoftwareID}, dem \textbf{Namen} der Software, einer optionalen Beschreibung (engl. \textbf{Description}) und der zwingend notwendigen Befehlszeile (engl. \textbf{Command}), die den Linux-Befehlt enthält, mit dem die Software installiert wird.\newline 
+Die Abbildung \ref{fig:Entity-Relationship-Model} zeigt zusätzlich eine rekursive Eigenschaft der Tabelle \textbf{Software}. Die Rekursion entsteht durch die gewünschte Funktion der Softwarepaketerstellung. Da jedes Softwarepaket aus mehreren Softwarkomponenten bestehen kann, ein Softwarepaket aber auch in der Liste der Softwarekomponenten geführt wird, entsteht so die rekursive Eigenschaft. Die genaue Umsetzung von rekursiven Tabellen, wird im folgenden Abschnitt genauer erklärt.
 
 \subsubsection{Relationales Datenbank Modell}\label{sssec:RelationalDatabaseModel}
-Die zweite Darstellung konkretisiert den Datenbankentwurf durch eine detaillierte Ansicht auf die Tabellenkonstrukte. Beziehungen zwischen Tabellen werden aufgelöst und ggf. in neue Tabellen gewandelt. Zudem werden Primär- und Fremdschlüssel Beziehungen verdeutlicht. Ein Primärschlüssel wird immer aus einer Menge von Schlüsselkandidaten bestimmt, deren Definition in \cite{pernul2003datenbanken} lautet:\newline 'Ist die identifizierte Attributmenge "minimal", d.h. ein Oberschlüssel, aus dem keine Attribute gestrichen werden können, ohne dass die Schlüsseleigenschaften verloren gehen, so handelt es sich um einen Schlüsselkandidaten K.'\newline
-Ein Fremdschlüssel wird dadurch ausgezeichnet, dass er entweder ein Primärschlüssel oder ein Schlüsselkandidat aus einer anderen Tabelle ist.
-Da das RDM (Relationales Datanbank Modell) nah an die reale Umsetzung angelehnt ist, erfordert es die Auflösung der Beziehungstypen aus dem vorherigen Abschnitt \ref{sssec:ERM}.
 \begin{figure}[htb]
   \centering
 \includegraphics[width=0.9\textwidth]{../Bilder/RelationalDatabaseDiagram.png}
@@ -496,21 +487,35 @@ Da das RDM (Relationales Datanbank Modell) nah an die reale Umsetzung angelehnt 
 	\label{fig:RelationalDatabaseModel}
 \end{figure}
 \FloatBarrier
-Nach \cite{jarosch2002datenbankentwurf} müssen N:M Beziehungen in 1:N und N:1 Typen umgeformt werden, wodurch eine Zwischentabelle (Koppeltabelle) entsteht.
-Angewendet auf das Schema aus Abbildung {fig:Entity-Relationship-Model} bedeutet das, dass eine Tabelle aus der Beziehung zwischen den Tabellen \textbf{Machine} und \textbf{Software} entstehen muss. Einfacherhalber MachineSoftware genannt, die aus beiden Tabellen die Primärschlüssel als Fremdschlüssel nutzt und wiederum zu ihren eigenen Primärschlüsseln transformieren. 
-Die dadurch gewonnenen Beziehungstypen, sind wie gefordert 1:N und N:1 zwischen \textbf{Machine} und \textbf{MachineSoftware} und \textbf{Software} und \textbf{MachineSoftware}. 
-Sprachlich ausgedrückt: 
+Die zweite Darstellung konkretisiert den Datenbankentwurf durch eine detaillierte Ansicht der Tabellenkonstrukte und erleichtert die Implementierung der einzelnen Tabellenstrukturen. Dafür werden im Weiteren Beziehungen zwischen Tabellen aufgelöst und ggf. neue Tabellen hinzugefügt. Zudem werden Primär- und Fremdschlüssel Beziehungen verdeutlicht, um die Darstellung nah an die Implementierung zu bringen.\newline Ein Primärschlüssel wird immer aus einer Menge von Schlüsselkandidaten bestimmt, deren Definition in \cite{pernul2003datenbanken} lautet:
+\begin{quote}
+'Ist die identifizierte Attributmenge "minimal", d.h. ein Oberschlüssel, aus dem keine Attribute gestrichen werden können, ohne dass die Schlüsseleigenschaften verloren gehen, so handelt es sich um einen Schlüsselkandidaten K.'
+\end{quote}
+Ein Fremdschlüssel wird dadurch ausgezeichnet, dass er entweder ein Primärschlüssel oder ein Schlüsselkandidat aus einer anderen Tabelle ist.
+Da das RDM (Relationales Datanbank Modell) nah an die reale Umsetzung angelehnt ist, erfordert es die Auflösung der Beziehungstypen aus dem vorherigen Abschnitt \ref{sssec:ERM}.\newline Die erste betrachtete Regel bezieht sich bei der Umwandlung auf N:M Beziehungen. Nach \cite{jarosch2002datenbankentwurf} müssen N:M Beziehungen in 1:N und N:1 Typen umgeformt werden, wodurch eine Zwischentabelle (Koppeltabelle) entsteht. Angewendet auf Abbildung \ref{fig:Entity-Relationship-Model} bedeutet das, dass neue Tabellen entstehen müssen, die jeweils als Relation zwischen den folgenden Tabellen entstehen:
 \begin{enumerate}
-\item[ ] 1 Maschine kann N(mehrere) Softwarekomponenten beinhalten
-\item[ ] N(mehrere) Softwarekomponenten können auf 1 Maschine installiert werden
-\end{enumerate})
-Dies gilt auch für die Auflösung der Beziehung zwischen den Tabellen \textbf{File} und \textbf{Option}.
-Das Ergebnis ist eine Zwischentabelle \textbf{FileOption}, die ebefalls eine 1:N und N:1 Relation zur Folge hat.\newline\newline Ebenfalls wie bei der Tabelle \textbf{MachineSoftware}, besteht die Tabelle \textbf{FileOption} aus den zusammengesetzten Primärschlüsseln der Tabellen die ehemals M:N verbunden waren.
-Auch hier werden die Fremdschlüssel der Tabellen \textbf{File} und \textbf{Option} zu einem Primärschlüsselpaar der Tabelle \textbf{FileOption}.\newline\newline Die dritte M:N Beziehung im Schema beinhaltet einen weiteren zu beachtenden Faktor. Denn hier besteht eine Rekursion auf die eigene Tabelle, die nach \cite{pernul2003datenbanken} ebenfalls aufgelöst werden muss:\newline
+\item \textbf{Software} und \textbf{Machine}
+\item \textbf{Software} und \textbf{File}
+\item \textbf{Machine} und \textbf{File}
+\item \textbf{Software} und \textbf{Software}
+\end{enumerate} 
+Die neu entstandenen Zwischentabellen nutzen die Primärschlüssel der Tabellen, die vorher N:M verknüpft waren, als Fremdschüssel und wandeln ihn in ihren eigenen Primärschlüssel um. So werden Beispielsweise die Tabellen \textbf{Machine} und \textbf{Software} mit der Zwischentabelle \textbf{MachineSoftware} verknüpft und die Umformung in eine 1:N und N:1 Beziehung durchgeführt. Dies gilt auch für die Auflösung der Beziehungen zwischen den Tabellen \textbf{Software} und \textbf{File} und \textbf{Machine} und \textbf{File}.
+Die vierte M:N Beziehung beinhaltet einen speziellen Faktor, der eine andere Herangehensweise benötigt. Die Besonderheit hier besteht in der Rekursion, die auf die eigene Tabelle zeigt und nach \cite{pernul2003datenbanken} wie folgt aufgelöst werden muss:
+\begin{quote}
 'Rekursive Beziehungstypen beschreiben eine Beziehung verschiedener Entities innerhalb eines einzigen Entitytypen. Durch diesen Sachverhalt stehen wir im Relationenmodell vor dem Problem, dass nach der Transformation die Attribute des Primärschlüssels nun zweimal auftauchen. Eine Forderung des rationalen Datenbankmodells ist aber die Eindeutigkeit von Attributbezeichnungen. Aus diesem Grund muss eine der beiden Bezeichnungen - in Anlehnung an die Art der Beziehung - umbenannt werden.[...] Bei einer Kardinalität {M:N} muss ein zusätzliches Relationenschema erstellt werden, dass als Attribut zumindest den Primärschlüssel und den umbenannten Primärschlüssel aus dem Entitytyp-Relationenschema enthält. In dem neuen Relationenschema bilden dann beide Attributmengen gemeinsam den Primärschlüssel.'
-Da jede angebotene Softwarekomponente wiederum aus Softwarekomponenten bestehen kann, wird eine neue Tabelle erstellt mit dem Namen \textbf{Package}.
-Wie bei \cite{pernul2003datenbanken} beschrieben, enthält die neue Tabelle zwei Mal den Primärschlüssel aus der Tabelle \textbf{Software}, wobei einer umbenannt werden muss. Das entspricht in diesem Fall der \textbf{partID}.\newline\newline Die Tabelle \textbf{File} bekommt zu ihrem Primärschlüssel einen Fremdschlüssel aus der Relation \textbf{Machine}, durch die Auflösung der 1:N Beziehung, die zwischen den beiden Tabellen herrschte. Relationen, die aus dem Entitätstyp mit Kardinalität 1 gebildet wurden, bleiben erhalten. Primärschlüssel aus der Relation mit Kardinalität 1 wandern als Fremdschlüssel in die N-Relation.
-
+\end{quote}
+Die Transformierung besagt, dass im ersten Schritt auch hier eine neue Tabelle entstehen muss. Da die Rekursion durch die Verwendung von Softwarepaketen entstanden ist, wird die neue Tabelle \textbf{Package} genannt. Im nächsten Schritt muss nach \cite{pernul2003datenbanken}, die neue Tabelle \textbf{Package} den Primärschlüssel aus der Tabelle \textbf{Software} zwei Mal enthalten, wobei darauf zu achten ist, dass ein Schlüssel unbenannt werden muss. Das entspricht in diesem Fall der \textbf{partID}, wodurch die Umwandlung abgeschlossen ist.\newline\newline 
+Zu guter Letzt werden die 1:N Beziehungen betrachtet, die den folgenden Relationen entsprechen:
+\begin{enumerate}
+\item \textbf{File} und \textbf{Option}
+\item \textbf{Image} und \textbf{Machine}
+\end{enumerate}
+Um auch hier die Umwandlung korrekt vorzunehmen, müssen folgende Regeln beachtet werden:
+\begin{enumerate}
+\item Relationen, die aus dem Entitätstyp mit Kardinalität 1 gebildet wurden, bleiben erhalten.
+\item  Primärschlüssel aus der Relation mit Kardinalität 1 wandern als Fremdschlüssel in die N-Relation.
+\end{enumerate}
+Als Beispiel für die Umsetzung der Regeln, werden die Tabellen \textbf{File} und \textbf{Option} herangezogen. Der Primärschlüssel aus Tabelle \textbf{Option} wird in Tabelle \textbf{File} als Fremdschlüssel eingesetzt und wird so als ein Teil der Tabelle \textbf{File}. Da die Regeln besagen, dass die Tabelle mit der Kardinalität 1 unverändert bleibt, wird an der Tabelle \textbf{Option} keine weitere Veränderung vorgenommen.
 \section{Client}\label{sec:Client}
 Im Gegensatz zum Server benötigt der Client keine ausführliche Planung und Modellierung, da das angestrebte Konstrukt ein Thin Client ist. Diese Art von Clients benötigt wenig oder gar keine Anwendungsteile auf dem Client-Rechner.
 Auf Anwenderseite wird entsprechend nur die Weboberfläche des VM-Builders aufgerufen, damit die Funktionalitäten bereitstehen. Es wird keine lokale Datenbank oder andere Software zum Betrieb benötigt. 
@@ -519,14 +524,11 @@ Dies gilt auch für die Darstellungen der angezeigten Webelemente.Sie werden durc
 Eine detaillierte Ansicht zu der Kommunikation zwischen Client und Server, sowie deren Ablauf ist z.B in der Laufzeitsicht (Abschnitt \ref{ssec:Laufzeitsicht}) zu finden.
 
 \section{Zusammenfassung}
-Die einzelnen Phasen des Entwurfs verhelfen nicht nur den Aufbau der Software besser zu verstehen, sondern auch Fehler in Strukturen und Planung aufzudecken.
-Gerade das Herantasten an die Konzipierung der einzelnen Sichten, ermöglicht eine strukturierte Planung und herangehensweise.
-Während die Kontextabgrenzung in Abschnitt \ref{sec:Kontextabgrenzung} allein den Fokus auf die Software und ihre Umsysteme legt, wird in der Verteilungssicht aus Abschnitt \ref{sec:Verteilungssicht} der technische Aufbau von Server und Client deutlicher, durch das auftauchen erster Details.
-Durch die Anwendung von Entwurfsmustern und Modellen unter Abschnitt \ref{sec:Systemarchitektur} bekommt die zu erstellende Software ihren groben Aufbau, der durch die Beschreibung der Kommunikation (Abschnitt \ref{sec:Kommunikation}) deutlicher wird.
-Die Anwendung der Entwurfsmuster findet sich indirekt im strukturellen Aufbau dieser Arbeit wieder, durch die Aufteilung der Beschreibungen zwischen Client und Server.
-Zudem haben sie direkten Einfluss auf die Konzipierung der Bausteinsicht aus \ref{sec:Bausteinsicht}. des Servers.
-Die entwickelten Bausteine werden nicht nur nach ihren Zuständigkeiten entwickelt, sondern auch in Schichten der konzipierten Systemarchitektur platziert.
-Dank der Laufzeitsicht in \ref{ssec:Laufzeitsicht}. verhilft die Abläufe zwischen den Bausteinen zu verstehen und in einen Kontext zu bringen.
-Eine etwas losgelöste Rolle spielt der Datenbankentwurf. Dieser hat nur indirekt etwas mit dem Serverkonstrukt zu tun, benötigt aber dennoch Aufmerksamkeit.
-Abschnitt \ref{ssec:Datenbank} befasst sich mit dem konzeptionellen Entwurf des Datenbankschemas und dem Zusammenhang der einzelnen Tabellen.
-In aller Kürze wird zum Schluss der Client in Abschnitt \ref{sec:Client} beschrieben. Da es sich bei dem Client-Konstrukt um einen ThinClient handelt, der ohne weitere lokale Software auskommt, kommt die Beschreibung mit wenig Erklärung aus.
+Die einzelnen Phasen des Entwurfs verhelfen nicht nur den Aufbau der Software besser zu verstehen, sondern ermöglichen auch eine klare Strukturierung der Anwendung.
+Die Kontextabgrenzung in Abschnitt \ref{sec:Kontextabgrenzung} zeigt den VM-Builder inklusive seiner Umsysteme und verschafft eine erste Übersicht, während die Verteilungssicht (Abschnitt \ref{sec:Verteilungssicht}) eine Stufe heran zoomt und die Platzierung geplanten Softwarebestandteile im VM-Builder verdeutlicht.
+Abschnitt \ref{sec:Systemarchitektur} beschäftigt sich mit zwei Systemarchitekturen, die die Anwendung strukturieren und Zuständigkeiten definieren. Die erste Modell der Architektur ist das Client-Server-Modell, wodurch eine erste konkrete Entscheidung der Aufgabenverteilung zwischen Client und Server getroffen wurde, während das MVC-Entwurfsmuster die Zuständigkeiten der einzelnen Schichten bestimmt.\\ Die darauf folgende Übersicht der Kommunikation geht exemplarisch auf das Verhalten von Sinatra ein und zeigt die Annahme von Clientaufrufen und den Aufbau von Routen. Siehe Abschnitt \ref{sec:Kommunikation}.\\
+Nachdem die Basis definiert wurde, befasst sich Abschnitt \ref{sec:Server} mit der Konzipierung der Serverseite, unter der Verwendung der Bausteinsicht (Abschnitt \ref{ssec:Bausteinsicht}) und der Laufzeitsicht (Abschnitt \ref{ssec:Laufzeitsicht}).
+Die Bausteinsicht zeigt die Komponenten der einzelnen Schichten, deren Verbindungen zu anderen Komponenten und Abhängigkeiten zu der darunter liegenden Schicht. Während die Komponenten in den Schichten noch als Blackboxen dargestellt sind, werden sie in den einzelnen Erklärungen als Whitebox gezeigt, um eine detailliertere Ansicht auf deren Aufbau und Kommunikation zu erhalten.
+Die Wirkungsweise der Komponenten kann duch die Laufzeitsicht gezeigt werden, die exemplarisch Abläufe darstellt, um so die Aufgabenverteilung der involvierten Komponenten herauszustellen.
+Abschnitt \ref{ssec:Datenbank} befasst sich mit dem konzeptionellen Entwurf des Datenbankschemas und dessen Umwandlung für die spätere Implementierung.
+Zu guter Letzt wird der Client beschrieben. Da es sich bei dem Client-Konstrukt um einen ThinClient handelt, der ohne weitere lokale Software verwendbar ist, kommt die Beschreibung in Abschnitt \ref{sec:Client} mit wenig Erklärung aus.
