@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: BA.aux
 A level-1 auxiliary file: einleitung.aux
@@ -16,61 +16,63 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: literatur.bib
-Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
+Warning--entry type for "Sophisten13" isn't style-file defined
 --line 314 of file literatur.bib
+Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
+--line 324 of file literatur.bib
 Warning--entry type for "Sinatra:2015:Online" isn't style-file defined
---line 322 of file literatur.bib
+--line 332 of file literatur.bib
 Warning--entry type for "Wikipedia:2015:Online" isn't style-file defined
---line 330 of file literatur.bib
+--line 340 of file literatur.bib
 Warning--entry type for "Statista:2015:Online" isn't style-file defined
---line 337 of file literatur.bib
+--line 347 of file literatur.bib
 Warning--entry type for "Golem:2015:Online" isn't style-file defined
---line 344 of file literatur.bib
+--line 354 of file literatur.bib
 Warning--entry type for "opennebula:2015:Online" isn't style-file defined
---line 351 of file literatur.bib
+--line 361 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
 Warning--no proper publisher, using url in Hock12
 Warning--empty note in Hock12
 You've used 27 entries,
             3552 wiz_defined-function locations,
-            997 strings with 10945 characters,
-and the built_in function-call counts, 15890 in all, are:
-= -- 1839
+            994 strings with 10982 characters,
+and the built_in function-call counts, 15927 in all, are:
+= -- 1852
 > -- 210
-< -- 264
-+ -- 334
-- -- 106
-* -- 1433
-:= -- 2625
+< -- 277
++ -- 347
+- -- 107
+* -- 1428
+:= -- 2633
 add.period$ -- 40
 call.type$ -- 27
 change.case$ -- 115
 chr.to.int$ -- 27
 cite$ -- 31
-duplicate$ -- 429
-empty$ -- 1426
+duplicate$ -- 426
+empty$ -- 1408
 format.name$ -- 211
-if$ -- 3355
+if$ -- 3348
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 36
-newline$ -- 200
+missing$ -- 34
+newline$ -- 199
 num.names$ -- 108
-pop$ -- 163
+pop$ -- 160
 preamble$ -- 1
 purify$ -- 115
 quote$ -- 0
-skip$ -- 595
+skip$ -- 605
 stack$ -- 0
-substring$ -- 1374
+substring$ -- 1389
 swap$ -- 73
 text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 207
+type$ -- 212
 warning$ -- 4
 while$ -- 169
 width$ -- 0
-write$ -- 338
-(There were 10 warnings)
+write$ -- 336
+(There were 11 warnings)

@@ -1,45 +1,46 @@
 \chapter{Realisierung}
-Die Realisierung zeigt in wie fern die vorherige Planung der Realität stand hält und ob Änderungen in der Struktur oder Funktionalität notwendig sind. Zudem werden Entscheidungen und Problematiken verdeutlicht, die bei der Planung noch nicht zu erkennen waren. 
-Die Implementierung wird, wie in den Anforderungen beschrieben (Kapitel  \ref{subsec:TechnischeRandbedingungen}.), mit dem Framework Sinatra und Ruby umgesetzt.
-Jeder Umsetzungsschritt basiert auf der Anforderungsanalyse und dem darauf aufbauenden Entwurf. Geplante Fremdsoftware wird entsprechend mit berücksichtigt und eingebunden.
-Zu beachten ist, dass hier ein Prototyp der Anwendung umgesetzt wird und Funktionalitätet entsprechend nicht komplett implementiert werden. Im späteren Kapitel Aussichten, werden weitere Funktionalitäten betrachtet, die für die Applikation praktikabel wären. Zudem wird die Applikation als ein Prototypen-Szenario aufgebaut, welches kleineren Hardwarespezifikationen und einem Anwenderzugriff zur Zeit genügt.
-Die Realisierung besteht aus mehreren Schritten, die aufbauend auf einander sind.
-Im ersten Schritt wird in \ref{ssec:ServerRealisierung} auf das Hardware-Serverkonstrukt näher eingegangen, welches der Planung und den Anforderungen entsprechend umgesetzt werden soll. Der zweite Schritt in Abschnitt \ref{ssec:SoftwareRealisierung} befasst sich mit den nötigen Fremdsoftware-Komponenten, wie z.B. des Webserver, seinen zugehörigen Softwarekomponenten, des Provisionieres, Virtualisierers und diversen Anderen. Schritt Drei beschäftigt sich dann mit der Implementierung der eigentlichen Applikation. %Abschnitt \ref{ssec:Implementierung} beschäftigt sich neben der Implementierung auch mit Planung, bzw. den Unterschieden zwischen Planung und Implementierung.
+Dieses Kapitel wird die Umsetzung und die damit verbundene Realisierung des VM-Builders beschreiben. Die Umsetzung geschieht unter der Beachtung der zuvor durchgeführten Planung aus Kapitel \ref{ch:Anforderungsanalyse} und der damit verbundenen Integration von Dritt-Anwendungen. Ein wichtiger Aspekt des Kapitels ist die Verdeutlichung von Unterschieden, die zwischen Planung und der Umsetzung auftreten. Die Realisierung selbst wird in erster Linie ein Prototyp des VM-Builders anstreben, wobei auch seine Implementierung sich ganz nach dem Entwurf richtet, der in Kapitel \ref{ch:Entwurf} entstanden ist. Um die Anforderungen aus dem technischen Randbedingungen (Abschnitt \ref{subsec:TechnischeRandbedingungen}) zu erfüllen, geschieht die Umsetzung der Applikation in einer Kombination aus dem Framework Sinatra und Ruby und wird in der IDE 'RubyMine' entwickelt.\newline
+Die Realisierung wird in drei Schritte unterteilt:
+\begin{enumerate}
+\item Aufbau des Servers (Abschnitt \ref{ssec:ServerRealisierung})
+\item Installation und Beschreibung der Fremdsoftware (Abschnitt \ref{ssec:SoftwareRealisierung})
+\item Erstellung und Implementierung des VM-Builders (Abhschnitt \ref{ssec:SoftwareRealisierung})
+\end{enumerate}
+Die drei Schritte beinhalten nicht nur Details zu ihrer Umsetzung, sondern auch die Unterschiede zum Entwurf.
 
-\section{Hardware}\label{ssec:ServerRealisierung}
-Um die Vorraussetzungen für die Entwicklung des 'VM-Builders' zu schaffen, wird statt auf einen Hardware-Server verzichtet und stattdessen über VirtualBox ein virtueller Server aufgebaut. Wie in der Einleitung bereits erwähnt, handelt es sich bei der Entwicklung um einen Prototypen der Applikation. Aufbauend auf diesem Aspekt, ist eine virtuelle Umgebung zum entwickeln und testen mehr als geeignet. Im Rahmen des Prototypen können gewissen Operationen bezüglich der virtuellen Maschinen ggf. noch nicht zur Verfügung stehen.
-Um die Aufbaugeschwindigkeit und das Verhalten auf unterschiedlicher Infrastuktur testen zu können, werden zwei virtuelle Server gleichzeitig aufgebaut. Einer Server wird lokal erstellt, der Andere auf einem VM-Host der HAW-Hamburg. In den folgenden Abschnitten wird lediglich ein Server betrachtet. Die Unterschiede der Server, sind nur rein technischer Natur und sollen ggf. bei der Analyse des Zeitfaktors unterstützen, der für den Aufbau einer virtuellen Maschine benötigt wird.\newline
-Im lokalen Aufbau wird ein virtueller Server mit 4GB Arbeitsspreicher, 20 GB Festplattenkapazität und Ubuntu 14.04.2 realisiert. 
-Parallel wird der Server auf HAW-Seite mit 16 GB Arbeitsspeicher ausgestattet, um die Konfiguration gegeneinander stellen zu können.
+\section{Server Realisierung}\label{ssec:ServerRealisierung}
+Um die Vorraussetzungen für die Entwicklung des VM-Builders zu schaffen, wird der erste Schritt der Aufbauphase angegangen und eine Entwicklungsplatform vorbereitet. Anstelle eines Hardware-Servers, wird zunächst auf einer virtuelle Maschine entwickelt. Wie bereits in der Einleitung erwähnt, handelt es sich bei der Entwicklung um einen Prototypen der Applikation und genau auf diesem Aspekt aufbauend, ist eine virtuelle Umgebung zum entwickeln und testen mehr als geeignet.\newline
+Zeitgleich wird eine identische Umgebung auf einem VM-Host der HAW aufgebaut, um später Unterschiede in der Aufbaugeschwindigkeit der virtuellen Maschinen messen zu können. Einfacherhalber wird in den folgenden Abschnitten lediglich ein Server betrachtet, damit keine Unklarheiten auftreten. Die Unterschiede der Server sind nur rein technischer Natur und unterscheiden sich weder in Applikationsversionen, noch im Aufbau.\newline
+Der lokale virtuelle Server wird mit 4GB Arbeitsspreicher, 20 GB Festplattenkapazität und Ubuntu 14.04.2 umgesetzt. Der Server auf HAW-Seite, wird mit 16 GB Arbeitsspeicher ausgestattet und einem schnelleren Prozessor. Das Betriebssystem ist ebenfalls Ubuntu 14.04.2.
 
 \section{Fremdsoftware}\label{ssec:SoftwareRealisierung}
-Für die ordnungsgemäße Funktion des 'VM-Builders' wird auf Fremdsoftware zurückgegriffen, das sichgleichzeitig auf den zweiten Schritt der Umsetzung bezieht. In der Evaluation aus Kapitel \ref{ch:Evaluation}. sind die ersten Annahmen getroffen worden, welche Softwarekomponente sich für bestimmte Aufgabenbereiche am besten eignet. Ebenso wurden in der Verteilungssicht aus Kapitel \ref{sec:Verteilungssicht} weitere Softwarekomponenten empfohlen. Im Folgenden werden die Empfehlungen und evaluierten Softwarekomponenten in ihrem Einsatz beschrieben. Auf Installationsdetails und der Beschreibung von ggf. notwendiger Drittsoftware wird verzichtet.
+Eines der Ergebnisse des Entwurfs war die Verwendung von Fremdsoftware, wodurch gewisse Teile des Funktionsspektrums übernommen werden sollen. Der zweite Schritt der Realisierung wird sich mit den einzelnen Softwareelementen beschäftigt, die für den Betrieb des VM-Builders eingesetzt werden sollen. In der Evaluation aus Kapitel \ref{ch:Evaluation} sind die ersten Annahmen getroffen worden welche Softwarekomponente sich für bestimmte Aufgabenbereiche eignen könnten, um sie dann in der in der Verteilungssicht (Abschnitt \ref{sec:Verteilungssicht}) provisorisch zu integrieren. Vorteile der verwendeten Applikationen sind ihre OpenSource Eigenschaften und der damit verbundene Verzicht auf weitere Kosten oder Investitionen. Die einzelnen Applikationen werden noch einmal kurz vorgestell, wobei auf Installationsdetails verzichtet wird.
 
 \subsection{Webserver}
-Für die Präsentation des Webinterfaces und die Kommunikation zwischen Client und Server wird auf den frei erhältlichen Apache Webserver, in der Version 2.4.7 zurückgegriffen.\newline
-Durch die freie Verfügbarkeit von Apache, wird der geforderte Open-Source-Aspekt aus \ref{subsec:TechnischeRandbedingungen} berücksichtigt. Zudem hat Apache einen Marktanteil von 50,51\% an aktiven Webseiten, nach \cite{Statista:2015:Online}. Die Verwendung von Apache hat den entsprechend Vorteil, dass durch den Bekanntheitsgrad, eher Fachwissen über Konfiguration und Administration bei Administratoren vorliegen könnte.
+Für die Präsentation des Webinterfaces und für die Kommunikation zwischen Client und Server, wird auf den frei erhältlichen Apache Webserver, in der Version 2.4.7 zurückgegriffen.\newline
+Es bietet sich an, einen etablierten Webserver zu nutzen, gerade wenn er den geforderten Open-Source-Aspekt erfüllt. Zudem besitzt Apache einen Marktanteil von 50,51\% an aktiven Webseiten (\cite{Statista:2015:Online}), wodurch das Argument der Etablierung weiter untermauert wird. Durch diesen Faktor kann zudem davon ausgegangen werden, dass die Weiterentwicklung weiter anhält, sowie Supportmöglichkeiten auch noch zukünftig vorhanden sein werden.
 
 \subsection{Phusion Passenger}
-Im Zuge der Vorbereitung der Appikation wird auf Phusions Passenger zurückgegriffen, das ein Modul für Apache darstellt. Phusions Passenger wird gerade im Bezug auf Ruby-Applikationen verwendet, um Ruby-Web-Applikationen bereitzustellen. Zudem erleichtert Passenger die Administration von Web-Applikationen und ist essenziel für den Betrieb des VM-Builders.\newline
+Im Zuge der Vorbereitung auf die Appikation, wird auf Phusions Passenger zurückgegriffen, das als ein Modul für Apache konzipiert wurde. Phusions Passenger wird primär bei Ruby-Applikationen verwendet, um Ruby-Web-Applikationen bereitzustellen. Zudem erleichtert Passenger die Administration von Web-Applikationen und ist essenziel für den Betrieb des VM-Builders.\newline
 
 \subsection{VirtualBox}
-Ein eigener Entwurf und deren Ausführung einer Virtualisierungsstrategie, wäre weder zielführend noch praktikabel. Deshalb wurde in der Evaluation (Kapitel \ref{ssec:VirtualBox}.) eine Analyse der frei zugänglichen Virtualisierer durchgeführt.
-VirtualBox übernimmt beim 'VM-Builder' den Part der Maschinenvirtualisierung. Wie bei Apache ist mit einer der Argumente für VirtualBox, die kostenlose Verfügbarkeit und das es Open-Source ist. 
+Ein eigener Entwurf und deren Ausführung einer Virtualisierungsstrategie, wäre weder zielführend noch praktikabel. Deshalb wurde in der Evaluation (Kapitel \ref{ssec:VirtualBox}) eine Analyse der frei zugänglichen Virtualisierer durchgeführt, wodurch letztendlich das Ergebnis VirtualBox als geeigneten Kandidaten herausstellte.
+VirtualBox übernimmt beim VM-Builder die Funktion der Maschinenvirtualisierung und somit den automatisierten Aufbau der Umgebung.
 
 \subsection{Ansible}
-Die Aufgabe der Provisionierung der einzelnen virtuellen Maschinen, wird Ansible übertragen. Ansible kann die gewünschte Zustandsbeschreibung direkt auf der virtuellen Maschine umsetzen, ohne einen Client dort zu installieren. Dies erleichtert nicht nur die Arbeit mit Ansible, sondern erleichtert zudem die Implementierung in den 'VM-Builder'. Wie bei VirtualBox, sind liegen die Gründe für Ansible bei dem Open-Source Gedanken und den Ergebnissen der Evaluation aus Kapitel \ref{subsec:Ansible}.
+Damit die erstellte Umgebung mit Software bestückt werden kann, wird diese Aufgabe Ansible übertragen. Ansible kann die gewünschte Zustandsbeschreibung des Anwenders, direkt auf der virtuellen Maschine umsetzen, ohne dort einen extra Client installieren installieren zu müssen. Dies erleichtert nicht nur die Arbeit mit Ansible, sondern erleichtert zudem die Integration von Ansible in den VM-Builder. 
 
 \subsection{Vagrant}
 Vagrant dient als Wrapper für VirtualBox und Ansible. Die Flexibilität von Vagrant ermöglicht das leichte Zusammenspiel der drei Softwarekomponenten. Da Vagrant mit anderen Provisionierern und Virtualisierern zusammenarbeiten kann, ist ein Austausch von Ansible und VirtualBox in einem begrenzen Zeitrahmen möglich.\newline
-Der 'VM-Builder' wird über Befehlsaufrufe direkt mit Vagrant kommunizieren und durch entsprechende Befehle den Aufbau, die Deaktivierung, das Sharing usw. auslösen.
+Der VM-Builder wird über Befehlsaufrufe direkt mit Vagrant kommunizieren und durch entsprechende Befehle den Aufbau, die Deaktivierung, das Sharing usw. auslösen.
 
 \subsection{Bundler}
-Um in Ruby-Pojekten die notwendige Abhängigkeiten zu genutzen Paketen zu verwalten und ggf. deren Versionen zu spezifizieren, wird auf Bundler zurückgegriffen.
-Durch Bundler können einheitliche Umgebungen für Projekte geschaffen und der Wiederaufbau der gleichen Umgebung beschleunigt werden. Z.B. kann eine automatisierte Installation des 'VM-Builders' durch Bundler vereinfacht werden.
-
+Um in Ruby-Pojekten Abhängigkeiten zu genutzen Paketen zu verwalten und ggf. deren Versionen zu spezifizieren, kann auf Bundler zurückgegriffen werden.
+Durch Bundler können einheitliche Umgebungen für Projekte geschaffen und der Wiederaufbau der gleichen Umgebung beschleunigt werden. Durch seine Eigenschaft, Ruby-Komponenten sofort und automatisch installieren zu können, ist Bundler prädestiniert für die Umsetzung einer automatisierte Installation des VM-Builders.
 
 \subsection{Datenbank}
-Für die Umsetzung der Datenbank wird auf den OR-Mapper \textbf{Datamapper} zurückgegriffen. ORM Frameworks sind gerade für objektorientierte Sprachen besonders hilfreich, da sie die objektorientierte Welt mit der Relationalen Welt der Datenbanken in einklang bringen. So ist es möglich programmatisch Tabellenkonstrukte zu definieren und zu erstellen. Durch den Aufruf von Datamapper wird nicht nur die Tabelle nach den Vorgaben erstellt, sondern auch die Beziehungen zwischen den Tabellen. 
+Um die objektorientierte Welt mit der Relationalen Welt der Datenbanken in Einklang zu bringen, können OR-Mapper helfen. Durch ihre Übersetzung von Quellcode, können programmatisch Tabellenkonstrukte erzeugt und Beziehungen zwischen den gewünschten Tabellen definiert werden. Datamapper ist eines der Beiden populärsten ORM Frameworks für Ruby und wird die beschriebenen Aufgaben im VM-Builder übernehmen.\newline
+Ein Beispiel für die Funktionsweise von Datamapper, ist die Definition der Tabelle Machine, die aus vier Attributen besteht inklusive ihrer Typ-Eigenschaften, sowie ihrer Relation zu anderen Tabellen.
 \begin{lstlisting} [caption={ORM Framework Datamapper},label={code:ORMTable}, language=Ruby]
 class Machine
   include DataMapper::Resource
@@ -56,7 +57,6 @@ class Machine
   belongs_to :vmimage
 end
  \end{lstlisting}
-Ein Beispiel ist die Definition der Tabelle Machine, die aus vier Attributen besteht inklusive ihrer Typ-Eigenschaften, sowie ihrer Relation zu anderen Tabellen.
 Programmatischer Zugriff auf die Tabellen kann über SQL-Befehle bereitgestellt werden, oder über typischerweise vorhandenen Befehle des ORM-Frameworks.
 Um z.B aus der Tabelle \textbf{Machine} alle Daten einmal abzurufen genügt der Befehl 'Machine.all'. 
 \begin{lstlisting} [caption={ORM Framework command},label={code:ORMCommand}, language=Ruby]
@@ -64,7 +64,6 @@ Um z.B aus der Tabelle \textbf{Machine} alle Daten einmal abzurufen genügt der B
     Machine.all
   end
 \end{lstlisting}
-
 
 \section{Implementierung}\label{ssec:Implementierung}
 Nach dem Aufbau der Server und der Installation der benötigten Softwarekomponenten, steht im nächsten Abschnitt die Implementierung des Protoypen im Vordergrund.
@@ -118,11 +117,12 @@ Durch die Umsetzung haben sich Unterschiede bezüglich des Entwurfs herausgestell
 	\label{fig:Bausteinsicht_MVC_Umsetzung}
 \end{figure}
 \FloatBarrier
-Abgesehen von der Entstehung neuen Beziehungen zwischen Komponenten ist eine der wesentlichen Änderungen das Wegfallen des ConfigurationfileHandlers. Seine Aufgabe bestand im lesen und beschreiben einer Konfigurationsdatei, die Konfigurationen des gesamten 'VM-Builders' beinhalten sollte. Da in der Konzepierung eine Datenbank mit eingeplant wurde, sind die Konfigurationen dort hinein übernommen worden.
-Dies hat den Vorteil, dass es eine zentrale Steuerung für den persistenten Speicher besteht und Änderungen, sowie das Hinzufügen von neuen Konfiguration deutlich vereinfacht wird.
+Abgesehen von der Entstehung neuen Beziehungen zwischen Komponenten, ist eine der wesentlichen Änderungen das Wegfallen des ConfigurationfileHandlers. Seine Aufgabe bestand im Lesen und Beschreiben einer Konfigurationsdatei, die Konfigurationen des gesamten 'VM-Builders' beinhalten sollte. 
+Anstelle der Konfigurationsdatei, werden die Konfigurationen in der Datenbank gepflegt.
+Die daraus entstehenden Vorteile sind eine zentrale Steuerung für den persistenten Speicher und Änderungen, sowie das Hinzufügen von neuen Konfiguration sind deutlich vereinfacht worden.
 
 \subsection{Datenbank}
-Wie bereits erwähnt, wird im Gegensatz zur Planung, ein Tabellenkonstrukt angewendet, um die Einstellungen zu persistieren. Dies spart zu erstellende Komponenten und zentralisiert den Zugriff und die Datenhaltung.
+Wie bereits erwähnt, wird im Gegensatz zur Planung, ein Tabellenkonstrukt angewendet, um Konfigurationen zu persistieren. Dies spart zu erstellende Komponenten und zentralisiert den Zugriff und die Datenhaltung.
 Zur Umsetzung von Konfigurationstabellen werden in der Regel zwei Konzepte vorgeschlagen:
 \begin{enumerate}
 
@@ -179,7 +179,7 @@ Auch wenn dieses Konzept weniger Vorteile als '\textbf{Single-Row}', spricht das
 
 \subsection{Funktionen}
 Die Realisierung aller geplanten Controller, Models und Views hat das Funktionsspektrum der Applikation fast vollständig erfüllt.\newline
-So sind folgende Funktionen durch die bisherige Implementierung erfüllt worden:
+So sind folgende Funktionen durch die bisherige Implementierung realisiert worden:
 \begin{description}
 \item \textbf{Erstellung einer virtuellen Maschine} \\
 Die Komponente 'Main-Representation', die die zentrale Steuerung darstellt, kommuniziert kann die BuildingProcess-Komponente aufrufen in der die Darstellung für den geleiteten Aufbau einer virtuellen Maschine gehalten wird und die Schnittstelle zu der entsprechenden Logik. Der Aufbauprozess beinhaltet die Benamung der gewünschten Maschine, Optionen wie IP-Adresse und die Auswahl an Softwarekomonenten. Echtzeitinformation über den Aufbauprozess sind nicht implementiert. Allerdings im Logfile nachlesbar.

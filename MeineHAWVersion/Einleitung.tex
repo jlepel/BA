@@ -1,6 +1,62 @@
 %\setcounter{secnumdepth}{3}
 \chapter{Einleitung}
+
+\section{Problemstellung und Motivation}
+Die Herausforderung klassischer IT-Umgebungen besteht oft in der dynamischen Anpassung an die Umstände eines Unternehmens. Wächst das Unternehmen oder werden neue Systeme integriert, wird die Umsetzung durch konventionelle Methoden meist aufwändig und langwierig. Sie erfordern neue Hardwareanschaffungen, die exakte Festlegung der Hardwareeigenschaften und die Integration in die bestehende Infrastruktur. So entstehen unflexible Serverkonstrukte, die über Jahre meist nur einen starren Zweck erfüllen, ggf. durch nicht genutzte Auslastung Ressourcen vergeuden und nach Dienstende ausgemustert werden. Eine mögliche Lösung zur effizienteren Nutzung von Ressourcen wurde bislang in der Virtualisierung gesehen. %Virtualisierung war der erste Schritt, um den Nachteilen entgegenzuwirken und spezifische Server/Rechner effizienter zu gestalten.
+Durch die Entkopplung der Hardware, können unterschiedliche Strukturen an Maschinen parallel genutzt werden und somit mehrere Aufgaben, bei besserer Auslastung der Hardware, wahrgenommen werden.\newline
+Auch wenn die Virtualisierung viele Abläufe beschleunigt hat und Umgebungen schneller bereit stehen, verbringen die Administratoren ihre Zeit nun mit der Vervielfältigung von Systemen, dem Anlegen von Systemzuständen, der Verwaltung von Speicherressourcen und der Bearbeitung von Anfragen nach temporären und permanenten Maschinen.\newline
+Entlastung könnte der Schritt zu IaaS (Infrastructure-as-a-Service) bringen, um die zahlreichen Handgriffe zu reduzieren. Die angebotenen Automatismen helfen bei der Verwaltung der Basisinfrastuktur und unterstützen den Anwender mit selbstständigen Konfigurationen. Nachteilig sind allerdings die laufenden Kosten, die an den IaaS-Anbieter zu entrichten sind. Auch das Herausgeben der ganzen oder teilweisen Infrastuktur (Cloud-Computing / Hyprid-Cloud) an einen Drittanbieter, ist meist mit Sicherheitsbedenken verbunden. Ein anderer Gedanke wäre das Abgeben von Zuständigkeiten an eine interne Anwendung und den Anwender selbst. Auch wenn die Basis immer noch vom Administrator bereitgestellt werden muss, ist die Idee, dass der Anwender selbsttätig in der Lage ist, sich in einem Teil der Infrasturktur seine virtuelle Umgebung aufzubauen. Die Einbindung der IT oder eines administrativen Weges, wäre somit obsolet. Anwendergruppen, wie Tester und Entwickler, könnten sich so den Aufbau von Test- oder Entwicklungsumgebungen vereinfachen. Der wiederholte Aufbau von Umgebungen ist in ihren Bereichen ein nötiges Unterfangen und könnte den betroffenen Personenkreis weit autonomer agieren lassen als zuvor. Vorstellbar ist also eine Applikation, die dem Anwender Freiraum in Aufbau und Verwaltung seiner Maschinen gibt und ihm zusätzliche Funktionen anbietet. 
+
+\section{Zielsetzung}
+Diese Arbeit wird sich mit der Konzipierung und der Umsetzung einer Anwendung auseinandersetzen. Der Fokus wird auf die Zentralisierung der Anwendung gelegt, auf die autonome Handhabung und die Möglichkeit zeitnah individuelle Maschinen zu erstellen. Die Modellierung der Applikation wird iterativ und inkrementell gestaltet. Beginnent bei der Planung bis hin zur Umsetzung. Der Funktionsumfang des Prototypen wird nach Requirement-Engineering Standard strukturiert geplant und mit Hilfe von fiktiven Stakeholdern eingegrenzt. Angestrebt wird die Umsetzung der Planung, die als Ziel einen lauffähigen Prototypen hat, der dem geplanten Funktionsumfang entspricht. 
+
+\begin{comment}
+Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interaktives Vorgehen eine Applikation zu modellieren, die den Anwender der Applikation beim Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und den Anwender durch seine ausgewählte Funktion leiten.
+Große Konfigurationen oder komplizierte Einstellungen sollen dem Anwender abgenommen werde. Sie geschehen im Hintergrund. 
+Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollen Im- und Exportfunktionen dies untzerstützen.
+Die Realisierung soll auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendigen Maschinen zu erstellen und zu verwalten.
+Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Einsatzbereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
+Bei der Erstellung der einzelnen Softwarekomponenten sind stehts die Prinzipien von hoher Kohäsion und loser Kopplung zu beachten. Darunter wird der Grad der Abhängigkeit zwischen mehreren Hard- und Softwarekomponenten verstanden, der Änderungen an einzelnen Komponenten erleichtert.
+Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden sowohl von unnötigen verschachtelten Menüführungen, als auch von einer Vielfalt an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
+
+\end{comment}
+\begin{comment}
+
+
+%Diese Arbeit nimmt sich ein paar dieser Faktoren an und wird versuchen administrative Aufgaben soweit zu vereinfachen, dass sie dem Anwender übergeben werden können. Für den grundlegenden Aufbau und die Bereitstellung einer virtuellen Maschine sind die Handgriffe nicht all zu komplex und könnten gerade für temporäre Maschinen weiter vereinfacht oder automatisiert werden.
+
+%Entlastung könnte der Schritt zu Iaas (Infrastructure-as-a-Service) bringen, um die zahlreichen Handgriffe zu reduzieren und komfortable Automatismen zu verwenden, die bei der Verwaltung der Basisinfrastuktur helfen und Konfigurationen selbstständig vornehmen können.
+%Wird also eine Hardware nicht mehr nur für einen Zweck benötigt, sondern wird abhängig von den darauf installierten virtuellen Maschinen, für unterschiedliche Aufgaben verwendet.
+%Für eine Reduzierung der zahlreichen Handgriffe könnte auf IaaS-Anbieter (IaaS: Infrastucture-as-a-Service) zurückgegriffen werden, wodurch 
+
+All das erfordert Zeit und Arbeitskraft. Administratoren sind regelmäßig dieser eher eintönigen Arbeit ausgesetzt, statt sich um Innovation und höheren Komfort zu kümmern. Außerdem nutzen konventionelle Installationen ihre Ressourcen häufig schlecht: Ein moderner Server mit etlichen CPUs und viel Arbeitsspeicher ist mit einem einzelnen Webserverprozess kaum auszulasten, wenn das Setup nicht Java oder ähnlich rechenintensive Software nutzt.
+
+und bei der Installation die Beachtung diverser möglicher Abhängigkeiten. 
+
+Ausserdem sind die Eigenschaften der einzelnen Server meist 
+
+
+Zudem liegen ungenutze Hardwareressourcen brach und All das erfordert nicht nur Zeit, sondern auch Arbeitskraft der Administratoren. Um Administratoren eintönige und umständliche Konfiguration zu ersparen kann auf die Virtualisierung von Systeme zurückgegriffen werden. Virtualiserung hat nicht nur den  Vorteil, dass Hardwarekosten gesenkt werden können und Ressourcen besser genutzt werden, sondern auch, dass neue Systeme schneller bereit stehen. Wer also die Vielzahl an Handgriffen reduzieren möchte, vereinfacht die Infrastruktur mit virtuellen Maschinen und Servern. 
+
+
+Virtualisierung hat die Schlagzahl beträchtlich erhöht ? mit KVM, Xen, VMware & Co. stellt der Admin neue Systeme viel schneller bereit, als sich neue Hardware in den Zeiten dedizierter Server beschaffen ließ. Die gewonnene Zeit bringt der nun für viel mehr Systeme Verantwortliche mit dem Klonen von Image-Konfigurationen, dem Kopieren von Verzeichnissen und dem Mounten von Speicherressourcen zu. Richtig knifflig wird es, wenn die Hardware nach Wartung ruft, denn dann gilt es, virtuelle Maschinen herunterzufahren, zu verschieben und neu zu starten.
+
+Wer die Schwemme an Handgriffen reduzieren will
+
+: Wenn das Unternehmen wächst, das das Setup betreibt, muss auch die IT-Plattform mit ihm wachsen. Die konventionelle Methode macht das aber äußerst schwierig, denn neue Funktionen im Setup setzen neue Rechner voraus, und an der Installation neuer Rechner hängt eine ganze Reihe weiterer Abhängigkeiten wie die korrekte Einrichtung von Switches und die spezifische Installation der benötigten Softwarekomponenten.
+
+All das erfordert Zeit und Arbeitskraft. Administratoren sind regelmäßig dieser eher eintönigen Arbeit ausgesetzt, statt sich um Innovation und höheren Komfort zu kümmern. Außerdem nutzen konventionelle Installationen ihre Ressourcen häufig schlecht: Ein moderner Server mit etlichen CPUs und viel Arbeitsspeicher ist mit einem einzelnen Webserverprozess kaum auszulasten, wenn das Setup nicht Java oder ähnlich rechenintensive Software nutzt.
+
+
+
+
+
+
+
+
 Aufgabe: Vom Problem zur Fragestellung
+
+
 
 \begin{quote}
 	``Es ist nicht zu wenig Zeit, die wir haben, sondern es ist zu viel Zeit, die wir nicht nutzen'' - Lucius Annaeus Seneca, \cite{Apelt200511}
@@ -9,7 +65,7 @@ dieser Satz stammt von dem römischer Philosophen Seneca (ca. 49 n. Chr.) und bes
 Die Informatik hat durch Automatisierung Prozessabläufe vereinfacht, durch effizientere Ressourcennutzung Zeit eingespart und den Arbeitsalltag beschleunigt.
 Gerade durch das Erforschen von effizienterer Ressourcennutzung und der Suche nach Zeitersparnis, ist in der Informatik die Virtualisierung entstanden. Sie hat in vielen Firmen die Serverlandschaften deutlich verkleinert, Clients durch virtuelle Desktops ersetzt und gestattet es Entwicklern und Testern ihren Arbeitsbereich auf produktionsnahen virtuellen Klonen auszuführen.
 Gerade der letzt genannte Aspekt, ist die Grundlage für diese Arbeit. Um genauer zu sein, wird der Fokus auf den automatisierten Aufbau von Entwicklungsumgebungen gelegt, inklusive der Vervollständigung durch ausgewählte Softwarekomponenten. Es wird also versucht, dem Entwickler Zeit zu sparen, damit er seine Zeit effektiver nutzen kann. Gewünschter Nebeneffekt ist die Unabhängigkeit von IT-Support Instanzen. So wird der Anwender in die Lage versetzt autonom zu handeln und Bearbeitungsschritte zu beschleunigen.
-
+\end{comment}
 \begin{comment}
 http://www.golem.de/news/openstack-viele-brauchen-es-keiner-versteht-es-wir-erklaeren-es-1503-112814.html
 
@@ -21,7 +77,7 @@ Die Herausforderung klassischer IT-Umgebungen besteht daher oft darin: Wenn das 
 
 All das erfordert Zeit und Arbeitskraft. Administratoren sind regelmäßig dieser eher eintönigen Arbeit ausgesetzt, statt sich um Innovation und höheren Komfort zu kümmern. Außerdem nutzen konventionelle Installationen ihre Ressourcen häufig schlecht: Ein moderner Server mit etlichen CPUs und viel Arbeitsspeicher ist mit einem einzelnen Webserverprozess kaum auszulasten, wenn das Setup nicht Java oder ähnlich rechenintensive Software nutzt.
 
-irtualisierung von Computing-Leistungen war der erste Schritt auf dem Weg von spezifischen Rechnern zu universell einsetzbaren. Sie verfolgt dabei einen einfachen Zweck - die Entkoppelung von Hardware - und sorgt dafür, dass eine IT-Infrastruktur deutlich flexibler wird. Ein Server dient nicht mehr nur einer Aufgabe, sondern erfüllt verschiedene Funktionen - abhängig davon, wie viele virtuelle Maschinen (VMs) auf jenem System beheimatet sind.
+Virtualisierung von Computing-Leistungen war der erste Schritt auf dem Weg von spezifischen Rechnern zu universell einsetzbaren. Sie verfolgt dabei einen einfachen Zweck - die Entkoppelung von Hardware - und sorgt dafür, dass eine IT-Infrastruktur deutlich flexibler wird. Ein Server dient nicht mehr nur einer Aufgabe, sondern erfüllt verschiedene Funktionen - abhängig davon, wie viele virtuelle Maschinen (VMs) auf jenem System beheimatet sind.
 
 Typische Virtualisierungen mittels KVM oder VMware lösen aber nur einen Teil der typischen Probleme. Denn auch bei ihnen ist der Grad an Automatisierung eher gering: Zwar müssen Administratoren nicht mehr für jedes neue System auch neue Server in Racks schrauben, aber neue virtuelle Maschinen legen sie noch immer per Hand an. Ebenfalls manuell werden Netzwerke eingerichtet und persistenter Speicher kommissioniert, denn wer will schon seinen Kunden etwa den Zugriff auf vorhandene, zentrale SAN-Speicher erlauben?
 
@@ -42,7 +98,10 @@ Wer die Schwemme an Handgriffen reduzieren will, greift zu einer Infrastructure-
 
 
 
-\section{Motivation}
+%\section{Motivation}
+\begin{comment}
+Vorstellbar wäre entsprechend eine Anwendung, die primär den administrativen Aufwand verkleinert und den Aufbau von temporären Maschinen weiter vereinfacht.
+
 Das Ziel dieser Arbeit ist die Entwicklung einer Applikation, zur automatisierten Erstellung von Linux basierten ad hoc Umgebungen. Der Anwender soll in die Lage versetzt werden, ohne Grundlegende Kenntnisse über Anwendungsstruktur und Betriebssystem, mit minimalem Aufwand, die benötigte virtuelle Maschine zu erstellen.
 Großer zeitlicher Aufwand für die Erstellung und Organisation wird entsprechend vermieden und es Anwendern ermöglicht sich auf Kerntätigkeiten zu fokussieren.
 Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden.
@@ -53,22 +112,15 @@ die durch vereinfachte Handhabung und einer minimalen Einarbeitungszeit den Anwe
 
 Das Ziel dieser Arbeit ist es, eine Software zu entwickeln, die durch vereinfachte Handhabung und minimaler Einarbeitungszeit, es dem Benutzer ermöglich eine ad-hoc Umgebung zu erstellen, ohne dass ein bürokratischer Aufwand erforderlich ist und ohne Grundwissen über die darunterliegende Anwendungsstruktur.
 Der normalerweise große zeitliche Aufwand für die Erstellung von virtuellen Maschinen soll möglichst minimiert werden und es Anwendern sowohl in Unternehmen als auch bei  Projektarbeiten erleichtern, sich auf die vorhandenen Usecase zu fokussieren. Somit muss keine Zeit mehr in Aufbau, Installation und Problembehebung investieren werden.
-
-\section{Zielsetzung}
-Das Ziel der vorliegenden Arbeit ist es, durch inkrementelles und interaktives Vorgehen eine Applikation zu modellieren, die den Anwender der Applikation beim Aufbau von virtuellen Umgebungen unterstützt. Je nach Wunsch des Anwenders, wird nicht nur der Aufbau einer Umgebung vereinfacht, sondern auch die direkte Installation von Programmen veranlasst. Eine Weboberfläche soll die entsprechenden Optionen zur Verfügung stellen und den Anwender durch seine ausgewählte Funktion leiten.
-Große Konfigurationen oder komplizierte Einstellungen sollen dem Anwender abgenommen werde. Sie geschehen im Hintergrund. 
-Damit auch ein Sichern oder ein Zurückspielen von vorhandenen virtuellen Maschinen möglich wird, sollen Im- und Exportfunktionen dies untzerstützen.
-Die Realisierung soll auf einem zentralen Knotenpunkt stattfinden, um es mehreren Anwendern zu ermöglichen, ihre notwendigen Maschinen zu erstellen und zu verwalten.
-Kernaufgaben sollen Open-Source Anwendungen übernehmen, die in ihrem Einsatzbereich etabliert sind. Ebenfalls im Fokus steht die Leichtigkeit der Konfiguration der auszuwählenden Open-Source Anwendung.
-Bei der Erstellung der einzelnen Softwarekomponenten sind stehts die Prinzipien von hoher Kohäsion und loser Kopplung zu beachten. Darunter wird der Grad der Abhängigkeit zwischen mehreren Hard- und Softwarekomponenten verstanden, der Änderungen an einzelnen Komponenten erleichtert.
-Um auch die Anwendungsoberfläche unkompliziert zu halten, soll der Anwender mit ein paar Klicks zu seinem Ziel geführt werden. Durch das Vermeiden sowohl von unnötigen verschachtelten Menüführungen, als auch von einer Vielfalt an Optionen und Konfigurationen, soll der Anwender in der Applikation einen Helfer für seine Tätigkeit finden.
-\newline
+\end{comment}
 
 
+
+
+
+
+%\section{Problemstellung}
 \begin{comment}
-
-
-\section{Problemstellung}
 %Die Einleitung muss Ihr Thema eingrenzen (und diese Eingrenzung rechtfertigen) und Ihr Erkenntnisinteresse prÃ¤zisieren und begrÃ¼nden
 Virtualisierung hat in vielen Bereichen den physischen Server abgelöst, denn der Finanzielle Aspekt ist für Unternehmen nicht unerheblich. Im Idealfall heißt der Umstieg auf virtuelle Landschaften gleich weniger Server, was gleichbedeutend mit weniger Stellfläche ist. Somit auch mit weniger Racks und weniger Verkabelung.\newline
 Aufwändige Vorplanung von Serverzentren entfällt, die Kostenplanung der unterschiedlichen Hardware wird minimiert und die Frage, was in ein paar Jahren mit der Hardware passieren soll, wird obsolet.\newline
@@ -79,11 +131,10 @@ Auch wenn die Softwarebranche eine Vielfalt an Möglichkeiten bereitstellt, sind 
 
 \end{comment}
 
+
 \section{Themenabgrenzung}
 Diese Arbeit greift bekannte und etablierte Softwareprodukte auf und nutzt diese in einem zusammenhängenden Kontext. Dabei werden die verwendeten Softwareprodukte nicht modifiziert, sondern für eine vereinfachte Benutzung durch eigene Implementierungen kombiniert. Sie werden mit einem Benutzerinterface versehen, welches die Abläufe visualisiert und dem Benutzer die Handhabung vereinfacht.
 Die vorzunehmenden Implementierungen greifen nicht in den Ablauf der jeweiligen Software ein, sondern vereinfachen das Zusammenspiel der einzelnen Anwendungen.
-
-
 
 \section{Struktur der Arbeit}
 Diese Arbeit wird in Kapitel \ref{ch:Grundlagen} Grundlagen schaffen, um ein besseres Verständnis über die Virtualisierung zu erhalten 

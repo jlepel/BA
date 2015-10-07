@@ -127,6 +127,13 @@
 \newblock URL \url{http://amazon.de/o/ASIN/1491907665/}. --
 \newblock ISBN 9781491907665
 
+\bibitem[Roland~Kluge(2013)]{Sophisten13}
+\dinatlabel{Roland~Kluge 2013} \textsc{Roland~Kluge}, SOPHIST~G.:
+\newblock \emph{Schablonen für alle Fälle}.
+\newblock 2013. --
+\newblock URL
+  \url{https://www.sophist.de/fileadmin/SOPHIST/Puplikationen/Broschueren/SOPHIST_Broschuere_MASTeR.pdf}
+
 \bibitem[Rupp und die SOPHISTen(2014)]{RuppSOPHISTen201410}
 \dinatlabel{Rupp und die SOPHISTen 2014} \textsc{Rupp}, Chris~;
   \textsc{SOPHISTen} die:
@@ -151,13 +158,6 @@
 \newblock \emph{Ansible vs. Salt}.
 \newblock Januar 2014. --
 \newblock URL \url{https://www.scriptrock.com/articles/ansible-vs-salt}
-
-\bibitem[Seneca(2005)]{Apelt200511}
-\dinatlabel{Seneca 2005} \textsc{Seneca}:
-\newblock \emph{Von der Kürze des Lebens}.
-\newblock Deutscher Taschenbuch Verlag, 11 2005. --
-\newblock URL \url{http://amazon.de/o/ASIN/342334251X/}. --
-\newblock ISBN 9783423342513
 
 \bibitem[Siegert und Baumgarten(2006)]{SiegertBaumgarten200612}
 \dinatlabel{Siegert und Baumgarten 2006} \textsc{Siegert}, Hans-Jürgen~;

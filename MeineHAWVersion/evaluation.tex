@@ -1,28 +1,7 @@
 \chapter{Evaluation}\label{ch:Evaluation}
 Um herauszufinden, ob und welche Softwareprodukte der Anwendung hinzugefügt werden können, kann eine Evaluation des Marktes hilfreich sein.
 Es ist zu eruieren, ob gewünschte Funktionalitäten unter Verwendung der technischen Randbedingungen aus Kapitel \ref{subsec:TechnischeRandbedingungen} - Unterpunkt 'Femdsoftware', von externen, etablierten, sowie kostenlosen Softwarekomponenten unterstützt oder sogar durchgeführt werden können.
-Da es bereits Anwendungen gibt, die sich mit der Verwaltung und dem Aufbau von virtuellen Maschinen befasst haben, werden im ersten Schritt zwei Produkte vorgestellt, die als Open-Source erhältlich sind.
-
-\section{Vergleichbare Anwendungen}
-Der Markt an Verwaltungs- und Administrationssoftware ist über die Jahre immer größer geworden. Besonders nach dem auftretenden Trend, alles über die Cloud steuern und administrieren zu können. Das wiederrum hat diverse Vorteile für Administratoren, da ihnen teils lästige und zeitaufwendige Konfigurationen erspart werden. Die Open-Source Community hat ebenfalls ihren Beitrag dazu geleistet und diverse Lösungen hervorgebracht, wovon zwei im Folgenden genauer betrachtet werden.
-
-\subsection{OpenNebula}
-%OpenNebula ist eine Open Source Lösung, die Cloud basierend ist und unter Verwendung verschiedener Industriestandards eine hochverfügbare, skalierbare Virtualisierungplattform zur Verfügung stellt. \cite{Netways:2015:Online}. 
-OpenNebula ist eine Open-Source-Cloud Lösung, die sich selbst als ein 'Open-Source-\\Industriestandard zur Virtualisierung von Rechenzentren' bezeichnet (\cite{Hock12}) und hochverfügbare, skalierbare Virtualisierungsplattformen zur Verfügung stellt.
-Als 'Infrastucture as a Service' (kurz IaaS) kann OpenNebula die zentrale Administration und Überwachung von virtuellen Systemen übernehmen. Kommt es zu Ausfällen von Komponenten, kann OpenNebula sich um den Neustart auf einem anderen Hostsystem kümmern. Zudem sind dynamische Erweiterungen der Hadwareressourcen möglich. Die Kernkompetenzen liegen dabei auf schon vorhandenen Systemen im Bereich Virtualisierung, Speicherung und Vernetzung.
-In erster Linie kann OpenNebula als Werkzeug zur Integration vorhandener Systeme gesehen werden, da es Möglichkeiten zur Wartung und Skalierung der gegebenen Infrastruktur zur Verfügung stellt.\newline
-Auch wenn OpenNebula sich selbst in das Enterprise Segment kategorisiert (\cite{opennebula:2015:Online}), ist es jedoch auch für kleinere Organisationen praktikabel. Gerade durch die Installation von wenigen Komponenten und seine Steuerung über nur ein Frontend, macht die Steuerung und Konfiguration komfortabel.
-
-\subsection{OpenStack}
-Der Ursprung von OpenStack liegt in einer Kooperation zwischen Rackspace (ein US-Webhoster) und der NASA, die versuchten eine Lösung zu finden, um Rechenkapazität an einer zentralen Stelle zu bündeln und einzelnen Abteilungen benötigte Ressourcen nach Bedarf anzubieten. Nachdem die NASA das Projekt abgegeben hat und sich diverse IT-Unternehmen um die Weiterentwicklung kümmerten, ist die Lösung ein fester Bestandteil des Portfolios aller großen Linux-Anbieter geworden.
-Die Struktur von OpenStack besteht aus einer Vielzahl an Komponenten, die alle unterschiedlich weit entwickelt sind. Während 'Keystone', welches oft als Hauptkomponente von OpenStack bezeichnet wird, als stabil und gut gewartet gilt, liegen neuere Komponenten noch teilweise hinter ihren Erwartungen.
-Ansonsten bietet OpenStack Administratoren ein großes Spektrum an Werkzeugen, um ihre Cloud-Computing Umgebung zu verwalten. Durch seine vielfältigen Einsatzmöglichkeiten und die große Auswahl an Optionen, ist OpenStack ein guter 'Allrounder', mit Defiziten in der Einarbeitungszeit. (\cite{Golem:2015:Online})
-
-\subsection{Fazit}
-Eines der wichtigen Merkmale von OpenNebula ist der Schwerpunkt auf Rechenzentrumsvirtualisierung inklusive bestehender Infrastruktur wodurch dies mehr im Enterprise-Cloud-Computing angesiedelt wird, OpenStack dagegen ein Vertreter des Public-Cloud-Computing ist. Für OpenNebula spricht, dass sich eigene VM-Images per Knopfdruck auf Virtualisierungsservern und dem dazugehörigen Storage instantiieren lassen und Zuweisungen wie IP, Load-Balancing und Speicherplatz von der eigenen Verwaltungssoftware übernommen wird. Zudem kommt eine übersichtliche Steuerung, die Fähigkeit mehrere hundert Server / virtuelle Maschinen verwalten zu können und die Eigenschaft verhältnismäßig einfach in eine bestehende Infrastruktur integriert zu werden. OpenStack versucht für alle alles anzubieten und kommt daher mit einer Vielzahl an unterschiedlichen Komponenten daher, die schnell unübersichtlich werden können.
-Das Komponentensystem bringt aber auch den Vorteil mit sich, nur Komponenten zu verwenden, die benötigt werden. So wird im Grunde mehr Flexibilität und die Chance auf Kostenreduzierung erreicht.\newline
-Für die Verwaltung von virtuellen Maschinen und Infrastrukturen sind beide Applikationen mehr als geeignet. Allerdings fehlt bei beiden die Möglichkeit direkt Software mit aufzuspielen. Zudem sind beide Anwendungen für den anvisierten Verwendungszweck zu überdimensional in ihren Funktionalitäten. 
-
+%Da es bereits Anwendungen gibt, die sich mit der Verwaltung und dem Aufbau von virtuellen Maschinen befasst haben, werden im ersten Schritt zwei Produkte vorgestellt, die als Open-Source erhältlich sind.
 \section{Virtualisierungsprodukte}
 Virtualisierungsprodukte oder entsprechende Tools helfen virtuelle Maschinen für temporäre Zwecke aufzubauen, wie beispielsweise um alternative Betriebssysteme zu testen, Softwareprodukte auszuprobieren oder Entwicklungsumgebungen zu erstellen.
 Die wohl derzeit (Stand Mitte 2015) bekanntesten und etabliertesten Virtualisierungslösungen werden von drei verschiedenen Herstellern repräsentiert und zum Teil als Freeware angeboten.

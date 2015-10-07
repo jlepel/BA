@@ -52,7 +52,7 @@ Da weder die Anwendungen noch das entsprechende Gastbetriebssystem Kenntnis darü
 \end{center}
 
 \subsection{Hypervisor}\label{subsec:Hypervisor}
-Die Benamung des Hypervisors kann von Hersteller zu Hersteller variieren. Bei Microsoft wird er z.B. Hyper-V genannt, während der Hypervisor bei VMware unter der Bezeichnung ESXi läuft.
+Die Benennung des Hypervisors kann von Hersteller zu Hersteller variieren. Bei Microsoft wird er z.B. Hyper-V genannt, während der Hypervisor bei VMware unter der Bezeichnung ESXi läuft.
 Der Hypervisor, oder in der Literatur auch VMM (Virtual Machine Monitor) genannt, ist die sogenannte abstrahierende Schicht zwischen der tatsächlich vorhanden Hardware und den ggf. mehrfach existierenden Betriebssystemen. Zu sehen in Abbildung \ref{fig:Betriebssystemvirtualisierung}.
 Seine primäre Aufgabe ist die Verwaltung der Host-Ressourcen und deren Zuteilung bei Anfragen der Gastsysteme. Lösen Instruktionen oder Anfagen eines Gastbetriebssystems eine CPU-Exception aus, weil diese im Benutzer-Modus ausgeführt werden, fängt der Hypervisor diese auf und emuliert die Ausführung der Instruktionen (trap and emulate). Die Ressourcen des Hostsystems werden durch den Hypervisor so verwaltet, dass diese bedarfsgerecht zur Verfügung stehen, egal ob ein oder mehrere Gastsysteme laufen. Zu seinen Aufgaben zählen unter anderem E/A-Zugriffe (insbesondere Hardwarezugriffe), Speichermanagement, Prozesswechsel und System-Aufrufe.\newline
 \begin{figure} 

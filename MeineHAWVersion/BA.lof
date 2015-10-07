@@ -8,15 +8,15 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Betriebssystemvirtualisierung}}{6}{figure.2.1}
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Hypervisor Typ 1 und 2}}{7}{figure.2.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bezeichnung der linken Grafik}}}{7}{figure.2.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezeichnung der rechten Grafik}}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Betriebssystemvirtualisierung}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Hypervisor Typ 1 und 2}}{6}{figure.2.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bezeichnung der linken Grafik}}}{6}{figure.2.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bezeichnung der rechten Grafik}}}{6}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Stakeholderdefinition}}{11}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Business-Use-Case \"Ubersicht}}{14}{figure.3.2}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Entwurf der Verwaltungsoberfl\"ache}}{21}{figure.3.3}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Enwurf der Aufbauoberfl\"ache - Eingabe Parameter}}{22}{figure.3.4}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Stakeholderdefinition}}{10}{figure.3.1}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Business-Use-Case \"Ubersicht}}{13}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Entwurf der Verwaltungsoberfl\"ache}}{20}{figure.3.3}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Enwurf der Aufbauoberfl\"ache - Eingabe Parameter}}{21}{figure.3.4}
 \contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Enwurf der Aufbauoberfl\"ache - Auswahl der Softwarekomponenten}}{22}{figure.3.5}
 \contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces Enwurf der Sharing-Oberfl\"ache}}{23}{figure.3.6}
 \contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Enwurf der Export-Oberfl\"ache}}{24}{figure.3.7}
