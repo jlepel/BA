@@ -8,8 +8,8 @@ A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: entwurf.aux
 A level-1 auxiliary file: umsetzung.aux
 A level-1 auxiliary file: fazit.aux
-The style file: dinat.bst
 A level-1 auxiliary file: anhang.aux
+The style file: dinat.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -19,60 +19,68 @@ Database file #1: literatur.bib
 Warning--entry type for "Sophisten13" isn't style-file defined
 --line 314 of file literatur.bib
 Warning--entry type for "ScriptRock:2014:Online" isn't style-file defined
---line 324 of file literatur.bib
+--line 322 of file literatur.bib
 Warning--entry type for "Sinatra:2015:Online" isn't style-file defined
---line 332 of file literatur.bib
+--line 330 of file literatur.bib
 Warning--entry type for "Wikipedia:2015:Online" isn't style-file defined
---line 340 of file literatur.bib
+--line 338 of file literatur.bib
 Warning--entry type for "Statista:2015:Online" isn't style-file defined
---line 347 of file literatur.bib
+--line 345 of file literatur.bib
 Warning--entry type for "Golem:2015:Online" isn't style-file defined
---line 354 of file literatur.bib
+--line 352 of file literatur.bib
 Warning--entry type for "opennebula:2015:Online" isn't style-file defined
---line 361 of file literatur.bib
+--line 359 of file literatur.bib
+Warning--entry type for "vagrant:2015:Online" isn't style-file defined
+--line 366 of file literatur.bib
+Warning--entry type for "Braun11:Online" isn't style-file defined
+--line 373 of file literatur.bib
+Warning--entry type for "Scherf15:Online" isn't style-file defined
+--line 381 of file literatur.bib
+Warning--entry type for "Fleichmann12:Online" isn't style-file defined
+--line 388 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
 Warning--no proper publisher, using url in Hock12
 Warning--empty note in Hock12
-You've used 27 entries,
+You've used 31 entries,
             3552 wiz_defined-function locations,
-            994 strings with 10982 characters,
-and the built_in function-call counts, 15927 in all, are:
-= -- 1852
-> -- 210
-< -- 277
-+ -- 347
-- -- 107
-* -- 1428
-:= -- 2633
-add.period$ -- 40
-call.type$ -- 27
-change.case$ -- 115
-chr.to.int$ -- 27
-cite$ -- 31
-duplicate$ -- 426
-empty$ -- 1408
-format.name$ -- 211
-if$ -- 3348
+            1014 strings with 11647 characters,
+and the built_in function-call counts, 17987 in all, are:
+= -- 2107
+> -- 238
+< -- 315
++ -- 393
+- -- 120
+* -- 1600
+:= -- 2984
+add.period$ -- 44
+call.type$ -- 31
+change.case$ -- 131
+chr.to.int$ -- 31
+cite$ -- 35
+duplicate$ -- 478
+empty$ -- 1564
+format.name$ -- 235
+if$ -- 3767
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 34
-newline$ -- 199
-num.names$ -- 108
-pop$ -- 160
+newline$ -- 223
+num.names$ -- 124
+pop$ -- 176
 preamble$ -- 1
-purify$ -- 115
+purify$ -- 131
 quote$ -- 0
-skip$ -- 605
+skip$ -- 683
 stack$ -- 0
-substring$ -- 1389
-swap$ -- 73
-text.length$ -- 34
+substring$ -- 1593
+swap$ -- 81
+text.length$ -- 38
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 212
+type$ -- 256
 warning$ -- 4
-while$ -- 169
+while$ -- 193
 width$ -- 0
-write$ -- 336
-(There were 11 warnings)
+write$ -- 376
+(There were 15 warnings)

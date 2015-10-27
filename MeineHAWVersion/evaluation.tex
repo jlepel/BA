@@ -1,88 +1,87 @@
 \chapter{Evaluation}\label{ch:Evaluation}
 Um herauszufinden, ob und welche Softwareprodukte der Anwendung hinzugefügt werden können, kann eine Evaluation des Marktes hilfreich sein.
-Es ist zu eruieren, ob gewünschte Funktionalitäten unter Verwendung der technischen Randbedingungen aus Kapitel \ref{subsec:TechnischeRandbedingungen} - Unterpunkt 'Femdsoftware', von externen, etablierten, sowie kostenlosen Softwarekomponenten unterstützt oder sogar durchgeführt werden können.
+Dabei ist zu eruieren, ob gewünschte Funktionalitäten unter Verwendung der technischen Randbedingungen aus Kapitel \ref{subsec:TechnischeRandbedingungen} von externen, etablierten sowie kostenlosen Softwarekomponenten unterstützt oder sogar durchgeführt werden können.
 %Da es bereits Anwendungen gibt, die sich mit der Verwaltung und dem Aufbau von virtuellen Maschinen befasst haben, werden im ersten Schritt zwei Produkte vorgestellt, die als Open-Source erhältlich sind.
 \section{Virtualisierungsprodukte}
-Virtualisierungsprodukte oder entsprechende Tools helfen virtuelle Maschinen für temporäre Zwecke aufzubauen, wie beispielsweise um alternative Betriebssysteme zu testen, Softwareprodukte auszuprobieren oder Entwicklungsumgebungen zu erstellen.
-Die wohl derzeit (Stand Mitte 2015) bekanntesten und etabliertesten Virtualisierungslösungen werden von drei verschiedenen Herstellern repräsentiert und zum Teil als Freeware angeboten.
+Virtualisierungsprodukte oder entsprechende Tools können Anwendern helfen virtuelle Maschinen für temporäre Zwecke aufzubauen, wie beispielsweise um alternative Betriebssysteme zu testen, Softwareprodukte auszuprobieren oder Entwicklungsumgebungen zu erstellen.
+Die derzeit (Stand Juli 2015) bekanntesten und etabliertesten Virtualisierungslösungen werden von drei verschiedenen Herstellern vertrieben und werden zum Teil als Freeware angeboten.
 \begin{enumerate}
 \item \textbf{VMware Player / Plus}\newline
-Preiswerte Virtualisierungslösung für Unternehmen. 
-Source-Code.
+Der VMware Player ist VMwares preiswerte Virtualisierungslösung für Unternehmen und Privatkunden.
 \item \textbf{Microsoft Hyper-V}\newline
-Microsofts Virtualisierungslösung, die nur in Windows 8 oder höher lauffähig ist.
+Microsofts Virtualisierungslösung ist Hyper-V, die ab Windows 8 oder Windows Server 2012 kostenlos zur Verfügung steht.
 \item \textbf{Oracle VM VirtualBox}\newline
-Gratis Open-Source-Tool von Oracle mit großem Funktionsumfang und frei verfügbar. 
+VirtualBox ist ein gratis Open-Source-Tool von Oracle, das großen Funktionsumfang bietet und kostenlos angeboten wird. 
 \end{enumerate}
 
 \subsection{VMware Player (Plus)}
-Eines der bekanntesten Unternehmen für Virtualisierungslösungen ist VMware.
+Eines der bekanntesten Unternehmen für Virtualisierungslösungen ist VMware.\footnote{\label{foot:dama}Quelle: ama Direktbefragung 02/2014}
 VMware bietet für den Privatanwender den VMware Player an, der das kostenlose Pendant zur professionellen Lösung VMware Workstation / VMware Fusion darstellt.
-Mittlerweile ist der VMware Player für Unternehmen unter dem Namen VMware Player Plus, zum Preis von ca. 90 Euro zu erwerben. 
-Der VMware Player (Plus) unterstützt ca. 200 Gastbetriebssysteme, ganz gleich ob 32Bit oder 64Bit, und lässt sich auf Windows und verschiedenen Linux-Distributionen installieren. Virtuelle Maschinen lassen sich nur als VMDK-Format (Virtual Machine Disk) speichern, was somit die Wahl der Dateiformate enorm einschränkt. Features wie eine virtuelle Maschine in einen vorherigen Systemzustand zurückzuversetzen fehlt gänzlich, genau so wie das Duplizieren einer Maschine. Allerdings werden Export- und Import Funktionen, sowie das erstellen von Snapshots vom VMware Player unterstützt.
+Mittlerweile ist der VMware Player für Unternehmen unter dem Namen VMware Player Plus, zum Preis von 134,95 Euro zu erwerben.\footnote{\label{foot:player_plus}Quelle: http://store.vmware.com} Der VMware Player (Plus) unterstützt ca. 200 Gastbetriebssysteme, mit 32Bit oder 64Bit, und lässt sich auf Windows und verschiedenen Linux-Distributionen installieren. Nachteilig ist die Beschränkung auf das VMDK-Format (Virtual Machine Disk), das bei der Speicherung von virtuellen Maschinen zur Verfügung steht. Zudem fehlen Features, wie eine virtuelle Maschine in einen vorherigen Systemzustand zurückzuversetzen, oder eine Maschine zu duplizieren. Allerdings werden Export- und Import Funktionen, sowie das Erstellen von momentanen Zuständen vom VMware Player unterstützt.
 
 \subsection{Microsoft Hyper-V}
-Microsoft hat in Windows 8 (und höher) Hyper-V integriert, das sich über Windows-Funktionen einfach nachinstalliert lässt. Damit dies möglich ist, müssen zwei Faktoren gegeben sein. Windows 8 muss als Professional-Version in der 64-Bit Version vorliegen. Der Vorteil gegenüber der Konkurrenz besteht in der Fähigkeit mehrere virtuelle Maschinen prallel betreiben zu können, ohne signifikanten Performanceverlust. Dies erreicht Hyper-V dank SLAT, einer Technik zur dynamischen RAM Verwaltung.
-%TODO: ggf noch Infos suchen
+Hyper-V wurde von Microsoft in Windows 8 (oder höher) und Windows Server 2012 integriert. Die Software lässt sich über die Windows-Funktion einfach nachinstalliert. Damit dieses möglich ist, müssen zwei Faktoren erfüllt sein. Windows 8 muss als Professional-Version in der 64-Bit Version vorliegen. Der Vorteil gegenüber den Mitbewerbern besteht in der Möglichkeit mehrere virtuelle Maschinen parallel betreiben zu können ohne signifikanten Performanceverlust. Dieses erreicht Hyper-V durch SLAT einer Technik zur dynamischen RAM Verwaltung.
+
 \subsection{Oracle VM VirtualBox}\label{ssec:VirtualBox}
-Die im April 2005 entstandene Virtualisierungssoftware von Oracle (erst InnoTek Systemberatung GmbH) eignet sich für Windows, Linux, Mac OS X, FreeBSD und Solaris als Hostsystem. An Gastsystemen wird eine Vielzahl von x64- und x86-Betriebssystemen unterstützt, so wie diverse Linux Distributionen, Windows ab Version 3.11, Mac OS X, IBM OS/2 und FreeBSD. \newline
-VirtualBox lässt dem Anwender viele Freiheiten im Speichern seiner virtuellen Umgebung. Etwa vier gängige Formate werden angeboten und ermöglichen einen leichteren Austausch unter Anwendern. Ein weiterer Vorteil besteht darin, dass VirtualBox vollständig kostenlos und OpenSource ist. Der Quellcode steht jedem Interessierten zur Verfügung.
-Im Funktionsumfang enthalten sind das Importieren und Exportieren von virtuellen Maschinen, das Erstellen von Snapshots und das Klonen von virtuellen Maschinen.
+Die im April 2005 gegründete Virtualisierungssoftware von Oracle (erst InnoTek Systemberatung GmbH) eignet sich für Windows, Linux, Mac OS X, FreeBSD und Solaris als Hostsystem. An Gastsystemen wird eine Vielzahl von 32Bit und 64Bit-Betriebssystemen unterstützt, diverse Linux Distributionen, Windows ab Version 3.11, Mac OS X, IBM OS/2 und FreeBSD. \newline
+VirtualBox lässt dem Anwender viele Freiheiten im Speichern seiner virtuellen Umgebung. Vier gängige Formate werden von VirtualBox angeboten und ermöglichen einen leichteren Austausch von erstellten virtuellen Maschinen unter Anwendern. Ein weiterer Vorteil von VirtualBox besteht darin, dass VirtualBox kostenlos und OpenSource ist. Der Quellcode steht jedem Interessierten zur Verfügung.
+Im Funktionsumfang der Software enthalten sind das Importieren und Exportieren von virtuellen Maschinen, das Erstellen von Snapshots und das Klonen von virtuellen Maschinen.
 
 \subsection{Zusammenfassung}
-Die wichtigsten Faktoren bezüglich der zu entwickelnden Anwendung zusammengefasst:\newline\newline
-
-\begin{tabular}{|p{3cm} | p{3cm} | p{3cm} | p{3cm}|}
+\textcolor{white}{Zusammenfassung}
+\begin{table}[!h]
+\begin{tabular}{| p{3cm} | p{3cm} | p{3cm} | p{3cm}|}
 \hline 
  \cellcolor[gray]{0.9} &\textbf{VMware Player (Plus)} \cellcolor[gray]{0.9} &\textbf{Microsoft Hyper-V} \cellcolor[gray]{0.9} &\textbf{Oracle VM VirtualBox}\cellcolor[gray]{0.9}  \\ \hline
-\textbf{Host-Betriebssystem} &Windows, diverse\newline Linux Distributionen &Windows 8 Pro 64 Bit& Windows, Linux, MacOS X \\ \hline  
-\textbf{Gastbetriebssysteme}  &Mehr als 200 Gast-Betriebssysteme & &Diverse Linux\newline Distributionen, Windows, FreeBSD, Mac OS X, IBM OS/2 \\ \hline 
+\textbf{Host-Betriebssystem} &Windows, diverse\newline Linux Distributionen &Windows 8 Pro\newline 64 Bit (oder höher); Microsoft Server 2012& Windows, Linux, Mac OS X, FreeBSD und Solaris \\ \hline  
+\textbf{Gast\-betriebssysteme}  &Mehr als 200 Gast-Betriebssysteme & Ab Windows XP mit SP 3 (oder höher), Diverse Linux Distributionen, FreeBSD &Diverse Linux\newline Distributionen, Windows, FreeBSD, MacOS X,\newline IBM OS/2 \\ \hline 
 \textbf{64-Bit-Gast-Betriebssystem} & Ja  & Ja & Ja \\ \hline 
 \textbf{Dateiformate für virtuelle Disks} &VMDK &VHDX &VMDK, VHD, Parallels Hard Disk, OVF \\ \hline
 \textbf{Snapshots} & Nein & Nein & Ja \\ \hline
 \textbf{Klonen} & Nein & Nein & Ja \\ \hline
 \textbf{Export von virtuellen Maschinen} & Ja & Ja & Ja \\ \hline
-\textbf{Preis} & 90 Euro für Unternehmen & Kostenlos & Kostenlos\\ \hline 
+\textbf{Preis} & 134,96 Euro für Unternehmen; Kostenlos für Privatanwender  & Kostenlos & Kostenlos\\ \hline 
 \end{tabular}
+\caption[Zusammenfassung evaluierter Softwareprodukte]{Zusammenfassung evaluierter Softwareprodukte\footnotemark}
+\end{table}\footnotetext{Quelle: Eigene Darstellung}  
+\FloatBarrier
+\pagebreak
+\subsection{Resümee}
+Auch wenn VMware zu den bekannteren Herstellern gehört und der VMware Player (Plus) eine Vielzahl an Funktionen bietet, macht die Unterscheidung zwischen einer Unternehmensvariante und einer für Privatanwender die zukünftige Benutzung aufwändiger. Sollte die zu erstellende Anwendung in einem kommerziellen Umfeld betrieben werden, so muss auf den VMware-Player Plus zugegriffen werden. Dadurch sind ggf. Änderungen an der Implementierung vorzunehmen sind und die entsprechenden Lizenzkosten zu entrichten. Außerdem schränkt nicht nur die geringe Auswahl an Dateiformaten zum Export von Maschinen die Funktionsweise ein, sondern auch das Nichtvorhandensein von Snapshot- und Klon Funktionen ist ein negativer Punkt.\\
+Microsofts Lösung stellt sich, im Rahmen dieser Arbeit, von den Grundanforderungen her als nicht nutzbar heraus. Da Hyper-V Windows als Host-System benötigt, widerspricht dieses den gestellten technischen Randbedingungen aus Kapitel \ref{sec:Randbedingungen} - Server Betriebssystem). 
+Oracles VirtualBox hingegen vereint viele für die geforderten Funktionen unterstützende und hilfreiche Aspekte. Die Vielzahl an unterstützenden Dateiformaten ist für die Umsetzung der geforderte Exportfunktion ein positiver Faktor. Da VirtualBox für Privatanwender und Firmenkunden kostenlos ist, hat der Lizensierungsaspekt keine Relevanz. VirtualBox lässt sich auf diversen Linux-Umgebungen installieren und erfüllt einen weiteren Punkt aus den technischen Randbedingungen (siehe Kapitel \ref{subsec:TechnischeRandbedingungen}).VirtualBox ist durch seinen Funktionsumfang in der Lage, für wichtige Funktionen in der angestrebten Applikation eingesetzt zu werden. Dieses hat den Vortiel, dass die Funktionsbestandteile nicht kostenaufwändig und langwierig implementiert werden müssen.
 
-\subsection{Fazit}
-Auch wenn VMware zu den bekannteren Herstellern gehört und der VMware Player (Plus) eine Vielzahl an Funktionen bietet, macht die Unterscheidung zwischen der Unternehmensvariante und der für Privatanwender die zukünftige Benutzung kompliziert. Sollte die zu erstellende Anwendung in einem nicht privaten Umfeld betrieben werden, so muss auf den VMware-Player Plus zugegriffen werden, wodurch ggf. Änderungen an der Implementierung vorzunehmen sind und die entsprechenden Lizenzkosten zu beachten wären. Außerdem schränkt nicht nur die geringe Auswahl an Dateiformaten zum Export von Maschinen die Funktionsweise ein, sondern auch das Nichtvorhandensein von Snapshot- und Klon Funktionen.
-Microsofts Lösung stellt sich von den Grundanforderungen her als nicht nutzbar heraus, da Hyper-V Windows als Grundlage benötigt, dieses jedoch nicht den gestellten technischen Randbedingungen (Kapitel \ref{sec:Randbedingungen} - Server Betriebssystem) an die zu erstellende Software genügt. 
-Oracles VirtualBox hingegen vereint viele für die geforderten Funktionen unterstützende und hilfreiche Aspekte. Die Vielzahl an unterstützenden Dateiformaten kann für die geforderte Exportfunktion interessant sein. Da VirtualBox für Privatanwender und Firmenkunden kostenlos ist, fällt der Lizensierungsaspekt weg. VirtualBox lässt sich auf diversen Linux-Umgebungen installieren und somit ebenfalls mit den technischen Randbedingungen aus Kapitel \ref{subsec:TechnischeRandbedingungen} in Einklang bringen. Ggf. könnte der Punkt, dass VirtualBox Open-Source ist, für eine spätere Weiterentwicklungen interessant werden.
-VirtualBox wäre durch seinen Funktionsumfang in der Lage, wichtige Funktionen in der angestrebten Applikation zu übernehmen. Dies hätte zudem den Vorteil, dass die Funktionsbestandteile nicht aufwändig implementiert werden müssen.
-
-\section{Konfigurationsmanagement-Systeme}
-Wie in Kapitel \ref{sec:Konfigurationsmanagement} beschrieben, helfen Konfigurationsmanagement-Systeme bei der Umsetzung von sogenannten Zustandsbeschreibungen eines Hostes. Kurz gefasst, Konfigurationsmanagement-Systeme können gewünschte Software auf Zielrechner(n) installieren, Dienste und Applikationen starten/beenden, Konfigurationen ändern/erstellen/löschen und wenn gewünscht, dies alles gleichzeitig auf einem oder mehreren Zielrechnern.
-Durch die Anwendung von Konfigurationsmanagement-Systemen, kann die aus der Anforderungsanalyse herausgestellte Anforderung nach automatisierter Installation von Software übernommen werden.
+\section{Konfigurationsmanagementsysteme}
+Wie in Kapitel \ref{sec:Konfigurationsmanagement} beschrieben, helfen Konfigurationsmanagementsysteme bei der Umsetzung von sogenannten Zustandsbeschreibungen eines Hostes. Konfigurationsmanagementsysteme können erforderliche Software installieren, Dienste und Applikationen starten/beenden, Konfigurationen ändern/erstellen/löschen und dieses gleichzeitig auf einem oder mehreren Zielrechnern.
+Durch die Anwendung von Konfigurationsmanagementsystemen kann die aus der Anforderungsanalyse herausgestellte Anforderung nach automatisierter Installation von Software übernommen werden.
 Auch hier gibt es bekannte und häufig verwendete Applikationen, die im Folgenden betrachtet werden.
 
 \subsection{Ansible}\label{ssec:Ansible}
-Die Hauptdesignidee bei dem in Python geschriebenen Ansible ist es, Konfigurationen so leicht wie möglich durchführen zu können. Es werden weder aufwändige Deployment-Scripts benötigt, noch komplizierte Syntaxen verwendet. Ansible wird nur auf der Maschine installiert, die die Infrastruktur verwaltet und kann von dort auf die gewünschten Maschinen zugreifen. Die Clients benötigen weder eine lokale Ansible Installation noch andere spezielle Softwarekomponenten. (\cite{Hall201311})
+Die Hauptdesignidee bei dem in Python geschriebenen Programm Ansible ist es, Konfigurationen mit wenig Aufwand durchführen zu können. Dabei werden weder aufwändige Deployment-Scripts benötigt noch komplizierte Syntax verwendet. Ansible wird nur auf der Maschine installiert, die die Infrastruktur verwaltet und kann von dort auf die gewünschten Maschinen zugreifen. Die Clients benötigen weder eine lokale Ansible-Installation noch andere spezielle Softwarekomponenten. [\cite{Hall201311}]
 Die Kommunikation zwischen dem Host, auf dem Ansible installiert ist und den Clients wird über SSH ausgeführt. Für Linux-Distributionen, auf denen SSH für den Root Benutzer gesperrt sind, kann Ansible 'sudo' Befehle emulieren, um die gewünschte Zustandsbeschreibung durchzuführen. Windows wird in der aktuellen Version 1.9.1 nicht unterstützt.
-Zustandsbeschreibungen werden in YAML Syntax ausgeführt und in Playbooks geschrieben. Playbooks haben eine simple YAML Struktur und können somit schon vorgefertigt als Template gespeichert und wieder verwendet werden (\cite{ScriptRock:2014:Online}).
+Zustandsbeschreibungen werden in YAML Syntax ausgeführt und in Playbooks geschrieben. Playbooks haben eine einfache YAML Struktur und können somit schon vorgefertigt als Template gespeichert und wiederverwendet werden. [\cite{ScriptRock:2014:Online}]
 
 
 \subsection{Saltstack}
-Saltstack oder kurz 'Salt' ist wie Ansible in Python entwickelt worden. Zur Kommunikation mit den gewünschten Clients wird ein Master benötigt und Agenten, oder auch Minions gennat, die auf den Zielclients installiert werden müssen. %Das einen höheren Installationsaufwand zur Folge hat.
-Die eigentliche Kommunikation funktioniert über eine ZeroMQ messaging lib in der Transportschicht, wordurch die Verständigung zwischen Master und Minions vereinfacht wird. Dadurch ist die Kommunikation zwar schnell, jedoch nicht so sicher wie die SSH Kommunikation von Ansible. 
-ZeroMq bietet nativ keine Verschlüsselung an und transportiert Nachrichten über IPC, TCP, TIPC und Multicast. 
-Der größte Vorteil von Salt ist die Skalierbarkeit. Diese macht es möglich mehrere Ebenen an Mastern zu erstellen, um so eine bessere Lastverteilung zu erhalten.
-Salt benutzt für seine Konfigurationsdateien zwar ebenfalls YAML, allerdings müssen in der Konsole ausgeführte Befehle in Python oder PyDSL geschrieben werden. 
-\cite{ScriptRock:2014:Online}
+Saltstack oder kurz 'Salt' ist wie Ansible in Python entwickelt worden. Zur Kommunikation mit den Clients wird ein Mastersystem benötigt und Agenten, als Minions bezeichnet, die auf den Zielclients installiert werden müssen. %Das einen höheren Installationsaufwand zur Folge hat.
+Die eigentliche Kommunikation wird über eine ZeroMQ messaging lib in der Transportschicht aufgebaut, wodurch die Verständigung zwischen Master und Minions vereinfacht wird. Dadurch verschnellert sich zwa die Kommunikation, jedoch ist diese dadurch unsicherer, als die SSH Kommunikation von Ansible. 
+ZeroMq bietet nativ keine Verschlüsselung an, kann aber Nachrichten über IPC, TCP, TIPC oder Multicast transportieren. 
+Salts Skalierbarkeit ist für Administratoren ein relevanter Faktor. Diese macht es möglich mehrere Ebenen an Mastern zu erstellen, um eine bessere Lastverteilung zu erhalten.
+Für die eigenen Konfigurationsdateien benutzt Salt das YAML-Format. Allerdings müssen Befehle, die in der Konsole ausgeführte werden, in Python oder PyDSL verfasst werden. [\cite{ScriptRock:2014:Online}]
 
 \subsection{Puppet}\label{ssec:Puppet}
-Der größte Vertreter auf dem Markt  im Bereich Konfigurationsmanagement-Systeme ist wohl Puppet von Puppet Labs. Puppet hat nicht nur eine ausgereifte Monitoring-Oberfläche und läuft auf allen gängigen Betriebssystemen, sondern ist darüber hinaus Open-Source und bietet einen professionellen Support. Entwickelt wurde Puppet in Ruby. Entsprechend ist das Command-Line Interface an Ruby angelehnt, was natürlich den Nachteil mitsicht bringt, dass neben den Puppet Befehlen auch noch Ruby gelernt werden muss.
+Der größte Vertreter auf dem Markt  im Bereich Konfigurationsmanagement-Systeme ist Puppet von Puppet Labs. Puppet hat nicht nur eine ausgereifte Monitoring-Oberfläche und läuft auf allen gängigen Betriebssystemen, sondern ist darüber hinaus Open-Source und bietet einen professionellen Support. Entwickelt wurde Puppet in Ruby. Entsprechend ist das Command-Line Interface an Ruby angelehnt, was den Nachteil mit sich bringt, dass neben dem lernen der Puppet Befehlen auch Ruby Kenntnisse erforderlich sind.
 Wie bei Salt muss es einen Master geben, auf dem der Puppet-Daemon (Puppetmaster) installiert ist. Der Puppetmaster hält die Zustandsbeschreibung für die jeweiligen Clients und verteilt diese auf Anfrage via REST-API.
-Die Clients selbst benötigen ebenfalls einen Agenten (Puppet-Agent), um die Zustandsbeschreibungen zu erfragen. Dieser vergleicht die Zustandsbeschreibung mit der aktuellen Konfiguration des Clients und nimmt entsprechende Änderungen vor (\cite{Rhett201508}).
+Die Clients selbst benötigen einen Agenten (Puppet-Agent), um die Zustandsbeschreibungen zu erfragen. Dieser vergleicht die Zustandsbeschreibung mit der aktuellen Konfiguration des Clients und nimmt entsprechende Änderungen vor. [\cite{Rhett201508}]
 
 \subsection{Zusammenfassung}
-Die wichtigsten Faktoren bezüglich der zu entwickelnde Anwendung zusammengefasst.\newline\newline
-
+\textcolor{white}{Zusammenfassung}
+\begin{table}[!h]
 \begin{tabular}{|p{3cm} | p{3cm} | p{3cm} | p{3cm}|}
 \hline 
  \cellcolor[gray]{0.9} &\textbf{Vagrant} \cellcolor[gray]{0.9} &\textbf{Saltstack} \cellcolor[gray]{0.9} &\textbf{Puppet}\cellcolor[gray]{0.9}  \\ \hline
-\textbf{Host-Betriebssystem} & Diverse Linux Distributionen & Diverse Linux Distributionen & Linux Distributionen, Windows \\ \hline  
-\textbf{Client-Betriebssysteme}  & Diverse Linux Distributionen, Windows & Diverse Linux Distributionen, Windows &  Linux Distributionen, Windows\\ \hline 
+\textbf{Host-Betriebssystem} & Diverse Linux Distributionen & Diverse Linux Distributionen & Diverse Linux Distributionen, Windows \\ \hline  
+\textbf{Client-Betriebssysteme}  & Diverse Linux Distributionen, Windows & Diverse Linux Distributionen, Windows & Diverse Linux Distributionen, Windows\\ \hline 
 \textbf{Lokale Client Installation nötig} & Nein  & Ja & Ja \\ \hline 
 \textbf{Command-line Interface Sprache} &Python &Python&Ruby \\ \hline
 \textbf{Zustands-\newline beschreibung} &YAML &YAML & Puppet Code \\ \hline
@@ -90,19 +89,22 @@ Die wichtigsten Faktoren bezüglich der zu entwickelnde Anwendung zusammengefasst
 \textbf{Open-Source} & Ja & Ja & Ja\\ \hline
 \textbf{Preis} & Kostenlos & Kostenlos & Kostenlos\\ \hline 
 \end{tabular}
+\caption[Zusammenfassung evaluierter Konfigurationsmanagementsysteme]{Zusammenfassung evaluierter Konfigurationsmanagementsysteme\footnotemark}
+\end{table}\footnotetext{Quelle: Eigene Darstellung}  
+\FloatBarrier
+\pagebreak
 
-\subsection{Fazit}
-Der größte Unterschied in den verglichenen Konfigurationsmanagement-Systemen besteht im Kontext, in dem das jeweilige System eingesetzt werden soll. Alle drei Anwendungen erfüllen die Grundbedingung auf Linux lauffähig zu sein und diverse Linux-Distributionen als Client bespielen zu können, wobei Puppet sich hervorragend im Umfeld größerer Systemlandschaften eignet, d.h. wenn es darum geht, mehrere Clients gleichzeitig zu verwalten und zu konfigurieren. Wie Puppet benötigt Staltstack für die Clients extra Software, um die gewünschte Zustandsbeschreibung durchzuführen, was einen gewissen Zeitaufwand und eine Fehlerquelle mehr bedeutet.
-Ansible ist zwar der unbekanntere Vertreter unter den Konfigurationsmanagement-Systemen, kann aber leicht eingerichtet werden und benötigt keine weitere Ergänzungen auf der Clientseite. Dadurch wird auf den Zielmaschinen, ausschließlich das Gewünschte installiert, der gesamte Installationsprozess zudem beschleunigt und der erforderliche Zeitaufwand minimiert.
+\subsection{Resümee}
+Der Unterschied in den verglichenen Konfigurationsmanagementsystemen besteht im Kontext, in dem das jeweilige System eingesetzt werden soll. Alle drei Anwendungen erfüllen die Grundbedingung auf Linux lauffähig zu sein und diverse Linux-Distributionen als Client bespielen zu können, wobei Puppet sich hervorragend im Umfeld größerer Systemlandschaften eignet. Wie Puppet benötigt Staltstack für die Clients extra Software, um die gewünschte Zustandsbeschreibung durchzuführen, was einen höheren Zeitaufwand und eine Fehlerquelle mehr bedeutet.
+Ansible ist das neuste entwickelte Softwareprodukt unter den Konfigurationsmanagement-Systemen, kann aber einfacher eingerichtet werden und benötigt keine weiteren Ergänzungen auf der Clientseite. Dadurch wird auf den Zielmaschinen ausschließlich die erforderliche Software installiert, der gesamte Installationsprozess beschleunigt und der gesamte Zeitaufwand der Konfiguration minimiert.
 
 \section{Vagrant}
-Ein weiteres Produkt, das die zu erstellende Applikation unterstützen könnte, ist Vagrant. Dabei handelt es sich um ein Softwareprojekt, welches 2010 von Mitchell Hashimoto und John Bender 2010 ins Leben gerufen wurde.
+Ein weiteres Produkt, das die zu erstellende Applikation unterstützen wird, ist Vagrant. Dabei handelt es sich um ein Softwareprojekt, welches 2010 von Mitchell Hashimoto und John Bender 2010 entwickelt wurde.
 Vagrant ist ein Entwicklungswerkzeug, das als Wrapper zwischen Virtualisierungssoftware wie VirtualBox und Konfigurationsmanagement-System fungiert.
-Das command-line Interface und die einfache Konfigurationssprache helfen, virtuelle Maschinen schnell zu konfigurieren und zu verwalten.
-Die Konfiguration einer Maschine geschieht über das 'Vagrantfile', in dem Parameter wie IP-Adresse konfiguriert und Konfigurationsmanagement-Systeme hinzugeschaltet werden können. Da das Vagrantfile in einer Ruby Domain Specific Language geschrieben wird, bedeutet das für den Anwender, ein problemloses Teilen des Vagrantfiles mit anderen Kollegen über Versionskontrollen (z.B. Git oder Subversion).\newline
-In puncto Konfigurationsmanagement-Systeme, wird dem Benutzer die Freiheit gegeben, auf eine Vielzahl bekannter Konfigurationsmanagement-Systeme zurückzugreifen, unter anderem auch Ansible, Salt und Puppet. \newline
-Um die Virtualisierung vorzunehmen, greift Vagrant standardmäßig auf VirtualBox zurück. Allerdings werden auch Amazon-Web-Services und VMware-Fusion unterstützt und Teamarbeit ermöglicht durch eine 'sharing'-Option, die mit Version 1.5 implementiert wurde. Das Teilen einer Maschine ermöglicht es Teams, an gemeinsamen und entfernten Standorten, auf die gleiche Maschine zuzugreifen (\cite{Peacock201308}).
-Gerade die zusätzlichen Funktionen von Vagrant und das Vereinen von Konfigurationsmanagement und Virtualisierer in einem Produkt würde den Entwicklungsprozess der Applikation unterstützen helfen. Funktionen, wie das Teilen einer Maschine, könnten direkt übernommen und in die Applikation eingefügt werden.
+Das command-line Interface und die einfache Konfigurationssprache helfen virtuelle Maschinen schnell zu konfigurieren und zu verwalten.
+Die Konfiguration einer virtuellen Maschine geschieht über das 'Vagrantfile', in dem Parameter wie IP-Adresse konfiguriert und Konfigurationsmanagementsysteme hinzugeschaltet werden können. Da das Vagrantfile in einer Ruby Domain Specific Language geschrieben wird, kann dieses über eine Versionskontrollen (z.B. Git oder Subversion) versioniert und an andere Anwender verteilt werden.\newline
+Um eine Virtualisierung vorzunehmen, verwendet Vagrant standardmäßig VirtualBox. Alternativ werden Amazon-Web-Services und VMware-Fusion ebefalls unterstützt und sind einfach zu integrieren. Zudem werden von Vagrant Funktionen zur Teamarbeit angeboten, die einen entfernten Zugriff auf eine virtuelle Maschine lassen. Diese Möglichkeit des Zugriffs auf eine virtuelle Maschine, ermöglicht es Teams an unterschiedlichen Standorten, auf die gleiche Maschine zuzugreifen.[(\cite{Peacock201308}]\\
+Die zusätzlichen Funktionen von Vagrant und das Vereinen von Konfigurationsmanagement und Virtualisierer in einem Produkt, unterstützen den Entwicklungsprozess der Applikation. Funktionen, wie der enfernte Zugriff auf eine Maschine, können übernommen und in die Applikation eingefügt werden.
 
 
 \begin{comment}
@@ -111,7 +113,6 @@ Vergleichbare Produkte aufzählen
 Vor- und Nachteile auflisten.
 Fazit 
 \subsection{OpenNebula}
-%TODO: Eigens Formulieren
 OpenNebula ist eine Open Source Cloud Lösung, welche unter Verwendung verschiedener Industriestandards eine hochverfügbare, skalierbare und höchsteffiziente Virtualisierungplattform zur Verfügung stellt.
 So können virtuelle Systeme auf unterschiedlichen Hypervisioren und Storage-Systemen zentral administriert und überwacht werden.
 Beim Ausfall einer Komponente kümmert sich OpenNebula um den Neustart der virtuellen Instanzen auf einem anderen Hostsystem.

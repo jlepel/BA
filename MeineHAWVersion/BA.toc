@@ -8,91 +8,94 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problemstellung und Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Zielsetzung}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Themenabgrenzung}{2}{section.1.3}
+\contentsline {section}{\numberline {1.2}Themenabgrenzung}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Zielsetzung}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Struktur der Arbeit}{2}{section.1.4}
-\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Grundlagen der Virtualisierung}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Virtuelle Maschine}{4}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Gastbetriebssystem}{4}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Hypervisor}{5}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Konfigurationsmanagement-System}{7}{section.2.2}
-\contentsline {chapter}{\numberline {3}Anforderungsanalyse}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Zielsetzung}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Stakeholder}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Funktionale Anforderungen}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Use-Cases}{12}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Business-Use-Case}{12}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}System-Use-Case}{14}{subsection.3.4.2}
-\contentsline {subsubsection}{\nonumberline Use-Case 1 - Virtuelle Maschine erstellen}{14}{section*.2}
-\contentsline {subsubsection}{\nonumberline Use-Case 2 - Virtuelle Maschine exportieren}{15}{section*.3}
-\contentsline {subsubsection}{\nonumberline Use-Case 3 - Virtuelle Maschine importieren}{15}{section*.4}
-\contentsline {subsubsection}{\nonumberline Use-Case 4 - Virtuelle Maschine teilen}{16}{section*.5}
-\contentsline {subsubsection}{\nonumberline Use-Case 5 - Softwarepakete konfigurieren}{17}{section*.6}
-\contentsline {section}{\numberline {3.5}Nichtfunktionale Anforderungen}{17}{section.3.5}
-\contentsline {subsubsection}{\nonumberline Technologische Anforderungen}{19}{section*.7}
-\contentsline {subsubsection}{\nonumberline Qualit\"atsanforderungen}{19}{section*.8}
-\contentsline {subsubsection}{\nonumberline Anforderungen an die Benutzeroberfl\"ache}{19}{section*.9}
-\contentsline {section}{\numberline {3.6}Randbedingungen}{27}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{28}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Vergleichbare Anwendungen}{28}{section.3.7}
+\contentsline {chapter}{\numberline {2}Grundlagen}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Grundlagen der Virtualisierung}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Virtuelle Maschine}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Gastbetriebssystem}{5}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Hypervisor}{6}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Konfigurationsmanagementsystem}{8}{section.2.2}
+\contentsline {chapter}{\numberline {3}Anforderungsanalyse}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Zielsetzung}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Stakeholder}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Funktionale Anforderungen}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Use-Cases}{13}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Business-Use-Case}{14}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}System-Use-Case}{15}{subsection.3.4.2}
+\contentsline {subsubsection}{\nonumberline Use-Case 1 - Virtuelle Maschine erstellen}{15}{section*.2}
+\contentsline {subsubsection}{\nonumberline Use-Case 2 - Virtuelle Maschine exportieren}{16}{section*.3}
+\contentsline {subsubsection}{\nonumberline Use-Case 3 - Virtuelle Maschine importieren}{16}{section*.4}
+\contentsline {subsubsection}{\nonumberline Use-Case 4 - Virtuelle Maschine teilen}{17}{section*.5}
+\contentsline {subsubsection}{\nonumberline Use-Case 5 - Softwarepakete konfigurieren}{18}{section*.6}
+\contentsline {section}{\numberline {3.5}Nichtfunktionale Anforderungen}{18}{section.3.5}
+\contentsline {subsubsection}{\nonumberline Technologische Anforderungen}{20}{section*.7}
+\contentsline {subsubsection}{\nonumberline Qualit\"atsanforderungen}{20}{section*.8}
+\contentsline {subsubsection}{\nonumberline Anforderungen an die Benutzeroberfl\"ache}{21}{section*.9}
+\contentsline {section}{\numberline {3.6}Randbedingungen}{26}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Technische Randbedingungen}{27}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Vergleichbare Anwendungen}{27}{section.3.7}
 \contentsline {subsection}{\numberline {3.7.1}OpenNebula}{28}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}OpenStack}{29}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Fazit}{29}{subsection.3.7.3}
-\contentsline {section}{\numberline {3.8}Zusammenfassung}{30}{section.3.8}
-\contentsline {chapter}{\numberline {4}Evaluation}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Virtualisierungsprodukte}{32}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}VMware Player (Plus)}{32}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Microsoft Hyper-V}{33}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Oracle VM VirtualBox}{33}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {3.7.2}OpenStack}{28}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Res\"umee}{29}{subsection.3.7.3}
+\contentsline {section}{\numberline {3.8}Zusammenfassung}{29}{section.3.8}
+\contentsline {chapter}{\numberline {4}Evaluation}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Virtualisierungsprodukte}{31}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}VMware Player (Plus)}{31}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Microsoft Hyper-V}{32}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Oracle VM VirtualBox}{32}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Zusammenfassung}{33}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Fazit}{34}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Konfigurationsmanagement-Systeme}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.1.5}Res\"umee}{34}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Konfigurationsmanagementsysteme}{34}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Ansible}{35}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Saltstack}{36}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Puppet}{36}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.2}Saltstack}{35}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Puppet}{35}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Zusammenfassung}{36}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Fazit}{37}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Res\"umee}{37}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Vagrant}{37}{section.4.3}
-\contentsline {chapter}{\numberline {5}Softwareentwurf}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}Kontextabgrenzung}{40}{section.5.1}
-\contentsline {subsubsection}{\numberline {5.1.0.1}Kurzbeschreibung der externen Schnittstellen}{41}{subsubsection.5.1.0.1}
-\contentsline {section}{\numberline {5.2}Verteilungssicht}{42}{section.5.2}
-\contentsline {section}{\numberline {5.3}Systemarchitektur}{43}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Client-Server-Modell}{43}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Model-View-Controller Entwurfsmuster}{45}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Kommunikation}{47}{section.5.4}
-\contentsline {section}{\numberline {5.5}Server}{49}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Bausteinsicht}{49}{subsection.5.5.1}
+\contentsline {chapter}{\numberline {5}Softwareentwurf}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Kontextabgrenzung}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Kurzbeschreibung der externen Schnittstellen}{40}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Verteilungssicht}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Systemarchitektur}{42}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Client-Server-Modell}{42}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Model-View-Controller Entwurfsmuster}{44}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Kommunikation}{46}{section.5.4}
+\contentsline {section}{\numberline {5.5}Server}{48}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Bausteinsicht}{48}{subsection.5.5.1}
 \contentsline {subsubsection}{\numberline {5.5.1.1}Benutzerschnittstelle}{50}{subsubsection.5.5.1.1}
-\contentsline {subsubsection}{\numberline {5.5.1.2}Verarbeitungseben}{55}{subsubsection.5.5.1.2}
-\contentsline {subsubsection}{\numberline {5.5.1.3}Datenebene}{59}{subsubsection.5.5.1.3}
-\contentsline {subsection}{\numberline {5.5.2}Laufzeitsicht}{60}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}Aufbau einer virtuellen Maschine}{61}{subsubsection.5.5.2.1}
-\contentsline {subsection}{\numberline {5.5.3}Datenbank}{63}{subsection.5.5.3}
-\contentsline {subsubsection}{\numberline {5.5.3.1}Entity-Relationship-Model}{63}{subsubsection.5.5.3.1}
-\contentsline {subsubsection}{\numberline {5.5.3.2}Relationales Datenbank Modell}{64}{subsubsection.5.5.3.2}
-\contentsline {section}{\numberline {5.6}Client}{67}{section.5.6}
-\contentsline {section}{\numberline {5.7}Zusammenfassung}{67}{section.5.7}
-\contentsline {chapter}{\numberline {6}Realisierung}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Server Realisierung}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Fremdsoftware}{70}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Webserver}{70}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Phusion Passenger}{70}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}VirtualBox}{71}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Ansible}{71}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Vagrant}{71}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}Bundler}{71}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}Datenbank}{71}{subsection.6.2.7}
+\contentsline {subsubsection}{\numberline {5.5.1.2}Verarbeitungseben}{54}{subsubsection.5.5.1.2}
+\contentsline {subsubsection}{\numberline {5.5.1.3}Datenebene}{58}{subsubsection.5.5.1.3}
+\contentsline {subsection}{\numberline {5.5.2}Laufzeitsicht}{59}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Aufbau einer virtuellen Maschine}{60}{subsubsection.5.5.2.1}
+\contentsline {subsection}{\numberline {5.5.3}Datenbank}{62}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}Entity-Relationship-Model}{62}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}Relationales Datenbank Modell}{63}{subsubsection.5.5.3.2}
+\contentsline {section}{\numberline {5.6}Client}{66}{section.5.6}
+\contentsline {section}{\numberline {5.7}Zusammenfassung}{66}{section.5.7}
+\contentsline {chapter}{\numberline {6}Realisierung}{68}{chapter.6}
+\contentsline {section}{\numberline {6.1}Server Realisierung}{68}{section.6.1}
+\contentsline {section}{\numberline {6.2}Fremdsoftware}{69}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Webserver}{69}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Phusion Passenger}{69}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}VirtualBox}{70}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Ansible}{70}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Vagrant}{70}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Bundler}{70}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}Datenbank}{70}{subsection.6.2.7}
 \contentsline {section}{\numberline {6.3}Implementierung}{72}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Komponenten Umsetzung}{73}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Datenbank}{75}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Funktionen}{77}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Schluss}{79}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zusammenfassung und Fazit}{79}{section.7.1}
-\contentsline {section}{\numberline {7.2}Ausblick}{79}{section.7.2}
-\contentsline {chapter}{\nonumberline Anhang}{86}{chapter*.27}
-\contentsline {section}{\numberline {1}Mockups}{86}{section.7.1}
-\contentsline {subsection}{\numberline {1.1}Aufbauprozess}{86}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {1.2}Optionen}{86}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {1.3}Einstellungen}{86}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {6.3.1}Komponenten Umsetzung}{72}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Datenbank}{74}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Funktionen}{76}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Schluss}{81}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zusammenfassung und Fazit}{81}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ausblick}{82}{section.7.2}
+\contentsline {chapter}{\numberline {8}Anhang}{84}{chapter.8}
+\contentsline {section}{\numberline {8.1}Aufbau einer virtuellen Maschine}{84}{section.8.1}
+\contentsline {section}{\numberline {8.2}Verwaltung der virtuellen Maschinen}{85}{section.8.2}
+\contentsline {section}{\numberline {8.3}Externer Zugriff}{85}{section.8.3}
+\contentsline {section}{\numberline {8.4}Import}{86}{section.8.4}
+\contentsline {section}{\numberline {8.5}Log}{87}{section.8.5}
+\contentsline {section}{\numberline {8.6}Administration}{87}{section.8.6}
+\contentsline {section}{\numberline {8.7}Software und Packages}{88}{section.8.7}

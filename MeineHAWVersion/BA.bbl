@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{31}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -33,6 +33,20 @@
 \newblock / Computer Science Department WPI, Worcester.
 \newblock URL \url{http://web.cs.wpi.edu/~dcb/Papers/CASCON03.pdf}, 2002.
 \newblock  -- Forschungsbericht
+
+\bibitem[Christian~Baun(2011)]{Braun11:Online}
+\dinatlabel{Christian~Baun 2011} \textsc{Christian~Baun}, Viktor~M.:
+\newblock \emph{Cluster-, Grid- und Cloud-Computing}.
+\newblock 2011. --
+\newblock URL
+  \url{http://www.baun-vorlesungen.appspot.com/CGC11/Skript/folien_cgc_vorlesung_13_SS2011.pdf}
+
+\bibitem[Fleischmann(2012)]{Fleichmann12:Online}
+\dinatlabel{Fleischmann 2012} \textsc{Fleischmann}, Andreas:
+\newblock \emph{Konfigurationsmanagement mit Ansible}.
+\newblock April 2012. --
+\newblock URL
+  \url{http://www.s-inn.de/blog/image.axd?picture=2012\%2F5\%2FHypervisor-Type-1-vs-Type-2.png}
 
 \bibitem[Hall(2013)]{Hall201311}
 \dinatlabel{Hall 2013} \textsc{Hall}, Daniel:
@@ -144,6 +158,13 @@
 \newblock URL \url{http://amazon.de/o/ASIN/3446438939/}. --
 \newblock ISBN 9783446438934
 
+\bibitem[Scherf(2015)]{Scherf15:Online}
+\dinatlabel{Scherf 2015} \textsc{Scherf}, Thorsten:
+\newblock \emph{Konfigurationsmanagement mit Ansible}.
+\newblock 2015. --
+\newblock URL
+  \url{http://www.admin-magazin.de/Online-Artikel/Konfigurationsmanagement-mit-Ansible}
+
 \bibitem[Schäfer(2009)]{Schaefer200912}
 \dinatlabel{Schäfer 2009} \textsc{Schäfer}, Werner:
 \newblock \emph{Softwareentwicklung - inkl. Lerntest auf CD: Einstieg für
@@ -206,6 +227,12 @@
 \newblock Pearson Studium, 11 2007. --
 \newblock URL \url{http://amazon.de/o/ASIN/3827372933/}. --
 \newblock ISBN 9783827372932
+
+\bibitem[Vagrant(2015)]{vagrant:2015:Online}
+\dinatlabel{Vagrant 2015} \textsc{Vagrant}:
+\newblock \emph{CREATING A BASE BOX}.
+\newblock 2015. --
+\newblock URL \url{https://docs.vagrantup.com/v2/virtualbox/boxes.html}
 
 \bibitem[Wikipedia(2015)]{Wikipedia:2015:Online}
 \dinatlabel{Wikipedia 2015} \textsc{Wikipedia}:

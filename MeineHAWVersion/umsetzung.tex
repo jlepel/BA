@@ -1,4 +1,4 @@
-\chapter{Realisierung}
+\chapter{Realisierung}\label{ch:Realisierung}
 Dieses Kapitel wird die Umsetzung und die damit verbundene Realisierung des VM-Builders beschreiben. Die Umsetzung geschieht unter der Beachtung der zuvor durchgeführten Planung aus Kapitel \ref{ch:Anforderungsanalyse} und der damit verbundenen Integration von Dritt-Anwendungen. Ein wichtiger Aspekt des Kapitels ist die Verdeutlichung von Unterschieden, die zwischen Planung und der Umsetzung auftreten. Die Realisierung selbst wird in erster Linie ein Prototyp des VM-Builders anstreben, wobei auch seine Implementierung sich ganz nach dem Entwurf richtet, der in Kapitel \ref{ch:Entwurf} entstanden ist. Um die Anforderungen aus dem technischen Randbedingungen (Abschnitt \ref{subsec:TechnischeRandbedingungen}) zu erfüllen, geschieht die Umsetzung der Applikation in einer Kombination aus dem Framework Sinatra und Ruby und wird in der IDE 'RubyMine' entwickelt.\newline
 Die Realisierung wird in drei Schritte unterteilt:
 \begin{enumerate}
@@ -9,39 +9,39 @@ Die Realisierung wird in drei Schritte unterteilt:
 Die drei Schritte beinhalten nicht nur Details zu ihrer Umsetzung, sondern auch die Unterschiede zum Entwurf.
 
 \section{Server Realisierung}\label{ssec:ServerRealisierung}
-Um die Vorraussetzungen für die Entwicklung des VM-Builders zu schaffen, wird der erste Schritt der Aufbauphase angegangen und eine Entwicklungsplatform vorbereitet. Anstelle eines Hardware-Servers, wird zunächst auf einer virtuelle Maschine entwickelt. Wie bereits in der Einleitung erwähnt, handelt es sich bei der Entwicklung um einen Prototypen der Applikation und genau auf diesem Aspekt aufbauend, ist eine virtuelle Umgebung zum entwickeln und testen mehr als geeignet.\newline
-Zeitgleich wird eine identische Umgebung auf einem VM-Host der HAW aufgebaut, um später Unterschiede in der Aufbaugeschwindigkeit der virtuellen Maschinen messen zu können. Einfacherhalber wird in den folgenden Abschnitten lediglich ein Server betrachtet, damit keine Unklarheiten auftreten. Die Unterschiede der Server sind nur rein technischer Natur und unterscheiden sich weder in Applikationsversionen, noch im Aufbau.\newline
+Um die Voraussetzungen für die Entwicklung des VM-Builders zu schaffen, wird der erste Schritt der Aufbauphase angegangen und eine Entwicklungsplatform vorbereitet. Anstelle eines Hardware-Servers, wird zunächst auf einer virtuelle Maschine entwickelt. Wie bereits in der Einleitung erwähnt, handelt es sich bei der Entwicklung um einen Prototypen der Applikation und genau auf diesem Aspekt aufbauend, ist eine virtuelle Umgebung zum entwickeln und testen mehr als geeignet.\newline
+Zeitgleich wird eine identische Umgebung auf einem VM-Host der HAW aufgebaut, um später Unterschiede in der Aufbaugeschwindigkeit der virtuellen Maschinen messen zu können. Einfacher halber wird in den folgenden Abschnitten lediglich ein Server betrachtet, damit keine Unklarheiten auftreten. Die Unterschiede der Server sind nur rein technischer Natur und unterscheiden sich weder in Applikationsversionen, noch im Aufbau.\newline
 Der lokale virtuelle Server wird mit 4GB Arbeitsspreicher, 20 GB Festplattenkapazität und Ubuntu 14.04.2 umgesetzt. Der Server auf HAW-Seite, wird mit 16 GB Arbeitsspeicher ausgestattet und einem schnelleren Prozessor. Das Betriebssystem ist ebenfalls Ubuntu 14.04.2.
 
 \section{Fremdsoftware}\label{ssec:SoftwareRealisierung}
-Eines der Ergebnisse des Entwurfs war die Verwendung von Fremdsoftware, wodurch gewisse Teile des Funktionsspektrums übernommen werden sollen. Der zweite Schritt der Realisierung wird sich mit den einzelnen Softwareelementen beschäftigt, die für den Betrieb des VM-Builders eingesetzt werden sollen. In der Evaluation aus Kapitel \ref{ch:Evaluation} sind die ersten Annahmen getroffen worden welche Softwarekomponente sich für bestimmte Aufgabenbereiche eignen könnten, um sie dann in der in der Verteilungssicht (Abschnitt \ref{sec:Verteilungssicht}) provisorisch zu integrieren. Vorteile der verwendeten Applikationen sind ihre OpenSource Eigenschaften und der damit verbundene Verzicht auf weitere Kosten oder Investitionen. Die einzelnen Applikationen werden noch einmal kurz vorgestell, wobei auf Installationsdetails verzichtet wird.
+Eines der Ergebnisse des Entwurfs war die Verwendung von Fremdsoftware, wodurch gewisse Teile des Funktionsspektrums übernommen werden sollen. Der zweite Schritt der Realisierung wird sich mit den einzelnen Softwareelementen beschäftigt, die für den Betrieb des VM-Builders eingesetzt werden sollen. In der Evaluation aus Kapitel \ref{ch:Evaluation} sind die ersten Annahmen getroffen worden welche Softwarekomponente sich für bestimmte Aufgabenbereiche eignen könnten, um sie dann in der in der Verteilungssicht (Abschnitt \ref{sec:Verteilungssicht}) provisorisch zu integrieren. Vorteile der verwendeten Applikationen sind ihre OpenSource Eigenschaften und der damit verbundene Verzicht auf weitere Kosten oder Investitionen. Die einzelnen Applikationen werden noch einmal kurz vorgestellt, wobei auf Installationsdetails verzichtet wird.
 
 \subsection{Webserver}
 Für die Präsentation des Webinterfaces und für die Kommunikation zwischen Client und Server, wird auf den frei erhältlichen Apache Webserver, in der Version 2.4.7 zurückgegriffen.\newline
 Es bietet sich an, einen etablierten Webserver zu nutzen, gerade wenn er den geforderten Open-Source-Aspekt erfüllt. Zudem besitzt Apache einen Marktanteil von 50,51\% an aktiven Webseiten (\cite{Statista:2015:Online}), wodurch das Argument der Etablierung weiter untermauert wird. Durch diesen Faktor kann zudem davon ausgegangen werden, dass die Weiterentwicklung weiter anhält, sowie Supportmöglichkeiten auch noch zukünftig vorhanden sein werden.
 
 \subsection{Phusion Passenger}
-Im Zuge der Vorbereitung auf die Appikation, wird auf Phusions Passenger zurückgegriffen, das als ein Modul für Apache konzipiert wurde. Phusions Passenger wird primär bei Ruby-Applikationen verwendet, um Ruby-Web-Applikationen bereitzustellen. Zudem erleichtert Passenger die Administration von Web-Applikationen und ist essenziel für den Betrieb des VM-Builders.\newline
+Im Zuge der Vorbereitung auf die Applikation, wird auf Phusions Passenger zurückgegriffen, das als ein Modul für Apache konzipiert wurde. Phusions Passenger wird primär bei Ruby-Applikationen verwendet, um Ruby-Web-Applikationen bereitzustellen. Zudem erleichtert Passenger die Administration von Web-Applikationen und ist essenziel für den Betrieb des VM-Builders.\newline
 
 \subsection{VirtualBox}
 Ein eigener Entwurf und deren Ausführung einer Virtualisierungsstrategie, wäre weder zielführend noch praktikabel. Deshalb wurde in der Evaluation (Kapitel \ref{ssec:VirtualBox}) eine Analyse der frei zugänglichen Virtualisierer durchgeführt, wodurch letztendlich das Ergebnis VirtualBox als geeigneten Kandidaten herausstellte.
 VirtualBox übernimmt beim VM-Builder die Funktion der Maschinenvirtualisierung und somit den automatisierten Aufbau der Umgebung.
 
 \subsection{Ansible}
-Damit die erstellte Umgebung mit Software bestückt werden kann, wird diese Aufgabe Ansible übertragen. Ansible kann die gewünschte Zustandsbeschreibung des Anwenders, direkt auf der virtuellen Maschine umsetzen, ohne dort einen extra Client installieren installieren zu müssen. Dies erleichtert nicht nur die Arbeit mit Ansible, sondern erleichtert zudem die Integration von Ansible in den VM-Builder. 
+Damit die erstellte Umgebung mit Software bestückt werden kann, wird diese Aufgabe Ansible übertragen. Ansible kann die gewünschte Zustandsbeschreibung des Anwenders, direkt auf der virtuellen Maschine umsetzen, ohne dort einen extra Client installieren zu müssen. Dies erleichtert nicht nur die Arbeit mit Ansible, sondern erleichtert zudem die Integration von Ansible in den VM-Builder. 
 
 \subsection{Vagrant}
 Vagrant dient als Wrapper für VirtualBox und Ansible. Die Flexibilität von Vagrant ermöglicht das leichte Zusammenspiel der drei Softwarekomponenten. Da Vagrant mit anderen Provisionierern und Virtualisierern zusammenarbeiten kann, ist ein Austausch von Ansible und VirtualBox in einem begrenzen Zeitrahmen möglich.\newline
 Der VM-Builder wird über Befehlsaufrufe direkt mit Vagrant kommunizieren und durch entsprechende Befehle den Aufbau, die Deaktivierung, das Sharing usw. auslösen.
 
 \subsection{Bundler}
-Um in Ruby-Pojekten Abhängigkeiten zu genutzen Paketen zu verwalten und ggf. deren Versionen zu spezifizieren, kann auf Bundler zurückgegriffen werden.
+Um in Ruby-Projekten Abhängigkeiten nutzen, Pakete zu verwalten und ggf. deren Versionen zu spezifizieren, kann auf Bundler zurückgegriffen werden.
 Durch Bundler können einheitliche Umgebungen für Projekte geschaffen und der Wiederaufbau der gleichen Umgebung beschleunigt werden. Durch seine Eigenschaft, Ruby-Komponenten sofort und automatisch installieren zu können, ist Bundler prädestiniert für die Umsetzung einer automatisierte Installation des VM-Builders.
 
 \subsection{Datenbank}
 Um die objektorientierte Welt mit der Relationalen Welt der Datenbanken in Einklang zu bringen, können OR-Mapper helfen. Durch ihre Übersetzung von Quellcode, können programmatisch Tabellenkonstrukte erzeugt und Beziehungen zwischen den gewünschten Tabellen definiert werden. Datamapper ist eines der Beiden populärsten ORM Frameworks für Ruby und wird die beschriebenen Aufgaben im VM-Builder übernehmen.\newline
 Ein Beispiel für die Funktionsweise von Datamapper, ist die Definition der Tabelle Machine, die aus vier Attributen besteht inklusive ihrer Typ-Eigenschaften, sowie ihrer Relation zu anderen Tabellen.
-\begin{lstlisting} [caption={ORM Framework Datamapper},label={code:ORMTable}, language=Ruby]
+\begin{lstlisting} [caption={ORM Framework Datamapper\protect\footnotemark},label={code:ORMTable}, language=Ruby]
 class Machine
   include DataMapper::Resource
 
@@ -56,14 +56,14 @@ class Machine
   has n, :softwares, :through => :machinesoftwares
   belongs_to :vmimage
 end
- \end{lstlisting}
+ \end{lstlisting}\footnotetext{Codebeispiel: Eigene Darstellung}
 Programmatischer Zugriff auf die Tabellen kann über SQL-Befehle bereitgestellt werden, oder über typischerweise vorhandenen Befehle des ORM-Frameworks.
-Um z.B aus der Tabelle \textbf{Machine} alle Daten einmal abzurufen genügt der Befehl 'Machine.all'. 
-\begin{lstlisting} [caption={ORM Framework command},label={code:ORMCommand}, language=Ruby]
+Um z.B. aus der Tabelle \textbf{Machine} alle Daten einmal abzurufen genügt der Befehl 'Machine.all'. 
+\begin{lstlisting} [caption={ORM Framework command\protect\footnotemark},label={code:ORMCommand}, language=Ruby]
  def all_machines?
     Machine.all
   end
-\end{lstlisting}
+\end{lstlisting}\footnotetext{Codebeispiel: Eigene Darstellung}
 
 \section{Implementierung}\label{ssec:Implementierung}
 Nach dem Aufbau der Server und der Installation der benötigten Softwarekomponenten, steht im nächsten Abschnitt die Implementierung des Protoypen im Vordergrund.
@@ -79,7 +79,7 @@ Entsprechend stehen folgende Funktionalitäten im Mittelpunkt:
 Zuvor wird ein Blick auf strukturellen Ansätze der Entwicklung geworfen, in dem allgemein auf die Komponenten-Umsetzung eingegangen wird und auf entsprechende Änderungen.
 \subsection{Komponenten Umsetzung}
 Wie bereits in der Einleitung des Kapitels erwähnt, wird der 'VM-Builder' mit Ruby inklusive dem Framework Sinatra umgesetzt. Um dem MVC-Konzept zu entsprechen, werden die definierten Komponenten aus \ref{ssec:Bausteinsicht} in der folgenden exemplarischen Ordner-/Dateistruktur (\ref{code:Filestructure}) umgesetzt.
-\begin{lstlisting} [caption={Exemplarische Ordnerstruktur VM-Builder},label={code:Filestructure}, language=Ruby]
+\begin{lstlisting} [caption={Exemplarische Ordnerstruktur VM-Builder\protect\footnotemark},label={code:Filestructure}, language=Ruby]
 config.ru
 app.rb
 helpers/
@@ -90,10 +90,10 @@ routes/
   init_controller.rb
 views/
   init_view.erb
-\end{lstlisting}
+\end{lstlisting}\footnotetext{Quelle: Eigene Darstellung}
 Controller und Views aus der der Benutzerschnittstelle werden in den Ordnern 'routes' und 'views' erstellt. Bestandteile aus der Verarbeitungsebene und Datenebene werden in 'models' und 'helpers' gespeichert.\newline
-Da Ruby/Sinatra zulässt auf Klassen zu verzichten, sind die Controller als organisatorische Einheit konzepiert mit der entsprechenden Logik in den verwendeten Modellen.
-\begin{lstlisting} [caption={Controller Beispiel},label={code:ControllerExample}, language=Ruby]
+Da Ruby/Sinatra zulässt auf Klassen zu verzichten, sind die Controller als organisatorische Einheit konzipiert mit der entsprechenden Logik in den verwendeten Modellen.
+\begin{lstlisting} [caption={Controller Beispiel\protect\footnotemark},label={code:ControllerExample}, language=Ruby]
 require './models/administration_manager'
 require_relative 'softwareadmin_controller'
 
@@ -107,35 +107,35 @@ put '/log' do
   admin_mgr.create_logfile(params['logpath'])
   redirect '/admin'
 end
-\end{lstlisting}
+\end{lstlisting}\footnotetext{Codebeispiel: Eigene Darstellung}
 Während die Views in HTML geschrieben und Helper, sowie Models als Ruby-Klassen definiert sind.\newline
 Durch die Umsetzung haben sich Unterschiede bezüglich des Entwurfs herausgestellt, die folgende Bausteinsicht ergeben haben. 
 \begin{figure}[htb]
   \centering
 \includegraphics[width=0.9\textwidth]{../Bilder/Bausteinsicht_Impl.png}
-  \caption{Bausteinsicht Level 1}
+  \caption[Bausteinsicht Level 1]{Bausteinsicht Level 1\footnotemark}
 	\label{fig:Bausteinsicht_MVC_Umsetzung}
-\end{figure}
+\end{figure}\footnotetext{Bildquelle: Eigene Darstellung}
 \FloatBarrier
 Abgesehen von der Entstehung neuen Beziehungen zwischen Komponenten, ist eine der wesentlichen Änderungen das Wegfallen des ConfigurationfileHandlers. Seine Aufgabe bestand im Lesen und Beschreiben einer Konfigurationsdatei, die Konfigurationen des gesamten 'VM-Builders' beinhalten sollte. 
 Anstelle der Konfigurationsdatei, werden die Konfigurationen in der Datenbank gepflegt.
 Die daraus entstehenden Vorteile sind eine zentrale Steuerung für den persistenten Speicher und Änderungen, sowie das Hinzufügen von neuen Konfiguration sind deutlich vereinfacht worden.
 
-\subsection{Datenbank}
+\subsection{Datenbank}\label{ssec:DatenbankImpl}
 Wie bereits erwähnt, wird im Gegensatz zur Planung, ein Tabellenkonstrukt angewendet, um Konfigurationen zu persistieren. Dies spart zu erstellende Komponenten und zentralisiert den Zugriff und die Datenhaltung.
 Zur Umsetzung von Konfigurationstabellen werden in der Regel zwei Konzepte vorgeschlagen:
 \begin{enumerate}
 
 \item \textbf{Name-Value-Pair Table}\newline
 Name-Value Pair Tabellen bestehen nur aus zwei Spalten. Eine für den Konfigurations-Typen und die Andere für den zugehörigen Wert. Kommen neue Konfigurationen dazu, werden die einfach an die Tabelle angehangen.
-\begin{lstlisting} [caption={Name-Value-Pair Table},label={code:Name-Value-PairTable}]
+\begin{lstlisting} [caption={Name-Value-Pair Table\protect\footnotemark},label={code:Name-Value-PairTable}]
   ConfigOption   |   Value
------------------+-------------
- CompanyName     | ACME Inc.
- StartFullScreen | true (or 1, or Y, ...)
- RefreshSeconds  | 20
- ...             | ...
-\end{lstlisting}
+-----------------+-------------------------
+      Start      | true (or 1, or Y, ...)
+      FullScreen | true (or 1, or Y, ...)
+      Resolution | 720
+      ...        | ...
+\end{lstlisting}\footnotetext{Abbildungsquelle: Eigene Darstellung}
 
 
 \textbf{Vorteil}
@@ -154,12 +154,12 @@ Name-Value Pair Tabellen bestehen nur aus zwei Spalten. Eine für den Konfigurati
 
 \item \textbf{Single-Row Table}\newline
 Bei Single-Row Tabellen wird die Struktur gedreht. Jede Konfiguration besteht aus einer eigenen Spalte. Die darunter liegende Zeile beinhaltet die Werte.
-\begin{lstlisting} [caption={Single-Row Table},label={code:Single-RowTable}]
+\begin{lstlisting} [caption={Single-Row Table\protect\footnotemark},label={code:Single-RowTable}]
 
-CompanyName | StartFullScreen | RefreshSeconds | ...
-------------+-----------------+----------------+-----
-  ACME Inc. |      true       |       20       |  ...
-\end{lstlisting}
+ Start | FullScreen | Resolution | ...
+-------+------------+------------+----
+ true  |    true    |     20     | ...
+\end{lstlisting}\footnotetext{Abbildungsquelle: Eigene Darstellung}
 
 \textbf{Vorteil}
 \begin{enumerate}
@@ -182,24 +182,68 @@ Die Realisierung aller geplanten Controller, Models und Views hat das Funktionss
 So sind folgende Funktionen durch die bisherige Implementierung realisiert worden:
 \begin{description}
 \item \textbf{Erstellung einer virtuellen Maschine} \\
-Die Komponente 'Main-Representation', die die zentrale Steuerung darstellt, kommuniziert kann die BuildingProcess-Komponente aufrufen in der die Darstellung für den geleiteten Aufbau einer virtuellen Maschine gehalten wird und die Schnittstelle zu der entsprechenden Logik. Der Aufbauprozess beinhaltet die Benamung der gewünschten Maschine, Optionen wie IP-Adresse und die Auswahl an Softwarekomonenten. Echtzeitinformation über den Aufbauprozess sind nicht implementiert. Allerdings im Logfile nachlesbar.
-VagrantControl liefert in Kombination mit dem SystemFileManager die Befehle für den Aufbau einer Maschine. Der SystemfFileManager bietet eine Methode für direkte Systemaufufe an, mit der VagrantControl Vagrant Befehle absetzen kann.
+Der Aufbau einer virtuellen Maschine kann, entgegengesetzt zur Planung, von überall aus aufgerufen werden. Die Planung sah ursprünglich vor, dass eine Maschine nur von der Hauptseite aus erstellt werden kann. Ein Optionsmenü, welches am oberen Rand platziert wurde, stellt dem Anwender den Aufbau und diverse andere Funktionen zur Verfügung. Die Realisierung des Aufbaus geschieht hauptsächlich über die BuildingProcess-Komponente. Sie verwaltet nicht nur die für sie bestimmten HTTP-Requests, sondern hält auch die Darstellung vor, die den Aufbau betreffen. Der Aufbauprozess selbst beinhaltet die Benamung der gewünschten Maschine, Optionen wie IP-Adresse, die Auswahl an Softwarekomponenten und die Möglichkeit Dateien auf dem Zielhost zu speichern. Echtzeitinformation über den Aufbauprozess sind nicht implementiert. Allerdings in einem seperaten Logfile nachlesbar.
+VagrantControl liefert in Kombination mit dem SystemFileManager die Befehle für den Aufbau einer Maschine. Der SystemfFileManager bietet eine Methode für direkte Systemaufrufe an, mit der VagrantControl Vagrantspezifische Befehle absetzen kann. Sobald der Anwender alle nötigen Informationen eingegeben hat und dies im Webformular bestätigt wurde, werden eine Reihe an aufbauprozessen eingeleitet.
+Der VM-Builder legt im ersten Schritt alle nötigen Informationen in der Datenbank ab. Dabei garantieren Transaktionen die konsistente Speicherung aller nötigen Informationen. Danach wird ein eigenes Verzeichnis angelegt, in dem aufbaurelevante Dateien, sowie Logdateien abgespeichert werden. In diesem Zusammenhang werden das Vagrantfile und eine YAML-Datei als aufbaurelevant bezeichnet, da sie die Kernkonfigurationen der zukünftigen virtuellen Maschine beinhalten. Das Vagrantfile wird durch die VagrantControl-Komponente erzeugt und wird dabei dynamisch an die Auswahl des Anwenders angepasst. Benötigt der Anwender keine Software und keine Dateien auf seiner Maschine, wird im Vagrantfile der Provisionierer (Vagrant) abgeschaltet. Ähnlich funktioniert der Aufbau der YAML-Datei für Ansible. Sie wird ebenfalls dynamisch an den Kontext der Auswahl angepasst und von dem YamlBuilder erzeugt. Die dynamische Anpassung soll Fehlinformationen in den Dateien verhindern und eine spätere Erweiterung an Funktionen vereinfachen. Falls der Anwender Dateien hochladen wollte, werden diese nun in das angelegte Verzeichnis der Maschine geladen.
+Der letzte Schritt beinhaltet den Bau der Maschine, wodurch auch die Zustandsumsetzung erfolgt. Sobald die Maschine erstellt wurde, werden die ausgewählten Softwarepakete installiert und die Dateien auf der Maschine platziert. Danach startet der VM-Builer die virtuelle Maschine hoch, so dass der Anwender sie sofort nutzen kann. Der ganze Aufbauprozess ist ab dem ersten Schritt im Verwaltungsmenü des VM-Builders nachzuverfolgen, da jeder Aufbauschritt in der Logdatei gespeichert wird.
+
 \item \textbf{Provisioning} \\
-Die Provisionierung wurde in den Aufbau mit integriert und wird durch die Komponente MachineConstruction realisiert. Um genauer zu sein, durch die Klasse 'YamlBuilder'.
-Die ausgewählte Software, wird durch diese Klasse in eine YAML-Datei übersetzt und mit Einstellungen aus der Konfigurations-Tabelle angereichert.
-Beinhaltet die Auswahl an Software Unterkomponenten und/oder Dateien, die auf den Zielhost übertragen werden sollen, wird die YAML-Datei automatisch entsprechend angepasst.
+Wie im oberen Abschnitt bereits beschrieben, ist die Provisionierung ebenfalls umgesetzt worden. Sie wurde in den Aufbau mit integriert und wird durch die Komponente MachineConstruction realisiert. Um genauer zu sein, durch die Klasse 'YamlBuilder'.
+Dateien und Software werden durch diese Klasse in eine YAML-Datei übersetzt und mit Einstellungen aus der Konfigurations-Tabelle angereichert.
+Beinhaltet die ausgewählte Software ein oder mehr Packages, werden diese in ihre einzelnen Komponenten aufgelöst und so in der YAML-Datei hinterlegt. Ähnlich agiert die Komponente bei Dateien. Der Anwender hat die Möglichkeit eine Vielzahl an Dateien auf die Zielmaschine zu bringen, worauf hin die YAML-Datei dynamisch angepasst wird.
 
 \item \textbf{VM-Konfigurationen speichern} \\
-Sobald eine virtuelle Maschine erfolgreich aufgebaut wurde, Name und optionale Einstellungen der Maschine, sowie ausgewählten Softwarekomponenten durch Transaktionen im Datamapper gespeichert. Durch die verwendeten Transaktionen, wird vermieden, dass inkonsistente Konfigurationen gespeichert werden und sichergestellt, dass diese auch nur im Erfolgsfall gesichert werden.\newline
-Solange die Maschine durch keinen Anwender gelöscht wird, bleiben die gespeicherten Parameter bestehen.
+Der Aufbau einer virtuellen Maschine beinhaltet zeitgleich das Speichern ihrer Konfiguration. Jede getroffene Auswahl des Anwenders wird über Transaktionen in der Datenbank hinterlegt. Durch die Verwendung von Transaktionen wird vermieden, dass inkonsistente Konfigurationen gespeichert werden und sichergestellt, dass diese auch nur im Erfolgsfall gesichert werden. 
 
-\item \textbf{Softwarebundles erstellen} \\
-Softwarebundles helfen dabei, Software mit Abhängigkeiten zu anderen Softwarekomponenten und Dateien zu erstellen und im System zu hinterlegen.
-So wird die Möglichkeit geschaffen, Software zu installieren, die mehrere Installationsschritte benötigt.
-Die SystemAdministration-Komponente hält dafür die entsprechende Implementierung vor. Da die Implementierung organisatorisch zur Administration gehört, wurde sie in diesem Paket platziert. Auch hier wird die Speicherung der Einstellungen durch Transaktionen bewerkstelligt, um keine Inkonsistenzen zu verursachen. Dem Anwender wird die Möglichkeit geboten, durch seine Eingaben zu entscheiden, was für eine Software gespeichert wird. Wählt er keine Relationen zu anderen Softwarekomponenten aus und lässt er die Möglichkeit aus Dateien zu transferieren, wird automatisch nur eine standard Software zur Auswahl hinzugefügt. Erst durch die Auswahl von Relationen und/oder Dateien, wird es ein Softwarebundle. Die Umsetzung der Auswahl geschieht in dem Model 'SoftwareEditor' der seine Entscheidung an den 'PersistenceHandler' weitergibt.
+
+\item \textbf{Packages erstellen} \\
+Packages können vom Anwender ähnlich wie Softwarekomponenten erstellt werden.
+Einer der großen Unterschiede liegt allerdings im Konfigurationsspektrum und ihrer eigentlichen Verwendung. Packages werden in der Datenbank wie Softwarekomponenten geführt, allerdings mit einer extra Kennzeichnung. So stehen sie zur Auswahl beim Maschinenaufbau, werden aber vom System als Package erkannt. Packages können aus diversen Softwarekomponenten bestehen und aus einer Vielzahl von Dateien. So wird es möglich größere Softwareprojekte zu erstellen und dem Anwender zur Verfügung zu stellen. Die SystemAdministration-Komponente hält dafür die entsprechende Implementierung vor. Da die Implementierung organisatorisch zur Administration gehört, wurde sie auch in diesem Paket platziert. Wie bei der Speicherung von Konfigurationen, wird auch hier mit Transaktionen gearbeitet, um keine Inkonsistenzen zu verursachen. Um ein Bild einer solchen Transaktion zu bekommen zeigt das Codebeispiel in Abbildung \ref{code:Transaction} den Vorgang des Speicherns eines Softwarebundles.
+\begin{lstlisting} [caption={Beispiel einer Transaktion - Speichern eines Packages\protect\footnotemark},label={code:Transaction}]
+def save_software_bundle(program, command, desc, selection)
+    Software.transaction do |t|
+      begin
+        Software.first_or_create(:name => program, 
+        :command => command, 
+        :description => desc, 
+        :package => 1)
+        
+        selection.each do |software|
+          Package.first_or_create(
+          :source_id => get_software_id(program), 
+          :sub_id => get_software_id(software))
+        end
+      rescue
+        t.rollback
+      end
+    end
+  end
+\end{lstlisting}\footnotetext{Codebeispiel: Eigene Darstellung}
+Werden nicht alle Bedingungen erfüllt, verwirft die Transaktion alle Änderungen und führt ein \textbf{Rollback} aus. Daraus folgt, dass die Datenbank auf den Stand zurück geholt, wie er vor der Ausführung der Transaktion war.
 
 \item \textbf{VM-Sharing} \\
-Das 'Sharing' einer bestehende virtuellen Maschine wird durch die interne Implementierung von Vagrant übernommen. Die Zuständigkeit um die Funktion in den 'VM-Builder' zu übernehmen und auszulösen, übernimmt die Klasse 'VagrantControl'. Wie auch bei dem Aufbau einer virtuellen Maschine, verwendet 'VagrantControl' die Funktion des 'SystemfileManagers' um den entsprechenden Befehl abzusetzen und an Vagrant selber weiterzuleiten. Das Teilen oder 'Sharing' einer virtuellen Maschine wird allerdings durch die Portsperrung des jeweiligen Netzwerkes eingeschränkt. Ist der Port 4567 gesperrt, wird durch Vagrant eine Fehlernachricht generiert und das Teilen der Maschine nicht ausgeführt. Bei erfolgreichem 'Sharing' wird ein SSH-Share erstellt. Die SSH Variante hat den Vorteil, dass Port und ggf. Passwort optional eingerichtet werden können, durch Angaben von erweiterten Parametern.
+Das 'Sharing' einer bestehenden virtuellen Maschine wird durch die interne Implementierung von Vagrant übernommen. Jede Maschine, die in der Hauptansicht zu sehen ist, kann von dort aus freigegeben werden. Wie jede weitere Option einer Maschine, wird die Share-Option durch den AdministrationController angesteuert und anschliessend durch die Logik der Option ermöglicht. In diesem Fall wird die Logik von der MachineShare-Komponente bereitgestellt. Die Voreinstellung des 'Sharings' ist auf HTTP gesetzt, wodurch ein Webzugriff auf die Maschine ermöglicht wird. Optional kann in der Implementierung auf einen SSH Zugriff gewechselt werden, der direkten Zugriff auf die Maschine erlaubt. So wäre beispielsweise simultaner Zugriff auf eine Maschine möglich, wodurch Teamarbeit von mehreren Standorten kein Problem darstellt.
+Die Zuständigkeit der Umsetzung erfolgt über den 'VM-Builder' zu übernehmen und auszulösen, übernimmt die Klasse 'VagrantControl'. Wie auch bei dem Aufbau einer virtuellen Maschine, verwendet 'VagrantControl' die Funktion des 'SystemfileManagers' um den entsprechenden Befehl abzusetzen und an Vagrant selber weiterzuleiten. 
+
+\item \textbf{Import}\label{itm:Import} \\
+Der wesentliche Bestandteil einer virtuellen Maschine, die über den VM-Builder aufgebaut wird, sind zwei Dateien. Das Vagrantfile, welches generelle Konfigurationen über die Maschine beinhaltet und die Yaml-Datei, die für die Zustandsumsetzung auf der Maschine benötigt wird.
+Werden diese beiden Dateien in den VM-Builder geladen, kann daraus der Aufbau der Maschine abgeleitet und die Provisionierung der Umgebung übernommen werden. 
+Die Importierte Maschine, wird im System wie jede andere Maschine geführt und kann somit auf die gleichen Optionen zugreifen. Der Import wird durch den MachineOptionController verwaltet, während dieser auf die Logik im MachineImporter zurückgreift. Damit der Import im System umgesetzt werden kann, verwendet die Klasse MachineImporter die Komponenten der MachineConstruction. Entsprechende Aufbauinformationen werden aus dem Machineimporter extrahiert und an die MachineConstruction weitergeleitet. Dort geht dann der normale Aufbauprozess von statten.
+
+\item \textbf{Export} \\
+Der Export befähigt den Anwender seine Maschine vom Server herunterzuladen und als vmdk-Datei zu speichern. Wie auch bei allen anderen Optionen, wird die Annahme des HTTP-Requests vom MachineOptionController verarbeitet. Die Logik, die in der Klasse 'MachineExport' beherbergt ist, veranlasst Vagrant die gewählte Maschine zu packen. Das entstandene Paket besteht dabei aus folgenden Dateien:
+\begin{lstlisting} [caption={Inhalt eines Export\protect\footnotemark},label={code:exportfile}]
+|-- Vagrantfile
+|-- box-disk1.vmdk
+|-- box.ovf
+|-- metadata.json
+\end{lstlisting}\footnotetext{Codebeispiel: \cite{vagrant:2015:Online}}
+
+
+
+
+%Das Teilen oder 'Sharing' einer virtuellen Maschine wird allerdings durch die Portsperrung des jeweiligen Netzwerkes eingeschränkt. Ist der Port 4567 gesperrt, wird durch Vagrant eine Fehlernachricht generiert und das Teilen der Maschine nicht ausgeführt. Bei erfolgreichem 'Sharing' wird ein SSH-Share erstellt. Die SSH Variante hat den Vorteil, dass Port und ggf. Passwort optional eingerichtet werden können, durch Angaben von erweiterten Parametern.
 \end{description}
+Eine Veranschaulichung der Applikation lässt sich im Anhang (\ref{ch:Anhang}) finden. Dort werden die einzelnen Funktionen noch einmal kurz aufgelistet und visualisiert.
 
 
