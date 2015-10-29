@@ -1,0 +1,110 @@
+\setcounter{secnumdepth}{3}
+\chapter{Anhang}\label{ch:Anhang}
+Dieses Kapitel zeigt Auszüge aus dem Prototypen und gibt kurze Einblicke in die Funktionsweise. Die Abläufe werden entsprechend erklärt und sollen bei der Verdeutlichung der Arbeitsweise helfen.
+\section{Aufbau einer virtuellen Maschine}\label{sec:Aufbau}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/create_machine.png}
+  }
+  \caption{Menü zum Erstellen einer virtuellen Umgebung}
+	\label{fig:create_machine}
+\end{figure}
+\FloatBarrier
+Der Aufbau einer virtuellen Umgebung wird durch das Menü in Abbildung \ref{fig:create_machine} ermöglicht. Der Anwender bekommt hier die Möglichkeit, Konfigurationsparameter zu erfassen und eine Auswahl des Betriebssystems zu treffen. Die Konfigurationsparameter umfassen die Vergabe eines individuellen Namens, der IP-Adresse und einer optionalen Beschreibung der Maschine. Danach kann er sich entscheiden, ob und welche Softwarekomponenten er auf der Zielmaschine verwenden möchte. Die Auswahl der Softwarekomponenten kann einzelne Softwarebestandteile beinhalten und Gruppierungen von Software. Die Gruppierung ermöglicht das Konfigurieren von ganzen Installationsabläufen und das Einbringen von externer Software. Das CRM-Bundle aus Abbildung \ref{fig:create_machine}, ist so eine Gruppierung an Software und beinhaltet mehrere Softwarekomponenten.\newline
+Zu guter letzt wird dem Anwender anboten, beliebig viele Dateien mit zu übergeben, die dann durch den VM-Builder auf den Zielhost gebracht werden. 
+Nach dem Aufbau der virtuellen Umgebung, wird der Anwender in eine Übersicht geleitet, die ihm den Status seiner und aller aktuell vorhandenen Maschinen anzeigt. Zu sehen in Abschnitt \ref{sec:Verwaltung}, Abbildung \ref{fig:machine_overview}.
+
+\section{Verwaltung der virtuellen Maschinen}\label{sec:Verwaltung}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/machine_overview.png}
+  }
+  \caption{Übersicht aller aktuellen virtuellen Maschinen}
+	\label{fig:machine_overview}
+\end{figure}
+Die Verwaltung der einzelnen Umgebungen, wird über das Hauptmenü der Anwendung möglich. Nicht nur Maschinenbezogene Informationen werden über das Menü angezeigt, sondern auch Optionen für die einzelnen Maschinen angeboten. Über die Share-Funktion, wird die Maschine für einen externen Zugriff vorbereitet und ermöglicht so den Zugriff über das Internet. Mehr Informationen zu der Share-Option unter (\ref{sec:Sharing}). Der Export einer virtuellen Maschine kann durch die entsprechende Funktion eingeleitet werden. Das Stoppen, sowie das Herausnehmen der Umgebung aus dem System, wird ebenfalls explizit für jede Umgebung angeboten. Die Log-Funktion ermöglicht das Nachlesen des bisherigen Maschinenstatus. Alle Aktionen, die auf die entsprechende Maschine angewandt wurden, sind dort nachlesbar. Sei es der Aufbaufortschritt, die installierte Software oder das Beenden der Maschine.
+
+\section{Externer Zugriff}\label{sec:Sharing}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/sharing.png}
+  }
+  \caption{Externe Zugriffsoptionen auf eine virtuelle Maschine }
+	\label{fig:share}
+\end{figure}
+Unterschiedliche Zugriffsmöglichkeiten auf eine virtuelle Maschine, helfen bei kooperativer Arbeit von Mitarbeitern. Gerade wenn die involvierten Mitarbeiter nicht im gleichen Gebäude oder Land sitzen. Deshalb kann die Sharing-Option angewählt werden, die die Maschine im laufenden Betrieb so konfiguriert, dass auf sie über einen Link zugegriffen werden kann. Der Anwender selbst ist dabei immer noch in der Lage seine Maschine zu verwenden, während der oder die anderen Mitarbeiter von extern darauf arbeiten.
+
+\section{Import}\label{sec:Import}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/import.png}
+  }
+  \caption{Import durch Konfigurationsdateien}
+	\label{fig:import}
+\end{figure}
+Wie bereits in der Umsetzung des Imports aus Kapitel \ref{itm:Import} erwähnt, werden für den Aufbau einer virtuellen Maschine zwei wesentliche Dateien benötigt: 
+\begin{itemize}
+\item Das Vagrantfile, welches generelle Konfigurationen enthält und z.B. Informationen über das zu installierende Betriebssystem beinhaltet.
+\item Die Yaml-Datei, die für die Zustandsumsetzung benötigt wird. 
+\end{itemize}
+Sind diese Dateien hochgeladen und hat der Anwender dies mit einem Klick bestätigt, wird der Aufbauprozess eingeleitet, wodurch die importierte Maschine in das System integriert wird.
+
+\section{Log}\label{sec:Log-Dateien}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/log.png}
+  }
+  \caption{Allgemeine Logdatei}
+	\label{fig:log}
+\end{figure}
+Jede Maschine verwendet eine eigene Logdatei, um vergangene Vorgänge besser nachvollziehen zu können. Zudem werden alle Aktionen zu jeder Maschine in einer allgemeinen Log-Datei protokolliert, die über eine administrative Oberfläche einsehbar ist. Die individuellen Logdateien beinhalten grundsätzlich alle Aktionen, die auf jener Maschine ausgeführt wurden. Zudem wird der komplette Aufbauprozess dort festgehalten, inklusive der Softwarebestandteile und Dateien, die auf der virtuellen Maschine provisioniert wurden.
+\pagebreak
+
+\section{Administration}\label{sec:Administration}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/admin_1.png}
+  }
+  \caption{Administration des VM-Builders (Teil 1)}
+	\label{fig:admin1}
+\end{figure}
+\FloatBarrier
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/admin_2.png}
+  }
+  \caption{Administration des VM-Builders (Teil 2)}
+	\label{fig:admin2}
+\end{figure}
+\FloatBarrier
+Die Administration des VM-Builders erfolgt über ein eigenes Menü, welches über die Auswahl am oberen Rand ausgewählt werden kann. Das Menü bietet dem Anwender unterschiedlichste Konfigurationsmöglichkeiten an, die die Verwaltung von Dateien, der virtuellen Maschinen, der Logdateien und der integrierten Fremdsoftware ermöglichen. 
+In der Endversion des VM-Builders, sollte der Zugriff allerdings nur einem Administrator möglich sein, weswegen eine Zugriffsverwaltung eine optionale Möglichkeit wäre.
+
+\section{Software und Packages}\label{sec:SoftwarePackages}
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/soft_pack.png}
+  }
+  \caption{Administration von Software und Packages}
+	\label{fig:soft_pack}
+\end{figure}
+\FloatBarrier
+Um eine Softwareauswahl im VM-Builder anzubieten, diese zu administrieren und ggf. Softwarepakete schnüren zu können, werden Optionen angeboten, die diese Tätigkeiten unterstützen. Wie in Abbildung \ref{fig:soft_pack} gezeigt wird, kann der Anwender über das entsprechende Optionsmenü, Software und Packages hinzufügen und editieren. Jede neu hinzugefügte Softwarekomponente und jedes Package, ist sofort einsatzbereit und wird dem Anwender beim Aufbau einer Maschine angeboten. Während Softwarekomponenten nur aus Linux-Typischen apt-get install-Befehlen bestehen, können Softwarepakete (oder Packages genannt) unterschiedliche Konfigurationen beinhalten. Softwarepakete erweitern die Funktionspalette des VM-Builders, indem sie es ermöglichen, mehrere Softwarekomponenten zu vereinen und zusätzliche Dateien mit anzuhängen.
+\begin{figure}[htbp]
+  \centering
+  \fbox{
+\includegraphics[width=0.7\textwidth]{../Bilder/Anhang/package.png}
+  }
+  \caption{Erstellung eines Packages}
+	\label{fig:pack}
+\end{figure}
+\FloatBarrier
+Ein Softwarepackage kann durch das Konfigurationsmenü aus Abbildung \ref{fig:pack} erstellt werden. Jede ausgewählte Software, wird in der Reihenfolge der Auswahl im  späteren Installationsprozess installiert. Zudem können Dateien mitgegeben und in den gewünschten Pfad des Zielhosts kopiert werden. Die Erweiterung der Packageskonfiguration wäre ein wichtiger Punkt für die zukünftige Anwendung der Applikation. Denkbare Erweiterungen wären die Integration von Schnittstellen, die im System gebaut werden könnten und eine Auswahl an Dateioptionen. Die Erstellung von Softwarepaketen könnte so zukünftig dabei helfen, Komplettinstallationen von Teilsystemen zu übernehmen und erst zu ermöglichen.

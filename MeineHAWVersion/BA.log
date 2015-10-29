@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.6)  26 OCT 2015 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.6)  29 OCT 2015 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,29 +1134,29 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 16
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sl' in size <10.95> no
 t available
 (Font)              Font shape `T1/LinuxLibertineT-TLF/m/it' tried instead on i
-nput line 52.
+nput line 50.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 52.
+(Font)              scaled to size 10.95pt on input line 50.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
+(babel)             in language  on input line 50.
  [4
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
  [5])
 \tf@toc=\write10
 \openout10 = `BA.toc'.
@@ -1170,6 +1170,74 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 165.
  [6]
+Package tocbasic Info: character protrusion at lof deactivated on input line 16
+8.
+ (./BA.lof
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 52.
+ [7
+
+
+])
+\tf@lof=\write11
+\openout11 = `BA.lof'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 168.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 168.
+
+
+Class scrbook Warning: \float@listhead detected!
+(scrbook)              Implementation of \float@listhead became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Maybe implementation of \float@listhead will
+(scrbook)              be removed from KOMA-Script soon.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@listhead interface  on input line 169.
+
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 169.
+[8] (./BA.lol
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+)
+\tf@lol=\write12
+\openout12 = `BA.lol'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 169.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 174.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 174.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 174.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 174.
+ [9
+
+
+]
 ===== File: chapter 1
 \openout2 = `einleitung.aux'.
 
@@ -1234,13 +1302,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 23.
  [2])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 183.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 182.
+(babel)             in language  on input line 183.
  [3]
 \openout2 = `grundlagen.aux'.
 
@@ -1284,15 +1352,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 44.
- [5] <../Bilder/BSVirtualisierung.png, id=482, 384.43625pt x 316.18124pt>
+ [5] <../Bilder/BSVirtualisierung.png, id=625, 384.43625pt x 316.18124pt>
 File: ../Bilder/BSVirtualisierung.png Graphic file (type png)
 
 <use ../Bilder/BSVirtualisierung.png>
 Package pdftex.def Info: ../Bilder/BSVirtualisierung.png used on input line 48.
 
 (pdftex.def)             Requested size: 153.77177pt x 126.47025pt.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 49.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 51.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -1303,14 +1369,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 55.
 
-<../Bilder/Hypervisor1.png, id=488, 291.0875pt x 266.9975pt>
+<../Bilder/Hypervisor1.png, id=631, 291.0875pt x 266.9975pt>
 File: ../Bilder/Hypervisor1.png Graphic file (type png)
 
 <use ../Bilder/Hypervisor1.png>
 Package pdftex.def Info: ../Bilder/Hypervisor1.png used on input line 60.
 (pdftex.def)             Requested size: 202.79285pt x 186.0129pt.
 
-<../Bilder/Hypervisor2.png, id=489, 299.1175pt x 259.97125pt>
+<../Bilder/Hypervisor2.png, id=632, 299.1175pt x 259.97125pt>
 File: ../Bilder/Hypervisor2.png Graphic file (type png)
 
 <use ../Bilder/Hypervisor2.png>
@@ -1380,13 +1446,13 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 184.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 184.
  [9]
 \openout2 = `anforderunsanalyse.aux'.
 
@@ -1480,7 +1546,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 156.
 
-<../Bilder/UseCaseUebersicht.png, id=584, 673.51625pt x 816.04875pt>
+<../Bilder/UseCaseUebersicht.png, id=724, 673.51625pt x 816.04875pt>
 File: ../Bilder/UseCaseUebersicht.png Graphic file (type png)
 
 <use ../Bilder/UseCaseUebersicht.png>
@@ -1614,7 +1680,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 316.
  [20]
-<../Bilder/Mockups/Manage.png, id=683, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Manage.png, id=822, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Manage.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Manage.png>
@@ -1633,7 +1699,7 @@ Package babel Info: Redefining ngerman shorthand "~
 Package placeins Info: Float barrier, from input line 329, processed on page 21
 , lands on page 21. 
  <../Bilder/Mockups/Manage.png>]
-<../Bilder/Mockups/CreatePage1.png, id=701, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/CreatePage1.png, id=839, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/CreatePage1.png Graphic file (type png)
 
 <use ../Bilder/Mockups/CreatePage1.png>
@@ -1642,7 +1708,7 @@ Package pdftex.def Info: ../Bilder/Mockups/CreatePage1.png used on input line 3
 (pdftex.def)             Requested size: 206.92917pt x 155.19662pt.
 Package placeins Info: No floats held, on input line 352.
 
-<../Bilder/Mockups/CreatePage12.png, id=704, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/CreatePage12.png, id=842, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/CreatePage12.png Graphic file (type png)
 
 <use ../Bilder/Mockups/CreatePage12.png>
@@ -1651,7 +1717,7 @@ Package pdftex.def Info: ../Bilder/Mockups/CreatePage12.png used on input line
 (pdftex.def)             Requested size: 206.92917pt x 155.19662pt.
 Package placeins Info: No floats held, on input line 362.
 
-<../Bilder/Mockups/Share.png, id=708, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Share.png, id=846, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Share.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Share.png>
@@ -1684,7 +1750,7 @@ Package babel Info: Redefining ngerman shorthand "~
 Package placeins Info: Float barrier, from input line 374, processed on page 23
 , lands on page 23. 
  <../Bilder/Mockups/Share.png>]
-<../Bilder/Mockups/Export.png, id=732, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Export.png, id=867, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Export.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Export.png>
@@ -1692,7 +1758,7 @@ Package pdftex.def Info: ../Bilder/Mockups/Export.png used on input line 381.
 (pdftex.def)             Requested size: 206.92917pt x 155.19662pt.
 Package placeins Info: No floats held, on input line 385.
 
-<../Bilder/Mockups/Import.png, id=736, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Import.png, id=871, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Import.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Import.png>
@@ -1700,7 +1766,7 @@ Package pdftex.def Info: ../Bilder/Mockups/Import.png used on input line 393.
 (pdftex.def)             Requested size: 206.92917pt x 155.19662pt.
 Package placeins Info: No floats held, on input line 397.
 
-<../Bilder/Mockups/SettingsPage1_1_2.png, id=742, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/SettingsPage1_1_2.png, id=877, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/SettingsPage1_1_2.png Graphic file (type png)
 
 <use ../Bilder/Mockups/SettingsPage1_1_2.png>
@@ -1723,7 +1789,7 @@ Package placeins Info: Float barrier, from input line 397, processed on page 24
  <../Bilder/Mockups/Export.png> <../Bilder/Mockups/Import.png>]
 Package placeins Info: No floats held, on input line 408.
 
-<../Bilder/Mockups/Settings-Logs.png, id=757, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Settings-Logs.png, id=890, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Settings-Logs.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Settings-Logs.png>
@@ -1732,7 +1798,7 @@ Package pdftex.def Info: ../Bilder/Mockups/Settings-Logs.png used on input line
 (pdftex.def)             Requested size: 206.92917pt x 155.19662pt.
 Package placeins Info: No floats held, on input line 419.
 
-<../Bilder/Mockups/Settings-Programs.png, id=760, 1027.84pt x 770.88pt>
+<../Bilder/Mockups/Settings-Programs.png, id=893, 1027.84pt x 770.88pt>
 File: ../Bilder/Mockups/Settings-Programs.png Graphic file (type png)
 
 <use ../Bilder/Mockups/Settings-Programs.png>
@@ -1755,7 +1821,7 @@ Package placeins Info: Float barrier, from input line 419, processed on page 25
 , lands on page 25. 
 Package placeins Info: Float barrier, from input line 430, processed on page 25
 , lands on page 25. 
-pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.28}
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.38}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1857,13 +1923,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 494.
  [29])
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 185.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 184.
+(babel)             in language  on input line 185.
  [30]
 \openout2 = `evaluation.aux'.
 
@@ -2119,13 +2185,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 101.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 186.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 185.
+(babel)             in language  on input line 186.
  [37]
 \openout2 = `entwurf.aux'.
 
@@ -2135,7 +2201,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
-<../Bilder/sichten.png, id=901, 296.10625pt x 146.5475pt>
+<../Bilder/sichten.png, id=1031, 296.10625pt x 146.5475pt>
 File: ../Bilder/sichten.png Graphic file (type png)
 
 <use ../Bilder/sichten.png>
@@ -2162,7 +2228,7 @@ Package babel Info: Redefining ngerman shorthand "~
 Package placeins Info: Float barrier, from input line 26, processed on page 38,
  lands on page 38. 
  <../Bilder/sichten.png>]
-<../Bilder/kontextsicht.png, id=917, 549.05125pt x 586.19pt>
+<../Bilder/kontextsicht.png, id=1046, 549.05125pt x 586.19pt>
 File: ../Bilder/kontextsicht.png Graphic file (type png)
 
 <use ../Bilder/kontextsicht.png>
@@ -2208,7 +2274,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<../Bilder/Verteilungssicht.png, id=934, 976.64874pt x 356.33125pt>
+<../Bilder/Verteilungssicht.png, id=1063, 976.64874pt x 356.33125pt>
 File: ../Bilder/Verteilungssicht.png Graphic file (type png)
 
 <use ../Bilder/Verteilungssicht.png>
@@ -2220,575 +2286,634 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 83.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 83.
  [41
 Package placeins Info: Float barrier, from input line 74, processed on page 41,
  lands on page 41. 
  <../Bilder/Verteilungssicht.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 91.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 85.
+(babel)             in language  on input line 91.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 95.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 95.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 99.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 104.
 
-<../Bilder/client-server-anordnungen.png, id=954, 585.18625pt x 281.05pt>
+[42]
+<../Bilder/client-server-anordnungen.png, id=1096, 585.18625pt x 281.05pt>
 File: ../Bilder/client-server-anordnungen.png Graphic file (type png)
 
 <use ../Bilder/client-server-anordnungen.png>
 Package pdftex.def Info: ../Bilder/client-server-anordnungen.png used on input 
-line 102.
+line 116.
 (pdftex.def)             Requested size: 372.46997pt x 178.8936pt.
-Package placeins Info: Must dump some floats on input line 106.
+Package placeins Info: Must dump some floats on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
- [42
-Package placeins Info: Float barrier, from input line 106, processed on page 42
-, lands on page 42. 
-]
-Package placeins Info: Check again: on input line 106.
-Package placeins Info: No floats held, on input line 106.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 120.
  [43
-Package placeins Info: Float barrier, from input line 106, processed on page 43
+Package placeins Info: Float barrier, from input line 120, processed on page 43
 , lands on page 43. 
+]
+Package placeins Info: Check again: on input line 120.
+Package placeins Info: No floats held, on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 128.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 128.
+ [44
+Package placeins Info: Float barrier, from input line 120, processed on page 44
+, lands on page 44. 
  <../Bilder/client-server-anordnungen.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 129.
 
-<../Bilder/MVC-Process_Wiki.png, id=983, 2007.5pt x 2208.25pt>
+<../Bilder/MVC-Process_Wiki.png, id=1123, 2007.5pt x 2208.25pt>
 File: ../Bilder/MVC-Process_Wiki.png Graphic file (type png)
 
 <use ../Bilder/MVC-Process_Wiki.png>
-Package pdftex.def Info: ../Bilder/MVC-Process_Wiki.png used on input line 133.
+Package pdftex.def Info: ../Bilder/MVC-Process_Wiki.png used on input line 147.
 
 (pdftex.def)             Requested size: 165.5408pt x 182.08852pt.
-Package placeins Info: Must dump some floats on input line 137.
+Package placeins Info: Must dump some floats on input line 151.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 137.
+(babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 137.
- [44
-Package placeins Info: Float barrier, from input line 137, processed on page 44
-, lands on page 44. 
+(babel)             in language  on input line 151.
+ [45
+Package placeins Info: Float barrier, from input line 151, processed on page 45
+, lands on page 45. 
 ]
-Package placeins Info: Check again: on input line 137.
-Package placeins Info: No floats held, on input line 137.
+Package placeins Info: Check again: on input line 151.
+Package placeins Info: No floats held, on input line 151.
 
-<../Bilder/MVC_Eigen.png, id=1001, 776.9025pt x 500.87125pt>
+<../Bilder/MVC_Eigen.png, id=1141, 776.9025pt x 500.87125pt>
 File: ../Bilder/MVC_Eigen.png Graphic file (type png)
 
 <use ../Bilder/MVC_Eigen.png>
-Package pdftex.def Info: ../Bilder/MVC_Eigen.png used on input line 156.
+Package pdftex.def Info: ../Bilder/MVC_Eigen.png used on input line 170.
 (pdftex.def)             Requested size: 372.46997pt x 240.14032pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 160.
- [45
-Package placeins Info: Float barrier, from input line 137, processed on page 45
-, lands on page 45. 
- <../Bilder/MVC-Process_Wiki.png>]
-Package placeins Info: No floats held, on input line 160.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--173
-
- []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
-[46
-Package placeins Info: Float barrier, from input line 160, processed on page 46
+(babel)             in language  on input line 174.
+ [46
+Package placeins Info: Float barrier, from input line 151, processed on page 46
 , lands on page 46. 
- <../Bilder/MVC_Eigen.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+ <../Bilder/MVC-Process_Wiki.png>]
+Package placeins Info: No floats held, on input line 174.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 178.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 178.
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--190
+
+ []
+
+
+Overfull \hbox (11.38559pt too wide) in paragraph at lines 179--190
+[] \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) In dem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--190
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
+(babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
+(babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
+(babel)             in language  on input line 190.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
-[47]
+(babel)             in language  on input line 190.
+[47
+Package placeins Info: Float barrier, from input line 174, processed on page 47
+, lands on page 47. 
+ <../Bilder/MVC_Eigen.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 209.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 209.
- <../Bilder/Bausteinsicht.png, id=1054, 1163.34625pt x 808.01875pt>
+(babel)             in language  on input line 204.
+ [48]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 224.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 224.
+
+<../Bilder/Bausteinsicht.png, id=1190, 1172.38pt x 809.0225pt>
 File: ../Bilder/Bausteinsicht.png Graphic file (type png)
 
 <use ../Bilder/Bausteinsicht.png>
-Package pdftex.def Info: ../Bilder/Bausteinsicht.png used on input line 220.
-(pdftex.def)             Requested size: 372.46997pt x 258.70691pt.
+Package pdftex.def Info: ../Bilder/Bausteinsicht.png used on input line 228.
+(pdftex.def)             Requested size: 455.24669pt x 314.14725pt.
+
+Overfull \hbox (41.38835pt too wide) in paragraph at lines 228--229
+ [][] 
+ []
+
+Package placeins Info: Must dump some floats on input line 232.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 224.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 224.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 224.
+(babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 224.
- [48]
-Package placeins Info: No floats held, on input line 224.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 227.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 227.
- [49
-Package placeins Info: Float barrier, from input line 224, processed on page 49
+(babel)             in language  on input line 232.
+[49
+Package placeins Info: Float barrier, from input line 232, processed on page 49
 , lands on page 49. 
+]
+Package placeins Info: Check again: on input line 232.
+Package placeins Info: No floats held, on input line 232.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 236.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 236.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 236.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 236.
+ [50
+Package placeins Info: Float barrier, from input line 232, processed on page 50
+, lands on page 50. 
  <../Bilder/Bausteinsicht.png>]
-<../Bilder/Benutzerschnittstelle.png, id=1087, 1106.1325pt x 486.81876pt>
+<../Bilder/Benutzerschnittstelle.png, id=1220, 1106.1325pt x 478.78876pt>
 File: ../Bilder/Benutzerschnittstelle.png Graphic file (type png)
 
 <use ../Bilder/Benutzerschnittstelle.png>
 Package pdftex.def Info: ../Bilder/Benutzerschnittstelle.png used on input line
- 230.
-(pdftex.def)             Requested size: 372.46997pt x 163.92654pt.
-Package placeins Info: No floats held, on input line 234.
+ 239.
+(pdftex.def)             Requested size: 372.46997pt x 161.2226pt.
+Package placeins Info: No floats held, on input line 243.
 
-<../Bilder/Distributor.png, id=1091, 663.47874pt x 242.9075pt>
+<../Bilder/Distributor.png, id=1224, 663.47874pt x 242.9075pt>
 File: ../Bilder/Distributor.png Graphic file (type png)
 
 <use ../Bilder/Distributor.png>
-Package pdftex.def Info: ../Bilder/Distributor.png used on input line 240.
+Package pdftex.def Info: ../Bilder/Distributor.png used on input line 250.
 (pdftex.def)             Requested size: 372.46997pt x 136.36455pt.
-Package placeins Info: No floats held, on input line 244.
+Package placeins Info: No floats held, on input line 254.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 248.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 248.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 248.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 248.
- [50
-Package placeins Info: Float barrier, from input line 234, processed on page 50
-, lands on page 50. 
-Package placeins Info: Float barrier, from input line 244, processed on page 50
-, lands on page 50. 
+(babel)             in language  on input line 261.
+ [51
+Package placeins Info: Float barrier, from input line 243, processed on page 51
+, lands on page 51. 
+Package placeins Info: Float barrier, from input line 254, processed on page 51
+, lands on page 51. 
  <../Bilder/Benutzerschnittstelle.png> <../Bilder/Distributor.png>]
-<../Bilder/MainRepresentation.png, id=1106, 558.085pt x 306.14375pt>
+<../Bilder/MainRepresentation.png, id=1238, 559.08875pt x 307.1475pt>
 File: ../Bilder/MainRepresentation.png Graphic file (type png)
 
 <use ../Bilder/MainRepresentation.png>
-Package pdftex.def Info: ../Bilder/MainRepresentation.png used on input line 25
-2.
-(pdftex.def)             Requested size: 372.46997pt x 204.32578pt.
-Package placeins Info: No floats held, on input line 256.
-
-<../Bilder/BuildingProcess.png, id=1109, 798.985pt x 322.20375pt>
-File: ../Bilder/BuildingProcess.png Graphic file (type png)
-
-<use ../Bilder/BuildingProcess.png>
-Package pdftex.def Info: ../Bilder/BuildingProcess.png used on input line 264.
-(pdftex.def)             Requested size: 372.46997pt x 150.20667pt.
-Package placeins Info: Must dump some floats on input line 268.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 268.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 268.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 268.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 268.
- [51
-Package placeins Info: Float barrier, from input line 256, processed on page 51
-, lands on page 51. 
-Package placeins Info: Float barrier, from input line 268, processed on page 51
-, lands on page 51. 
- <../Bilder/MainRepresentation.png>]
-Package placeins Info: Check again: on input line 268.
+Package pdftex.def Info: ../Bilder/MainRepresentation.png used on input line 26
+4.
+(pdftex.def)             Requested size: 372.46997pt x 204.63014pt.
 Package placeins Info: No floats held, on input line 268.
-
-<../Bilder/MachineOption.png, id=1122, 794.97pt x 323.2075pt>
-File: ../Bilder/MachineOption.png Graphic file (type png)
-
-<use ../Bilder/MachineOption.png>
-Package pdftex.def Info: ../Bilder/MachineOption.png used on input line 285.
-(pdftex.def)             Requested size: 372.46997pt x 151.43903pt.
-Package placeins Info: Must dump some floats on input line 289.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 289.
+(babel)             in language  on input line 272.
  [52
 Package placeins Info: Float barrier, from input line 268, processed on page 52
 , lands on page 52. 
-Package placeins Info: Float barrier, from input line 289, processed on page 52
-, lands on page 52. 
- <../Bilder/BuildingProcess.png>]
-Package placeins Info: Check again: on input line 289.
-Package placeins Info: No floats held, on input line 289.
+ <../Bilder/MainRepresentation.png>]
+<../Bilder/BuildingProcess.png, id=1249, 799.98875pt x 323.2075pt>
+File: ../Bilder/BuildingProcess.png Graphic file (type png)
 
-<../Bilder/administration.png, id=1137, 794.97pt x 323.2075pt>
+<use ../Bilder/BuildingProcess.png>
+Package pdftex.def Info: ../Bilder/BuildingProcess.png used on input line 275.
+(pdftex.def)             Requested size: 372.46997pt x 150.48227pt.
+Package placeins Info: No floats held, on input line 279.
+
+Overfull \hbox (14.2463pt too wide) in paragraph at lines 280--283
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Der Auf-bau-pro-zess ei-ner vir-tu-el-l
+en Ma-schi-ne wird gra-fisch durch die BuildingProcess-Komponente
+ []
+
+<../Bilder/MachineOption.png, id=1252, 795.97375pt x 324.21124pt>
+File: ../Bilder/MachineOption.png Graphic file (type png)
+
+<use ../Bilder/MachineOption.png>
+Package pdftex.def Info: ../Bilder/MachineOption.png used on input line 296.
+(pdftex.def)             Requested size: 372.46997pt x 151.71144pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+ [53
+Package placeins Info: Float barrier, from input line 279, processed on page 53
+, lands on page 53. 
+ <../Bilder/BuildingProcess.png>]
+Package placeins Info: No floats held, on input line 300.
+
+<../Bilder/administration.png, id=1266, 795.97375pt x 324.21124pt>
 File: ../Bilder/administration.png Graphic file (type png)
 
 <use ../Bilder/administration.png>
-Package pdftex.def Info: ../Bilder/administration.png used on input line 295.
-(pdftex.def)             Requested size: 372.46997pt x 151.43903pt.
-Package placeins Info: No floats held, on input line 299.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 302.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 302.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 302.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 302.
- [53
-Package placeins Info: Float barrier, from input line 289, processed on page 53
-, lands on page 53. 
-Package placeins Info: Float barrier, from input line 299, processed on page 53
-, lands on page 53. 
- <../Bilder/MachineOption.png> <../Bilder/administration.png>]
-<../Bilder/SoftwareSelection.png, id=1151, 759.83875pt x 307.1475pt>
-File: ../Bilder/SoftwareSelection.png Graphic file (type png)
-
-<use ../Bilder/SoftwareSelection.png>
-Package pdftex.def Info: ../Bilder/SoftwareSelection.png used on input line 307
-.
-(pdftex.def)             Requested size: 372.46997pt x 150.56451pt.
+Package pdftex.def Info: ../Bilder/administration.png used on input line 307.
+(pdftex.def)             Requested size: 372.46997pt x 151.71144pt.
 Package placeins Info: No floats held, on input line 311.
 
-Overfull \hbox (3.7608pt too wide) in paragraph at lines 312--313
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Die an der \T1/LinuxLibertineT-TLF/b/
-n/10.95 Ad-mi-nis-tra-ti-ons\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) -Komponente
- an-ge-schlos-se-ne \T1/LinuxLibertineT-TLF/b/n/10.95 Soft-wa-re-Se-lec-ti-on\T
-1/LinuxLibertineT-TLF/m/n/10.95 (-20) -Komponente
+Overfull \hbox (50.92984pt too wide) in paragraph at lines 312--315
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Wie be-reits in Ab-schnitt Distributor-
+Komponente ([][]5.7.1.1[][]) be-schrie-ben, wird ne-ben der MainRepresentation-
+
  []
 
-<../Bilder/Verarbeitungsebene.png, id=1154, 1084.05pt x 519.9425pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 315.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 315.
+[54
+Package placeins Info: Float barrier, from input line 300, processed on page 54
+, lands on page 54. 
+Package placeins Info: Float barrier, from input line 311, processed on page 54
+, lands on page 54. 
+ <../Bilder/MachineOption.png> <../Bilder/administration.png>]
+<../Bilder/Software.png, id=1280, 759.83875pt x 307.1475pt>
+File: ../Bilder/Software.png Graphic file (type png)
+
+<use ../Bilder/Software.png>
+Package pdftex.def Info: ../Bilder/Software.png used on input line 319.
+(pdftex.def)             Requested size: 372.46997pt x 150.56451pt.
+Package placeins Info: No floats held, on input line 323.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 329.
+ [55
+Package placeins Info: Float barrier, from input line 323, processed on page 55
+, lands on page 55. 
+ <../Bilder/Software.png>]
+<../Bilder/Verarbeitungsebene.png, id=1290, 1133.23375pt x 525.965pt>
 File: ../Bilder/Verarbeitungsebene.png Graphic file (type png)
 
 <use ../Bilder/Verarbeitungsebene.png>
-Package pdftex.def Info: ../Bilder/Verarbeitungsebene.png used on input line 31
-7.
-(pdftex.def)             Requested size: 372.46997pt x 178.64252pt.
-Package placeins Info: Must dump some floats on input line 321.
+Package pdftex.def Info: ../Bilder/Verarbeitungsebene.png used on input line 33
+3.
+(pdftex.def)             Requested size: 372.46997pt x 172.87076pt.
+Package placeins Info: No floats held, on input line 337.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 321.
+(babel)             in language  on input line 342.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 321.
+(babel)             in language  on input line 342.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 321.
+(babel)             in language  on input line 342.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 321.
- [54
-Package placeins Info: Float barrier, from input line 311, processed on page 54
-, lands on page 54. 
-Package placeins Info: Float barrier, from input line 321, processed on page 54
-, lands on page 54. 
- <../Bilder/SoftwareSelection.png>]
-Package placeins Info: Check again: on input line 321.
-Package placeins Info: No floats held, on input line 321.
-
-<../Bilder/MachineConstruction.png, id=1167, 684.5575pt x 279.0425pt>
+(babel)             in language  on input line 342.
+ [56
+Package placeins Info: Float barrier, from input line 337, processed on page 56
+, lands on page 56. 
+ <../Bilder/Verarbeitungsebene.png>]
+<../Bilder/MachineConstruction.png, id=1300, 685.56125pt x 329.23pt>
 File: ../Bilder/MachineConstruction.png Graphic file (type png)
 
 <use ../Bilder/MachineConstruction.png>
 Package pdftex.def Info: ../Bilder/MachineConstruction.png used on input line 3
-36.
-(pdftex.def)             Requested size: 372.46997pt x 151.8303pt.
+45.
+(pdftex.def)             Requested size: 372.46997pt x 178.8767pt.
+Package placeins Info: No floats held, on input line 349.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 339.
+(babel)             in language  on input line 354.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 339.
+(babel)             in language  on input line 354.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 339.
+(babel)             in language  on input line 354.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 339.
- [55
-Package placeins Info: Float barrier, from input line 321, processed on page 55
-, lands on page 55. 
- <../Bilder/Verarbeitungsebene.png>]
-Package placeins Info: No floats held, on input line 340.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 347.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 347.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 347.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 347.
-[56
-Package placeins Info: Float barrier, from input line 340, processed on page 56
-, lands on page 56. 
+(babel)             in language  on input line 354.
+ [57
+Package placeins Info: Float barrier, from input line 349, processed on page 57
+, lands on page 57. 
  <../Bilder/MachineConstruction.png>]
-<../Bilder/SystemAdministration.png, id=1187, 702.625pt x 252.945pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 354.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 354.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 362.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 362.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 362.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 362.
+ [58] <../Bilder/SystemAdministration.png, id=1316, 626.34pt x 243.91125pt>
 File: ../Bilder/SystemAdministration.png Graphic file (type png)
 
 <use ../Bilder/SystemAdministration.png>
 Package pdftex.def Info: ../Bilder/SystemAdministration.png used on input line 
-351.
-(pdftex.def)             Requested size: 372.46997pt x 134.09108pt.
-Package placeins Info: No floats held, on input line 355.
+366.
+(pdftex.def)             Requested size: 372.46997pt x 145.05269pt.
+Package placeins Info: No floats held, on input line 370.
 
-<../Bilder/MachineManagement.png, id=1190, 684.5575pt x 313.17pt>
+Overfull \hbox (13.0094pt too wide) in paragraph at lines 371--374
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Die Um-set-zung der Lo-gik der ad-mi-ni
+s-tra-ti-ven An-sicht ge-schieht durch die AdministrationManager-
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 374.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 374.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 374.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 374.
+[59
+Package placeins Info: Float barrier, from input line 370, processed on page 59
+, lands on page 59. 
+ <../Bilder/SystemAdministration.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 374.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 374.
+
+<../Bilder/SoftwareAdministration.png, id=1326, 817.0525pt x 243.91125pt>
+File: ../Bilder/SoftwareAdministration.png Graphic file (type png)
+
+<use ../Bilder/SoftwareAdministration.png>
+Package pdftex.def Info: ../Bilder/SoftwareAdministration.png used on input lin
+e 377.
+(pdftex.def)             Requested size: 372.46997pt x 111.19193pt.
+Package placeins Info: No floats held, on input line 381.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 385.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 385.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 385.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 385.
+ [60
+Package placeins Info: Float barrier, from input line 381, processed on page 60
+, lands on page 60. 
+ <../Bilder/SoftwareAdministration.png>] <../Bilder/MachineManagement.png, id=1
+335, 685.56125pt x 314.17375pt>
 File: ../Bilder/MachineManagement.png Graphic file (type png)
 
 <use ../Bilder/MachineManagement.png>
-Package pdftex.def Info: ../Bilder/MachineManagement.png used on input line 362
+Package pdftex.def Info: ../Bilder/MachineManagement.png used on input line 389
 .
-(pdftex.def)             Requested size: 372.46997pt x 170.39949pt.
-Package placeins Info: Must dump some floats on input line 366.
+(pdftex.def)             Requested size: 372.46997pt x 170.69637pt.
+Package placeins Info: No floats held, on input line 393.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 406.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 406.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 366.
+(babel)             in language  on input line 406.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 366.
- [57
-Package placeins Info: Float barrier, from input line 355, processed on page 57
-, lands on page 57. 
-Package placeins Info: Float barrier, from input line 366, processed on page 57
-, lands on page 57. 
- <../Bilder/SystemAdministration.png>]
-Package placeins Info: Check again: on input line 366.
-Package placeins Info: No floats held, on input line 366.
+(babel)             in language  on input line 406.
+ [61
+Package placeins Info: Float barrier, from input line 393, processed on page 61
+, lands on page 61. 
+ <../Bilder/MachineManagement.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 406.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 406.
 
-Overfull \hbox (20.5857pt too wide) in paragraph at lines 373--374
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Die VMBuilder-Komponenten ist der In-fo
-r-ma-ti-ons-lie-fe-rant für die MainRepresentation-Komponente
- []
-
-<../Bilder/Datenebene.png, id=1204, 1152.305pt x 202.7575pt>
+[62] <../Bilder/Datenebene.png, id=1352, 1152.305pt x 202.7575pt>
 File: ../Bilder/Datenebene.png Graphic file (type png)
 
 <use ../Bilder/Datenebene.png>
-Package pdftex.def Info: ../Bilder/Datenebene.png used on input line 378.
+Package pdftex.def Info: ../Bilder/Datenebene.png used on input line 409.
 (pdftex.def)             Requested size: 372.46997pt x 65.53961pt.
-Package placeins Info: Must dump some floats on input line 382.
+Package placeins Info: No floats held, on input line 413.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 382.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 382.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 382.
+(babel)             in language  on input line 427.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 382.
- [58
-Package placeins Info: Float barrier, from input line 366, processed on page 58
-, lands on page 58. 
-Package placeins Info: Float barrier, from input line 382, processed on page 58
-, lands on page 58. 
- <../Bilder/MachineManagement.png>]
-Package placeins Info: Check again: on input line 382.
-Package placeins Info: No floats held, on input line 382.
+(babel)             in language  on input line 427.
+ [63
+Package placeins Info: Float barrier, from input line 413, processed on page 63
+, lands on page 63. 
+ <../Bilder/Datenebene.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 428.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 396.
+(babel)             in language  on input line 428.
 
-<../Bilder/Laufzeitsicht_VMAufbau.png, id=1218, 1093.08376pt x 674.52pt>
+<../Bilder/Laufzeitsicht_VMAufbau.png, id=1366, 1096.095pt x 665.48625pt>
 File: ../Bilder/Laufzeitsicht_VMAufbau.png Graphic file (type png)
 
 <use ../Bilder/Laufzeitsicht_VMAufbau.png>
 Package pdftex.def Info: ../Bilder/Laufzeitsicht_VMAufbau.png used on input lin
-e 403.
-(pdftex.def)             Requested size: 372.46997pt x 229.83809pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 406.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 406.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 406.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 406.
- [59
-Package placeins Info: Float barrier, from input line 382, processed on page 59
-, lands on page 59. 
- <../Bilder/Datenebene.png>]
-Package placeins Info: No floats held, on input line 407.
+e 436.
+(pdftex.def)             Requested size: 372.46997pt x 226.14047pt.
+Package placeins Info: No floats held, on input line 440.
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--415
+Underfull \hbox (badness 10000) in paragraph at lines 441--444
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 419.
+(babel)             in language  on input line 448.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 419.
+(babel)             in language  on input line 448.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 419.
+(babel)             in language  on input line 448.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 419.
-[60
-Package placeins Info: Float barrier, from input line 407, processed on page 60
-, lands on page 60. 
+(babel)             in language  on input line 448.
+[64
+Package placeins Info: Float barrier, from input line 440, processed on page 64
+, lands on page 64. 
  <../Bilder/Laufzeitsicht_VMAufbau.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 461.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 461.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 434.
+(babel)             in language  on input line 461.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 434.
- [61]
+(babel)             in language  on input line 461.
+ [65]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 474.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 439.
+(babel)             in language  on input line 474.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 474.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 474.
+ [66]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 475.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 475.
 
-<../Bilder/datamodel_impl.png, id=1247, 1163.34625pt x 639.38875pt>
+<../Bilder/datamodel_impl.png, id=1393, 1163.34625pt x 639.38875pt>
 File: ../Bilder/datamodel_impl.png Graphic file (type png)
 
 <use ../Bilder/datamodel_impl.png>
-Package pdftex.def Info: ../Bilder/datamodel_impl.png used on input line 446.
+Package pdftex.def Info: ../Bilder/datamodel_impl.png used on input line 482.
 (pdftex.def)             Requested size: 372.46997pt x 204.7159pt.
-Package placeins Info: No floats held, on input line 450.
+Package placeins Info: No floats held, on input line 486.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 458.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 458.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 458.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 458.
- [62
-Package placeins Info: Float barrier, from input line 450, processed on page 62
-, lands on page 62. 
+(babel)             in language  on input line 496.
+ [67
+Package placeins Info: Float barrier, from input line 486, processed on page 67
+, lands on page 67. 
  <../Bilder/datamodel_impl.png>]
-<../Bilder/RelationalDatabaseDiagram.png, id=1261, 1121.18875pt x 456.70625pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 496.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 496.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 496.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 496.
+ [68]
+<../Bilder/RelationalDatabaseDiagram.png, id=1410, 1121.18875pt x 456.70625pt>
 File: ../Bilder/RelationalDatabaseDiagram.png Graphic file (type png)
 
 <use ../Bilder/RelationalDatabaseDiagram.png>
 Package pdftex.def Info: ../Bilder/RelationalDatabaseDiagram.png used on input 
-line 462.
+line 499.
 (pdftex.def)             Requested size: 372.46997pt x 151.72398pt.
-Package placeins Info: Must dump some floats on input line 466.
+Package placeins Info: No floats held, on input line 503.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 466.
+(babel)             in language  on input line 513.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 466.
+(babel)             in language  on input line 513.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 466.
+(babel)             in language  on input line 513.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 466.
- [63
-Package placeins Info: Float barrier, from input line 466, processed on page 63
-, lands on page 63. 
-]
-Package placeins Info: Check again: on input line 466.
-Package placeins Info: No floats held, on input line 466.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 477.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 477.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 477.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 477.
- [64
-Package placeins Info: Float barrier, from input line 466, processed on page 64
-, lands on page 64. 
+(babel)             in language  on input line 513.
+ [69
+Package placeins Info: Float barrier, from input line 503, processed on page 69
+, lands on page 69. 
  <../Bilder/RelationalDatabaseDiagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 484--487
+Underfull \hbox (badness 10000) in paragraph at lines 521--524
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 526.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 526.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 526.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
-[65]
+(babel)             in language  on input line 526.
+[70]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 533.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 496.
+(babel)             in language  on input line 533.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 503.
+(babel)             in language  on input line 538.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 503.
+(babel)             in language  on input line 538.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
- [66]
+(babel)             in language  on input line 187.
+ [71]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 186.
+(babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 186.
- [67]
+(babel)             in language  on input line 187.
+ [72]
 \openout2 = `umsetzung.aux'.
 
  (./umsetzung.tex
@@ -2802,14 +2927,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 16.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
-[68
+(babel)             in language  on input line 16.
+[73
 
 
 
@@ -2844,166 +2969,202 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
-[69]
+[74]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 37.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
- [70]
+(babel)             in language  on input line 45.
+ [75]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 68.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
- [71]
+(babel)             in language  on input line 72.
+ [76]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 97.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
- [72]
-<../Bilder/Bausteinsicht_Impl.png, id=1397, 1171.37625pt x 808.01875pt>
+(babel)             in language  on input line 97.
+ [77]
+<../Bilder/Bausteinsicht_Impl.png, id=1547, 1171.37625pt x 808.01875pt>
 File: ../Bilder/Bausteinsicht_Impl.png Graphic file (type png)
 
 <use ../Bilder/Bausteinsicht_Impl.png>
 Package pdftex.def Info: ../Bilder/Bausteinsicht_Impl.png used on input line 11
-5.
+3.
 (pdftex.def)             Requested size: 372.46997pt x 256.93147pt.
-Package placeins Info: Must dump some floats on input line 119.
+Package placeins Info: Must dump some floats on input line 117.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
- [73
-Package placeins Info: Float barrier, from input line 119, processed on page 73
-, lands on page 73. 
+(babel)             in language  on input line 117.
+ [78
+Package placeins Info: Float barrier, from input line 117, processed on page 78
+, lands on page 78. 
 ]
-Package placeins Info: Check again: on input line 119.
-Package placeins Info: No floats held, on input line 119.
+Package placeins Info: Check again: on input line 117.
+Package placeins Info: No floats held, on input line 117.
+
+Overfull \hbox (6.72543pt too wide) in paragraph at lines 118--120
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Einer der we-sent-li-chen Op-ti-mie-run
+-gen ist der Weg-fall der ConfigurationfileHandler-Komponente.
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 121.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 121.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 131.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 131.
- [74
-Package placeins Info: Float barrier, from input line 119, processed on page 74
-, lands on page 74. 
+(babel)             in language  on input line 128.
+[79
+Package placeins Info: Float barrier, from input line 117, processed on page 79
+, lands on page 79. 
  <../Bilder/Bausteinsicht_Impl.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 168.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 168.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 168.
+(babel)             in language  on input line 165.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 168.
-[75]
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+(babel)             in language  on input line 165.
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 180.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 180.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
-[76]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 197.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 197.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 197.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 197.
- [77]
-Overfull \hbox (1.14986pt too wide) in paragraph at lines 203--204
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+(babel)             in language  on input line 178.
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--191
+
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 221.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 221.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 221.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 221.
-[78]
+(babel)             in language  on input line 191.
+[81]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 233.
- [79])
+(babel)             in language  on input line 191.
+ [82]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 210.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 210.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 210.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 187.
- [80]
+(babel)             in language  on input line 210.
+ [83]
+Underfull \hbox (badness 10000) in paragraph at lines 211--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--220
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 220.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 220.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 220.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 220.
+[84])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+ [85]
 \openout2 = `fazit.aux'.
 
  (./fazit.tex
@@ -3024,7 +3185,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
-[81
+[86
 
 
 
@@ -3036,194 +3197,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 10.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
- [82]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 188.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 188.
- [83]
-\openout2 = `anhang.aux'.
-
- (./anhang.tex
-Kapitel 8.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
-<../Bilder/Anhang/create_machine.png, id=1535, 1123.19624pt x 694.595pt>
-File: ../Bilder/Anhang/create_machine.png Graphic file (type png)
-
-<use ../Bilder/Anhang/create_machine.png>
-Package pdftex.def Info: ../Bilder/Anhang/create_machine.png used on input line
- 9.
-(pdftex.def)             Requested size: 289.69957pt x 179.14902pt.
-Package placeins Info: No floats held, on input line 13.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
- [84
-
-
-
-
-Package placeins Info: Float barrier, from input line 13, processed on page 84,
- lands on page 84. 
- <../Bilder/Anhang/create_machine.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-
-<../Bilder/Anhang/machine_overview.png, id=1546, 1195.46625pt x 479.7925pt>
-File: ../Bilder/Anhang/machine_overview.png Graphic file (type png)
-
-<use ../Bilder/Anhang/machine_overview.png>
-Package pdftex.def Info: ../Bilder/Anhang/machine_overview.png used on input li
-ne 23.
-(pdftex.def)             Requested size: 289.69957pt x 116.26534pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
-
-<../Bilder/Anhang/sharing.png, id=1548, 957.5775pt x 546.04pt>
-File: ../Bilder/Anhang/sharing.png Graphic file (type png)
-
-<use ../Bilder/Anhang/sharing.png>
-Package pdftex.def Info: ../Bilder/Anhang/sharing.png used on input line 34.
-(pdftex.def)             Requested size: 289.69957pt x 165.19635pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
- [85 <../Bilder/Anhang/machine_overview.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
-<../Bilder/Anhang/import.png, id=1556, 1108.14pt x 409.53pt>
-File: ../Bilder/Anhang/import.png Graphic file (type png)
-
-<use ../Bilder/Anhang/import.png>
-Package pdftex.def Info: ../Bilder/Anhang/import.png used on input line 45.
-(pdftex.def)             Requested size: 289.69957pt x 107.06268pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
- [86 <../Bilder/Anhang/sharing.png> <../Bilder/Anhang/import.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
-
-<../Bilder/Anhang/log.png, id=1566, 881.2925pt x 458.71375pt>
-File: ../Bilder/Anhang/log.png Graphic file (type png)
-
-<use ../Bilder/Anhang/log.png>
-Package pdftex.def Info: ../Bilder/Anhang/log.png used on input line 61.
-(pdftex.def)             Requested size: 289.69957pt x 150.78806pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 67.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 67.
-
-<../Bilder/Anhang/admin_1.png, id=1567, 1094.0875pt x 548.0475pt>
-File: ../Bilder/Anhang/admin_1.png Graphic file (type png)
-
-<use ../Bilder/Anhang/admin_1.png>
-Package pdftex.def Info: ../Bilder/Anhang/admin_1.png used on input line 72.
-(pdftex.def)             Requested size: 289.69957pt x 145.1148pt.
-Package placeins Info: Must dump some floats on input line 76.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 76.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 76.
- [87
-Package placeins Info: Float barrier, from input line 76, processed on page 87,
- lands on page 87. 
- <../Bilder/Anhang/log.png>]
-Package placeins Info: Check again: on input line 76.
-Package placeins Info: No floats held, on input line 76.
-
-<../Bilder/Anhang/admin_2.png, id=1574, 1094.0875pt x 548.0475pt>
-File: ../Bilder/Anhang/admin_2.png Graphic file (type png)
-
-<use ../Bilder/Anhang/admin_2.png>
-Package pdftex.def Info: ../Bilder/Anhang/admin_2.png used on input line 81.
-(pdftex.def)             Requested size: 289.69957pt x 145.1148pt.
-Package placeins Info: No floats held, on input line 85.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 89.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 89.
-
-<../Bilder/Anhang/soft_pack.png, id=1575, 678.535pt x 181.67876pt>
-File: ../Bilder/Anhang/soft_pack.png Graphic file (type png)
-
-<use ../Bilder/Anhang/soft_pack.png>
-Package pdftex.def Info: ../Bilder/Anhang/soft_pack.png used on input line 94.
-(pdftex.def)             Requested size: 289.69957pt x 77.56589pt.
-Package placeins Info: Must dump some floats on input line 98.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 98.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 98.
- [88
-Package placeins Info: Float barrier, from input line 76, processed on page 88,
- lands on page 88. 
-Package placeins Info: Float barrier, from input line 85, processed on page 88,
- lands on page 88. 
-Package placeins Info: Float barrier, from input line 98, processed on page 88,
- lands on page 88. 
- <../Bilder/Anhang/admin_1.png> <../Bilder/Anhang/admin_2.png>]
-Package placeins Info: Check again: on input line 98.
-Package placeins Info: No floats held, on input line 98.
-
-<../Bilder/Anhang/package.png, id=1586, 1092.08pt x 440.64626pt>
-File: ../Bilder/Anhang/package.png Graphic file (type png)
-
-<use ../Bilder/Anhang/package.png>
-Package pdftex.def Info: ../Bilder/Anhang/package.png used on input line 104.
-(pdftex.def)             Requested size: 289.69957pt x 116.89172pt.
-Package placeins Info: No floats held, on input line 108.
-)
+(babel)             in language  on input line 189.
+ [87]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3232,83 +3213,9 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 189.
- [89
-Package placeins Info: Float barrier, from input line 98, processed on page 89,
- lands on page 89. 
-Package placeins Info: Float barrier, from input line 108, processed on page 89
-, lands on page 89. 
- <../Bilder/Anhang/soft_pack.png> <../Bilder/Anhang/package.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 189.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 189.
- [90]
+ [88]
 ===== Section: literature
-Package tocbasic Info: character protrusion at lof deactivated on input line 21
-7.
-(./BA.lof
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
- [91
-
-
-
-
-
-])
-\tf@lof=\write11
-\openout11 = `BA.lof'.
-
-
-
-Class scrbook Warning: \float@listhead detected!
-(scrbook)              Implementation of \float@listhead became
-(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
-(scrbook)              has been replaced by several more flexible
-(scrbook)              features of package `tocbasic`.
-(scrbook)              Maybe implementation of \float@listhead will
-(scrbook)              be removed from KOMA-Script soon.
-(scrbook)              Loading of package `scrhack' may help to
-(scrbook)              avoid this warning, if you are using a
-(scrbook)              a package that still implements the
-(scrbook)              deprecated \float@listhead interface  on input line 218.
-
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 218.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 218.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 218.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 218.
-[92] (./BA.lol)
-\tf@lol=\write12
-\openout12 = `BA.lol'.
-
- (./BA.bbl
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
- [93
-
-
-]
+(./BA.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 11.
 
@@ -3332,7 +3239,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 77.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 77.
-[94
+[89
+
+
+
 
 
 ]
@@ -3358,7 +3268,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 160.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 160.
-[95]
+[90]
 Underfull \hbox (badness 10000) in paragraph at lines 162--167
 []\T1/LinuxLibertineT-TLF/m/n/10.95 (+20) [Scherf 2015]  \T1/LinuxLibertineT-TL
 F/m/sc/10.95 (+20) Scherf\T1/LinuxLibertineT-TLF/m/n/10.95 (+20) , Thors-ten:  
@@ -3387,17 +3297,188 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 243.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 243.
-[96])
+[91])
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 221.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+ [92]
+\openout2 = `anhang.aux'.
+
+ (./anhang.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+
+<../Bilder/Anhang/create_machine.png, id=1736, 1123.19624pt x 694.595pt>
+File: ../Bilder/Anhang/create_machine.png Graphic file (type png)
+
+<use ../Bilder/Anhang/create_machine.png>
+Package pdftex.def Info: ../Bilder/Anhang/create_machine.png used on input line
+ 10.
+(pdftex.def)             Requested size: 372.46997pt x 230.32991pt.
+Package placeins Info: No floats held, on input line 14.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 16.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 16.
+ [93
+
+
+
+Package placeins Info: Float barrier, from input line 14, processed on page 93,
+ lands on page 93. 
+ <../Bilder/Anhang/create_machine.png>]
+<../Bilder/Anhang/machine_overview.png, id=1743, 1195.46625pt x 479.7925pt>
+File: ../Bilder/Anhang/machine_overview.png Graphic file (type png)
+
+<use ../Bilder/Anhang/machine_overview.png>
+Package pdftex.def Info: ../Bilder/Anhang/machine_overview.png used on input li
+ne 23.
+(pdftex.def)             Requested size: 372.46997pt x 149.48819pt.
+Package placeins Info: No floats held, on input line 27.
+
+<../Bilder/Anhang/sharing.png, id=1744, 957.5775pt x 546.04pt>
+File: ../Bilder/Anhang/sharing.png Graphic file (type png)
+
+<use ../Bilder/Anhang/sharing.png>
+Package pdftex.def Info: ../Bilder/Anhang/sharing.png used on input line 36.
+(pdftex.def)             Requested size: 372.46997pt x 212.3965pt.
+Package placeins Info: No floats held, on input line 40.
+
+<../Bilder/Anhang/import.png, id=1745, 1108.14pt x 409.53pt>
+File: ../Bilder/Anhang/import.png Graphic file (type png)
+
+<use ../Bilder/Anhang/import.png>
+Package pdftex.def Info: ../Bilder/Anhang/import.png used on input line 48.
+(pdftex.def)             Requested size: 372.46997pt x 137.65112pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 52.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 52.
+ [94
+Package placeins Info: Float barrier, from input line 27, processed on page 94,
+ lands on page 94. 
+Package placeins Info: Float barrier, from input line 40, processed on page 94,
+ lands on page 94. 
+ <../Bilder/Anhang/machine_overview.png> <../Bilder/Anhang/sharing.png>]
+Package placeins Info: No floats held, on input line 52.
+
+<../Bilder/Anhang/log.png, id=1755, 881.2925pt x 458.71375pt>
+File: ../Bilder/Anhang/log.png Graphic file (type png)
+
+<use ../Bilder/Anhang/log.png>
+Package pdftex.def Info: ../Bilder/Anhang/log.png used on input line 61.
+(pdftex.def)             Requested size: 372.46997pt x 193.86935pt.
+Package placeins Info: No floats held, on input line 65.
+
+<../Bilder/Anhang/admin_1.png, id=1756, 1094.0875pt x 548.0475pt>
+File: ../Bilder/Anhang/admin_1.png Graphic file (type png)
+
+<use ../Bilder/Anhang/admin_1.png>
+Package pdftex.def Info: ../Bilder/Anhang/admin_1.png used on input line 73.
+(pdftex.def)             Requested size: 372.46997pt x 186.57619pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 77.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 77.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 77.
+ [95
+Package placeins Info: Float barrier, from input line 52, processed on page 95,
+ lands on page 95. 
+Package placeins Info: Float barrier, from input line 65, processed on page 95,
+ lands on page 95. 
+ <../Bilder/Anhang/import.png> <../Bilder/Anhang/log.png>]
+Package placeins Info: No floats held, on input line 77.
+
+<../Bilder/Anhang/admin_2.png, id=1765, 1094.0875pt x 548.0475pt>
+File: ../Bilder/Anhang/admin_2.png Graphic file (type png)
+
+<use ../Bilder/Anhang/admin_2.png>
+Package pdftex.def Info: ../Bilder/Anhang/admin_2.png used on input line 83.
+(pdftex.def)             Requested size: 372.46997pt x 186.57619pt.
+Package placeins Info: Must dump some floats on input line 87.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 87.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 87.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 87.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 87.
+ [96
+Package placeins Info: Float barrier, from input line 77, processed on page 96,
+ lands on page 96. 
+Package placeins Info: Float barrier, from input line 87, processed on page 96,
+ lands on page 96. 
+ <../Bilder/Anhang/admin_1.png>]
+Package placeins Info: Check again: on input line 87.
+Package placeins Info: No floats held, on input line 87.
+
+<../Bilder/Anhang/soft_pack.png, id=1772, 678.535pt x 181.67876pt>
+File: ../Bilder/Anhang/soft_pack.png Graphic file (type png)
+
+<use ../Bilder/Anhang/soft_pack.png>
+Package pdftex.def Info: ../Bilder/Anhang/soft_pack.png used on input line 95.
+(pdftex.def)             Requested size: 372.46997pt x 99.72955pt.
+Package placeins Info: No floats held, on input line 99.
+
+<../Bilder/Anhang/package.png, id=1773, 1092.08pt x 440.64626pt>
+File: ../Bilder/Anhang/package.png Graphic file (type png)
+
+<use ../Bilder/Anhang/package.png>
+Package pdftex.def Info: ../Bilder/Anhang/package.png used on input line 105.
+(pdftex.def)             Requested size: 372.46997pt x 150.28839pt.
+Package placeins Info: Must dump some floats on input line 109.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 109.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 109.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 109.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 109.
+ [97
+Package placeins Info: Float barrier, from input line 87, processed on page 97,
+ lands on page 97. 
+Package placeins Info: Float barrier, from input line 99, processed on page 97,
+ lands on page 97. 
+Package placeins Info: Float barrier, from input line 109, processed on page 97
+, lands on page 97. 
+ <../Bilder/Anhang/admin_2.png> <../Bilder/Anhang/soft_pack.png>]
+Package placeins Info: Check again: on input line 109.
+Package placeins Info: No floats held, on input line 109.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 222.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 222.
+ [98 <../Bilder/Anhang/package.png>]
 ===== Section: nomenclature
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 226.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 226.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 226.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 226.
-[97]
 No file BA.nls.
 ===== Section: index
 No file BA.ind.
@@ -3406,67 +3487,70 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 238.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 238.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 238.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 238.
-[98
+(babel)             in language  on input line 240.
+[99
+Package placeins Info: Float barrier, from input line 109, processed on page 98
+, lands on page 99. 
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
  (./BA.aux (./einleitung.aux) (./grundlagen.aux) (./anforderunsanalyse.aux) (./
 evaluation.aux) (./entwurf.aux) (./umsetzung.aux) (./fazit.aux)
 (./anhang.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 Package rerunfilecheck Info: File `BA.out' has not changed.
-(rerunfilecheck)             Checksum: EAFA802C64EC594A3116CAF31D409169;5461.
+(rerunfilecheck)             Checksum: 5C007A4DADA14FD37010F4C4E50BC8D9;5435.
  ) 
 Here is how much of TeX's memory you used:
- 20927 strings out of 493089
- 336109 string characters out of 6134842
+ 20939 strings out of 493089
+ 336445 string characters out of 6134842
  569764 words of memory out of 5000000
- 23125 multiletter control sequences out of 15000+600000
+ 23134 multiletter control sequences out of 15000+600000
  119000 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,13n,71p,1809b,2004s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.112} has been referenced but does not e
-xist, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.54} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.111} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.110} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.109} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.108} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.107} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.106} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.105} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.104} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.103} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.44} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
 t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{
 /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/
@@ -3482,10 +3566,10 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb>
 ineT.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/libertine/LinLi
 bertineTB.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/libertine/
 LinLibertineTI.pfb>
-Output written on BA.pdf (104 pages, 3041221 bytes).
+Output written on BA.pdf (108 pages, 2993950 bytes).
 PDF statistics:
- 1921 PDF objects out of 2073 (max. 8388607)
- 1651 compressed objects within 17 object streams
- 577 named destinations out of 1000 (max. 500000)
- 31071 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1947 PDF objects out of 2073 (max. 8388607)
+ 1670 compressed objects within 17 object streams
+ 579 named destinations out of 1000 (max. 500000)
+ 31076 words of extra memory for PDF output out of 35830 (max. 10000000)
 

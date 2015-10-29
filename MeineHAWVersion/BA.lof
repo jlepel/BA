@@ -28,35 +28,35 @@
 \contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces Vier Arten von Sichten}}{38}{figure.5.1}
 \contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Kontextsicht}}{39}{figure.5.2}
 \contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Verteilungssicht des VM-Builders}}{41}{figure.5.3}
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Client-Server-Anordnungen}}{43}{figure.5.4}
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Model-View-Controller}}{45}{figure.5.5}
-\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Model-View-Controller im 3-Schichten-Modell}}{46}{figure.5.6}
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Bausteinsicht Level 1}}{49}{figure.5.7}
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Benutzerschnittstelle}}{50}{figure.5.8}
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Komponentensicht Distributor}}{50}{figure.5.9}
-\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Komponentensicht VMBuilder}}{51}{figure.5.10}
-\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Komponentensicht BuildingProcess}}{52}{figure.5.11}
-\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Komponentensicht MachineOption}}{53}{figure.5.12}
-\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Komponentensicht Administration}}{53}{figure.5.13}
-\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Komponentensicht SoftwareSelection}}{54}{figure.5.14}
-\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Ansicht der Verarbeitungsebene}}{55}{figure.5.15}
-\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces Komponentenansicht MachineConstruction}}{56}{figure.5.16}
-\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Komponentenansicht SystemAdministration}}{57}{figure.5.17}
-\contentsline {figure}{\numberline {\relax 5.18}{\ignorespaces Komponentenansicht MachineManagement}}{58}{figure.5.18}
-\contentsline {figure}{\numberline {\relax 5.19}{\ignorespaces Ansicht der Datenebene}}{59}{figure.5.19}
-\contentsline {figure}{\numberline {\relax 5.20}{\ignorespaces Laufzeitsicht eines VM-Aufbaus}}{60}{figure.5.20}
-\contentsline {figure}{\numberline {\relax 5.21}{\ignorespaces Entity-Relationship-Model}}{62}{figure.5.21}
-\contentsline {figure}{\numberline {\relax 5.22}{\ignorespaces RelationalDatabaseModel}}{64}{figure.5.22}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Client-Server-Anordnungen}}{44}{figure.5.4}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Model-View-Controller}}{46}{figure.5.5}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Model-View-Controller im 3-Schichten-Modell}}{47}{figure.5.6}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Bausteinsicht Level 1}}{50}{figure.5.7}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Benutzerschnittstelle}}{51}{figure.5.8}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Komponentensicht Distributor}}{51}{figure.5.9}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Komponentensicht MainRepresentation}}{52}{figure.5.10}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Komponentensicht BuildingProcess}}{53}{figure.5.11}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Komponentensicht MachineOption}}{54}{figure.5.12}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Komponentensicht Administration}}{54}{figure.5.13}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Komponentensicht Software}}{55}{figure.5.14}
+\contentsline {figure}{\numberline {\relax 5.15}{\ignorespaces Ansicht der Verarbeitungsebene}}{56}{figure.5.15}
+\contentsline {figure}{\numberline {\relax 5.16}{\ignorespaces Komponentenansicht MachineConstruction}}{57}{figure.5.16}
+\contentsline {figure}{\numberline {\relax 5.17}{\ignorespaces Komponentenansicht SystemAdministration}}{59}{figure.5.17}
+\contentsline {figure}{\numberline {\relax 5.18}{\ignorespaces Komponentenansicht SoftwareAdministration}}{60}{figure.5.18}
+\contentsline {figure}{\numberline {\relax 5.19}{\ignorespaces Komponentenansicht MachineManagement}}{61}{figure.5.19}
+\contentsline {figure}{\numberline {\relax 5.20}{\ignorespaces Ansicht der Datenebene}}{63}{figure.5.20}
+\contentsline {figure}{\numberline {\relax 5.21}{\ignorespaces Laufzeitsicht eines VM-Aufbaus}}{64}{figure.5.21}
+\contentsline {figure}{\numberline {\relax 5.22}{\ignorespaces Entity-Relationship-Model}}{67}{figure.5.22}
+\contentsline {figure}{\numberline {\relax 5.23}{\ignorespaces RelationalDatabaseModel}}{69}{figure.5.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Bausteinsicht Level 1}}{74}{figure.6.1}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Bausteinsicht Level 1}}{79}{figure.6.1}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 8.1}{\ignorespaces Men\"u zum Erstellen einer virtuellen Umgebung}}{84}{figure.8.1}
-\contentsline {figure}{\numberline {\relax 8.2}{\ignorespaces \"Ubersicht aller aktuellen virtuellen Maschinen}}{85}{figure.8.2}
-\contentsline {figure}{\numberline {\relax 8.3}{\ignorespaces Externe Zugriffsoptionen auf eine virtuelle Maschine }}{86}{figure.8.3}
-\contentsline {figure}{\numberline {\relax 8.4}{\ignorespaces Import durch Konfigurationsdateien}}{86}{figure.8.4}
-\contentsline {figure}{\numberline {\relax 8.5}{\ignorespaces Allgemeine Logdatei}}{87}{figure.8.5}
-\contentsline {figure}{\numberline {\relax 8.6}{\ignorespaces Administration des VM-Builders (Teil 1)}}{88}{figure.8.6}
-\contentsline {figure}{\numberline {\relax 8.7}{\ignorespaces Administration des VM-Builders (Teil 2)}}{88}{figure.8.7}
-\contentsline {figure}{\numberline {\relax 8.8}{\ignorespaces Administration von Software und Packages}}{89}{figure.8.8}
-\contentsline {figure}{\numberline {\relax 8.9}{\ignorespaces Erstellung eines Packages}}{89}{figure.8.9}
+\contentsline {figure}{\numberline {\relax 1}{\ignorespaces Men\"u zum Erstellen einer virtuellen Umgebung}}{93}{figure.7.1}
+\contentsline {figure}{\numberline {\relax 2}{\ignorespaces \"Ubersicht aller aktuellen virtuellen Maschinen}}{94}{figure.7.2}
+\contentsline {figure}{\numberline {\relax 3}{\ignorespaces Externe Zugriffsoptionen auf eine virtuelle Maschine }}{94}{figure.7.3}
+\contentsline {figure}{\numberline {\relax 4}{\ignorespaces Import durch Konfigurationsdateien}}{95}{figure.7.4}
+\contentsline {figure}{\numberline {\relax 5}{\ignorespaces Allgemeine Logdatei}}{95}{figure.7.5}
+\contentsline {figure}{\numberline {\relax 6}{\ignorespaces Administration des VM-Builders (Teil 1)}}{96}{figure.7.6}
+\contentsline {figure}{\numberline {\relax 7}{\ignorespaces Administration des VM-Builders (Teil 2)}}{97}{figure.7.7}
+\contentsline {figure}{\numberline {\relax 8}{\ignorespaces Administration von Software und Packages}}{97}{figure.7.8}
+\contentsline {figure}{\numberline {\relax 9}{\ignorespaces Erstellung eines Packages}}{98}{figure.7.9}
