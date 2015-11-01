@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{33}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -81,6 +81,14 @@
 \newblock Braunschweig Wiesbaden~: Vieweg, 2002. --
 \newblock ISBN 3528058005
 
+\bibitem[Joost(2014)]{Joost14:Online}
+\dinatlabel{Joost 2014} \textsc{Joost}, Thomas:
+\newblock \emph{Virtualisierung: der kostenlose Microsoft Hyper-V-Server 2012
+  R2 in der Praxis}.
+\newblock Dezember 2014. --
+\newblock URL
+  \url{http://www.tecchannel.de/server/windows/2053524/virtualisierung_der_kostenlose_hyper_v_server_2012_r2_in_der_praxis/}
+
 \bibitem[Llorente(2014)]{opennebula:2015:Online}
 \dinatlabel{Llorente 2014} \textsc{Llorente}, Ignacio~M.:
 \newblock \emph{OpenNebula vs. OpenStack: User Needs vs. Vendor Driven}.
@@ -104,6 +112,13 @@
 \newblock Springer, 11 2009. --
 \newblock URL \url{http://amazon.de/o/ASIN/3642016588/}. --
 \newblock ISBN 9783642016585
+
+\bibitem[Masiero(2015)]{Masiero15:Online}
+\dinatlabel{Masiero 2015} \textsc{Masiero}, Manuel:
+\newblock \emph{VMware vs VirtualBox - Virtualisierungs-Tools im Test}.
+\newblock Januar 2015. --
+\newblock URL
+  \url{http://www.pc-magazin.de/vergleich/vmware-virtualbox-virtualisierung-tool-test-gratis-kostenlos-2827888.html}
 
 \bibitem[Peacock(2013)]{Peacock201308}
 \dinatlabel{Peacock 2013} \textsc{Peacock}, Michael:

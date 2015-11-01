@@ -17,15 +17,15 @@ VirtualBox ist ein gratis Open-Source-Tool von Oracle, das großen Funktionsumfan
 \subsection{VMware Player (Plus)}
 Eines der bekanntesten Unternehmen für Virtualisierungslösungen ist VMware.\footnote{\label{foot:dama}Quelle: ama Direktbefragung 02/2014}
 VMware bietet für den Privatanwender den VMware Player an, der das kostenlose Pendant zur professionellen Lösung VMware Workstation / VMware Fusion darstellt.
-Mittlerweile ist der VMware Player für Unternehmen unter dem Namen VMware Player Plus, zum Preis von 134,95 Euro zu erwerben.\footnote{\label{foot:player_plus}Quelle: http://store.vmware.com} Der VMware Player (Plus) unterstützt ca. 200 Gastbetriebssysteme, mit 32Bit oder 64Bit, und lässt sich auf Windows und verschiedenen Linux-Distributionen installieren. Nachteilig ist die Beschränkung auf das VMDK-Format (Virtual Machine Disk), das bei der Speicherung von virtuellen Maschinen zur Verfügung steht. Zudem fehlen Features, wie eine virtuelle Maschine in einen vorherigen Systemzustand zurückzuversetzen, oder eine Maschine zu duplizieren. Allerdings werden Export- und Import Funktionen, sowie das Erstellen von momentanen Zuständen vom VMware Player unterstützt.
+Mittlerweile ist der VMware Player für Unternehmen unter dem Namen VMware Player Plus, zum Preis von 134,95 Euro zu erwerben.\footnote{\label{foot:player_plus}Quelle: http://store.vmware.com} Der VMware Player (Plus) unterstützt ca. 200 Gastbetriebssysteme, mit 32Bit oder 64Bit, und lässt sich auf Windows und verschiedenen Linux-Distributionen installieren. Nachteilig ist die Beschränkung auf das VMDK-Format (Virtual Machine Disk), das bei der Speicherung von virtuellen Maschinen zur Verfügung steht. Zudem fehlen Features, wie eine virtuelle Maschine in einen vorherigen Systemzustand zurückzuversetzen, oder eine Maschine zu duplizieren. Allerdings werden Export- und Import Funktionen, sowie das Erstellen von momentanen Zuständen vom VMware Player unterstützt. [\cite{Masiero15:Online}]
 
 \subsection{Microsoft Hyper-V}
-Hyper-V wurde von Microsoft in Windows 8 (oder höher) und Windows Server 2012 integriert. Die Software lässt sich über die Windows-Funktion einfach nachinstalliert. Damit dieses möglich ist, müssen zwei Faktoren erfüllt sein. Windows 8 muss als Professional-Version in der 64-Bit Version vorliegen. Der Vorteil gegenüber den Mitbewerbern besteht in der Möglichkeit mehrere virtuelle Maschinen parallel betreiben zu können ohne signifikanten Performanceverlust. Dieses erreicht Hyper-V durch SLAT einer Technik zur dynamischen RAM Verwaltung.
+Hyper-V wurde von Microsoft in Windows 8 (oder höher) und Windows Server 2012 integriert. Die Software lässt sich über die Windows-Funktion einfach nachinstalliert. Damit dieses möglich ist, müssen zwei Faktoren erfüllt sein. Windows 8 muss als Professional-Version in der 64-Bit Version vorliegen. Der Vorteil gegenüber den Mitbewerbern besteht in der Möglichkeit mehrere virtuelle Maschinen parallel betreiben zu können ohne signifikanten Performanceverlust. Dieses erreicht Hyper-V durch SLAT einer Technik zur dynamischen RAM Verwaltung.[\cite{Joost14:Online}]
 
 \subsection{Oracle VM VirtualBox}\label{ssec:VirtualBox}
 Die im April 2005 gegründete Virtualisierungssoftware von Oracle (erst InnoTek Systemberatung GmbH) eignet sich für Windows, Linux, Mac OS X, FreeBSD und Solaris als Hostsystem. An Gastsystemen wird eine Vielzahl von 32Bit und 64Bit-Betriebssystemen unterstützt, diverse Linux Distributionen, Windows ab Version 3.11, Mac OS X, IBM OS/2 und FreeBSD. \newline
 VirtualBox lässt dem Anwender viele Freiheiten im Speichern seiner virtuellen Umgebung. Vier gängige Formate werden von VirtualBox angeboten und ermöglichen einen leichteren Austausch von erstellten virtuellen Maschinen unter Anwendern. Ein weiterer Vorteil von VirtualBox besteht darin, dass VirtualBox kostenlos und OpenSource ist. Der Quellcode steht jedem Interessierten zur Verfügung.
-Im Funktionsumfang der Software enthalten sind das Importieren und Exportieren von virtuellen Maschinen, das Erstellen von Snapshots und das Klonen von virtuellen Maschinen.
+Im Funktionsumfang der Software enthalten sind das Importieren und Exportieren von virtuellen Maschinen, das Erstellen von Snapshots und das Klonen von virtuellen Maschinen. [\cite{Masiero15:Online}, \cite{Reuther2014}]
 
 \subsection{Zusammenfassung}
 \textcolor{white}{Zusammenfassung}
@@ -46,7 +46,7 @@ Im Funktionsumfang der Software enthalten sind das Importieren und Exportieren v
 \end{table}\footnotetext{Quelle: Eigene Darstellung}  
 \FloatBarrier
 \pagebreak
-\subsection{Resümee}
+\subsection{Empfehlung}
 Auch wenn VMware zu den bekannteren Herstellern gehört und der VMware Player (Plus) eine Vielzahl an Funktionen bietet, macht die Unterscheidung zwischen einer Unternehmensvariante und einer für Privatanwender die zukünftige Benutzung aufwändiger. Sollte die zu erstellende Anwendung in einem kommerziellen Umfeld betrieben werden, so muss auf den VMware-Player Plus zugegriffen werden. Dadurch sind ggf. Änderungen an der Implementierung vorzunehmen sind und die entsprechenden Lizenzkosten zu entrichten. Außerdem schränkt nicht nur die geringe Auswahl an Dateiformaten zum Export von Maschinen die Funktionsweise ein, sondern auch das Nichtvorhandensein von Snapshot- und Klon Funktionen ist ein negativer Punkt.\\
 Microsofts Lösung stellt sich, im Rahmen dieser Arbeit, von den Grundanforderungen her als nicht nutzbar heraus. Da Hyper-V Windows als Host-System benötigt, widerspricht dieses den gestellten technischen Randbedingungen aus Kapitel \ref{sec:Randbedingungen} - Server Betriebssystem). 
 Oracles VirtualBox hingegen vereint viele für die geforderten Funktionen unterstützende und hilfreiche Aspekte. Die Vielzahl an unterstützenden Dateiformaten ist für die Umsetzung der geforderte Exportfunktion ein positiver Faktor. Da VirtualBox für Privatanwender und Firmenkunden kostenlos ist, hat der Lizensierungsaspekt keine Relevanz. VirtualBox lässt sich auf diversen Linux-Umgebungen installieren und erfüllt einen weiteren Punkt aus den technischen Randbedingungen (siehe Kapitel \ref{subsec:TechnischeRandbedingungen}).VirtualBox ist durch seinen Funktionsumfang in der Lage, für wichtige Funktionen in der angestrebten Applikation eingesetzt zu werden. Dieses hat den Vortiel, dass die Funktionsbestandteile nicht kostenaufwändig und langwierig implementiert werden müssen.
@@ -94,7 +94,7 @@ Die Clients selbst benötigen einen Agenten (Puppet-Agent), um die Zustandsbeschr
 \FloatBarrier
 \pagebreak
 
-\subsection{Resümee}
+\subsection{Empfehlung}
 Der Unterschied in den verglichenen Konfigurationsmanagementsystemen besteht im Kontext, in dem das jeweilige System eingesetzt werden soll. Alle drei Anwendungen erfüllen die Grundbedingung auf Linux lauffähig zu sein und diverse Linux-Distributionen als Client bespielen zu können, wobei Puppet sich hervorragend im Umfeld größerer Systemlandschaften eignet. Wie Puppet benötigt Staltstack für die Clients extra Software, um die gewünschte Zustandsbeschreibung durchzuführen, was einen höheren Zeitaufwand und eine Fehlerquelle mehr bedeutet.
 Ansible ist das neuste entwickelte Softwareprodukt unter den Konfigurationsmanagement-Systemen, kann aber einfacher eingerichtet werden und benötigt keine weiteren Ergänzungen auf der Clientseite. Dadurch wird auf den Zielmaschinen ausschließlich die erforderliche Software installiert, der gesamte Installationsprozess beschleunigt und der gesamte Zeitaufwand der Konfiguration minimiert.
 
@@ -106,33 +106,3 @@ Die Konfiguration einer virtuellen Maschine geschieht über das 'Vagrantfile', in
 Um eine Virtualisierung vorzunehmen, verwendet Vagrant standardmäßig VirtualBox. Alternativ werden Amazon-Web-Services und VMware-Fusion ebefalls unterstützt und sind einfach zu integrieren. Zudem werden von Vagrant Funktionen zur Teamarbeit angeboten, die einen entfernten Zugriff auf eine virtuelle Maschine lassen. Diese Möglichkeit des Zugriffs auf eine virtuelle Maschine, ermöglicht es Teams an unterschiedlichen Standorten, auf die gleiche Maschine zuzugreifen.[(\cite{Peacock201308}]\\
 Die zusätzlichen Funktionen von Vagrant und das Vereinen von Konfigurationsmanagement und Virtualisierer in einem Produkt, unterstützen den Entwicklungsprozess der Applikation. Funktionen, wie der enfernte Zugriff auf eine Maschine, können übernommen und in die Applikation eingefügt werden.
 
-
-\begin{comment}
-\chapter{Evaluation von Vergleichsprodukten}
-Vergleichbare Produkte aufzählen
-Vor- und Nachteile auflisten.
-Fazit 
-\subsection{OpenNebula}
-OpenNebula ist eine Open Source Cloud Lösung, welche unter Verwendung verschiedener Industriestandards eine hochverfügbare, skalierbare und höchsteffiziente Virtualisierungplattform zur Verfügung stellt.
-So können virtuelle Systeme auf unterschiedlichen Hypervisioren und Storage-Systemen zentral administriert und überwacht werden.
-Beim Ausfall einer Komponente kümmert sich OpenNebula um den Neustart der virtuellen Instanzen auf einem anderen Hostsystem.
-Die Integration und Automatisierung einer vorhandenen heterogenen Landschaft ist somit ohne weitere Hardwareinvestitionen flexibel möglich.
-%Zitat: https://www.netways.de/produkte/opennebula/
-Eine typische OpenNebula Installation sieht folgendermassen aus:
-\begin{figure}[htbp]
-\includegraphics[scale=0.3]{../Bilder/one_high.png}
-\caption{Typische OpenNebula Installation}
-\label{fig: dasdasdasdas}
-\end{figure}
-Front-End: Steuert und fuhrt die OpenNebula Dienste aus. ¨
-Schnittstelle fur den Cloud-Administrator. ¨
-Konsolenbasiert oder graphisch (Sunstone Weboberfl¨ache).
-Hosts: Hosts mit installierter Hypervisor-Software.
-Stellen die Ressourcen fur die Ausf ¨ uhrung von virtuellen ¨
-Maschinen.
-Aktuell wird Xen, KVM und VMware als Hypervisor
-unterstutzt, auch im Mischbetrieb. ¨
-Datastores: Stellen die Basisimages (Betriebssysteminstallation,
-Speicherplatz) der virtuellen Maschinen.
-%Link: http://www.fbi.h-da.de/~a.schuette/Vorlesungen/Cloud-Computing/Skript/3_Cloud-Infrastrukturen/3_Cloud-Infrastrukturen.pdf
-\end{comment}

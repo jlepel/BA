@@ -38,49 +38,53 @@ Warning--entry type for "Scherf15:Online" isn't style-file defined
 --line 381 of file literatur.bib
 Warning--entry type for "Fleichmann12:Online" isn't style-file defined
 --line 388 of file literatur.bib
+Warning--entry type for "Masiero15:Online" isn't style-file defined
+--line 396 of file literatur.bib
+Warning--entry type for "Joost14:Online" isn't style-file defined
+--line 404 of file literatur.bib
 Warning--no proper publisher, using url in Burge02
 Warning--empty note in Burge02
 Warning--no proper publisher, using url in Hock12
 Warning--empty note in Hock12
-You've used 31 entries,
+You've used 33 entries,
             3552 wiz_defined-function locations,
-            1014 strings with 11647 characters,
-and the built_in function-call counts, 17987 in all, are:
-= -- 2107
-> -- 238
-< -- 315
-+ -- 393
-- -- 120
-* -- 1600
-:= -- 2984
-add.period$ -- 44
-call.type$ -- 31
-change.case$ -- 131
-chr.to.int$ -- 31
-cite$ -- 35
-duplicate$ -- 478
-empty$ -- 1564
-format.name$ -- 235
-if$ -- 3767
+            1024 strings with 12088 characters,
+and the built_in function-call counts, 19009 in all, are:
+= -- 2233
+> -- 252
+< -- 333
++ -- 415
+- -- 126
+* -- 1688
+:= -- 3158
+add.period$ -- 46
+call.type$ -- 33
+change.case$ -- 139
+chr.to.int$ -- 33
+cite$ -- 37
+duplicate$ -- 504
+empty$ -- 1642
+format.name$ -- 247
+if$ -- 3975
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 34
-newline$ -- 223
-num.names$ -- 124
-pop$ -- 176
+newline$ -- 235
+num.names$ -- 132
+pop$ -- 184
 preamble$ -- 1
-purify$ -- 131
+purify$ -- 139
 quote$ -- 0
-skip$ -- 683
+skip$ -- 721
 stack$ -- 0
-substring$ -- 1593
-swap$ -- 81
-text.length$ -- 38
+substring$ -- 1693
+swap$ -- 85
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
+type$ -- 278
 warning$ -- 4
-while$ -- 193
+while$ -- 205
 width$ -- 0
-write$ -- 376
-(There were 15 warnings)
+write$ -- 396
+(There were 17 warnings)

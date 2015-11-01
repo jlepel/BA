@@ -12,7 +12,6 @@ Die drei Schritte beinhalten nicht nur Details zu dessen Umsetzung, sondern zeig
 Um die Voraussetzungen für die Entwicklung des VM-Builders zu schaffen, wird in der ersten Realisierungsphase die Entwicklungsserver aufgebaut. Anstelle eines Hardware-Servers wird zunächst auf einer virtuellen Maschine entwickelt. 
 Zeitgleich wird eine identische Umgebung auf einem VM-Host der HAW\footnotemark\footnotetext{Hochschule für Angewandte Wissenschaften Hamburg} aufgebaut, um Unterschiede in der Aufbaugeschwindigkeit der virtuellen Maschinen messen zu können. Um Missverständnisse zu vermeiden, wird in den folgenden Abschnitten lediglich ein Server betrachtet. Beide Server unterscheiden sich alleine durch ihre Hardwareausstattung. Der lokale virtuelle Server wird mit 4GB Arbeitsspreicher, 20 GB Festplattenkapazität und Ubuntu 14.04.2 umgesetzt. Der Server auf HAW-Seite, wird mit 16 GB Arbeitsspeicher ausgestattet und einem schnelleren Prozessor. Das Betriebssystem ist ebenfalls Ubuntu 14.04.2.
 
-
 \section{Fremdsoftware}\label{ssec:SoftwareRealisierung}
 Eines der Ergebnisse des Entwurfs war die Verwendung von Fremdsoftware, von der definierte Teile des Funktionsspektrums übernommen werden sollen. Der zweite Schritt der Realisierung wird sich mit den einzelnen Softwareelementen beschäftigen, die für den Betrieb des VM-Builders eingesetzt werden sollen. In der Evaluation aus Kapitel \ref{ch:Evaluation} sind erste Annahmen getroffen worden, welche Softwarekomponente sich für bestimmte Aufgabenbereiche eignen können, um diese dann in der in der Verteilungssicht (Abschnitt \ref{sec:Verteilungssicht}) provisorisch zu integrieren. Die einzelnen Applikationen werden im Folgenden kurz vorgestellt, wobei auf Installationsdetails verzichtet wird.
 
@@ -148,6 +147,7 @@ Name-Value Pair Tabellen bestehen nur aus zwei Spalten. Eine für den Konfigurati
 \item Alle Values wird als String/Varchar gespeichert.
 \item Für die Arbeit mit den Werten der Konfigurationstabelle sollte bekannt sein, welcher Typ sich hinter dem Wert verbirgt.
 \end{itemize}
+\pagebreak
 
 \item \textbf{Single-Row Table}\newline
 Bei Single-Row Tabellen wird die Struktur gedreht. Jede Konfiguration besteht aus einer eigenen Spalte. Die darunter liegende Zeile beinhaltet die Werte.
@@ -174,7 +174,7 @@ Bei Single-Row Tabellen wird die Struktur gedreht. Jede Konfiguration besteht au
 In der Umsetzung wurde das Konzept der 'Name-Value-Pair Table' verwendet.
 Auch wenn dieses Konzept weniger Vorteile als 'Single-Row'-Implementierung bietet, 
 spricht das leichtere Einpflegen von neuen Konfigurationseigenschaften und die bessere Lesbarkeit der Tabelle, für das Konzept.
-
+\pagebreak
 \subsection{Funktionen}
 Die Realisierung aller geplanten Controller, Models und Views hat das Funktionsspektrum der Applikation fast vollständig erfüllt. So sind folgende Funktionen durch die bisherige Implementierung realisiert worden:\newline\newline
 \textbf{Erstellung einer virtuellen Maschine}\\
@@ -188,6 +188,7 @@ Durch den Aufbau einer virtuellen Maschine wird auch deren Konfiguration gespeic
 \textbf{Packages erstellen} \\
 Packages können vom Anwender, ähnlich wie Softwarekomponenten, erstellt werden.
 Einer der großen Unterschiede zu Softwarekomponenten ist deren Konfigurationsspektrum und deren eigentlichen Verwendung. Packages werden in der Datenbank wie Softwarekomponenten aufgeführt. Allerdings werden diese mit einer extra Kennzeichnung versehen um Datenbankabfragen und die eindeutige Identifizierung der Packages zu beschleunigen. Diese stehen beim Maschinenaufbau zur Auswahl, werden aber vom System als Package erkannt. Packages können aus diversen Softwarekomponenten bestehen und aus einer Vielzahl von Dateien. So wird es möglich, größere Softwareprojekte zu erstellen und dem Anwender zur Verfügung zu stellen. Die SystemAdministration-Komponente hält dafür die entsprechende Implementierung vor. Da die Implementierung organisatorisch zur Administration gehört, wurde diese auch in diesem Paket platziert. Wie bei der Speicherung von Konfigurationen, wird auch hier mit Transaktionen gearbeitet, um keine Inkonsistenzen zu verursachen. Das Codebeispiel aus Abbildung \ref{code:Transaction} zeigt an einem Beispiel den Speichervorgang eines Softwarebundles.
+\pagebreak
 \begin{lstlisting} [caption={Beispiel einer Transaktion - Speichern eines Packages\protect\footnotemark},label={code:Transaction}]
 def save_software_bundle(program, command, desc, selection)
     Software.transaction do |t|
@@ -210,7 +211,7 @@ def save_software_bundle(program, command, desc, selection)
 \end{lstlisting}\footnotetext{Codebeispiel: Eigene Darstellung}
 Werden nicht alle Bedingungen erfüllt, verwirft die Transaktion alle Änderungen und führt ein Rollback aus. Daraus folgt, dass die Datenbank auf den Stand vor der Ausführung der Transaktion gesetzt wird.\newline\newline
 \textbf{VM-Sharing}\\
-Das 'Sharing' einer bestehenden virtuellen Maschine wird durch die interne Implementierung von Vagrant übernommen. Jede Maschine, die in der Hauptansicht zu sehen ist, kann von dort aus freigegeben werden. Wie jede weitere Option einer Maschine, wird die Share-Option durch den AdministrationController angesteuert und anschließend durch die Logik dieser Option ermöglicht. Der simultaner Zugriff auf eine Maschine ist durch Aktivierung der Share-Option möglich, wodurch eine Teamarbeit von mehreren Standorten begünstigt wird.\newline\newline
+Das 'Sharing' einer bestehenden virtuellen Maschine wird durch die interne Implementierung von Vagrant übernommen. Jede Maschine, die in der Hauptansicht zu sehen ist, kann von dort aus freigegeben werden. Wie jede weitere Option einer Maschine, wird die Share-Option durch den AdministrationController angesteuert und anschließend durch die Logik dieser Option ermöglicht. Der simultaner Zugriff auf eine Maschine ist durch Aktivierung der Share-Option möglich, wodurch eine Teamarbeit von mehreren Standorten begünstigt wird.\newline\newline\newline\newline
 \textbf{Import}\label{itm:Import} \\
 Der wesentliche Konfigurationsdateien einer virtuellen Maschine, die über den VM-Builder aufgebaut wird, sind zwei Dateien. Das Vagrantfile, welches generelle Konfigurationen über die Maschine beinhaltet und die Yaml-Datei, die für die Zustandsumsetzung auf der Maschine benötigt wird.
 Werden diese beiden Dateien in den VM-Builder geladen, kann daraus der Aufbau der Maschine abgeleitet und die Provisionierung der Umgebung übernommen werden. 
@@ -223,7 +224,6 @@ Der Export befähigt den Anwender seine Maschine vom Server herunterzuladen und a
 |-- box.ovf
 |-- metadata.json
 \end{lstlisting}\footnotetext{Codebeispiel: \cite{vagrant:2015:Online}}
-
 Eine Veranschaulichung der Applikation lässt sich im Anhang (\ref{ch:Anhang}) finden. Dort werden die einzelnen Funktionen noch einmal kurz aufgelistet und visualisiert.
 
 
